@@ -113,8 +113,8 @@ public class drawPanel extends JPanel implements Serializable {
 	
 	public void setPAF(float paf,int index){
 		
-		curPAF = paf;
-		selectedWall = index;
+//		curPAF = paf;
+//		selectedWall = index;
 		
 	}
 	public void setY(float y){
