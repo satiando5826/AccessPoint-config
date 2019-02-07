@@ -41,6 +41,7 @@ public class ControlPanel extends JPanel {
 	public JButton btnDelete;
 	public JButton btnExecute;
 	public JButton btnSubmit;
+
 	
 	public JSlider Yslider;
 	//final JSlider Kslider;
@@ -97,6 +98,7 @@ public class ControlPanel extends JPanel {
 		modeListCombo.setBounds(0, 72, 112, 31);
 		modeListCombo.setSelectedIndex(0);
 		add(modeListCombo);
+		
 		
 		//-----------------------------------------------------------------------------gridSlider---------------
 		

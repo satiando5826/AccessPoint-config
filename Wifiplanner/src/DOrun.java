@@ -117,7 +117,6 @@ public class DOrun {
 		Toolkit tk = Toolkit.getDefaultToolkit();
 		int xsize = (int) tk.getScreenSize().getWidth();
 		int ysize = (int) tk.getScreenSize().getHeight();
-		//frame.setSize(xsize, ysize-40);
 		frame.pack();
 		frame.setSize(xsize, ysize-40);
 		frame.getContentPane().setLayout(new BorderLayout());
@@ -475,6 +474,7 @@ public class DOrun {
 		 	}
 		 });
 		 Btmpanel.add(saveCalculated);
+
 		 
 		 JButton saveallPos = new JButton("SaveAllPos");
 		 saveallPos.addActionListener(new ActionListener() {
@@ -533,6 +533,7 @@ public class DOrun {
 		mntmLoad.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				JFileChooser fileChooser = new JFileChooser();
+				fileChooser.showDialog(conPanel, "Load");
 				fileChooser.setCurrentDirectory(new File(System.getProperty("user.dir")));			
 				int result = fileChooser.showSaveDialog(null);
 				 if(result == JFileChooser.APPROVE_OPTION)
@@ -558,8 +559,22 @@ public class DOrun {
                      Drawingpanel.curY = loaded.currentY_saved;
                     // System.out.println( loaded.APshow_saved.get(0).getPos());
                     // Drawingpanel.APshow = loaded.APshow_saved;
+                     int count = Drawingpanel.APs.size();
+                     String[] numAPs = new String[count];
+					 numAPs[0]="all";
+					 for(int h = 1; h< numAPs.length;h++){
+						 numAPs[h] = String.valueOf(h);
+					 }
+                     DefaultComboBoxModel<String> model = (DefaultComboBoxModel<String>) conPanel.numAP.getModel();
+					 model.removeAllElements();
+					 for(String temp : numAPs){
+						 model.addElement(temp);
+						 
+					 }
+                     AP tempAP = new AP(npx,npy,Drawingpanel.curFreq);
+                     conPanel.numAP.setModel(model);
                      Drawingpanel.reCal();
-                     Drawingpanel.repaint();
+                     Drawingpanel.repaint();           
                    //  System.out.println(loaded.APs_saved.get(0).getPos());
                      }
                      catch(Exception io)
@@ -579,6 +594,7 @@ public class DOrun {
 		mntmSave.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				JFileChooser fileChooser = new JFileChooser();
+				fileChooser.showDialog(conPanel, "Save");
 				fileChooser.setCurrentDirectory(new File(System.getProperty("user.dir")));
 				int result = fileChooser.showSaveDialog(null);
 				
@@ -689,6 +705,7 @@ public class DOrun {
 			public void actionPerformed(ActionEvent arg0) {
 				Drawingpanel.reset();
 				 JFileChooser file = new JFileChooser();
+				 file.showDialog(conPanel, "Upload");
 				 file.setCurrentDirectory(new File(System.getProperty("user.dir")));
 					//filter the files 
 				 
@@ -992,6 +1009,7 @@ public class DOrun {
 					 Drawingpanel.reCal();
 					// Drawingpanel.SampleRecal();
 					 Drawingpanel.temp = new Line();
+					 System.out.print(Drawingpanel.temp);
 				 }else{
 					
 					 Drawingpanel.temp = new Line(new Point(npx,npy),new Point(npx,npy));
