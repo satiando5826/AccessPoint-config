@@ -335,7 +335,8 @@ public class DOrun {
 		 		// import position to drawingpanelwith values
 
 				JFileChooser fileChooser = new JFileChooser();
-				fileChooser.setCurrentDirectory(new File(System.getProperty("user.dir")));			
+				fileChooser.setCurrentDirectory(new File(System.getProperty("user.dir")));
+				fileChooser.setDialogTitle("Up Text");
 				int result = fileChooser.showSaveDialog(null);
 				 if(result == JFileChooser.APPROVE_OPTION)
                  {
@@ -391,6 +392,7 @@ public class DOrun {
 		 		// import position to drawingpanel   ----->onlyfor sample pos (realPos30.txt)
 
 				JFileChooser fileChooser = new JFileChooser();
+				fileChooser.showDialog(conPanel, "Import Posncal");
 				fileChooser.setCurrentDirectory(new File(System.getProperty("user.dir")));			
 				int result = fileChooser.showSaveDialog(null);
 				 if(result == JFileChooser.APPROVE_OPTION)
@@ -533,9 +535,8 @@ public class DOrun {
 		mntmLoad.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				JFileChooser fileChooser = new JFileChooser();
-				fileChooser.showDialog(conPanel, "Load");
 				fileChooser.setCurrentDirectory(new File(System.getProperty("user.dir")));			
-				int result = fileChooser.showSaveDialog(null);
+				int result = fileChooser.showDialog(conPanel, "Load");
 				 if(result == JFileChooser.APPROVE_OPTION)
                  {
 					 
@@ -594,7 +595,6 @@ public class DOrun {
 		mntmSave.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				JFileChooser fileChooser = new JFileChooser();
-				fileChooser.showDialog(conPanel, "Save");
 				fileChooser.setCurrentDirectory(new File(System.getProperty("user.dir")));
 				int result = fileChooser.showSaveDialog(null);
 				
@@ -705,13 +705,12 @@ public class DOrun {
 			public void actionPerformed(ActionEvent arg0) {
 				Drawingpanel.reset();
 				 JFileChooser file = new JFileChooser();
-				 file.showDialog(conPanel, "Upload");
 				 file.setCurrentDirectory(new File(System.getProperty("user.dir")));
 					//filter the files 
 				 
 				 FileNameExtensionFilter filter = new FileNameExtensionFilter("*.Images", "jpg","gif","png");
 					file.addChoosableFileFilter(filter);
-				   int result = file.showSaveDialog(null);
+				   int result = file.showDialog(conPanel, "Upload");;
 					
 				 //if the user click on save in Jfilechooser 
 				 if(result == JFileChooser.APPROVE_OPTION)  {
