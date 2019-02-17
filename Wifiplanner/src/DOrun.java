@@ -953,13 +953,34 @@ public class DOrun {
 					}
 					Drawingpanel.reCal();
 					Drawingpanel.repaint();
-				}
-				
+				}	
+				}	
+			}
+		});
+		
+		conPanel.numDetec.addItemListener(new ItemListener() {
+			@Override
+			public void itemStateChanged(ItemEvent  e) {
+				if(e.getStateChange()==1){
+					int index = conPanel.numDetec.getSelectedIndex();
+					System.out.println(index+"num");
+					if(index!= 0){
+					Drawingpanel.Detecshow.clear();
+					Detec temp = new Detec(Drawingpanel.Detecs.get(index-1));
+					Drawingpanel.Detecshow.add(temp);
+					Drawingpanel.reCal();
+					Drawingpanel.repaint();
 					
-				}
-				
-			
-				
+				}else{
+					Drawingpanel.Detecshow.clear();
+					for(int i=0;i<Drawingpanel.Detecs.size();i++){
+						Detec temp = new Detec(Drawingpanel.Detecs.get(i));
+						Drawingpanel.Detecshow.add(temp);
+					}
+					Drawingpanel.reCal();
+					Drawingpanel.repaint();
+				}	
+				}	
 			}
 		});
 			
@@ -1073,8 +1094,7 @@ public class DOrun {
 				 
 				 
 				 
-			 }else if(Drawingpanel.currentMode == 4){//auto Detec
-				 
+			 }else if(Drawingpanel.currentMode == 4){//Detec
 				 if(!Drawingpanel.isthereWall(npx,npy)) {//check if there is a wall in the same npx npy
 					 
 					 Detec tempDetec = new Detec(npx,npy);
@@ -1084,21 +1104,21 @@ public class DOrun {
 					
 					 
 					 //update Combo box AP
-//					 int count = Drawingpanel.Detecs.size()+1;
-//					 String[] numDetecs = new String[count];
-//					 numDetecs[0]="all";
-//					 for(int h = 1; h< numDetecs.length;h++){
-//						 
-//						 numDetecs[h] = String.valueOf(h);
-//					 }
+					 int count = Drawingpanel.Detecs.size()+1;
+					 String[] numDetecs = new String[count];
+					 numDetecs[0]="all";
+					 for(int h = 1; h< numDetecs.length;h++){
+						 
+						 numDetecs[h] = String.valueOf(h);
+					 }
 					
-//					DefaultComboBoxModel<String> model = (DefaultComboBoxModel<String>) conPanel.numDetec.getModel();
-//					 model.removeAllElements();
-//					 for(String temp : numDetecs){
-//						 model.addElement(temp);
-//						 
-//					 }
-//					 conPanel.numDetec.setModel(model);
+					DefaultComboBoxModel<String> model = (DefaultComboBoxModel<String>) conPanel.numDetec.getModel();
+					 model.removeAllElements();
+					 for(String temp : numDetecs){
+						 model.addElement(temp);
+						 
+					 }
+					 conPanel.numDetec.setModel(model);
 					 //conPanel.numAP.setSelectedIndex(0);
 					// for(int i =0;i<Drawingpanel.APs.size();i++)
 					// System.out.println(Drawingpanel.APs.get(i).getPos());
@@ -1115,15 +1135,18 @@ public class DOrun {
 					 Drawingpanel.APs.remove(Drawingpanel.detectedAP);
 					 Drawingpanel.APshow.remove(Drawingpanel.detectedAP);
 					 Drawingpanel.reCal();
-				 }
-				
-					 
-					 if(Drawingpanel.isthereWall(p.x,p.y))
-					 {
-						 Drawingpanel.WList.remove(Drawingpanel.detectedWallnum);
-						// Drawingpanel.reCal();
-						 Drawingpanel.SampleRecal();
-					 }
+				 }	 
+				if(Drawingpanel.isthereWall(p.x,p.y))
+				{
+					Drawingpanel.WList.remove(Drawingpanel.detectedWallnum);
+					// Drawingpanel.reCal();
+					Drawingpanel.SampleRecal();
+				}
+				if(Drawingpanel.isthereDetec(p.x, p.y)) {
+					Drawingpanel.Detecs.remove(Drawingpanel.detectedDetec);
+					Drawingpanel.Detecshow.remove(Drawingpanel.detectedDetec);
+					Drawingpanel.reCal();
+				}
 					 
 				 
 				 

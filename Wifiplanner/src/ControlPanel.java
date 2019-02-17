@@ -72,7 +72,7 @@ public class ControlPanel extends JPanel {
 		
 		Icon delete = new ImageIcon("delete.png");
 		btnDelete = new JButton(delete);
-		btnDelete.setBounds(120, 34, 25, 25);
+		btnDelete.setBounds(120, 50, 25, 25);
 		
 		add(btnDelete);
 		
@@ -182,6 +182,9 @@ public class ControlPanel extends JPanel {
 		
 		add(numAP);
 		
+		numDetec = new JComboBox<String>();
+		numDetec.setBounds(124, 35, 50, 20);
+		add(numDetec);
 		
 		JLabel lblSignalLevelExamples = new JLabel("Signal level examples");
 		lblSignalLevelExamples.setBounds(97, 340, 123, 14);

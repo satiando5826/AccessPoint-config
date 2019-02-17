@@ -115,8 +115,8 @@ public class drawPanel extends JPanel implements Serializable {
 	
 	public void setPAF(float paf,int index){
 		
-//		curPAF = paf;
-//		selectedWall = index;
+		curPAF = paf;
+		selectedWall = index;
 		
 	}
 	public void setY(float y){
@@ -239,8 +239,9 @@ public class drawPanel extends JPanel implements Serializable {
 		 		//drawDetec
 		 		if(Detecs!=null) {
 		 			for(int i = 0; i< Detecs.size();i++) {//
-		 				g2.setColor(Color.GREEN);
+		 				g2.setColor(Color.BLACK);
 			 			g2.fillRect((Detecs.get(i).posx-4),(Detecs.get(i).posy-4),gw,gw);
+			 			g2.setColor(Color.WHITE);
 			 			g2.drawRect(Detecs.get(i).posx-4,Detecs.get(i).posy-4,gw,gw);	        			
 		 			}
 		 		}
@@ -655,7 +656,7 @@ public class drawPanel extends JPanel implements Serializable {
 		for(int i=0;i<WList.size();i++){
 			double check = Line2D.ptSegDist(WList.get(i).getP1X(),WList.get(i).getP1Y(),
 					WList.get(i).getP2X(),WList.get(i).getP2Y(),apx, apy);
-			if(check == 0.0){
+			if(check <= 5){
 				checker = true;
 				detectedWallnum =i;
 				break loop;
