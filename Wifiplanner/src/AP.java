@@ -65,6 +65,10 @@ public class AP implements Serializable{
 		
 	}
 	
+	public void setPT(int pt_) {
+		pt = pt_;
+	}
+	
 
 	/*public boolean isThereInterfere(Point AnotherApPos) { 
 	    return AreaPos.contains(AnotherApPos); 

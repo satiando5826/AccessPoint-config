@@ -41,6 +41,7 @@ public class ControlPanel extends JPanel {
 	public JButton btnDelete;
 	public JButton btnExecute;
 	public JButton btnSubmit;
+	public JButton btnGeneticAlgo;
 
 	
 	public JSlider Yslider;
@@ -54,12 +55,13 @@ public class ControlPanel extends JPanel {
 	String[] choices = { "Cement : -10dB", "Iron door : -15.4dB", "Thin Cement : -2.89dB", "Cement+WBoard : -16dB", "Wood board: -5.0 dB", "F : -18dB", "Customize" }; 
 	
 	  JComboBox<String> modeListCombo;
-	String[] modeList = {"Select Mode","Wall Mode","AP Mode","Auto Mode"};
+	String[] modeList = {"Select Mode","Wall Mode","AP Mode","Auto Mode","Detec Mode"}; //{0,1,2,3}
 	
 	  JComboBox<String> selectFreq;
 	String[] freqs = {"2.4 GHz","5.0GHz"};
 	
 	JComboBox<String> numAP;
+	JComboBox<String> numDetec;
 	
 
 	
@@ -99,6 +101,9 @@ public class ControlPanel extends JPanel {
 		modeListCombo.setSelectedIndex(0);
 		add(modeListCombo);
 		
+		btnGeneticAlgo = new JButton("GeneticAlgo");
+		btnGeneticAlgo.setBounds(0, 500, 89, 23);
+		add(btnGeneticAlgo);
 		
 		//-----------------------------------------------------------------------------gridSlider---------------
 		

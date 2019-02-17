@@ -10,6 +10,8 @@ public class savedObj implements Serializable{
 	public File selectedFile_S;
 	 public  ArrayList<Line> WList_saved = new ArrayList<Line>();
 	 public  ArrayList<AP> APs_saved=new ArrayList<AP>();
+	 public  ArrayList<Detec> Detecs_saved=new ArrayList<Detec>();
+	 
 	 //public  ArrayList<AP> APshow_saved=new ArrayList<AP>();
 	 public ArrayList<Spot> Spots_saved	 = new ArrayList<Spot>() ;
 	 public float gridDist; 
@@ -18,10 +20,11 @@ public class savedObj implements Serializable{
 	 public int cGW_saved;
 	 public float currentY_saved;
 
-	savedObj(File _file,ArrayList<Line> _walls, ArrayList<AP> _APs,ArrayList<Spot> _Spots,float _gridDist,float _gridDistP,int _gw,float _currentY,int _cgw){
+	savedObj(File _file,ArrayList<Line> _walls, ArrayList<AP> _APs,ArrayList<Detec> _Detecs, ArrayList<Spot> _Spots,float _gridDist,float _gridDistP,int _gw,float _currentY,int _cgw){
 		selectedFile_S = _file;
 		WList_saved = _walls;
 		APs_saved = _APs;
+		Detecs_saved = _Detecs;
 		Spots_saved = _Spots;
 		gridDist = _gridDist;
 		gridDistP = _gridDistP;

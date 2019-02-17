@@ -38,6 +38,7 @@ import javax.swing.event.ChangeListener;
 public class drawPanel extends JPanel implements Serializable {
 	public int detectedWallnum;
 	public int detectedAP;
+	public int detectedDetec;
 	 /**
 	 * 
 	 */
@@ -84,7 +85,9 @@ public class drawPanel extends JPanel implements Serializable {
 	 JSlider selectPt ;
 	//AP var----------------------------------------------
 	 public  ArrayList<AP> APs=new ArrayList<AP>();
+	 public  ArrayList<Detec> Detecs=new ArrayList<Detec>();
 	 public  ArrayList<AP> APshow=new ArrayList<AP>();
+	 public ArrayList<Detec> Detecshow = new ArrayList<Detec>();
 	 public ArrayList<Spot> Spots	 = new ArrayList<Spot>() ;
 	 public ArrayList<Spot> SampleSpots	 = new ArrayList<Spot>() ;
 	//-----------Zoom vars
@@ -107,7 +110,6 @@ public class drawPanel extends JPanel implements Serializable {
 		//paneHeight = BGimgIcon.getHeight();
 		//setPreferredSize(new Dimension(758,571));
 		 System.out.println("setpath");
-		
 		
 	}
 	
@@ -230,10 +232,17 @@ public class drawPanel extends JPanel implements Serializable {
 	        		
 		 			g2.setColor(Color.BLUE);
 		 			g2.fillOval((APs.get(i).posx-4),(APs.get(i).posy-4),gw,gw);
-		 			g2.drawOval(APs.get(i).posx-4,APs.get(i).posy-4,gw,gw);
-	        		
-	        			
+		 			g2.drawOval(APs.get(i).posx-4,APs.get(i).posy-4,gw,gw);	        			
 	        		}
+		 		}
+		 		
+		 		//drawDetec
+		 		if(Detecs!=null) {
+		 			for(int i = 0; i< Detecs.size();i++) {//
+		 				g2.setColor(Color.GREEN);
+			 			g2.fillRect((Detecs.get(i).posx-4),(Detecs.get(i).posy-4),gw,gw);
+			 			g2.drawRect(Detecs.get(i).posx-4,Detecs.get(i).posy-4,gw,gw);	        			
+		 			}
 		 		}
 		 	
 			 	  Graphics2D g2d = (Graphics2D) g2;
@@ -464,7 +473,7 @@ public class drawPanel extends JPanel implements Serializable {
 		 for(int k =0;k<Spots.size();k++){
     		
     		Color c = findColor(Spots.get(k).value,min1,max1);
-    		System.out.println(i);
+//    		System.out.println(i);
     		Spots.get(k).setColor(c);
     			
        
@@ -478,16 +487,9 @@ public class drawPanel extends JPanel implements Serializable {
 				 for(int k =0;k<SampleSpots.size();k++){
 		    		
 		    		Color c = findColor(SampleSpots.get(k).value,min1,max1);
-		    		SampleSpots.get(k).setColor(c);
-		    			
-		       
-		    			        		
+		    		SampleSpots.get(k).setColor(c);	    			        		
 		    	}
-		
-		
-		
-		
-	}
+			}
 	public int findDupSpot(Point _loc){
 		int found=-1;
 		
@@ -674,11 +676,22 @@ public class drawPanel extends JPanel implements Serializable {
 				 } 
 			 }
 		return checker;
-		
-		
-		
+	}
+	public boolean isthereDetec(int apx,int apy) {
+		boolean checker = false;
+		loop:
+			for(int i=0;i<Detecshow.size();i++){
+				 if(Detecshow.get(i).getPos().equals(new Point(apx,apy)))
+				 {
+					 checker = true;
+					 detectedDetec = i;
+					 break loop;
+				 } 
+			 }
+		return checker;	
 	}
 	public void ShowApOptions(){
+		
 		ChangingPanel = new JPanel();
       String[] freqs = {"2.4 GHz","5.0GHz"};
       changeFreq  = new JComboBox<String>(freqs);
@@ -733,8 +746,10 @@ public class drawPanel extends JPanel implements Serializable {
 		gw = 11;		
 	    WList = new ArrayList<Line>();
 		APs = new ArrayList<AP>();
+		Detecs = new ArrayList<Detec>();
 		Spots = new ArrayList<Spot>();
 		APshow = new ArrayList<AP>();
+		Detecshow = new ArrayList<Detec>();
 		gridDist = 0;
 		gridDistP = 0;	
 		curY = 2;

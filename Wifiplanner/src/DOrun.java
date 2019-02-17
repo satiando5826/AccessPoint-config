@@ -58,6 +58,7 @@ import javax.swing.JButton;
 import javax.swing.JTextField;
 import javax.swing.JComboBox;
 
+import java.util.Random;
 
 public class DOrun {
 
@@ -552,6 +553,7 @@ public class DOrun {
                      scroll.setViewportView(Drawingpanel);
                      Drawingpanel.WList = loaded.WList_saved;
                      Drawingpanel.APs = loaded.APs_saved;
+                     Drawingpanel.Detecs = loaded.Detecs_saved;
                      Drawingpanel.Spots = loaded.Spots_saved;
                      Drawingpanel.gridDist = loaded.gridDist;
                      Drawingpanel.gridDistP = loaded.gridDistP;
@@ -606,7 +608,7 @@ public class DOrun {
 						  File file = fileChooser.getSelectedFile();
 						  FileOutputStream opf = new FileOutputStream(file);				     
 				         ObjectOutputStream out = new ObjectOutputStream(opf);
-				         savedObj saveOb = new savedObj(selectedFile,Drawingpanel.WList,Drawingpanel.APs,Drawingpanel.Spots,Drawingpanel.gridDist,Drawingpanel.gridDistP,Drawingpanel.gw,Drawingpanel.curY,Drawingpanel.cGW);
+				         savedObj saveOb = new savedObj(selectedFile,Drawingpanel.WList,Drawingpanel.APs,Drawingpanel.Detecs,Drawingpanel.Spots,Drawingpanel.gridDist,Drawingpanel.gridDistP,Drawingpanel.gw,Drawingpanel.curY,Drawingpanel.cGW);
 				         out.writeObject(saveOb);
 				         System.out.println("wr done!!");
 				         out.close();
@@ -749,11 +751,21 @@ public class DOrun {
 			//	 System.out.println(Drawingpanel.scale);
 			}
 		});
+		
+		conPanel.btnGeneticAlgo.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				 //Drawingpanel.repaint();
+				geneticAlgorithm();	
+			//	 System.out.println(Drawingpanel.scale);
+			}
+		});
+		
 		conPanel.btnDelete.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				 
-				Drawingpanel.changeModeTo(4);
+				Drawingpanel.changeModeTo(5);
 				System.out.println(Drawingpanel.currentMode);
 			}
 		});
@@ -1023,7 +1035,7 @@ public class DOrun {
 				 
 				 
 			 }else if(Drawingpanel.currentMode == 2){
-				
+				//AP
 		//test--------------------------------------------------------------------------------------	
 				
 				 
@@ -1061,7 +1073,41 @@ public class DOrun {
 				 
 				 
 				 
-			 }else if(Drawingpanel.currentMode ==4){//delete mode
+			 }else if(Drawingpanel.currentMode == 4){//auto Detec
+				 
+				 if(!Drawingpanel.isthereWall(npx,npy)) {//check if there is a wall in the same npx npy
+					 
+					 Detec tempDetec = new Detec(npx,npy);
+					 System.out.println(npx+","+npy);
+					 
+					 Drawingpanel.Detecs.add(tempDetec);
+					
+					 
+					 //update Combo box AP
+//					 int count = Drawingpanel.Detecs.size()+1;
+//					 String[] numDetecs = new String[count];
+//					 numDetecs[0]="all";
+//					 for(int h = 1; h< numDetecs.length;h++){
+//						 
+//						 numDetecs[h] = String.valueOf(h);
+//					 }
+					
+//					DefaultComboBoxModel<String> model = (DefaultComboBoxModel<String>) conPanel.numDetec.getModel();
+//					 model.removeAllElements();
+//					 for(String temp : numDetecs){
+//						 model.addElement(temp);
+//						 
+//					 }
+//					 conPanel.numDetec.setModel(model);
+					 //conPanel.numAP.setSelectedIndex(0);
+					// for(int i =0;i<Drawingpanel.APs.size();i++)
+					// System.out.println(Drawingpanel.APs.get(i).getPos());
+					 Drawingpanel.reCal();
+			 }
+				 
+				 
+				 
+			 }else if(Drawingpanel.currentMode ==5){//delete mode
 				// System.out.println(GBx+","+GBy);
 				 Point p = snapGrid();
 				 if(Drawingpanel.isthereAP(p.x,p.y)){
@@ -1315,6 +1361,42 @@ public class DOrun {
 			
 		return s;	
 		
-		
 	}
+	//GENETIC ALGORITHM
+	public void geneticAlgorithm(){	
+		Random rand = new Random();
+		int n;
+		for(int i = 0; i<Drawingpanel.APs.size();i++){//init random gene
+			n = rand.nextInt(20)-10;
+			Drawingpanel.APs.get(i).setPT(n);
+			System.out.print("pt" + i +"=" + n + "\t ");
+		}
+		 int count = Drawingpanel.APs.size();
+		 String[] numAPs = new String[count];
+		 numAPs[0]="all";
+		 for(int h = 1; h< numAPs.length;h++){
+			 
+			 numAPs[h] = String.valueOf(h);
+		 }
+		
+		DefaultComboBoxModel<String> model = (DefaultComboBoxModel<String>) conPanel.numAP.getModel();
+		 model.removeAllElements();
+		 for(String temp : numAPs){
+			 model.addElement(temp);
+			 
+		 }
+		 conPanel.numAP.setModel(model);
+		Drawingpanel.reCal();
+		ArrayList<Integer> gene = ptAPs(Drawingpanel.APs);
+	}
+
+	
+	public ArrayList<Integer> ptAPs(ArrayList<AP> _APs ) {// make gene form current value of pt from AP
+		ArrayList<Integer> ptList = new ArrayList<Integer>();
+		for(int i = 0; i>_APs.size();i++){
+			ptList.add(_APs.get(i).pt);
+		}
+		return ptList;
+	}
+	
 }
