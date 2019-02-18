@@ -90,9 +90,14 @@ public class drawPanel extends JPanel implements Serializable {
 	 public ArrayList<Detec> Detecshow = new ArrayList<Detec>();
 	 public ArrayList<Spot> Spots	 = new ArrayList<Spot>() ;
 	 public ArrayList<Spot> SampleSpots	 = new ArrayList<Spot>() ;
+	 
 	//-----------Zoom vars
 	 double Zoomscale;
 	 double ZoomInc;
+	 
+	//Genetic value---------------------------------------
+	 public int overthreadhold = 0;
+	
 	public drawPanel() {
 		Zoomscale = 1.0;
 		
@@ -361,7 +366,7 @@ public class drawPanel extends JPanel implements Serializable {
 		 //create Image for Spots---------------
 		  
 
-		
+
 		Spots.clear();
 		
 			 //int count = 0;
@@ -394,6 +399,9 @@ public class drawPanel extends JPanel implements Serializable {
         					 Spots.get(checkDup).value = tempVal;//update new value to old spot
         					// Color c = findColor(tempSpot.value);
         					// Spots.get(checkDup).setColor(c);
+        				 }
+        				 if(tempVal-Spots.get(checkDup).value >= 30 || tempVal-Spots.get(checkDup).value <= -30 ) {
+        					 overthreadhold+=1;
         				 }
         			 }else{
         				// Color c = findColor(tempSpot.value);
@@ -445,7 +453,7 @@ public class drawPanel extends JPanel implements Serializable {
        				  tempVal= tempVal + PAFS.get(m);// Path loss + obstacles
        				 
        			  }
-       			  	System.out.println(tempVal);
+//       			  	System.out.println(tempVal);
        			if(tempVal > SampleSpots.get(i).value)
        					SampleSpots.get(i).value = tempVal;
        			//System.out.println(SampleSpots.get(i).value);
@@ -561,8 +569,7 @@ public class drawPanel extends JPanel implements Serializable {
 			//return c;
 			
 		}else{
-			System.out.println("FUCKFJKWFHWIDJIWDJIWDJ");
-			System.out.println(value+" max = "+max1+ " min = "+min1);
+//			System.out.println(value+" max = "+max1+ " min = "+min1);
 			c = new Color(255,255,255);
 		}
 		
@@ -703,7 +710,7 @@ public class drawPanel extends JPanel implements Serializable {
 			float selectedFreq = freqf[changeFreq.getSelectedIndex()]; 
 			APshow.get(detectedAP).setFreq(selectedFreq);
 			APs.get(detectedAP).setFreq(selectedFreq);
-			System.out.println(selectedFreq);
+//			System.out.println(selectedFreq);
 		
 		}
 	});
@@ -753,6 +760,7 @@ public class drawPanel extends JPanel implements Serializable {
 		Detecshow = new ArrayList<Detec>();
 		gridDist = 0;
 		gridDistP = 0;	
+		overthreadhold =0;
 		curY = 2;
 		
 		

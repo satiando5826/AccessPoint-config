@@ -18,7 +18,6 @@ public Color sc;
 Spot(Point _pos,float _val){
 	pos = _pos;
 	value = _val;
-
 }
 public Point getPos(){
 	return pos;

@@ -3,6 +3,7 @@ import java.awt.Color;
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.EventQueue;
+import java.awt.Point;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -352,7 +353,7 @@ public class DOrun {
 							 
 							 	//if(Integer.parseInt(parts[2]) < -90)
 							 		//parts[2] = "-90";
-								System.out.println(parts[0]+","+parts[1]+","+parts[2]);
+//								System.out.println(parts[0]+","+parts[1]+","+parts[2]);
 								Point Ptemp = new Point(Integer.parseInt(parts[0]),Integer.parseInt(parts[1]));
 						    	 Spot temp = new Spot(Ptemp,Integer.parseInt(parts[2]));
 						    	 int checkDup = Drawingpanel.findDupSpot(Ptemp);
@@ -434,7 +435,7 @@ public class DOrun {
 						 }
 						 Drawingpanel.SampleRecal();
 						for(int j=0;j<Drawingpanel.SampleSpots.size();j++){
-							 System.out.println(Drawingpanel.SampleSpots.get(j).value);
+//							 System.out.println(Drawingpanel.SampleSpots.get(j).value);
 							 
 							 //System.out.println(Drawingpanel.SampleSpots.get(j).getPos());
 						 }
@@ -576,6 +577,22 @@ public class DOrun {
 					 }
                      AP tempAP = new AP(npx,npy,Drawingpanel.curFreq);
                      conPanel.numAP.setModel(model);
+                     //
+                     //detec
+                     int countD = Drawingpanel.Detecs.size();
+                     String[] numDetecs = new String[countD];
+					 numDetecs[0]="all";
+					 for(int h = 1; h< numDetecs.length;h++){
+						 numDetecs[h] = String.valueOf(h);
+					 }
+                     DefaultComboBoxModel<String> modelD = (DefaultComboBoxModel<String>) conPanel.numDetec.getModel();
+					 model.removeAllElements();
+					 for(String temp : numDetecs){
+						 model.addElement(temp);
+						 
+					 }
+					 Detec tempDetec = new Detec(npx,npy);
+                     conPanel.numDetec.setModel(modelD);
                      Drawingpanel.reCal();
                      Drawingpanel.repaint();           
                    //  System.out.println(loaded.APs_saved.get(0).getPos());
@@ -933,7 +950,7 @@ public class DOrun {
 			public void itemStateChanged(ItemEvent  e) {
 				if(e.getStateChange()==1){
 					int index = conPanel.numAP.getSelectedIndex();
-					System.out.println(index+"num");
+//					System.out.println(index+"num");
 					if(index!= 0){
 					Drawingpanel.APshow.clear();
 						//AP temp = new AP(Drawingpanel.APs.get(index).posx,Drawingpanel.APs.get(index).posy,Drawingpanel.APs.get(index).freq);
@@ -1385,34 +1402,32 @@ public class DOrun {
 		return s;	
 		
 	}
-	//GENETIC ALGORITHM
+	//GENETIC ALGORITHM _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+	
 	public void geneticAlgorithm(){	
+		int popSize = 10;
+		ArrayList<Float> fitnessList = new ArrayList<Float>();
+		ArrayList<ArrayList<Integer> > popuration =  new ArrayList<ArrayList<Integer> >(popSize);
+	    
+		for(int i = 0;i<popSize;i++) {
+			System.out.println("gene " + (i+1));
+			initRandom(Drawingpanel.APs);
+			popuration.add(ptAPs(Drawingpanel.APs));
+			fitnessList.add(geneFitness());
+			emergencyRefresh();
+		}
+//		ArrayList<Integer> gene = ptAPs(Drawingpanel.APs);
+	}
+
+	public void initRandom(ArrayList<AP> _APs) {	
 		Random rand = new Random();
 		int n;
 		for(int i = 0; i<Drawingpanel.APs.size();i++){//init random gene
 			n = rand.nextInt(20)-10;
 			Drawingpanel.APs.get(i).setPT(n);
-			System.out.print("pt" + i +"=" + n + "\t ");
+//			System.out.println("pt" + i +"=" + n + "\t ");
 		}
-		 int count = Drawingpanel.APs.size();
-		 String[] numAPs = new String[count];
-		 numAPs[0]="all";
-		 for(int h = 1; h< numAPs.length;h++){
-			 
-			 numAPs[h] = String.valueOf(h);
-		 }
-		
-		DefaultComboBoxModel<String> model = (DefaultComboBoxModel<String>) conPanel.numAP.getModel();
-		 model.removeAllElements();
-		 for(String temp : numAPs){
-			 model.addElement(temp);
-			 
-		 }
-		 conPanel.numAP.setModel(model);
-		Drawingpanel.reCal();
-		ArrayList<Integer> gene = ptAPs(Drawingpanel.APs);
 	}
-
 	
 	public ArrayList<Integer> ptAPs(ArrayList<AP> _APs ) {// make gene form current value of pt from AP
 		ArrayList<Integer> ptList = new ArrayList<Integer>();
@@ -1422,4 +1437,67 @@ public class DOrun {
 		return ptList;
 	}
 	
+	public void emergencyRefresh() {
+		//refresh
+		int count = Drawingpanel.APs.size();
+		String[] numAPs = new String[count];
+		numAPs[0]="all";
+		for(int h = 1; h< numAPs.length;h++){	 
+					numAPs[h] = String.valueOf(h);
+		}
+		DefaultComboBoxModel<String> model = (DefaultComboBoxModel<String>) conPanel.numAP.getModel();
+		model.removeAllElements();
+		for(String temp : numAPs){
+			 model.addElement(temp);
+		}
+		conPanel.numAP.setModel(model);
+		Drawingpanel.reCal();
+		//refresh
+	}
+	
+	public float geneFitness() {// Power level
+		float fr = 0;
+		float fs = 0;
+	    float total = 0;
+		for(int i = 0;i<Drawingpanel.Detecs.size();i++) {
+			fr += getVal(Drawingpanel.Detecs.get(i).getPos());
+			System.out.println("val:"+getVal(Drawingpanel.Detecs.get(i).getPos())+"comulative fr:"+fr);
+			
+		}
+		fs = -30*Drawingpanel.overthreadhold;
+		total = fs+fr;
+		System.out.println("Fitness:" + total);
+		return total;
+	}
+	
+	public void mate() {
+				
+	}
+	
+	public void crossover() {
+		
+	}
+	
+	public float getVal(Point _loc) {
+		float val = 0;
+//		Point test = new Point(100,100);
+		Point cen1 = new Point(_loc.x-(_loc.x%30),_loc.y-(_loc.y%30));
+//		Point cen2 = new Point(_loc.x%30,_loc.y+1%30);
+//		Point cen3 = new Point(_loc.x+1%30,_loc.y%30);
+//		Point cen4 = new Point(_loc.x+1%30,_loc.y+1%30);
+//		Point[] p =  {cen1,cen2,cen3,cen4};
+//		for(int j=0;j<4;j++) {
+			for(int i=0;i<Drawingpanel.Spots.size();i++){
+				if(Drawingpanel.Spots.get(i).getPos().equals(cen1)){// Point p
+					val += Drawingpanel.Spots.get(i).value;
+					break;
+				}
+			
+			}
+			if(val == 0) {
+				return -120;
+			}
+//		}
+		return  val;
+	}
 }
