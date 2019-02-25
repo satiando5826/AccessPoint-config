@@ -1407,32 +1407,54 @@ public class DOrun {
 	public void geneticAlgorithm(){	
 		int popSize = 10;
 		ArrayList<Float> fitnessList = new ArrayList<Float>();
-		ArrayList<ArrayList<Integer> > popuration =  new ArrayList<ArrayList<Integer> >(popSize);
+		ArrayList<ArrayList<Integer> > popuration =  new ArrayList<ArrayList<Integer>>();
 	    
 		for(int i = 0;i<popSize;i++) {
 			System.out.println("gene " + (i+1));
-			initRandom(Drawingpanel.APs);
-			popuration.add(ptAPs(Drawingpanel.APs));
+			initRandom(Drawingpanel.APs,popuration);
 			fitnessList.add(geneFitness());
-			emergencyRefresh();
 		}
+		showBestFitness(fitnessList,popuration);
+		
 //		ArrayList<Integer> gene = ptAPs(Drawingpanel.APs);
 	}
 
-	public void initRandom(ArrayList<AP> _APs) {	
+	public void showBestFitness(ArrayList<Float> fitnessList, ArrayList<ArrayList<Integer>> popuration) {
+		Float best = (float) -99999;
+		int index = 0;
+		for(int i = 0;i<fitnessList.size();i++) {
+			if(fitnessList.get(i)>best) {
+				best=fitnessList.get(i);
+				index = i;
+			}
+		}
+		System.out.println("Best: gene " + index);
+		for(int i=0;i<Drawingpanel.APs.size();i++) {
+			int pt = popuration.get(index).get(i);
+			Drawingpanel.APs.get(i).setPT(pt);
+		}
+		emergencyRefresh();
+	}
+
+	public void initRandom(ArrayList<AP> _APs, ArrayList<ArrayList<Integer>> popuration) {	
 		Random rand = new Random();
 		int n;
 		for(int i = 0; i<Drawingpanel.APs.size();i++){//init random gene
 			n = rand.nextInt(20)-10;
 			Drawingpanel.APs.get(i).setPT(n);
-//			System.out.println("pt" + i +"=" + n + "\t ");
+			System.out.print("pt" + i +"=" + n + "\t ");
 		}
+		System.out.println();
+		ArrayList<Integer> pt = ptAPs(Drawingpanel.APs);
+		popuration.add(pt);
+		emergencyRefresh();
 	}
 	
 	public ArrayList<Integer> ptAPs(ArrayList<AP> _APs ) {// make gene form current value of pt from AP
 		ArrayList<Integer> ptList = new ArrayList<Integer>();
-		for(int i = 0; i>_APs.size();i++){
+		for(int i = 0; i<_APs.size();i++){
 			ptList.add(_APs.get(i).pt);
+//			System.out.println("ptAP" + i +"=" + _APs.get(i).pt + "\t ");
 		}
 		return ptList;
 	}
@@ -1457,15 +1479,13 @@ public class DOrun {
 	
 	public float geneFitness() {// Power level
 		float fr = 0;
-		float fs = 0;
 	    float total = 0;
 		for(int i = 0;i<Drawingpanel.Detecs.size();i++) {
 			fr += getVal(Drawingpanel.Detecs.get(i).getPos());
-			System.out.println("val:"+getVal(Drawingpanel.Detecs.get(i).getPos())+"comulative fr:"+fr);
-			
+//			System.out.println("val:"+getVal(Drawingpanel.Detecs.get(i).getPos())+" comulative fr:"+fr);		
 		}
-		fs = -30*Drawingpanel.overthreadhold;
-		total = fs+fr;
+//		fs = -30*Drawingpanel.overthreadhold;
+		total = fr;
 		System.out.println("Fitness:" + total);
 		return total;
 	}
