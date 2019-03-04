@@ -18,6 +18,7 @@ public class AP implements Serializable{
 	public float curK;
 	public float posxf,posyf;
 	public int posx,posy;
+	public int channel=0;
 	
 	 
 	public AP(){

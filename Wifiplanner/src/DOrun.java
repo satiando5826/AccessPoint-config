@@ -46,6 +46,7 @@ import java.awt.GridLayout;
 import java.awt.List;
 import java.awt.Point;
 import java.awt.Toolkit;
+import java.util.Collections;
 
 import java.awt.event.MouseMotionAdapter;
 import javax.swing.JMenuBar;
@@ -1412,7 +1413,8 @@ public class DOrun {
 		ArrayList<ArrayList<Integer> > population =  new ArrayList<ArrayList<Integer>>();
 	    
 		for(int i = 0;i<popSize;i++) {
-			System.out.println("gene " + (i+1));
+			System.out.println();
+			System.out.println("gene " + i);
 			initRandom(Drawingpanel.APs,population);
 			fitnessList.add(geneFitness());
 		}
@@ -1440,30 +1442,80 @@ public class DOrun {
             while (l == i || l == j || k == l)
                 l = rand.nextInt(size);
  
-            ArrayList<Integer> c1 = population.get(i);
-            ArrayList<Integer> c2 = population.get(j);
-            ArrayList<Integer> c3 = population.get(k);
-            ArrayList<Integer> c4 = population.get(l);
+            Individual c1 = new Individual(population.get(i));
+            Individual c2 = new Individual(population.get(j));
+            Individual c3 = new Individual(population.get(k));
+            Individual c4 = new Individual(population.get(l));
  
             Float f1 = fitnessList.get(i);
             Float f2 = fitnessList.get(j);
             Float f3 = fitnessList.get(k);
-            Float f4 =fitnessList.get(l);
+            Float f4 = fitnessList.get(l);
  
             ArrayList<Integer> w1, w2;
  
-            if (f1 > f2)
-                w1 = c1;
-            else
-                w1 = c2;
- 
-            if (f3 > f4)
-                w2 = c3;
-            else
-                w2 = c4;
- 
-            ArrayList<Integer> child1, child2;
+            if (f1 > f2) {
+                w1 = c1.pts;
+                System.out.println("win1=" + i);
+            }
+            else {
+                w1 = c2.pts;
+                System.out.println("win1=" + j);
+            }
+            if (f3 > f4) {
+                w2 = c3.pts;
+                System.out.println("win2=" + k);
+            }
+            else {
+                w2 = c4.pts;
+                System.out.println("win2=" + l);
+            }
+            if(newpopulation.size() < population.size() * (1.0-parentUseRate)) {//cross over
+            	ArrayList<Integer> child1,child2;
+            	child1 = w1;
+        		child2 = w2;
+        		int index = rand.nextInt(w1.size());
+        		System.out.println("crossover index is " + index);
+        		for(int i1=0;i1<index;i1++) {
+        			child2.set(i1, w1.get(i1));
+        		}
+            	for(int j1=index;j1<w1.size();j1++) {
+            		child1.set(j1, w2.get(j1));
+            	}
+            	newpopulation.add(child1);
+            	newpopulation.add(child2);
+            }
 		}
+		if(newpopulation.size()>population.size() * (1.0-parentUseRate)) {
+			newpopulation.remove(newpopulation.size()-1);
+		}
+		sortFitness(population,fitnessList);
+		System.out.println("print population : "+population);
+	}
+	private void sortFitness(ArrayList<ArrayList<Integer>> population, ArrayList<Float> fitnessList) {//Insertion Sort
+		ArrayList<Integer> index = new ArrayList<Integer>();
+		ArrayList<ArrayList<Integer>> tmppop= new ArrayList<ArrayList<Integer>>();
+		for(int i = 0;i<population.size();i++) {
+			index.add(i);
+		}
+		System.out.println("population size: "+ population.size()+" \tindex size: " + index.size());
+		for(int j = 1;j<fitnessList.size();j++) {
+			int k = j;
+			while(fitnessList.get(k)<fitnessList.get(k-1)) {
+				Collections.swap(fitnessList, k, k-1);
+				Collections.swap(index, k, k-1);
+				k--;
+				if(k==0) break;
+			}
+		}
+		System.out.println("index sort: " + index);
+		
+		for(int i = 0;i<population.size();i++) {
+			tmppop.add(population.get(index.get(i)));
+		}
+		population = tmppop;
+		System.out.println();
+		System.out.println("Sorted population: "+population);
 	}
 
 	public void showBestFitness(ArrayList<Float> fitnessList, ArrayList<ArrayList<Integer>> population) {
@@ -1475,6 +1527,7 @@ public class DOrun {
 				index = i;
 			}
 		}
+		System.out.println();
 		System.out.println("Best: gene " + index);
 		for(int i=0;i<Drawingpanel.APs.size();i++) {
 			int pt = population.get(index).get(i);
@@ -1486,12 +1539,14 @@ public class DOrun {
 	public void initRandom(ArrayList<AP> _APs, ArrayList<ArrayList<Integer>> population) {	
 		Random rand = new Random();
 		int n;
+		System.out.print("pt[");
 		for(int i = 0; i<Drawingpanel.APs.size();i++){//init random gene
 			n = rand.nextInt(20)-10;
 			Drawingpanel.APs.get(i).setPT(n);
-			System.out.print("pt" + (i+1) +"=" + n + "\t ");
+//			System.out.print("pt" + (i+1) +"=" + n + "\t ");
+			System.out.print(n+", ");
 		}
-		System.out.println();
+		System.out.println("]");
 		ArrayList<Integer> pt = ptAPs(Drawingpanel.APs);
 		population.add(pt);
 		emergencyRefresh();
