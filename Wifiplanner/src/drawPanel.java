@@ -383,6 +383,14 @@ public class drawPanel extends JPanel implements Serializable {
         			  float dist = (tempDistP*gridDist)/gw;//convert Pixel to Meter
         			//  System.out.println(APs.get(k).freq);
         			  float tempVal = spl(dist,APshow.get(k).curK,APshow.get(k).pt);//calculate spl
+        			  int tempChannel = APs.get(k).channel;
+//        			  System.out.println("spotapshow pt"+APshow.get(k).pt);
+//        			  System.out.println("spotaps pt"+APshow.get(k).pt);
+        			  
+//        			  System.out.println("spotapshow channel "+APshow.get(k).channel);
+//        			  System.out.println("spotaps channel "+APs.get(k).channel);
+//        			  System.out.println("spot chan"+tempChannel);
+        			  
         			  ArrayList<Float> PAFS = new ArrayList<Float>();
         			  PAFS = ipm(APshow.get(k).posx,APshow.get(k).posy,i,j);//find how many walls in the line of sign
         			  
@@ -399,6 +407,7 @@ public class drawPanel extends JPanel implements Serializable {
         					 Spots.get(checkDup).value = tempVal;//update new value to old spot
         					// Color c = findColor(tempSpot.value);
         					// Spots.get(checkDup).setColor(c);
+        					 Spots.get(checkDup).channel = tempChannel;
         				 }
         				 if(tempVal-Spots.get(checkDup).value >= 30 || tempVal-Spots.get(checkDup).value <= -30 ) {
         					 overthreadhold+=1;

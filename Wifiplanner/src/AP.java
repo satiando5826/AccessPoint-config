@@ -18,7 +18,7 @@ public class AP implements Serializable{
 	public float curK;
 	public float posxf,posyf;
 	public int posx,posy;
-	public int channel=0;
+	public int channel;
 	
 	 
 	public AP(){
@@ -70,6 +70,9 @@ public class AP implements Serializable{
 		pt = pt_;
 	}
 	
+	public void setChannel(int channel_) {
+		channel = channel_;
+	}
 
 	/*public boolean isThereInterfere(Point AnotherApPos) { 
 	    return AreaPos.contains(AnotherApPos); 

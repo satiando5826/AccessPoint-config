@@ -1539,12 +1539,16 @@ public class DOrun {
 	public void initRandom(ArrayList<AP> _APs, ArrayList<ArrayList<Integer>> population) {	
 		Random rand = new Random();
 		int n;
-		System.out.print("pt[");
+		int cha;
+		System.out.print("pt_channel[");
 		for(int i = 0; i<Drawingpanel.APs.size();i++){//init random gene
-			n = rand.nextInt(20)-10;
+			n = rand.nextInt(20)-1;
+			cha = rand.nextInt(3)*5+1;
 			Drawingpanel.APs.get(i).setPT(n);
+			Drawingpanel.APs.get(i).setChannel(cha);
 //			System.out.print("pt" + (i+1) +"=" + n + "\t ");
-			System.out.print(n+", ");
+			System.out.print(n+"_"+cha+", ");
+//			System.out.println("ap cha"+Drawingpanel.APs.get(i).channel);
 		}
 		System.out.println("]");
 		ArrayList<Integer> pt = ptAPs(Drawingpanel.APs);
@@ -1580,19 +1584,23 @@ public class DOrun {
 	}
 	
 	public float geneFitness() {// Power level
-		float fr = 0;
+		Drawingpanel.reCal();
+		float fs = 0;
+		float fp = 0;
 	    float total = 0;
+	    int lastChannel=0;
 		for(int i = 0;i<Drawingpanel.Detecs.size();i++) {
-			fr += getVal(Drawingpanel.Detecs.get(i).getPos());
+			fs += getVal(Drawingpanel.Detecs.get(i).getPos(),lastChannel);
+			
 //			System.out.println("val:"+getVal(Drawingpanel.Detecs.get(i).getPos())+" comulative fr:"+fr);		
 		}
 //		fs = -30*Drawingpanel.overthreadhold;
-		total = fr;
+		total = fs;
 		System.out.println("Fitness:" + total);
 		return total;
 	}
 	
-	public float getVal(Point _loc) {
+	public float getVal(Point _loc,int _lastChannel) {
 		float val = 0;
 //		Point test = new Point(100,100);
 		Point cen1 = new Point(_loc.x-(_loc.x%30),_loc.y-(_loc.y%30));
@@ -1604,6 +1612,9 @@ public class DOrun {
 			for(int i=0;i<Drawingpanel.Spots.size();i++){
 				if(Drawingpanel.Spots.get(i).getPos().equals(cen1)){// Point p
 					val += Drawingpanel.Spots.get(i).value;
+					_lastChannel = Drawingpanel.Spots.get(i).channel;
+					System.out.println("spot channel "+ _lastChannel );
+//					System.out.println("spots values "+Drawingpanel.Spots.get(i).values);
 					break;
 				}
 			

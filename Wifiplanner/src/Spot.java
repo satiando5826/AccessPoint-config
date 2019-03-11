@@ -12,7 +12,9 @@ public class Spot implements Serializable {
 private Point pos;
 
 public ArrayList<Float> values = new ArrayList<Float>();
+public ArrayList<Integer> channels = new ArrayList<Integer>();
 public float value;
+public int channel;
 public float Maxval;
 public Color sc;
 Spot(Point _pos,float _val){
@@ -36,12 +38,15 @@ public float getVal(){
 	
 	return value;
 }
+public float getChannel(){
+	
+	return channel;
+}
 public float getMaxVal(){
 	float Max = -999;
 	for(float temp:values){
 		if(temp>Max)
 			Max = temp;
-		
 	}
 	return Max;
 	
@@ -59,6 +64,9 @@ public void setMaxval(){
 public void addVal(float _val){
 	values.add(_val);
 	
+}
+public void addChannel(int _channel){
+	channels.add(_channel);
 }
 
 
