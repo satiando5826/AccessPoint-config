@@ -17,10 +17,18 @@ public float value;
 public int channel;
 public float Maxval;
 public Color sc;
+
 Spot(Point _pos,float _val){
 	pos = _pos;
 	value = _val;
 }
+
+Spot(Point _pos,float _val,int _channel){
+	pos = _pos;
+	value = _val;
+	channel = _channel;
+}
+
 public Point getPos(){
 	return pos;
 	

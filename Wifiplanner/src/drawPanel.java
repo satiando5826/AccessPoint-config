@@ -385,8 +385,8 @@ public class drawPanel extends JPanel implements Serializable {
         			  float tempVal = spl(dist,APshow.get(k).curK,APshow.get(k).pt);//calculate spl
         			  int tempChannel = APs.get(k).channel;
 //        			  System.out.println("spotapshow pt"+APshow.get(k).pt);
-//        			  System.out.println("spotaps pt"+APshow.get(k).pt);
-        			  
+//        			  System.out.println("spotaps pt"+APs.get(k).pt);
+//        			  
 //        			  System.out.println("spotapshow channel "+APshow.get(k).channel);
 //        			  System.out.println("spotaps channel "+APs.get(k).channel);
 //        			  System.out.println("spot chan"+tempChannel);
@@ -400,7 +400,7 @@ public class drawPanel extends JPanel implements Serializable {
         			  }
         			  if(tempVal >= -90){//if val > -100  add it to Spots
         		
-        			 Spot tempSpot = new Spot(new Point(i,j),tempVal);
+        			 Spot tempSpot = new Spot(new Point(i,j),tempVal,tempChannel);
         			 int checkDup = findDupSpot(new Point(i,j));//check duplicate spot
         			 if(checkDup != -1){//if found
         				 if(tempVal > Spots.get(checkDup).value){//if new spot is greater than old spot
@@ -408,6 +408,9 @@ public class drawPanel extends JPanel implements Serializable {
         					// Color c = findColor(tempSpot.value);
         					// Spots.get(checkDup).setColor(c);
         					 Spots.get(checkDup).channel = tempChannel;
+//        					 System.out.println("temp channel  :"+tempChannel);
+//        					 System.out.println("spots.channel :"+Spots.get(checkDup).channel);
+        					 
         				 }
         				 if(tempVal-Spots.get(checkDup).value >= 30 || tempVal-Spots.get(checkDup).value <= -30 ) {
         					 overthreadhold+=1;

@@ -1590,6 +1590,8 @@ public class DOrun {
 	    float total = 0;
 	    int lastChannel=0;
 		for(int i = 0;i<Drawingpanel.Detecs.size();i++) {
+			System.out.println("Detect: "+i+"______________");
+			pointSignals(Drawingpanel.Detecs.get(i).getPos());
 			fs += getVal(Drawingpanel.Detecs.get(i).getPos(),lastChannel);
 			
 //			System.out.println("val:"+getVal(Drawingpanel.Detecs.get(i).getPos())+" comulative fr:"+fr);		
@@ -1613,8 +1615,9 @@ public class DOrun {
 				if(Drawingpanel.Spots.get(i).getPos().equals(cen1)){// Point p
 					val += Drawingpanel.Spots.get(i).value;
 					_lastChannel = Drawingpanel.Spots.get(i).channel;
-					System.out.println("spot channel "+ _lastChannel );
+//					System.out.println("spot channel "+ _lastChannel);
 //					System.out.println("spots values "+Drawingpanel.Spots.get(i).values);
+					
 					break;
 				}
 			
@@ -1624,5 +1627,29 @@ public class DOrun {
 			}
 //		}
 		return  val;
+	}
+	
+	public SpotSignal pointSignals(Point _loc) {
+		ArrayList<Float> pointVals = new ArrayList<Float>();
+		ArrayList<Integer> pointChannels = new ArrayList<Integer>();	
+		for(int i = 0;i<Drawingpanel.APs.size();i++) {
+			float tempDistP =(float) Point.distance(_loc.getX(), _loc.getY(),Drawingpanel.APshow.get(i).posx ,Drawingpanel.APshow.get(i).posy);//distance from ij to AP in pixel
+   		  	if(tempDistP<=Drawingpanel.gridDistP){//if it's less than 70m( in pixel unit) gridDistP is defined in Testrun1
+   		  		float dist = (tempDistP*Drawingpanel.gridDist)/Drawingpanel.gw;
+   		  		float tempVal = Drawingpanel.spl(dist,Drawingpanel.APshow.get(i).curK,Drawingpanel.APshow.get(i).pt);//calculate spl
+   		  		int tempChannel = Drawingpanel.APs.get(i).channel;
+   		  		ArrayList<Float> PAFS = new ArrayList<Float>();
+   		  		PAFS = Drawingpanel.ipm(Drawingpanel.APshow.get(i).posx,Drawingpanel.APshow.get(i).posy,_loc.x,_loc.y);//find how many walls in the line of sign
+   		  		for(int m=0; m<PAFS.size();m++){
+				  tempVal= tempVal + PAFS.get(m);// Path loss + obstacles 
+   		  		}
+   		  		pointVals.add(tempVal);
+   		  		pointChannels.add(tempChannel);
+   		  		System.out.println("AP:"+i+" val:"+tempVal+" channel:"+tempChannel);
+   		  	}
+   		  	
+		}
+		SpotSignal signals = new  SpotSignal(pointVals,pointChannels);		
+		return signals; 
 	}
 }
