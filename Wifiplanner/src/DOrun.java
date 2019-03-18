@@ -1589,20 +1589,32 @@ public class DOrun {
 		float fp = 0;
 	    float total = 0;
 	    int lastChannel=0;
+	    float tmpVal = -200;
+	    float penalty = 0;
 		for(int i = 0;i<Drawingpanel.Detecs.size();i++) {
 			System.out.println("Detect: "+i+"______________");
-			pointSignals(Drawingpanel.Detecs.get(i).getPos());
-			fs += getVal(Drawingpanel.Detecs.get(i).getPos(),lastChannel);
+			SpotSignal currentSignal = pointSignals(Drawingpanel.Detecs.get(i).getPos());
+			tmpVal = getVal(Drawingpanel.Detecs.get(i).getPos(),lastChannel);
+			fs += tmpVal;
+			for (int j = 0; j < currentSignal.vals.size(); j++) {
+				System.out.println("current channel is "+ currentSignal.channels.get(mostValIndex(currentSignal)) + "this vals Channel is " + currentSignal.channels.get(j));
+				if(currentSignal.channels.get(j)==currentSignal.channels.get(mostValIndex(currentSignal))) {
+					System.out.println("*****penalty*****");
+
+					penalty += tmpVal+Math.abs(tmpVal-currentSignal.vals.get(j)); 
+				}
+			}
+			fp += tmpVal-penalty;
 			
 //			System.out.println("val:"+getVal(Drawingpanel.Detecs.get(i).getPos())+" comulative fr:"+fr);		
 		}
 //		fs = -30*Drawingpanel.overthreadhold;
-		total = fs;
-		System.out.println("Fitness:" + total);
+		total = fs-fp;
+		System.out.println("Fitness = fs - fp = "+fs+" - "+fp +" = "+ total);
 		return total;
 	}
 	
-	public float getVal(Point _loc,int _lastChannel) {
+	public float getVal(Point _loc,int _lastChannel) {//get the most val
 		float val = 0;
 //		Point test = new Point(100,100);
 		Point cen1 = new Point(_loc.x-(_loc.x%30),_loc.y-(_loc.y%30));
@@ -1617,7 +1629,6 @@ public class DOrun {
 					_lastChannel = Drawingpanel.Spots.get(i).channel;
 //					System.out.println("spot channel "+ _lastChannel);
 //					System.out.println("spots values "+Drawingpanel.Spots.get(i).values);
-					
 					break;
 				}
 			
@@ -1627,6 +1638,18 @@ public class DOrun {
 			}
 //		}
 		return  val;
+	}
+	
+	public int mostValIndex(SpotSignal _signals) {
+		int index=-1;
+		float val = -200;
+		for (int i = 0; i < _signals.vals.size(); i++) {
+			if(_signals.vals.get(i)>val) {
+				val= _signals.vals.get(i);
+				index = i;
+			}
+		}
+		return index;
 	}
 	
 	public SpotSignal pointSignals(Point _loc) {
@@ -1645,10 +1668,11 @@ public class DOrun {
    		  		}
    		  		pointVals.add(tempVal);
    		  		pointChannels.add(tempChannel);
-   		  		System.out.println("AP:"+i+" val:"+tempVal+" channel:"+tempChannel);
+//   		  		System.out.println("AP:"+i+" val:"+tempVal+" channel:"+tempChannel);
    		  	}
-   		  	
+   		 
 		}
+		System.out.println(pointVals + "   " + pointChannels);
 		SpotSignal signals = new  SpotSignal(pointVals,pointChannels);		
 		return signals; 
 	}
