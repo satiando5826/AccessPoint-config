@@ -1438,11 +1438,15 @@ public class DOrun {
 	private void mutate(ArrayList<ArrayList<Integer>> population, Float mutaterate,int _powMax) {
 		ArrayList<ArrayList<Integer>> newpopulation = new ArrayList<ArrayList<Integer>> ();
 		Random rand = new Random();
+		int mutateVal = rand.nextInt(_powMax);
 		for(int i=0; i<population.size(); i++) {
 			newpopulation.add(population.get(i));
 			for(int j=0; j<newpopulation.get(i).size();j++) {
 				if(rand.nextInt(100)<=mutaterate*100) {
-					newpopulation.get(i).set(j, rand.nextInt(_powMax));
+					while(newpopulation.get(i).get(j)==mutateVal) {
+						mutateVal = rand.nextInt(_powMax);
+					}
+					newpopulation.get(i).set(j, mutateVal);
 					System.out.println(("mutate at pop "+i+"gene "+j+" set to "+newpopulation.get(i).get(j)));
 				}
 			}
@@ -1468,12 +1472,26 @@ public class DOrun {
                 k = rand.nextInt(size);
             while (l == i || l == j || k == l)
                 l = rand.nextInt(size);
- 
+//            System.out.println("Candidate :"+i+" "+j+" "+k+" "+l+" ");
+//            System.out.println("c1 ="+population.get(i));
+//            System.out.println("c2 ="+population.get(j));
+//            System.out.println("c3 ="+population.get(k));
+//            System.out.println("c4 ="+population.get(l));
+            
             Individual c1 = new Individual(population.get(i));
             Individual c2 = new Individual(population.get(j));
             Individual c3 = new Individual(population.get(k));
             Individual c4 = new Individual(population.get(l));
- 
+//          
+//            ArrayList<Integer> c1 = population.get(i);
+//            ArrayList<Integer> c2 = population.get(j);
+//            ArrayList<Integer> c3 = population.get(k);
+//            ArrayList<Integer> c4 = population.get(l);
+//            System.out.println("c1 is gene "+i+" = "+c1.pts);
+//            System.out.println("c2 is gene "+j+" = "+c2.pts);
+//            System.out.println("c3 is gene "+k+" = "+c3.pts);
+//            System.out.println("c4 is gene "+l+" = "+c4.pts);
+            
             Float f1 = fitnessList.get(i);
             Float f2 = fitnessList.get(j);
             Float f3 = fitnessList.get(k);
@@ -1483,51 +1501,62 @@ public class DOrun {
  
             if (f1 > f2) {
                 w1 = c1.pts;
-                System.out.println("win1=" + i);
+//                System.out.println("win1=" + i);
             }
             else {
                 w1 = c2.pts;
-                System.out.println("win1=" + j);
+//                System.out.println("win1=" + j);
             }
             if (f3 > f4) {
                 w2 = c3.pts;
-                System.out.println("win2=" + k);
+//                System.out.println("win2=" + k);
             }
             else {
                 w2 = c4.pts;
-                System.out.println("win2=" + l);
+//                System.out.println("win2=" + l);
             }
-            if(newpopulation.size() < population.size() * (1.0-parentUseRate)) {//cross over
-            	ArrayList<Integer> child1,child2;
-            	child1 = w1;
-        		child2 = w2;
+            while(newpopulation.size() < population.size() * (1.0-parentUseRate)) {//cross over
+            	ArrayList<Integer> child1 = new ArrayList<Integer>();
+            	ArrayList<Integer> child2 = new ArrayList<Integer>();
+            	child1.addAll(w1);
+            	child2.addAll(w2);
         		int index = rand.nextInt(w1.size());
-        		System.out.println("crossover index is " + index);
+//        		System.out.println("crossover index is " + index);
+        		for(int j1=index;j1<w1.size();j1++) {
+            		child1.set(j1, w2.get(j1));
+            		child2.set(j1, w1.get(j1));
+            	}
         		for(int i1=0;i1<index;i1++) {
         			child2.set(i1, w1.get(i1));
-        	
+        			child2.set(i1, w2.get(i1));
         		}
-            	for(int j1=index;j1<w1.size();j1++) {
-            		child1.set(j1, w2.get(j1));
-            		
-            	}
-            	System.out.println("w1 "+w1);
-            	System.out.println("w2 "+w2);
             	
-            	System.out.println("child 1 "+child1);
-            	System.out.println("child 2 "+child2);
+//            	System.out.println("w1 "+w1);
+//            	System.out.println("w2 "+w2);
+//            	
+//            	System.out.println("child 1 "+child1);
+//            	System.out.println("child 2 "+child2);
             	newpopulation.add(child1);
             	newpopulation.add(child2);
             }
+//            while(newpopulation.size()>population.size() * (1.0-parentUseRate)) {
+//    			newpopulation.remove(newpopulation.size()-1);
+//    			System.out.println("DELETE excess POP");
+//    		}
+    		for(int p= (int) (population.size()*parentUseRate);p<population.size() * (1.0-parentUseRate);p++) {
+//    			System.out.println("index p "+p);
+    			population.set(p, newpopulation.get(p));
+    		}
+			System.out.println("old population     " + population);
+			System.out.println("new population     "+ newpopulation);
+			System.out.println("Current population " + population);
 		}
-		if(newpopulation.size()>population.size() * (1.0-parentUseRate)) {
-			newpopulation.remove(newpopulation.size()-1);
-		}
+		
 		sortFitness(population,fitnessList);
-		for(int i = (int) (population.size()*(1.0-parentUseRate));i<population.size()*(1.0-parentUseRate);i++) {
-			population.set(i, newpopulation.get(i));
-		}
-		System.out.println("print population : "+population);
+//		for(int i = (int) (population.size()*(1.0-parentUseRate));i<population.size()*(1.0-parentUseRate);i++) {
+//			population.set(i, newpopulation.get(i));
+//		}
+//		System.out.println("print population : "+population);
 	}
 	private void sortFitness(ArrayList<ArrayList<Integer>> population, ArrayList<Float> fitnessList) {//Insertion Sort
 		ArrayList<Integer> index = new ArrayList<Integer>();
