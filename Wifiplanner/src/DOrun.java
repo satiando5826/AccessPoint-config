@@ -1407,7 +1407,10 @@ public class DOrun {
 	
 	public void geneticAlgorithm(){	
 		int popSize = 10;
-		Float mutaterate = (float) 0.2;
+		int powMax = 20;
+		int maxPop = -99999;
+		int maxRound = 10; //Max round of genetic
+		Float mutaterate = (float) 0.005;
 		Float parentUseRate = (float) 0.3;
 		ArrayList<Float> fitnessList = new ArrayList<Float>();
 		ArrayList<ArrayList<Integer> > population =  new ArrayList<ArrayList<Integer>>();
@@ -1415,16 +1418,40 @@ public class DOrun {
 		for(int i = 0;i<popSize;i++) {
 			System.out.println();
 			System.out.println("gene " + i);
-			initRandom(Drawingpanel.APs,population);
+			initRandom(Drawingpanel.APs,population,powMax);
 			fitnessList.add(geneFitness());
 		}
-		showBestFitness(fitnessList,population);
-		mate(fitnessList,population,mutaterate,parentUseRate);
+		Float bestFitValue;
+		int round=1;
+		do {
+			round++;
+			bestFitValue = showBestFitness(fitnessList,population);
+			mate(fitnessList,population,parentUseRate);
+			mutate(population,mutaterate,powMax);
+			System.out.println("_ _ _ _ _ _ __ _ _ _ _ _ __ _ _ _ _ _ __ _ _ _ _ _ __ _ _ _ _ _ __ _ _ _ _ _ __ _ _ _ _ _ _");
+			System.out.println("round "+round+" BestFitness: "+bestFitValue);
+		}while(bestFitValue>=-100.0 || round<=maxRound);
 		
 //		ArrayList<Integer> gene = ptAPs(Drawingpanel.APs);
 	}
 
-	private void mate(ArrayList<Float> fitnessList, ArrayList<ArrayList<Integer>> population, Float mutaterate, Float parentUseRate) {
+	private void mutate(ArrayList<ArrayList<Integer>> population, Float mutaterate,int _powMax) {
+		ArrayList<ArrayList<Integer>> newpopulation = new ArrayList<ArrayList<Integer>> ();
+		Random rand = new Random();
+		for(int i=0; i<population.size(); i++) {
+			newpopulation.add(population.get(i));
+			for(int j=0; j<newpopulation.get(i).size();j++) {
+				if(rand.nextInt(100)<=mutaterate*100) {
+					newpopulation.get(i).set(j, rand.nextInt(_powMax));
+					System.out.println(("mutate at pop "+i+"gene "+j+" set to "+newpopulation.get(i).get(j)));
+				}
+			}
+		}
+		population = newpopulation;
+		System.out.println("print population : "+population);
+	}
+
+	private void mate(ArrayList<Float> fitnessList, ArrayList<ArrayList<Integer>> population, Float parentUseRate) {
 		ArrayList<ArrayList<Integer>> newpopulation = new ArrayList<ArrayList<Integer>> ();
 		Random rand = new Random();
 		while (newpopulation.size() < population.size() * (1.0-parentUseRate)) {
@@ -1478,10 +1505,17 @@ public class DOrun {
         		System.out.println("crossover index is " + index);
         		for(int i1=0;i1<index;i1++) {
         			child2.set(i1, w1.get(i1));
+        	
         		}
             	for(int j1=index;j1<w1.size();j1++) {
             		child1.set(j1, w2.get(j1));
+            		
             	}
+            	System.out.println("w1 "+w1);
+            	System.out.println("w2 "+w2);
+            	
+            	System.out.println("child 1 "+child1);
+            	System.out.println("child 2 "+child2);
             	newpopulation.add(child1);
             	newpopulation.add(child2);
             }
@@ -1490,6 +1524,9 @@ public class DOrun {
 			newpopulation.remove(newpopulation.size()-1);
 		}
 		sortFitness(population,fitnessList);
+		for(int i = (int) (population.size()*(1.0-parentUseRate));i<population.size()*(1.0-parentUseRate);i++) {
+			population.set(i, newpopulation.get(i));
+		}
 		System.out.println("print population : "+population);
 	}
 	private void sortFitness(ArrayList<ArrayList<Integer>> population, ArrayList<Float> fitnessList) {//Insertion Sort
@@ -1518,7 +1555,7 @@ public class DOrun {
 		System.out.println("Sorted population: "+population);
 	}
 
-	public void showBestFitness(ArrayList<Float> fitnessList, ArrayList<ArrayList<Integer>> population) {
+	public Float showBestFitness(ArrayList<Float> fitnessList, ArrayList<ArrayList<Integer>> population) {
 		Float best = (float) -99999;
 		int index = 0;
 		for(int i = 0;i<fitnessList.size();i++) {
@@ -1534,15 +1571,16 @@ public class DOrun {
 			Drawingpanel.APs.get(i).setPT(pt);
 		}
 		emergencyRefresh();
+		return best;
 	}
 
-	public void initRandom(ArrayList<AP> _APs, ArrayList<ArrayList<Integer>> population) {	
+	public void initRandom(ArrayList<AP> _APs, ArrayList<ArrayList<Integer>> population, int _powMax) {	
 		Random rand = new Random();
 		int n;
 		int cha;
 		System.out.print("pt_channel[");
 		for(int i = 0; i<Drawingpanel.APs.size();i++){//init random gene
-			n = rand.nextInt(20)-1;
+			n = rand.nextInt(_powMax)-1;
 			cha = rand.nextInt(3)*5+1;
 			Drawingpanel.APs.get(i).setPT(n);
 			Drawingpanel.APs.get(i).setChannel(cha);
