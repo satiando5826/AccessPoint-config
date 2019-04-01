@@ -62,6 +62,8 @@ public class ControlPanel extends JPanel {
 	
 	JComboBox<String> numAP;
 	JComboBox<String> numDetec;
+	JComboBox<String> numChannel;
+	
 	
 
 	
@@ -185,6 +187,11 @@ public class ControlPanel extends JPanel {
 		numDetec = new JComboBox<String>();
 		numDetec.setBounds(124, 35, 50, 20);
 		add(numDetec);
+		
+		numChannel = new JComboBox<String>();
+		numChannel.setBounds(104, 500, 89, 23);
+		
+		add(numChannel);
 		
 		JLabel lblSignalLevelExamples = new JLabel("Signal level examples");
 		lblSignalLevelExamples.setBounds(97, 340, 123, 14);

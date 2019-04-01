@@ -579,6 +579,22 @@ public class DOrun {
                      AP tempAP = new AP(npx,npy,Drawingpanel.curFreq);
                      conPanel.numAP.setModel(model);
                      //
+                  // Drawingpanel.APshow = loaded.APshow_saved;
+                     String[] numChannel = new String[4];
+					 numChannel[0]="all";
+					 numChannel[1]="1";
+					 numChannel[2]="6";
+					 numChannel[3]="11";
+                     DefaultComboBoxModel<String> modelCh = (DefaultComboBoxModel<String>) conPanel.numChannel.getModel();
+					 modelCh.removeAllElements();
+					 for(String temp : numChannel){
+						 modelCh.addElement(temp);
+						 
+					 }
+                     conPanel.numChannel.setModel(modelCh);
+                     Drawingpanel.reCal();
+                     Drawingpanel.repaint();     
+                     //
                      //detec
                      int countD = Drawingpanel.Detecs.size();
                      String[] numDetecs = new String[countD];
@@ -586,14 +602,13 @@ public class DOrun {
 					 for(int h = 1; h< numDetecs.length;h++){
 						 numDetecs[h] = String.valueOf(h);
 					 }
-                     DefaultComboBoxModel<String> modelD = (DefaultComboBoxModel<String>) conPanel.numDetec.getModel();
+//                     DefaultComboBoxModel<String> model = (DefaultComboBoxModel<String>) conPanel.numDetec.getModel();
 					 model.removeAllElements();
 					 for(String temp : numDetecs){
-						 model.addElement(temp);
-						 
+						 model.addElement(temp); 
 					 }
 					 Detec tempDetec = new Detec(npx,npy);
-                     conPanel.numDetec.setModel(modelD);
+                     conPanel.numDetec.setModel(model);
                      Drawingpanel.reCal();
                      Drawingpanel.repaint();           
                    //  System.out.println(loaded.APs_saved.get(0).getPos());
@@ -951,6 +966,7 @@ public class DOrun {
 			public void itemStateChanged(ItemEvent  e) {
 				if(e.getStateChange()==1){
 					int index = conPanel.numAP.getSelectedIndex();
+					System.out.println("select AP " + index);
 //					System.out.println(index+"num");
 					if(index!= 0){
 					Drawingpanel.APshow.clear();
@@ -994,6 +1010,41 @@ public class DOrun {
 					for(int i=0;i<Drawingpanel.Detecs.size();i++){
 						Detec temp = new Detec(Drawingpanel.Detecs.get(i));
 						Drawingpanel.Detecshow.add(temp);
+					}
+					Drawingpanel.reCal();
+					Drawingpanel.repaint();
+				}	
+				}	
+			}
+		});
+		
+		conPanel.numChannel.addItemListener(new ItemListener() {
+			@Override
+			public void itemStateChanged(ItemEvent  e) {
+				if(e.getStateChange()==1){
+					int index = conPanel.numChannel.getSelectedIndex();
+					System.out.println("select channel "+ index);
+//					System.out.println(index+"num");
+					if(index!= 0){
+					Drawingpanel.APshow.clear();
+						//AP temp = new AP(Drawingpanel.APs.get(index).posx,Drawingpanel.APs.get(index).posy,Drawingpanel.APs.get(index).freq);
+					for (int i = 0; i < Drawingpanel.APs.size(); i++) {
+						if(Drawingpanel.APs.get(i).channel==(index-1)*5+1) {
+							AP temp = new AP(Drawingpanel.APs.get(i));
+							Drawingpanel.APshow.add(temp);
+						}
+					}
+					//System.out.println("wdsalijdoiaefjaliwjisle");
+					Drawingpanel.reCal();
+					Drawingpanel.repaint();
+					
+				}else{
+					//Drawingpanel.APshow.clear();
+					//Drawingpanel.APshow = Drawingpanel.APs;
+					Drawingpanel.APshow.clear();
+					for(int i=0;i<Drawingpanel.APs.size();i++){
+						AP temp = new AP(Drawingpanel.APs.get(i));
+						Drawingpanel.APshow.add(temp);
 					}
 					Drawingpanel.reCal();
 					Drawingpanel.repaint();
@@ -1408,17 +1459,17 @@ public class DOrun {
 	public void geneticAlgorithm(){	
 		int popSize = 10;
 		int powMax = 20;
-		int maxPop = -99999;
-		int maxRound = 10; //Max round of genetic
+		int maxRound = 5; //Max round of genetic
 		Float mutaterate = (float) 0.005;
 		Float parentUseRate = (float) 0.3;
 		ArrayList<Float> fitnessList = new ArrayList<Float>();
 		ArrayList<ArrayList<Integer> > population =  new ArrayList<ArrayList<Integer>>();
+		ArrayList<ArrayList<Integer> > populationChannel =  new ArrayList<ArrayList<Integer>>();
 	    
 		for(int i = 0;i<popSize;i++) {
 			System.out.println();
 			System.out.println("gene " + i);
-			initRandom(Drawingpanel.APs,population,powMax);
+			initRandom(Drawingpanel.APs,population,powMax,populationChannel);
 			fitnessList.add(geneFitness());
 		}
 		Float bestFitValue;
@@ -1426,37 +1477,70 @@ public class DOrun {
 		do {
 			round++;
 			bestFitValue = showBestFitness(fitnessList,population);
-			mate(fitnessList,population,parentUseRate);
-			mutate(population,mutaterate,powMax);
+			mate(fitnessList,population,populationChannel,parentUseRate);
+			mutate(population,populationChannel,mutaterate,powMax,parentUseRate);
+			fitnessList.clear();
+			addAllNewFitness(fitnessList,population,populationChannel);
+			bestFitValue = showBestFitness(fitnessList,population);
 			System.out.println("_ _ _ _ _ _ __ _ _ _ _ _ __ _ _ _ _ _ __ _ _ _ _ _ __ _ _ _ _ _ __ _ _ _ _ _ __ _ _ _ _ _ _");
 			System.out.println("round "+round+" BestFitness: "+bestFitValue);
-		}while(bestFitValue>=-100.0 || round<=maxRound);
+			if(round>=maxRound) {
+				break;
+			}
+		}while(bestFitValue>=-100.00);
 		
 //		ArrayList<Integer> gene = ptAPs(Drawingpanel.APs);
 	}
 
-	private void mutate(ArrayList<ArrayList<Integer>> population, Float mutaterate,int _powMax) {
-		ArrayList<ArrayList<Integer>> newpopulation = new ArrayList<ArrayList<Integer>> ();
-		Random rand = new Random();
-		int mutateVal = rand.nextInt(_powMax);
-		for(int i=0; i<population.size(); i++) {
-			newpopulation.add(population.get(i));
-			for(int j=0; j<newpopulation.get(i).size();j++) {
-				if(rand.nextInt(100)<=mutaterate*100) {
-					while(newpopulation.get(i).get(j)==mutateVal) {
-						mutateVal = rand.nextInt(_powMax);
-					}
-					newpopulation.get(i).set(j, mutateVal);
-					System.out.println(("mutate at pop "+i+"gene "+j+" set to "+newpopulation.get(i).get(j)));
-				}
+	private void addAllNewFitness(ArrayList<Float> fitnessList, ArrayList<ArrayList<Integer>> population, ArrayList<ArrayList<Integer>> populationChannel) {
+		for (int i = 0; i < population.size(); i++) {
+			for (int j = 0; j < Drawingpanel.APs.size(); j++) {
+				Drawingpanel.APs.get(j).setPT(population.get(i).get(j));
+				Drawingpanel.APs.get(j).setPT(populationChannel.get(i).get(j));
 			}
+			System.out.println("Find fitness population "+i);
+			fitnessList.add(geneFitness());
 		}
-		population = newpopulation;
-		System.out.println("print population : "+population);
 	}
 
-	private void mate(ArrayList<Float> fitnessList, ArrayList<ArrayList<Integer>> population, Float parentUseRate) {
+	private void mutate(ArrayList<ArrayList<Integer>> population, ArrayList<ArrayList<Integer>> populationChannel, Float mutaterate,int _powMax, Float parentUseRate) {
 		ArrayList<ArrayList<Integer>> newpopulation = new ArrayList<ArrayList<Integer>> ();
+		ArrayList<ArrayList<Integer>> newpopulationChannel = new ArrayList<ArrayList<Integer>> ();
+		Random rand = new Random();
+		int mutateVal = rand.nextInt(_powMax);
+		int mutateCH = rand.nextInt(2)*5+1;
+		for (int i = 0; i < population.size(); i++) {
+			newpopulation.add(population.get(i));
+			newpopulationChannel.add(populationChannel.get(i));
+		}
+		for(int i = (int) (parentUseRate*population.size()); i<population.size(); i++) {
+			for(int j=0; j<newpopulation.get(i).size();j++) {
+				if(rand.nextInt(10000)<=mutaterate*10000) {
+					if(rand.nextInt(2)>=1) {
+						while(newpopulation.get(i).get(j)==mutateVal) {
+							mutateVal = rand.nextInt(_powMax);
+						}
+						newpopulation.get(i).set(j, mutateVal);
+						System.out.println(("mutate at pop "+i+" gene "+j+" set to "+newpopulation.get(i).get(j)));
+					}else {	
+						while(newpopulationChannel.get(i).get(j)==mutateCH) {
+							mutateCH = rand.nextInt(2)*5+1;
+						}
+						newpopulationChannel.get(i).set(j, mutateCH);
+						System.out.println(("mutate at pop_CH "+i+" gene "+j+" set to "+newpopulationChannel.get(i).get(j)));
+					}
+				}
+					
+			}	
+		}
+		population = newpopulation;
+		populationChannel =newpopulationChannel;
+//		System.out.println("print population : "+population);
+	}
+
+	private void mate(ArrayList<Float> fitnessList, ArrayList<ArrayList<Integer>> population, ArrayList<ArrayList<Integer>> populationChannel, Float parentUseRate) {
+		ArrayList<ArrayList<Integer>> newpopulation = new ArrayList<ArrayList<Integer>> ();
+		ArrayList<ArrayList<Integer>> newpopulationChannel = new ArrayList<ArrayList<Integer>> ();
 		Random rand = new Random();
 		while (newpopulation.size() < population.size() * (1.0-parentUseRate)) {
  
@@ -1478,10 +1562,10 @@ public class DOrun {
 //            System.out.println("c3 ="+population.get(k));
 //            System.out.println("c4 ="+population.get(l));
             
-            Individual c1 = new Individual(population.get(i));
-            Individual c2 = new Individual(population.get(j));
-            Individual c3 = new Individual(population.get(k));
-            Individual c4 = new Individual(population.get(l));
+            Individual c1 = new Individual(population.get(i),populationChannel.get(i));
+            Individual c2 = new Individual(population.get(j),populationChannel.get(j));
+            Individual c3 = new Individual(population.get(k),populationChannel.get(k));
+            Individual c4 = new Individual(population.get(l),populationChannel.get(l));
 //          
 //            ArrayList<Integer> c1 = population.get(i);
 //            ArrayList<Integer> c2 = population.get(j);
@@ -1498,38 +1582,49 @@ public class DOrun {
             Float f4 = fitnessList.get(l);
  
             ArrayList<Integer> w1, w2;
- 
+            ArrayList<Integer> chw1, chw2;
             if (f1 > f2) {
                 w1 = c1.pts;
+                chw1 = c1.channels;
 //                System.out.println("win1=" + i);
             }
             else {
                 w1 = c2.pts;
+                chw1 = c2.channels;
 //                System.out.println("win1=" + j);
             }
             if (f3 > f4) {
                 w2 = c3.pts;
+                chw2 = c3.channels;
 //                System.out.println("win2=" + k);
             }
             else {
                 w2 = c4.pts;
+                chw2 = c4.channels;
 //                System.out.println("win2=" + l);
             }
             while(newpopulation.size() < population.size() * (1.0-parentUseRate)) {//cross over
             	ArrayList<Integer> child1 = new ArrayList<Integer>();
             	ArrayList<Integer> child2 = new ArrayList<Integer>();
+            	ArrayList<Integer> child1ch = new ArrayList<Integer>();
+            	ArrayList<Integer> child2ch = new ArrayList<Integer>();
             	child1.addAll(w1);
             	child2.addAll(w2);
+            	child1ch.addAll(chw1);
+            	child2ch.addAll(chw2);
         		int index = rand.nextInt(w1.size());
 //        		System.out.println("crossover index is " + index);
+//        		for(int i1=0;i1<index;i1++) {
+//        			child1.set(i1, w1.get(i1));
+//        			child2.set(i1, w2.get(i1));
+//        		}
         		for(int j1=index;j1<w1.size();j1++) {
             		child1.set(j1, w2.get(j1));
             		child2.set(j1, w1.get(j1));
-            	}
-        		for(int i1=0;i1<index;i1++) {
-        			child2.set(i1, w1.get(i1));
-        			child2.set(i1, w2.get(i1));
+            		child1ch.set(j1, chw2.get(j1));
+            		child2ch.set(j1, chw1.get(j1));
         		}
+        		
             	
 //            	System.out.println("w1 "+w1);
 //            	System.out.println("w2 "+w2);
@@ -1538,18 +1633,25 @@ public class DOrun {
 //            	System.out.println("child 2 "+child2);
             	newpopulation.add(child1);
             	newpopulation.add(child2);
+            	newpopulationChannel.add(child1ch);
+            	newpopulationChannel.add(child2ch);
             }
 //            while(newpopulation.size()>population.size() * (1.0-parentUseRate)) {
 //    			newpopulation.remove(newpopulation.size()-1);
 //    			System.out.println("DELETE excess POP");
 //    		}
+            System.out.println("old population     " + population);
+            System.out.println("old pop_channel    "+ populationChannel);
     		for(int p= (int) (population.size()*parentUseRate);p<population.size() * (1.0-parentUseRate);p++) {
 //    			System.out.println("index p "+p);
     			population.set(p, newpopulation.get(p));
+    			populationChannel.set(p, newpopulationChannel.get(p));
     		}
-			System.out.println("old population     " + population);
 			System.out.println("new population     "+ newpopulation);
+			System.out.println("new pop_channel    "+ newpopulationChannel);
+			
 			System.out.println("Current population " + population);
+			System.out.println("Current pop_channel" + populationChannel);
 		}
 		
 		sortFitness(population,fitnessList);
@@ -1603,7 +1705,7 @@ public class DOrun {
 		return best;
 	}
 
-	public void initRandom(ArrayList<AP> _APs, ArrayList<ArrayList<Integer>> population, int _powMax) {	
+	public void initRandom(ArrayList<AP> _APs, ArrayList<ArrayList<Integer>> population, int _powMax, ArrayList<ArrayList<Integer>> populationChannel) {	
 		Random rand = new Random();
 		int n;
 		int cha;
@@ -1619,7 +1721,9 @@ public class DOrun {
 		}
 		System.out.println("]");
 		ArrayList<Integer> pt = ptAPs(Drawingpanel.APs);
+		ArrayList<Integer> ch = chAPs(Drawingpanel.APs);
 		population.add(pt);
+		populationChannel.add(ch);
 		emergencyRefresh();
 	}
 	
@@ -1630,6 +1734,15 @@ public class DOrun {
 //			System.out.println("ptAP" + i +"=" + _APs.get(i).pt + "\t ");
 		}
 		return ptList;
+	}
+	
+	public ArrayList<Integer> chAPs(ArrayList<AP> _APs ) {
+		ArrayList<Integer> chList = new ArrayList<Integer>();
+		for(int i = 0; i<_APs.size();i++){
+			chList.add(_APs.get(i).channel);
+//			System.out.println("ptAP" + i +"=" + _APs.get(i).pt + "\t ");
+		}
+		return chList;
 	}
 	
 	public void emergencyRefresh() {
@@ -1646,11 +1759,26 @@ public class DOrun {
 			 model.addElement(temp);
 		}
 		conPanel.numAP.setModel(model);
+		
+		String[] numChannel = new String[4];
+		numChannel[0]="all";
+		numChannel[1]="1";
+		numChannel[2]="6";
+		numChannel[3]="11";
+		DefaultComboBoxModel<String> modelCh = (DefaultComboBoxModel<String>) conPanel.numChannel.getModel();
+		modelCh.removeAllElements();
+		for(String temp : numChannel){
+			 modelCh.addElement(temp);
+		}
+		
+		conPanel.numChannel.setModel(modelCh);
+		
 		Drawingpanel.reCal();
 		//refresh
 	}
 	
 	public float geneFitness() {// Power level
+		emergencyRefresh();
 		Drawingpanel.reCal();
 		float fs = 0;
 		float fp = 0;
@@ -1663,10 +1791,10 @@ public class DOrun {
 			SpotSignal currentSignal = pointSignals(Drawingpanel.Detecs.get(i).getPos());
 			tmpVal = getVal(Drawingpanel.Detecs.get(i).getPos(),lastChannel);
 			fs += tmpVal;
-			for (int j = 0; j < currentSignal.vals.size(); j++) {
-				System.out.println("current channel is "+ currentSignal.channels.get(mostValIndex(currentSignal)) + "this vals Channel is " + currentSignal.channels.get(j));
+			for (int j = 0; j < currentSignal.channels.size(); j++) {
+//				System.out.println("current channel is "+ currentSignal.channels.get(mostValIndex(currentSignal)) + "this vals Channel is " + currentSignal.channels.get(j));
 				if(currentSignal.channels.get(j)==currentSignal.channels.get(mostValIndex(currentSignal))) {
-					System.out.println("*****penalty*****");
+					System.out.println("penalty channel "+ currentSignal.channels.get(j)+ " powerlevel AP "+mostValIndex(currentSignal)+" "+tmpVal+" powerlevel AP "+j+" "+currentSignal.vals.get(j));
 
 					penalty += tmpVal+Math.abs(tmpVal-currentSignal.vals.get(j)); 
 				}
@@ -1677,7 +1805,7 @@ public class DOrun {
 		}
 //		fs = -30*Drawingpanel.overthreadhold;
 		total = fs-fp;
-		System.out.println("Fitness = fs - fp = "+fs+" - "+fp +" = "+ total);
+		System.out.println("\nFitness = fs - fp = "+fs+" - "+fp +" = "+ total+"\n");
 		return total;
 	}
 	
