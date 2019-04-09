@@ -822,7 +822,7 @@ public class DOrun {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				 //Drawingpanel.repaint();
-				
+				System.out.println("popsize   "+conPanel.popSize.getText());
 				geneticAlgorithm();	
 			//	 System.out.println(Drawingpanel.scale);
 			}

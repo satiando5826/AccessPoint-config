@@ -202,7 +202,9 @@ public class ControlPanel extends JPanel {
 		lblSignalLevelExamples.setBounds(97, 340, 123, 14);
 		add(lblSignalLevelExamples);
 		
-		
+		popSize = new JTextField();
+		popSize.setBounds(0, 520, 89, 23);
+		add(popSize);
 		
 		exVals1 = new JTextField();
 		exVals1.setBounds(104, 365, 86, 20);
