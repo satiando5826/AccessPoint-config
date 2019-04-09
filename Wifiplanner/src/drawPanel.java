@@ -97,6 +97,13 @@ public class drawPanel extends JPanel implements Serializable {
 	 
 	//Genetic value---------------------------------------
 	 public int overthreadhold = 0;
+	 
+	 public int popSize = 100;
+	 public int powMax = 20;
+	 public int maxRound = 50;
+	 public float mutaterate = (float)0.005;
+	 public float parentUseRate = (float) 0.2;
+	 
 	
 	public drawPanel() {
 		Zoomscale = 1.0;
@@ -104,11 +111,16 @@ public class drawPanel extends JPanel implements Serializable {
 		ShowApOptions();
 	
 	     ScaleLine = new Line(new Point(-1,-1),new Point(-1,-1));
-
-		
-	
 		
 	}
+	public void setGeneticStat(int _popSize, int _powMax,int _maxRound,float _mutaterate,float _parentUseRate) {
+		popSize = _popSize;
+		powMax = _powMax;
+		maxRound = _maxRound;
+		mutaterate = _mutaterate;
+		parentUseRate = _parentUseRate;
+	}
+	
 	public void setPath(File path) throws IOException{
 		BGimgIcon = ImageIO.read(path);
 		//paneWidth = BGimgIcon.getWidth();

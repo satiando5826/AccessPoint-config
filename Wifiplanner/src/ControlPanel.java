@@ -25,6 +25,11 @@ public class ControlPanel extends JPanel {
 	private static final long serialVersionUID = 1L;
 	public JButton btnUpload;
 	public JButton btnNewButton;
+	public JTextField popSize;
+	public JTextField powMax;
+	public JTextField maxRound;
+	public JTextField mutaterate;
+	public JTextField parentUseRate;
 	public JTextField exVals1;
 	public JTextField exVals2;
 	public JTextField exVals3;
@@ -196,6 +201,8 @@ public class ControlPanel extends JPanel {
 		JLabel lblSignalLevelExamples = new JLabel("Signal level examples");
 		lblSignalLevelExamples.setBounds(97, 340, 123, 14);
 		add(lblSignalLevelExamples);
+		
+		
 		
 		exVals1 = new JTextField();
 		exVals1.setBounds(104, 365, 86, 20);

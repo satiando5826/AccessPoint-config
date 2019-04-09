@@ -1,0 +1,3910 @@
+This will be written to the text file
+setpath
+0
+Bughere
+4
+1034,726
+946,484
+1474,308
+1650,308
+1892,330
+1408,814
+1430,1320
+946,1320
+682,1474
+1188,1474
+1650,1188
+682,1254
+1760,726
+1210,990
+*******Start*******
+Genetic Algorithm 
+population size : 100	powerlevelMax = 20	Round : 20
+Mutation rate : 0.005	Parent Rate : 0.2
+Random generate first Population
+gene 0
+pt_channel[14_11, 0_1, 19_1, 9_6, 4_11, 2_11, 10_11, 6_1, find geneFitness
+*************** This is Emergency Refresh ola ola ola ola ola!!!!!! ***************
+
+Detect: 0______________
+MostValIndex (AP_dB): 2_-27.822369
+penalty channel 1 powerlevel AP 2 -28.739313 powerlevel AP 1 -77.26689
+penalty channel 1 powerlevel AP 2 -28.739313 powerlevel AP 7 -95.17856
+
+Detect: 1______________
+MostValIndex (AP_dB): 0_-32.82237
+penalty channel 11 powerlevel AP 0 -33.55462 powerlevel AP 4 -93.21431
+penalty channel 11 powerlevel AP 0 -33.55462 powerlevel AP 5 -99.14315
+penalty channel 11 powerlevel AP 0 -33.55462 powerlevel AP 6 -100.817184
+
+Detect: 2______________
+MostValIndex (AP_dB): 1_-81.90392
+penalty channel 1 powerlevel AP 1 -80.25324 powerlevel AP 2 -92.74446
+penalty channel 1 powerlevel AP 1 -80.25324 powerlevel AP 7 -100.70994
+
+Detect: 3______________
+MostValIndex (AP_dB): 1_-64.78415
+penalty channel 1 powerlevel AP 1 -65.01196 powerlevel AP 2 -79.311134
+penalty channel 1 powerlevel AP 1 -65.01196 powerlevel AP 7 -95.54851
+
+Detect: 4______________
+MostValIndex (AP_dB): 1_-80.46058
+penalty channel 1 powerlevel AP 1 -80.430275 powerlevel AP 2 -81.20694
+penalty channel 1 powerlevel AP 1 -80.430275 powerlevel AP 7 -106.07088
+
+Detect: 5______________
+MostValIndex (AP_dB): 2_-52.903923
+penalty channel 1 powerlevel AP 2 -52.22475 powerlevel AP 1 -86.99286
+penalty channel 1 powerlevel AP 2 -52.22475 powerlevel AP 7 -71.96181
+
+Detect: 6______________
+MostValIndex (AP_dB): 5_-56.419376
+penalty channel 11 powerlevel AP 5 -57.665638 powerlevel AP 0 -70.60736
+penalty channel 11 powerlevel AP 5 -57.665638 powerlevel AP 4 -94.20364
+penalty channel 11 powerlevel AP 5 -57.665638 powerlevel AP 6 -76.92725
+
+Detect: 7______________
+MostValIndex (AP_dB): 6_-53.419376
+penalty channel 11 powerlevel AP 6 -58.0843 powerlevel AP 0 -99.1613
+penalty channel 11 powerlevel AP 6 -58.0843 powerlevel AP 4 -66.80177
+penalty channel 11 powerlevel AP 6 -58.0843 powerlevel AP 5 -70.13716
+
+Detect: 8______________
+MostValIndex (AP_dB): 6_-41.903923
+penalty channel 11 powerlevel AP 6 -43.38232 powerlevel AP 0 -96.085724
+penalty channel 11 powerlevel AP 6 -43.38232 powerlevel AP 4 -67.36234
+penalty channel 11 powerlevel AP 6 -43.38232 powerlevel AP 5 -73.930984
+
+Detect: 9______________
+MostValIndex (AP_dB): 5_-48.290245
+penalty channel 11 powerlevel AP 5 -49.747677 powerlevel AP 0 -81.03306
+penalty channel 11 powerlevel AP 5 -49.747677 powerlevel AP 4 -82.22864
+penalty channel 11 powerlevel AP 5 -49.747677 powerlevel AP 6 -62.438683
+
+Detect: 10______________
+MostValIndex (AP_dB): 3_-63.78761
+
+Detect: 11______________
+MostValIndex (AP_dB): 4_-48.842968
+penalty channel 11 powerlevel AP 4 -47.27654 powerlevel AP 0 -73.95438
+penalty channel 11 powerlevel AP 4 -47.27654 powerlevel AP 5 -94.69009
+penalty channel 11 powerlevel AP 4 -47.27654 powerlevel AP 6 -59.55881
+
+Detect: 12______________
+MostValIndex (AP_dB): 1_-63.300545
+penalty channel 1 powerlevel AP 1 -62.593678 powerlevel AP 2 -88.68597
+penalty channel 1 powerlevel AP 1 -62.593678 powerlevel AP 7 -83.01181
+
+Detect: 13______________
+MostValIndex (AP_dB): 2_-49.893623
+penalty channel 1 powerlevel AP 2 -49.560623 powerlevel AP 1 -91.58943
+penalty channel 1 powerlevel AP 2 -49.560623 powerlevel AP 7 -61.438683
+
+Fitness = fs - fp = -787.2515 - 3966.8455 = -4754.097
+
+gene 1
+pt_channel[11_1, 10_11, 0_11, 10_6, 0_11, 13_11, 12_1, 8_6, find geneFitness
+*************** This is Emergency Refresh ola ola ola ola ola!!!!!! ***************
+
+Detect: 0______________
+MostValIndex (AP_dB): 2_-46.82237
+penalty channel 11 powerlevel AP 2 -47.739315 powerlevel AP 1 -67.26689
+penalty channel 11 powerlevel AP 2 -47.739315 powerlevel AP 4 -84.91422
+penalty channel 11 powerlevel AP 2 -47.739315 powerlevel AP 5 -75.79364
+
+Detect: 1______________
+MostValIndex (AP_dB): 0_-35.82237
+penalty channel 1 powerlevel AP 0 -36.55462 powerlevel AP 6 -98.817184
+
+Detect: 2______________
+MostValIndex (AP_dB): 1_-71.90392
+penalty channel 11 powerlevel AP 1 -69.253235 powerlevel AP 2 -111.74447
+penalty channel 11 powerlevel AP 1 -69.253235 powerlevel AP 4 -157.33691
+penalty channel 11 powerlevel AP 1 -69.253235 powerlevel AP 5 -79.20196
+
+Detect: 3______________
+MostValIndex (AP_dB): 1_-54.784145
+penalty channel 11 powerlevel AP 1 -55.011967 powerlevel AP 2 -98.311134
+penalty channel 11 powerlevel AP 1 -55.011967 powerlevel AP 4 -112.47166
+penalty channel 11 powerlevel AP 1 -55.011967 powerlevel AP 5 -109.48347
+
+Detect: 4______________
+MostValIndex (AP_dB): 1_-70.46058
+penalty channel 11 powerlevel AP 1 -70.430275 powerlevel AP 2 -100.20693
+penalty channel 11 powerlevel AP 1 -70.430275 powerlevel AP 4 -118.63579
+penalty channel 11 powerlevel AP 1 -70.430275 powerlevel AP 5 -129.96196
+
+Detect: 5______________
+MostValIndex (AP_dB): 5_-64.533005
+penalty channel 11 powerlevel AP 5 -64.52487 powerlevel AP 1 -76.99286
+penalty channel 11 powerlevel AP 5 -64.52487 powerlevel AP 2 -71.90392
+penalty channel 11 powerlevel AP 5 -64.52487 powerlevel AP 4 -93.36897
+
+Detect: 6______________
+MostValIndex (AP_dB): 5_-45.419376
+penalty channel 11 powerlevel AP 5 -55.00241 powerlevel AP 1 -113.27675
+penalty channel 11 powerlevel AP 5 -55.00241 powerlevel AP 2 -76.82237
+penalty channel 11 powerlevel AP 5 -55.00241 powerlevel AP 4 -98.20364
+
+Detect: 7______________
+MostValIndex (AP_dB): 6_-51.419376
+penalty channel 1 powerlevel AP 6 -56.0843 powerlevel AP 0 -102.1613
+
+Detect: 8______________
+MostValIndex (AP_dB): 6_-39.903923
+penalty channel 1 powerlevel AP 6 -41.38232 powerlevel AP 0 -99.085724
+
+Detect: 9______________
+MostValIndex (AP_dB): 5_-37.290245
+penalty channel 11 powerlevel AP 5 -38.747677 powerlevel AP 1 -115.65653
+penalty channel 11 powerlevel AP 5 -38.747677 powerlevel AP 2 -82.32316
+penalty channel 11 powerlevel AP 5 -38.747677 powerlevel AP 4 -86.22864
+
+Detect: 10______________
+MostValIndex (AP_dB): 3_-62.78761
+penalty channel 6 powerlevel AP 3 -77.72654 powerlevel AP 7 -80.24905
+
+Detect: 11______________
+MostValIndex (AP_dB): 4_-52.842968
+penalty channel 11 powerlevel AP 4 -51.27654 powerlevel AP 1 -127.20615
+penalty channel 11 powerlevel AP 4 -51.27654 powerlevel AP 2 -80.71227
+penalty channel 11 powerlevel AP 4 -51.27654 powerlevel AP 5 -83.69009
+
+Detect: 12______________
+MostValIndex (AP_dB): 1_-53.300545
+penalty channel 11 powerlevel AP 1 -52.593678 powerlevel AP 2 -107.68597
+penalty channel 11 powerlevel AP 1 -52.593678 powerlevel AP 4 -151.6336
+penalty channel 11 powerlevel AP 1 -52.593678 powerlevel AP 5 -121.78415
+
+Detect: 13______________
+MostValIndex (AP_dB): 3_-48.893623
+penalty channel 6 powerlevel AP 3 -48.560623 powerlevel AP 7 -59.438683
+
+Fitness = fs - fp = -764.88837 - 2978.5532 = -3743.4417
+
+gene 2
+pt_channel[19_6, 1_11, 16_6, 18_11, 10_1, 6_6, 19_6, 7_11, find geneFitness
+*************** This is Emergency Refresh ola ola ola ola ola!!!!!! ***************
+
+Detect: 0______________
+MostValIndex (AP_dB): 2_-30.822369
+penalty channel 6 powerlevel AP 2 -31.739313 powerlevel AP 0 -47.310844
+penalty channel 6 powerlevel AP 2 -31.739313 powerlevel AP 5 -82.79364
+penalty channel 6 powerlevel AP 2 -31.739313 powerlevel AP 6 -89.79364
+
+Detect: 1______________
+MostValIndex (AP_dB): 0_-27.822369
+penalty channel 6 powerlevel AP 0 -28.554619 powerlevel AP 2 -54.5433
+penalty channel 6 powerlevel AP 0 -28.554619 powerlevel AP 5 -95.14315
+penalty channel 6 powerlevel AP 0 -28.554619 powerlevel AP 6 -91.817184
+
+Detect: 2______________
+MostValIndex (AP_dB): 1_-80.90392
+penalty channel 11 powerlevel AP 1 -76.25324 powerlevel AP 3 -105.97081
+penalty channel 11 powerlevel AP 1 -76.25324 powerlevel AP 7 -99.70994
+
+Detect: 3______________
+MostValIndex (AP_dB): 1_-63.784145
+penalty channel 11 powerlevel AP 1 -64.01196 powerlevel AP 3 -82.121994
+penalty channel 11 powerlevel AP 1 -64.01196 powerlevel AP 7 -94.54851
+
+Detect: 4______________
+MostValIndex (AP_dB): 1_-79.46058
+penalty channel 11 powerlevel AP 1 -79.430275 powerlevel AP 3 -93.57747
+penalty channel 11 powerlevel AP 1 -79.430275 powerlevel AP 7 -105.07088
+
+Detect: 5______________
+MostValIndex (AP_dB): 2_-55.903923
+penalty channel 6 powerlevel AP 2 -55.22475 powerlevel AP 0 -65.95151
+penalty channel 6 powerlevel AP 2 -55.22475 powerlevel AP 5 -71.533005
+penalty channel 6 powerlevel AP 2 -55.22475 powerlevel AP 6 -75.85193
+
+Detect: 6______________
+MostValIndex (AP_dB): 5_-52.419376
+penalty channel 6 powerlevel AP 5 -60.665638 powerlevel AP 0 -65.60736
+penalty channel 6 powerlevel AP 5 -60.665638 powerlevel AP 2 -60.82237
+penalty channel 6 powerlevel AP 5 -60.665638 powerlevel AP 6 -67.92725
+
+Detect: 7______________
+MostValIndex (AP_dB): 6_-44.419376
+penalty channel 6 powerlevel AP 6 -49.0843 powerlevel AP 0 -94.1613
+penalty channel 6 powerlevel AP 6 -49.0843 powerlevel AP 2 -89.00316
+penalty channel 6 powerlevel AP 6 -49.0843 powerlevel AP 5 -66.13716
+
+Detect: 8______________
+MostValIndex (AP_dB): 6_-32.903923
+penalty channel 6 powerlevel AP 6 -34.38232 powerlevel AP 0 -91.085724
+penalty channel 6 powerlevel AP 6 -34.38232 powerlevel AP 2 -82.13285
+penalty channel 6 powerlevel AP 6 -34.38232 powerlevel AP 5 -69.930984
+
+Detect: 9______________
+MostValIndex (AP_dB): 5_-44.290245
+penalty channel 6 powerlevel AP 5 -45.747677 powerlevel AP 0 -76.03306
+penalty channel 6 powerlevel AP 5 -45.747677 powerlevel AP 2 -66.32316
+penalty channel 6 powerlevel AP 5 -45.747677 powerlevel AP 6 -53.438683
+
+Detect: 10______________
+MostValIndex (AP_dB): 3_-54.78761
+penalty channel 11 powerlevel AP 3 -69.72654 powerlevel AP 1 -134.96051
+penalty channel 11 powerlevel AP 3 -69.72654 powerlevel AP 7 -81.24905
+
+Detect: 11______________
+MostValIndex (AP_dB): 4_-42.842968
+
+Detect: 12______________
+MostValIndex (AP_dB): 1_-62.300545
+penalty channel 11 powerlevel AP 1 -61.593678 powerlevel AP 3 -101.01181
+penalty channel 11 powerlevel AP 1 -61.593678 powerlevel AP 7 -82.01181
+
+Detect: 13______________
+MostValIndex (AP_dB): 3_-40.893623
+penalty channel 11 powerlevel AP 3 -40.560623 powerlevel AP 1 -90.58943
+penalty channel 11 powerlevel AP 3 -40.560623 powerlevel AP 7 -60.438683
+
+Fitness = fs - fp = -738.2515 - 4489.512 = -5227.7637
+
+gene 3
+pt_channel[11_6, 6_11, 10_11, 6_11, 2_1, 7_1, 9_11, 1_1, find geneFitness
+*************** This is Emergency Refresh ola ola ola ola ola!!!!!! ***************
+
+Detect: 0______________
+MostValIndex (AP_dB): 2_-36.82237
+penalty channel 11 powerlevel AP 2 -37.739315 powerlevel AP 1 -71.26689
+penalty channel 11 powerlevel AP 2 -37.739315 powerlevel AP 3 -62.64715
+penalty channel 11 powerlevel AP 2 -37.739315 powerlevel AP 6 -99.79364
+
+Detect: 1______________
+MostValIndex (AP_dB): 0_-35.82237
+
+Detect: 2______________
+MostValIndex (AP_dB): 1_-75.90392
+penalty channel 11 powerlevel AP 1 -75.25324 powerlevel AP 2 -101.74446
+penalty channel 11 powerlevel AP 1 -75.25324 powerlevel AP 3 -117.97081
+penalty channel 11 powerlevel AP 1 -75.25324 powerlevel AP 6 -149.28531
+
+Detect: 3______________
+MostValIndex (AP_dB): 1_-58.784145
+penalty channel 11 powerlevel AP 1 -59.011967 powerlevel AP 2 -88.311134
+penalty channel 11 powerlevel AP 1 -59.011967 powerlevel AP 3 -94.121994
+penalty channel 11 powerlevel AP 1 -59.011967 powerlevel AP 6 -124.85624
+
+Detect: 4______________
+MostValIndex (AP_dB): 1_-74.46058
+penalty channel 11 powerlevel AP 1 -74.430275 powerlevel AP 2 -90.20694
+penalty channel 11 powerlevel AP 1 -74.430275 powerlevel AP 3 -105.57747
+penalty channel 11 powerlevel AP 1 -74.430275 powerlevel AP 6 -125.61673
+
+Detect: 5______________
+MostValIndex (AP_dB): 2_-61.903923
+penalty channel 11 powerlevel AP 2 -61.22475 powerlevel AP 1 -80.99286
+penalty channel 11 powerlevel AP 2 -61.22475 powerlevel AP 3 -78.1819
+penalty channel 11 powerlevel AP 2 -61.22475 powerlevel AP 6 -85.85193
+
+Detect: 6______________
+MostValIndex (AP_dB): 5_-51.419376
+penalty channel 1 powerlevel AP 5 -61.00241 powerlevel AP 4 -96.20364
+penalty channel 1 powerlevel AP 5 -61.00241 powerlevel AP 7 -81.75769
+
+Detect: 7______________
+MostValIndex (AP_dB): 6_-54.419376
+penalty channel 11 powerlevel AP 6 -59.0843 powerlevel AP 1 -119.92358
+penalty channel 11 powerlevel AP 6 -59.0843 powerlevel AP 2 -95.00316
+penalty channel 11 powerlevel AP 6 -59.0843 powerlevel AP 3 -85.36234
+
+Detect: 8______________
+MostValIndex (AP_dB): 6_-42.903923
+penalty channel 11 powerlevel AP 6 -44.38232 powerlevel AP 1 -137.08804
+penalty channel 11 powerlevel AP 6 -44.38232 powerlevel AP 2 -88.13285
+penalty channel 11 powerlevel AP 6 -44.38232 powerlevel AP 3 -79.5601
+
+Detect: 9______________
+MostValIndex (AP_dB): 5_-43.290245
+penalty channel 1 powerlevel AP 5 -44.747677 powerlevel AP 4 -84.22864
+penalty channel 1 powerlevel AP 5 -44.747677 powerlevel AP 7 -85.99734
+
+Detect: 10______________
+MostValIndex (AP_dB): 3_-66.78761
+penalty channel 11 powerlevel AP 3 -81.72654 powerlevel AP 1 -129.96051
+penalty channel 11 powerlevel AP 3 -81.72654 powerlevel AP 2 -87.72534
+penalty channel 11 powerlevel AP 3 -81.72654 powerlevel AP 6 -85.700386
+
+Detect: 11______________
+MostValIndex (AP_dB): 4_-50.842968
+penalty channel 1 powerlevel AP 4 -49.27654 powerlevel AP 5 -89.69009
+penalty channel 1 powerlevel AP 4 -49.27654 powerlevel AP 7 -124.20251
+
+Detect: 12______________
+MostValIndex (AP_dB): 1_-57.300545
+penalty channel 11 powerlevel AP 1 -56.593678 powerlevel AP 2 -97.68597
+penalty channel 11 powerlevel AP 1 -56.593678 powerlevel AP 3 -113.01181
+penalty channel 11 powerlevel AP 1 -56.593678 powerlevel AP 6 -108.37466
+
+Detect: 13______________
+MostValIndex (AP_dB): 3_-52.893623
+penalty channel 11 powerlevel AP 3 -52.560623 powerlevel AP 1 -85.58943
+penalty channel 11 powerlevel AP 3 -52.560623 powerlevel AP 2 -58.893623
+penalty channel 11 powerlevel AP 3 -52.560623 powerlevel AP 6 -82.997345
+
+Fitness = fs - fp = -793.58826 - 4509.3413 = -5302.9297
+
+gene 4
+pt_channel[9_6, 17_11, 18_1, 15_11, 11_6, 17_11, 18_11, 2_6, find geneFitness
+*************** This is Emergency Refresh ola ola ola ola ola!!!!!! ***************
+
+Detect: 0______________
+MostValIndex (AP_dB): 2_-28.822369
+
+Detect: 1______________
+MostValIndex (AP_dB): 0_-37.82237
+penalty channel 6 powerlevel AP 0 -38.55462 powerlevel AP 4 -86.21431
+penalty channel 6 powerlevel AP 0 -38.55462 powerlevel AP 7 -106.55423
+
+Detect: 2______________
+MostValIndex (AP_dB): 1_-64.90392
+penalty channel 11 powerlevel AP 1 -65.10324 powerlevel AP 3 -108.97081
+penalty channel 11 powerlevel AP 1 -65.10324 powerlevel AP 5 -75.20196
+penalty channel 11 powerlevel AP 1 -65.10324 powerlevel AP 6 -140.28531
+
+Detect: 3______________
+MostValIndex (AP_dB): 1_-47.784145
+penalty channel 11 powerlevel AP 1 -48.011967 powerlevel AP 3 -85.121994
+penalty channel 11 powerlevel AP 1 -48.011967 powerlevel AP 5 -105.48347
+penalty channel 11 powerlevel AP 1 -48.011967 powerlevel AP 6 -115.85624
+
+Detect: 4______________
+MostValIndex (AP_dB): 1_-63.46058
+penalty channel 11 powerlevel AP 1 -63.430275 powerlevel AP 3 -96.57747
+penalty channel 11 powerlevel AP 1 -63.430275 powerlevel AP 5 -125.96196
+penalty channel 11 powerlevel AP 1 -63.430275 powerlevel AP 6 -116.61673
+
+Detect: 5______________
+MostValIndex (AP_dB): 2_-53.903923
+
+Detect: 6______________
+MostValIndex (AP_dB): 5_-41.419376
+penalty channel 11 powerlevel AP 5 -51.00241 powerlevel AP 1 -106.27675
+penalty channel 11 powerlevel AP 5 -51.00241 powerlevel AP 3 -70.97226
+penalty channel 11 powerlevel AP 5 -51.00241 powerlevel AP 6 -68.92725
+
+Detect: 7______________
+MostValIndex (AP_dB): 6_-45.419376
+penalty channel 11 powerlevel AP 6 -50.0843 powerlevel AP 1 -108.92358
+penalty channel 11 powerlevel AP 6 -50.0843 powerlevel AP 3 -76.36234
+penalty channel 11 powerlevel AP 6 -50.0843 powerlevel AP 5 -55.137157
+
+Detect: 8______________
+MostValIndex (AP_dB): 6_-33.903923
+penalty channel 11 powerlevel AP 6 -35.38232 powerlevel AP 1 -126.08806
+penalty channel 11 powerlevel AP 6 -35.38232 powerlevel AP 3 -70.5601
+penalty channel 11 powerlevel AP 6 -35.38232 powerlevel AP 5 -58.930984
+
+Detect: 9______________
+MostValIndex (AP_dB): 5_-33.290245
+penalty channel 11 powerlevel AP 5 -34.747677 powerlevel AP 1 -108.65653
+penalty channel 11 powerlevel AP 5 -34.747677 powerlevel AP 3 -90.40907
+penalty channel 11 powerlevel AP 5 -34.747677 powerlevel AP 6 -54.438683
+
+Detect: 10______________
+MostValIndex (AP_dB): 3_-57.78761
+penalty channel 11 powerlevel AP 3 -72.72654 powerlevel AP 1 -118.96051
+penalty channel 11 powerlevel AP 3 -72.72654 powerlevel AP 5 -77.38957
+penalty channel 11 powerlevel AP 3 -72.72654 powerlevel AP 6 -76.700386
+
+Detect: 11______________
+MostValIndex (AP_dB): 4_-41.842968
+penalty channel 6 powerlevel AP 4 -40.27654 powerlevel AP 0 -78.95438
+penalty channel 6 powerlevel AP 4 -40.27654 powerlevel AP 7 -123.20251
+
+Detect: 12______________
+MostValIndex (AP_dB): 1_-46.300545
+penalty channel 11 powerlevel AP 1 -45.593678 powerlevel AP 3 -104.01181
+penalty channel 11 powerlevel AP 1 -45.593678 powerlevel AP 5 -117.78415
+penalty channel 11 powerlevel AP 1 -45.593678 powerlevel AP 6 -99.37466
+
+Detect: 13______________
+MostValIndex (AP_dB): 3_-43.893623
+penalty channel 11 powerlevel AP 3 -43.560623 powerlevel AP 1 -74.58943
+penalty channel 11 powerlevel AP 3 -43.560623 powerlevel AP 5 -57.951504
+penalty channel 11 powerlevel AP 3 -43.560623 powerlevel AP 6 -73.997345
+
+Fitness = fs - fp = -671.4383 - 737.48694 = -1408.9253
+
+gene 5
+pt_channel[9_11, 14_1, 1_11, 5_11, 7_1, 5_1, 17_1, 0_1, find geneFitness
+*************** This is Emergency Refresh ola ola ola ola ola!!!!!! ***************
+
+Detect: 0______________
+MostValIndex (AP_dB): 2_-45.82237
+penalty channel 11 powerlevel AP 2 -46.739315 powerlevel AP 0 -57.310844
+penalty channel 11 powerlevel AP 2 -46.739315 powerlevel AP 3 -63.64715
+
+Detect: 1______________
+MostValIndex (AP_dB): 0_-37.82237
+penalty channel 11 powerlevel AP 0 -38.55462 powerlevel AP 2 -69.543304
+penalty channel 11 powerlevel AP 0 -38.55462 powerlevel AP 3 -74.1284
+
+Detect: 2______________
+MostValIndex (AP_dB): 1_-67.90392
+penalty channel 1 powerlevel AP 1 -68.10324 powerlevel AP 4 -150.33691
+penalty channel 1 powerlevel AP 1 -68.10324 powerlevel AP 5 -87.20196
+penalty channel 1 powerlevel AP 1 -68.10324 powerlevel AP 6 -141.28531
+penalty channel 1 powerlevel AP 1 -68.10324 powerlevel AP 7 -106.70994
+
+Detect: 3______________
+MostValIndex (AP_dB): 1_-50.784145
+penalty channel 1 powerlevel AP 1 -51.011967 powerlevel AP 4 -105.47166
+penalty channel 1 powerlevel AP 1 -51.011967 powerlevel AP 5 -117.48347
+penalty channel 1 powerlevel AP 1 -51.011967 powerlevel AP 6 -116.85624
+penalty channel 1 powerlevel AP 1 -51.011967 powerlevel AP 7 -101.54851
+
+Detect: 4______________
+MostValIndex (AP_dB): 1_-66.46058
+penalty channel 1 powerlevel AP 1 -66.430275 powerlevel AP 4 -111.63579
+penalty channel 1 powerlevel AP 1 -66.430275 powerlevel AP 5 -137.96196
+penalty channel 1 powerlevel AP 1 -66.430275 powerlevel AP 6 -117.61673
+penalty channel 1 powerlevel AP 1 -66.430275 powerlevel AP 7 -112.07087
+
+Detect: 5______________
+MostValIndex (AP_dB): 2_-70.90392
+penalty channel 11 powerlevel AP 2 -70.22475 powerlevel AP 0 -75.95151
+penalty channel 11 powerlevel AP 2 -70.22475 powerlevel AP 3 -79.1819
+
+Detect: 6______________
+MostValIndex (AP_dB): 5_-53.419376
+penalty channel 1 powerlevel AP 5 -63.00241 powerlevel AP 1 -109.27675
+penalty channel 1 powerlevel AP 5 -63.00241 powerlevel AP 4 -91.20364
+penalty channel 1 powerlevel AP 5 -63.00241 powerlevel AP 6 -69.92725
+penalty channel 1 powerlevel AP 5 -63.00241 powerlevel AP 7 -82.75769
+
+Detect: 7______________
+MostValIndex (AP_dB): 6_-46.419376
+penalty channel 1 powerlevel AP 6 -51.0843 powerlevel AP 1 -111.92358
+penalty channel 1 powerlevel AP 6 -51.0843 powerlevel AP 4 -63.80177
+penalty channel 1 powerlevel AP 6 -51.0843 powerlevel AP 5 -67.13716
+penalty channel 1 powerlevel AP 6 -51.0843 powerlevel AP 7 -103.03176
+
+Detect: 8______________
+MostValIndex (AP_dB): 6_-34.903923
+penalty channel 1 powerlevel AP 6 -36.38232 powerlevel AP 1 -129.08806
+penalty channel 1 powerlevel AP 6 -36.38232 powerlevel AP 4 -64.36234
+penalty channel 1 powerlevel AP 6 -36.38232 powerlevel AP 5 -70.930984
+penalty channel 1 powerlevel AP 6 -36.38232 powerlevel AP 7 -115.9721
+
+Detect: 9______________
+MostValIndex (AP_dB): 5_-45.290245
+penalty channel 1 powerlevel AP 5 -46.747677 powerlevel AP 1 -111.65653
+penalty channel 1 powerlevel AP 5 -46.747677 powerlevel AP 4 -79.22864
+penalty channel 1 powerlevel AP 5 -46.747677 powerlevel AP 6 -55.438683
+penalty channel 1 powerlevel AP 5 -46.747677 powerlevel AP 7 -86.99734
+
+Detect: 10______________
+MostValIndex (AP_dB): 3_-67.78761
+penalty channel 11 powerlevel AP 3 -82.72654 powerlevel AP 0 -110.98673
+penalty channel 11 powerlevel AP 3 -82.72654 powerlevel AP 2 -96.72534
+
+Detect: 11______________
+MostValIndex (AP_dB): 4_-45.842968
+penalty channel 1 powerlevel AP 4 -44.27654 powerlevel AP 1 -123.20615
+penalty channel 1 powerlevel AP 4 -44.27654 powerlevel AP 5 -91.69009
+penalty channel 1 powerlevel AP 4 -44.27654 powerlevel AP 6 -52.55881
+penalty channel 1 powerlevel AP 4 -44.27654 powerlevel AP 7 -125.20251
+
+Detect: 12______________
+MostValIndex (AP_dB): 1_-49.300545
+penalty channel 1 powerlevel AP 1 -48.593678 powerlevel AP 4 -144.6336
+penalty channel 1 powerlevel AP 1 -48.593678 powerlevel AP 5 -129.78415
+penalty channel 1 powerlevel AP 1 -48.593678 powerlevel AP 6 -100.37466
+penalty channel 1 powerlevel AP 1 -48.593678 powerlevel AP 7 -89.01181
+
+Detect: 13______________
+MostValIndex (AP_dB): 3_-53.893623
+penalty channel 11 powerlevel AP 3 -53.560623 powerlevel AP 0 -70.63593
+penalty channel 11 powerlevel AP 3 -53.560623 powerlevel AP 2 -67.89362
+
+Fitness = fs - fp = -767.43823 - 3909.5825 = -4677.0205
+
+gene 6
+pt_channel[19_11, 0_1, 16_6, 6_11, 3_1, 18_1, 12_11, 19_6, find geneFitness
+*************** This is Emergency Refresh ola ola ola ola ola!!!!!! ***************
+
+Detect: 0______________
+MostValIndex (AP_dB): 2_-30.822369
+penalty channel 6 powerlevel AP 2 -31.739313 powerlevel AP 7 -82.17856
+
+Detect: 1______________
+MostValIndex (AP_dB): 0_-27.822369
+penalty channel 11 powerlevel AP 0 -28.554619 powerlevel AP 3 -73.1284
+penalty channel 11 powerlevel AP 0 -28.554619 powerlevel AP 6 -98.817184
+
+Detect: 2______________
+MostValIndex (AP_dB): 5_-74.20196
+penalty channel 1 powerlevel AP 5 -64.253235 powerlevel AP 1 -81.90392
+penalty channel 1 powerlevel AP 5 -64.253235 powerlevel AP 4 -154.33691
+
+Detect: 3______________
+MostValIndex (AP_dB): 1_-64.78415
+penalty channel 1 powerlevel AP 1 -65.01196 powerlevel AP 4 -109.47166
+penalty channel 1 powerlevel AP 1 -65.01196 powerlevel AP 5 -104.48347
+
+Detect: 4______________
+MostValIndex (AP_dB): 1_-80.46058
+penalty channel 1 powerlevel AP 1 -80.430275 powerlevel AP 4 -115.63579
+penalty channel 1 powerlevel AP 1 -80.430275 powerlevel AP 5 -124.96196
+
+Detect: 5______________
+MostValIndex (AP_dB): 2_-55.903923
+penalty channel 6 powerlevel AP 2 -55.22475 powerlevel AP 7 -58.961803
+
+Detect: 6______________
+MostValIndex (AP_dB): 5_-40.419376
+penalty channel 1 powerlevel AP 5 -50.00241 powerlevel AP 1 -123.27675
+penalty channel 1 powerlevel AP 5 -50.00241 powerlevel AP 4 -95.20364
+
+Detect: 7______________
+MostValIndex (AP_dB): 6_-51.419376
+penalty channel 11 powerlevel AP 6 -56.0843 powerlevel AP 0 -94.1613
+penalty channel 11 powerlevel AP 6 -56.0843 powerlevel AP 3 -85.36234
+
+Detect: 8______________
+MostValIndex (AP_dB): 6_-39.903923
+penalty channel 11 powerlevel AP 6 -41.38232 powerlevel AP 0 -91.085724
+penalty channel 11 powerlevel AP 6 -41.38232 powerlevel AP 3 -79.5601
+
+Detect: 9______________
+MostValIndex (AP_dB): 5_-32.290245
+penalty channel 1 powerlevel AP 5 -33.747677 powerlevel AP 1 -125.65653
+penalty channel 1 powerlevel AP 5 -33.747677 powerlevel AP 4 -83.22864
+
+Detect: 10______________
+MostValIndex (AP_dB): 3_-66.78761
+penalty channel 11 powerlevel AP 3 -68.60087 powerlevel AP 0 -100.98673
+penalty channel 11 powerlevel AP 3 -68.60087 powerlevel AP 6 -82.700386
+
+Detect: 11______________
+MostValIndex (AP_dB): 4_-49.842968
+penalty channel 1 powerlevel AP 4 -48.27654 powerlevel AP 1 -137.20615
+penalty channel 1 powerlevel AP 4 -48.27654 powerlevel AP 5 -78.69009
+
+Detect: 12______________
+MostValIndex (AP_dB): 1_-63.300545
+penalty channel 1 powerlevel AP 1 -62.593678 powerlevel AP 4 -148.6336
+penalty channel 1 powerlevel AP 1 -62.593678 powerlevel AP 5 -116.78415
+
+Detect: 13______________
+MostValIndex (AP_dB): 7_-48.438683
+penalty channel 6 powerlevel AP 7 -48.65272 powerlevel AP 2 -52.893623
+
+Fitness = fs - fp = -734.5547 - 358.67993 = -1093.2346
+
+gene 7
+pt_channel[4_6, 2_1, 2_6, 14_6, 16_6, 3_11, 2_6, 11_11, find geneFitness
+*************** This is Emergency Refresh ola ola ola ola ola!!!!!! ***************
+
+Detect: 0______________
+MostValIndex (AP_dB): 2_-44.82237
+penalty channel 6 powerlevel AP 2 -45.739315 powerlevel AP 0 -62.310844
+penalty channel 6 powerlevel AP 2 -45.739315 powerlevel AP 3 -54.64715
+penalty channel 6 powerlevel AP 2 -45.739315 powerlevel AP 4 -68.91422
+penalty channel 6 powerlevel AP 2 -45.739315 powerlevel AP 6 -106.79364
+
+Detect: 1______________
+MostValIndex (AP_dB): 0_-42.82237
+penalty channel 6 powerlevel AP 0 -43.55462 powerlevel AP 2 -68.543304
+penalty channel 6 powerlevel AP 0 -43.55462 powerlevel AP 3 -65.1284
+penalty channel 6 powerlevel AP 0 -43.55462 powerlevel AP 4 -81.21431
+penalty channel 6 powerlevel AP 0 -43.55462 powerlevel AP 6 -108.817184
+
+Detect: 2______________
+MostValIndex (AP_dB): 1_-79.90392
+
+Detect: 3______________
+MostValIndex (AP_dB): 1_-62.784145
+
+Detect: 4______________
+MostValIndex (AP_dB): 1_-78.46058
+
+Detect: 5______________
+MostValIndex (AP_dB): 7_-66.96181
+penalty channel 11 powerlevel AP 7 -67.855835 powerlevel AP 5 -74.533005
+
+Detect: 6______________
+MostValIndex (AP_dB): 5_-55.419376
+penalty channel 11 powerlevel AP 5 -65.00241 powerlevel AP 7 -71.75769
+
+Detect: 7______________
+MostValIndex (AP_dB): 4_-54.80177
+penalty channel 6 powerlevel AP 4 -54.46213 powerlevel AP 0 -109.16131
+penalty channel 6 powerlevel AP 4 -54.46213 powerlevel AP 2 -103.00316
+penalty channel 6 powerlevel AP 4 -54.46213 powerlevel AP 3 -77.36234
+penalty channel 6 powerlevel AP 4 -54.46213 powerlevel AP 6 -61.419376
+
+Detect: 8______________
+MostValIndex (AP_dB): 6_-49.903923
+penalty channel 6 powerlevel AP 6 -51.38232 powerlevel AP 0 -106.08573
+penalty channel 6 powerlevel AP 6 -51.38232 powerlevel AP 2 -96.13285
+penalty channel 6 powerlevel AP 6 -51.38232 powerlevel AP 3 -71.5601
+penalty channel 6 powerlevel AP 6 -51.38232 powerlevel AP 4 -55.362343
+
+Detect: 9______________
+MostValIndex (AP_dB): 5_-47.290245
+penalty channel 11 powerlevel AP 5 -48.747677 powerlevel AP 7 -75.997345
+
+Detect: 10______________
+MostValIndex (AP_dB): 3_-58.78761
+penalty channel 6 powerlevel AP 3 -73.72654 powerlevel AP 0 -115.98673
+penalty channel 6 powerlevel AP 3 -73.72654 powerlevel AP 2 -95.72534
+penalty channel 6 powerlevel AP 3 -73.72654 powerlevel AP 4 -99.16914
+penalty channel 6 powerlevel AP 3 -73.72654 powerlevel AP 6 -92.700386
+
+Detect: 11______________
+MostValIndex (AP_dB): 4_-36.842968
+penalty channel 6 powerlevel AP 4 -35.27654 powerlevel AP 0 -83.95438
+penalty channel 6 powerlevel AP 4 -35.27654 powerlevel AP 2 -78.71227
+penalty channel 6 powerlevel AP 4 -35.27654 powerlevel AP 3 -58.235386
+penalty channel 6 powerlevel AP 4 -35.27654 powerlevel AP 6 -67.55881
+
+Detect: 12______________
+MostValIndex (AP_dB): 1_-61.300545
+
+Detect: 13______________
+MostValIndex (AP_dB): 3_-44.893623
+penalty channel 6 powerlevel AP 3 -44.560623 powerlevel AP 0 -75.63593
+penalty channel 6 powerlevel AP 3 -44.560623 powerlevel AP 2 -66.89362
+penalty channel 6 powerlevel AP 3 -44.560623 powerlevel AP 4 -79.14746
+penalty channel 6 powerlevel AP 3 -44.560623 powerlevel AP 6 -89.99734
+
+Fitness = fs - fp = -811.59717 - 3515.246 = -4326.8433
+
+gene 8
+pt_channel[15_11, 1_6, 10_1, 18_1, 18_1, 9_6, 1_11, 16_11, find geneFitness
+*************** This is Emergency Refresh ola ola ola ola ola!!!!!! ***************
+
+Detect: 0______________
+MostValIndex (AP_dB): 2_-36.82237
+penalty channel 1 powerlevel AP 2 -37.739315 powerlevel AP 3 -50.64715
+penalty channel 1 powerlevel AP 2 -37.739315 powerlevel AP 4 -66.91422
+
+Detect: 1______________
+MostValIndex (AP_dB): 0_-31.822369
+penalty channel 11 powerlevel AP 0 -32.55462 powerlevel AP 6 -109.817184
+penalty channel 11 powerlevel AP 0 -32.55462 powerlevel AP 7 -92.55423
+
+Detect: 2______________
+MostValIndex (AP_dB): 1_-80.90392
+penalty channel 6 powerlevel AP 1 -73.253235 powerlevel AP 5 -83.20196
+
+Detect: 3______________
+MostValIndex (AP_dB): 1_-63.784145
+penalty channel 6 powerlevel AP 1 -64.01196 powerlevel AP 5 -113.48347
+
+Detect: 4______________
+MostValIndex (AP_dB): 1_-79.46058
+penalty channel 6 powerlevel AP 1 -79.430275 powerlevel AP 5 -133.96196
+
+Detect: 5______________
+MostValIndex (AP_dB): 2_-61.903923
+penalty channel 1 powerlevel AP 2 -61.22475 powerlevel AP 3 -66.1819
+penalty channel 1 powerlevel AP 2 -61.22475 powerlevel AP 4 -75.36897
+
+Detect: 6______________
+MostValIndex (AP_dB): 5_-49.419376
+penalty channel 6 powerlevel AP 5 -59.00241 powerlevel AP 1 -122.27675
+
+Detect: 7______________
+MostValIndex (AP_dB): 4_-52.80177
+penalty channel 1 powerlevel AP 4 -52.46213 powerlevel AP 2 -95.00316
+penalty channel 1 powerlevel AP 4 -52.46213 powerlevel AP 3 -73.36234
+
+Detect: 8______________
+MostValIndex (AP_dB): 6_-50.903923
+penalty channel 11 powerlevel AP 6 -52.38232 powerlevel AP 0 -95.085724
+penalty channel 11 powerlevel AP 6 -52.38232 powerlevel AP 7 -99.97211
+
+Detect: 9______________
+MostValIndex (AP_dB): 5_-41.290245
+penalty channel 6 powerlevel AP 5 -42.747677 powerlevel AP 1 -124.65653
+
+Detect: 10______________
+MostValIndex (AP_dB): 3_-54.78761
+penalty channel 1 powerlevel AP 3 -69.72654 powerlevel AP 2 -87.72534
+penalty channel 1 powerlevel AP 3 -69.72654 powerlevel AP 4 -97.16914
+
+Detect: 11______________
+MostValIndex (AP_dB): 4_-34.842968
+penalty channel 1 powerlevel AP 4 -33.27654 powerlevel AP 2 -70.71227
+penalty channel 1 powerlevel AP 4 -33.27654 powerlevel AP 3 -54.235386
+
+Detect: 12______________
+MostValIndex (AP_dB): 1_-62.300545
+penalty channel 6 powerlevel AP 1 -61.593678 powerlevel AP 5 -125.78415
+
+Detect: 13______________
+MostValIndex (AP_dB): 3_-40.893623
+penalty channel 1 powerlevel AP 3 -40.560623 powerlevel AP 2 -58.893623
+penalty channel 1 powerlevel AP 3 -40.560623 powerlevel AP 4 -77.14746
+
+Fitness = fs - fp = -759.9661 - 1437.0651 = -2197.0312
+
+gene 9
+pt_channel[14_11, 12_1, 4_11, 11_11, 12_6, 18_1, 9_1, 1_6, find geneFitness
+*************** This is Emergency Refresh ola ola ola ola ola!!!!!! ***************
+
+Detect: 0______________
+MostValIndex (AP_dB): 2_-42.82237
+penalty channel 11 powerlevel AP 2 -43.739315 powerlevel AP 0 -52.310844
+penalty channel 11 powerlevel AP 2 -43.739315 powerlevel AP 3 -57.64715
+
+Detect: 1______________
+MostValIndex (AP_dB): 0_-32.82237
+penalty channel 11 powerlevel AP 0 -33.55462 powerlevel AP 2 -66.543304
+penalty channel 11 powerlevel AP 0 -33.55462 powerlevel AP 3 -68.1284
+
+Detect: 2______________
+MostValIndex (AP_dB): 1_-69.90392
+penalty channel 1 powerlevel AP 1 -64.253235 powerlevel AP 5 -74.20196
+penalty channel 1 powerlevel AP 1 -64.253235 powerlevel AP 6 -149.28531
+
+Detect: 3______________
+MostValIndex (AP_dB): 1_-52.784145
+penalty channel 1 powerlevel AP 1 -53.011967 powerlevel AP 5 -104.48347
+penalty channel 1 powerlevel AP 1 -53.011967 powerlevel AP 6 -124.85624
+
+Detect: 4______________
+MostValIndex (AP_dB): 1_-68.46058
+penalty channel 1 powerlevel AP 1 -68.430275 powerlevel AP 5 -124.96196
+penalty channel 1 powerlevel AP 1 -68.430275 powerlevel AP 6 -125.61673
+
+Detect: 5______________
+MostValIndex (AP_dB): 5_-59.533
+penalty channel 1 powerlevel AP 5 -59.524868 powerlevel AP 1 -74.99286
+penalty channel 1 powerlevel AP 5 -59.524868 powerlevel AP 6 -85.85193
+
+Detect: 6______________
+MostValIndex (AP_dB): 5_-40.419376
+penalty channel 1 powerlevel AP 5 -50.00241 powerlevel AP 1 -111.27675
+penalty channel 1 powerlevel AP 5 -50.00241 powerlevel AP 6 -77.92725
+
+Detect: 7______________
+MostValIndex (AP_dB): 5_-54.137157
+penalty channel 1 powerlevel AP 5 -58.46213 powerlevel AP 1 -113.92358
+penalty channel 1 powerlevel AP 5 -58.46213 powerlevel AP 6 -54.419376
+
+Detect: 8______________
+MostValIndex (AP_dB): 6_-42.903923
+penalty channel 1 powerlevel AP 6 -44.38232 powerlevel AP 1 -131.08806
+penalty channel 1 powerlevel AP 6 -44.38232 powerlevel AP 5 -57.930984
+
+Detect: 9______________
+MostValIndex (AP_dB): 5_-32.290245
+penalty channel 1 powerlevel AP 5 -33.747677 powerlevel AP 1 -113.65653
+penalty channel 1 powerlevel AP 5 -33.747677 powerlevel AP 6 -63.438683
+
+Detect: 10______________
+MostValIndex (AP_dB): 3_-61.78761
+penalty channel 11 powerlevel AP 3 -76.597565 powerlevel AP 0 -105.98673
+penalty channel 11 powerlevel AP 3 -76.597565 powerlevel AP 2 -93.72534
+
+Detect: 11______________
+MostValIndex (AP_dB): 4_-40.842968
+penalty channel 6 powerlevel AP 4 -39.27654 powerlevel AP 7 -124.20251
+
+Detect: 12______________
+MostValIndex (AP_dB): 1_-51.300545
+penalty channel 1 powerlevel AP 1 -50.593678 powerlevel AP 5 -116.78415
+penalty channel 1 powerlevel AP 1 -50.593678 powerlevel AP 6 -108.37466
+
+Detect: 13______________
+MostValIndex (AP_dB): 3_-47.893623
+penalty channel 11 powerlevel AP 3 -47.560623 powerlevel AP 0 -65.63593
+penalty channel 11 powerlevel AP 3 -47.560623 powerlevel AP 2 -64.89362
+
+Fitness = fs - fp = -723.13727 - 1832.6083 = -2555.7456
+
+gene 10
+pt_channel[12_11, 4_6, 4_1, 16_1, 9_1, 19_1, 18_1, 15_11, find geneFitness
+*************** This is Emergency Refresh ola ola ola ola ola!!!!!! ***************
+
+Detect: 0______________
+MostValIndex (AP_dB): 2_-42.82237
+penalty channel 1 powerlevel AP 2 -43.739315 powerlevel AP 3 -52.64715
+penalty channel 1 powerlevel AP 2 -43.739315 powerlevel AP 4 -75.91422
+penalty channel 1 powerlevel AP 2 -43.739315 powerlevel AP 5 -69.79364
+penalty channel 1 powerlevel AP 2 -43.739315 powerlevel AP 6 -90.79364
+
+Detect: 1______________
+MostValIndex (AP_dB): 0_-34.82237
+penalty channel 11 powerlevel AP 0 -35.55462 powerlevel AP 7 -93.55423
+
+Detect: 2______________
+MostValIndex (AP_dB): 5_-73.20196
+penalty channel 1 powerlevel AP 5 -63.25324 powerlevel AP 2 -107.74446
+penalty channel 1 powerlevel AP 5 -63.25324 powerlevel AP 3 -107.97081
+penalty channel 1 powerlevel AP 5 -63.25324 powerlevel AP 4 -148.3369
+penalty channel 1 powerlevel AP 5 -63.25324 powerlevel AP 6 -140.28531
+
+Detect: 3______________
+MostValIndex (AP_dB): 1_-60.784145
+
+Detect: 4______________
+MostValIndex (AP_dB): 1_-76.46058
+
+Detect: 5______________
+MostValIndex (AP_dB): 5_-58.533
+penalty channel 1 powerlevel AP 5 -58.524868 powerlevel AP 2 -67.90392
+penalty channel 1 powerlevel AP 5 -58.524868 powerlevel AP 3 -68.1819
+penalty channel 1 powerlevel AP 5 -58.524868 powerlevel AP 4 -84.36897
+penalty channel 1 powerlevel AP 5 -58.524868 powerlevel AP 6 -76.85193
+
+Detect: 6______________
+MostValIndex (AP_dB): 5_-39.419376
+penalty channel 1 powerlevel AP 5 -49.00241 powerlevel AP 2 -72.82237
+penalty channel 1 powerlevel AP 5 -49.00241 powerlevel AP 3 -69.97226
+penalty channel 1 powerlevel AP 5 -49.00241 powerlevel AP 4 -89.20364
+penalty channel 1 powerlevel AP 5 -49.00241 powerlevel AP 6 -68.92725
+
+Detect: 7______________
+MostValIndex (AP_dB): 6_-45.419376
+penalty channel 1 powerlevel AP 6 -50.0843 powerlevel AP 2 -101.00316
+penalty channel 1 powerlevel AP 6 -50.0843 powerlevel AP 3 -75.36234
+penalty channel 1 powerlevel AP 6 -50.0843 powerlevel AP 4 -61.80177
+penalty channel 1 powerlevel AP 6 -50.0843 powerlevel AP 5 -53.137157
+
+Detect: 8______________
+MostValIndex (AP_dB): 6_-33.903923
+penalty channel 1 powerlevel AP 6 -35.38232 powerlevel AP 2 -94.13285
+penalty channel 1 powerlevel AP 6 -35.38232 powerlevel AP 3 -69.5601
+penalty channel 1 powerlevel AP 6 -35.38232 powerlevel AP 4 -62.362343
+penalty channel 1 powerlevel AP 6 -35.38232 powerlevel AP 5 -56.930984
+
+Detect: 9______________
+MostValIndex (AP_dB): 5_-31.290243
+penalty channel 1 powerlevel AP 5 -32.747677 powerlevel AP 2 -78.32316
+penalty channel 1 powerlevel AP 5 -32.747677 powerlevel AP 3 -89.40907
+penalty channel 1 powerlevel AP 5 -32.747677 powerlevel AP 4 -77.22864
+penalty channel 1 powerlevel AP 5 -32.747677 powerlevel AP 6 -54.438683
+
+Detect: 10______________
+MostValIndex (AP_dB): 3_-56.78761
+penalty channel 1 powerlevel AP 3 -71.72654 powerlevel AP 2 -93.72534
+penalty channel 1 powerlevel AP 3 -71.72654 powerlevel AP 4 -106.16914
+penalty channel 1 powerlevel AP 3 -71.72654 powerlevel AP 5 -75.38957
+penalty channel 1 powerlevel AP 3 -71.72654 powerlevel AP 6 -76.700386
+
+Detect: 11______________
+MostValIndex (AP_dB): 4_-43.842968
+penalty channel 1 powerlevel AP 4 -42.27654 powerlevel AP 2 -76.71227
+penalty channel 1 powerlevel AP 4 -42.27654 powerlevel AP 3 -56.235386
+penalty channel 1 powerlevel AP 4 -42.27654 powerlevel AP 5 -77.69009
+penalty channel 1 powerlevel AP 4 -42.27654 powerlevel AP 6 -51.55881
+
+Detect: 12______________
+MostValIndex (AP_dB): 1_-59.300545
+
+Detect: 13______________
+MostValIndex (AP_dB): 3_-42.893623
+penalty channel 1 powerlevel AP 3 -42.560623 powerlevel AP 2 -64.89362
+penalty channel 1 powerlevel AP 3 -42.560623 powerlevel AP 4 -86.14746
+penalty channel 1 powerlevel AP 3 -42.560623 powerlevel AP 5 -55.951504
+penalty channel 1 powerlevel AP 3 -42.560623 powerlevel AP 6 -73.997345
+
+Fitness = fs - fp = -720.88837 - 3878.8762 = -4599.7646
+
+gene 11
+pt_channel[10_6, 19_6, 3_6, 14_1, 8_1, 0_6, 2_6, 12_1, find geneFitness
+*************** This is Emergency Refresh ola ola ola ola ola!!!!!! ***************
+
+Detect: 0______________
+MostValIndex (AP_dB): 2_-43.82237
+penalty channel 6 powerlevel AP 2 -44.739315 powerlevel AP 0 -56.310844
+penalty channel 6 powerlevel AP 2 -44.739315 powerlevel AP 1 -58.266895
+penalty channel 6 powerlevel AP 2 -44.739315 powerlevel AP 5 -88.79364
+penalty channel 6 powerlevel AP 2 -44.739315 powerlevel AP 6 -106.79364
+
+Detect: 1______________
+MostValIndex (AP_dB): 0_-36.82237
+penalty channel 6 powerlevel AP 0 -37.55462 powerlevel AP 1 -80.04904
+penalty channel 6 powerlevel AP 0 -37.55462 powerlevel AP 2 -67.543304
+penalty channel 6 powerlevel AP 0 -37.55462 powerlevel AP 5 -101.14315
+penalty channel 6 powerlevel AP 0 -37.55462 powerlevel AP 6 -108.817184
+
+Detect: 2______________
+MostValIndex (AP_dB): 1_-62.903923
+penalty channel 6 powerlevel AP 1 -63.103245 powerlevel AP 0 -111.512276
+penalty channel 6 powerlevel AP 1 -63.103245 powerlevel AP 2 -108.74446
+penalty channel 6 powerlevel AP 1 -63.103245 powerlevel AP 5 -92.20196
+penalty channel 6 powerlevel AP 1 -63.103245 powerlevel AP 6 -156.28531
+
+Detect: 3______________
+MostValIndex (AP_dB): 1_-45.784145
+penalty channel 6 powerlevel AP 1 -46.011967 powerlevel AP 0 -123.668
+penalty channel 6 powerlevel AP 1 -46.011967 powerlevel AP 2 -95.311134
+penalty channel 6 powerlevel AP 1 -46.011967 powerlevel AP 5 -122.48347
+penalty channel 6 powerlevel AP 1 -46.011967 powerlevel AP 6 -131.85623
+
+Detect: 4______________
+MostValIndex (AP_dB): 1_-61.46058
+penalty channel 6 powerlevel AP 1 -61.430275 powerlevel AP 0 -135.97806
+penalty channel 6 powerlevel AP 1 -61.430275 powerlevel AP 2 -97.20693
+penalty channel 6 powerlevel AP 1 -61.430275 powerlevel AP 5 -142.96196
+penalty channel 6 powerlevel AP 1 -61.430275 powerlevel AP 6 -132.61673
+
+Detect: 5______________
+MostValIndex (AP_dB): 7_-65.96181
+penalty channel 1 powerlevel AP 7 -66.855835 powerlevel AP 3 -70.1819
+penalty channel 1 powerlevel AP 7 -66.855835 powerlevel AP 4 -85.36897
+
+Detect: 6______________
+MostValIndex (AP_dB): 5_-58.419376
+penalty channel 6 powerlevel AP 5 -68.00241 powerlevel AP 0 -74.60736
+penalty channel 6 powerlevel AP 5 -68.00241 powerlevel AP 1 -104.27675
+penalty channel 6 powerlevel AP 5 -68.00241 powerlevel AP 2 -73.82237
+penalty channel 6 powerlevel AP 5 -68.00241 powerlevel AP 6 -84.92725
+
+Detect: 7______________
+MostValIndex (AP_dB): 6_-61.419376
+penalty channel 6 powerlevel AP 6 -62.46213 powerlevel AP 0 -103.1613
+penalty channel 6 powerlevel AP 6 -62.46213 powerlevel AP 1 -106.92358
+penalty channel 6 powerlevel AP 6 -62.46213 powerlevel AP 2 -102.00316
+penalty channel 6 powerlevel AP 6 -62.46213 powerlevel AP 5 -72.13716
+
+Detect: 8______________
+MostValIndex (AP_dB): 6_-49.903923
+penalty channel 6 powerlevel AP 6 -51.38232 powerlevel AP 0 -100.085724
+penalty channel 6 powerlevel AP 6 -51.38232 powerlevel AP 1 -124.08806
+penalty channel 6 powerlevel AP 6 -51.38232 powerlevel AP 2 -95.13285
+penalty channel 6 powerlevel AP 6 -51.38232 powerlevel AP 5 -75.930984
+
+Detect: 9______________
+MostValIndex (AP_dB): 5_-50.290245
+penalty channel 6 powerlevel AP 5 -51.747677 powerlevel AP 0 -85.03306
+penalty channel 6 powerlevel AP 5 -51.747677 powerlevel AP 1 -106.65653
+penalty channel 6 powerlevel AP 5 -51.747677 powerlevel AP 2 -79.32316
+penalty channel 6 powerlevel AP 5 -51.747677 powerlevel AP 6 -70.43868
+
+Detect: 10______________
+MostValIndex (AP_dB): 3_-58.78761
+penalty channel 1 powerlevel AP 3 -73.72654 powerlevel AP 4 -107.16914
+penalty channel 1 powerlevel AP 3 -73.72654 powerlevel AP 7 -76.24905
+
+Detect: 11______________
+MostValIndex (AP_dB): 4_-44.842968
+penalty channel 1 powerlevel AP 4 -43.27654 powerlevel AP 3 -58.235386
+penalty channel 1 powerlevel AP 4 -43.27654 powerlevel AP 7 -113.2025
+
+Detect: 12______________
+MostValIndex (AP_dB): 1_-44.300545
+penalty channel 6 powerlevel AP 1 -43.593678 powerlevel AP 0 -88.84241
+penalty channel 6 powerlevel AP 1 -43.593678 powerlevel AP 2 -104.68597
+penalty channel 6 powerlevel AP 1 -43.593678 powerlevel AP 5 -134.78415
+penalty channel 6 powerlevel AP 1 -43.593678 powerlevel AP 6 -115.37466
+
+Detect: 13______________
+MostValIndex (AP_dB): 3_-44.893623
+penalty channel 1 powerlevel AP 3 -44.560623 powerlevel AP 4 -87.14746
+penalty channel 1 powerlevel AP 3 -44.560623 powerlevel AP 7 -55.438683
+
+Fitness = fs - fp = -758.4472 - 2490.4084 = -3248.8557
+
+gene 12
+pt_channel[19_11, 1_1, 10_11, 11_11, 7_6, 17_6, 17_1, 12_1, find geneFitness
+*************** This is Emergency Refresh ola ola ola ola ola!!!!!! ***************
+
+Detect: 0______________
+MostValIndex (AP_dB): 2_-36.82237
+penalty channel 11 powerlevel AP 2 -37.739315 powerlevel AP 0 -47.310844
+penalty channel 11 powerlevel AP 2 -37.739315 powerlevel AP 3 -57.64715
+
+Detect: 1______________
+MostValIndex (AP_dB): 0_-27.822369
+penalty channel 11 powerlevel AP 0 -28.554619 powerlevel AP 2 -60.5433
+penalty channel 11 powerlevel AP 0 -28.554619 powerlevel AP 3 -68.1284
+
+Detect: 2______________
+MostValIndex (AP_dB): 5_-75.20196
+penalty channel 6 powerlevel AP 5 -65.253235 powerlevel AP 4 -150.33691
+
+Detect: 3______________
+MostValIndex (AP_dB): 1_-63.784145
+penalty channel 1 powerlevel AP 1 -64.01196 powerlevel AP 6 -116.85624
+penalty channel 1 powerlevel AP 1 -64.01196 powerlevel AP 7 -89.54851
+
+Detect: 4______________
+MostValIndex (AP_dB): 1_-79.46058
+penalty channel 1 powerlevel AP 1 -79.430275 powerlevel AP 6 -117.61673
+penalty channel 1 powerlevel AP 1 -79.430275 powerlevel AP 7 -100.07088
+
+Detect: 5______________
+MostValIndex (AP_dB): 5_-60.533
+penalty channel 6 powerlevel AP 5 -60.524868 powerlevel AP 4 -86.36897
+
+Detect: 6______________
+MostValIndex (AP_dB): 5_-41.419376
+penalty channel 6 powerlevel AP 5 -51.00241 powerlevel AP 4 -91.20364
+
+Detect: 7______________
+MostValIndex (AP_dB): 6_-46.419376
+penalty channel 1 powerlevel AP 6 -51.0843 powerlevel AP 1 -124.92358
+penalty channel 1 powerlevel AP 6 -51.0843 powerlevel AP 7 -91.03176
+
+Detect: 8______________
+MostValIndex (AP_dB): 6_-34.903923
+penalty channel 1 powerlevel AP 6 -36.38232 powerlevel AP 1 -142.08804
+penalty channel 1 powerlevel AP 6 -36.38232 powerlevel AP 7 -103.97211
+
+Detect: 9______________
+MostValIndex (AP_dB): 5_-33.290245
+penalty channel 6 powerlevel AP 5 -34.747677 powerlevel AP 4 -79.22864
+
+Detect: 10______________
+MostValIndex (AP_dB): 3_-61.78761
+penalty channel 11 powerlevel AP 3 -75.60087 powerlevel AP 0 -100.98673
+penalty channel 11 powerlevel AP 3 -75.60087 powerlevel AP 2 -87.72534
+
+Detect: 11______________
+MostValIndex (AP_dB): 4_-45.842968
+penalty channel 6 powerlevel AP 4 -44.27654 powerlevel AP 5 -79.69009
+
+Detect: 12______________
+MostValIndex (AP_dB): 1_-62.300545
+penalty channel 1 powerlevel AP 1 -61.593678 powerlevel AP 6 -100.37466
+penalty channel 1 powerlevel AP 1 -61.593678 powerlevel AP 7 -77.01181
+
+Detect: 13______________
+MostValIndex (AP_dB): 3_-47.893623
+penalty channel 11 powerlevel AP 3 -47.560623 powerlevel AP 0 -60.635933
+penalty channel 11 powerlevel AP 3 -47.560623 powerlevel AP 2 -58.893623
+
+Fitness = fs - fp = -737.7627 - 1382.1807 = -2119.9434
+
+gene 13
+pt_channel[2_11, 2_11, 12_11, 6_6, 8_6, 2_11, 9_11, 9_6, find geneFitness
+*************** This is Emergency Refresh ola ola ola ola ola!!!!!! ***************
+
+Detect: 0______________
+MostValIndex (AP_dB): 2_-34.82237
+penalty channel 11 powerlevel AP 2 -35.739315 powerlevel AP 0 -64.310844
+penalty channel 11 powerlevel AP 2 -35.739315 powerlevel AP 1 -75.26689
+penalty channel 11 powerlevel AP 2 -35.739315 powerlevel AP 5 -86.79364
+penalty channel 11 powerlevel AP 2 -35.739315 powerlevel AP 6 -99.79364
+
+Detect: 1______________
+MostValIndex (AP_dB): 0_-44.82237
+penalty channel 11 powerlevel AP 0 -45.55462 powerlevel AP 1 -97.04905
+penalty channel 11 powerlevel AP 0 -45.55462 powerlevel AP 2 -58.5433
+penalty channel 11 powerlevel AP 0 -45.55462 powerlevel AP 5 -99.14315
+penalty channel 11 powerlevel AP 0 -45.55462 powerlevel AP 6 -101.817184
+
+Detect: 2______________
+MostValIndex (AP_dB): 1_-79.90392
+penalty channel 11 powerlevel AP 1 -80.10324 powerlevel AP 0 -119.512276
+penalty channel 11 powerlevel AP 1 -80.10324 powerlevel AP 2 -99.74446
+penalty channel 11 powerlevel AP 1 -80.10324 powerlevel AP 5 -90.20196
+penalty channel 11 powerlevel AP 1 -80.10324 powerlevel AP 6 -149.28531
+
+Detect: 3______________
+MostValIndex (AP_dB): 1_-62.784145
+penalty channel 11 powerlevel AP 1 -63.011967 powerlevel AP 0 -131.668
+penalty channel 11 powerlevel AP 1 -63.011967 powerlevel AP 2 -86.311134
+penalty channel 11 powerlevel AP 1 -63.011967 powerlevel AP 5 -120.48347
+penalty channel 11 powerlevel AP 1 -63.011967 powerlevel AP 6 -124.85624
+
+Detect: 4______________
+MostValIndex (AP_dB): 1_-78.46058
+penalty channel 11 powerlevel AP 1 -78.430275 powerlevel AP 0 -143.97806
+penalty channel 11 powerlevel AP 1 -78.430275 powerlevel AP 2 -88.20694
+penalty channel 11 powerlevel AP 1 -78.430275 powerlevel AP 5 -140.96196
+penalty channel 11 powerlevel AP 1 -78.430275 powerlevel AP 6 -125.61673
+
+Detect: 5______________
+MostValIndex (AP_dB): 2_-59.903923
+penalty channel 11 powerlevel AP 2 -59.22475 powerlevel AP 0 -82.95151
+penalty channel 11 powerlevel AP 2 -59.22475 powerlevel AP 1 -84.99286
+penalty channel 11 powerlevel AP 2 -59.22475 powerlevel AP 5 -75.533005
+penalty channel 11 powerlevel AP 2 -59.22475 powerlevel AP 6 -85.85193
+
+Detect: 6______________
+MostValIndex (AP_dB): 5_-56.419376
+penalty channel 11 powerlevel AP 5 -64.665634 powerlevel AP 0 -82.60737
+penalty channel 11 powerlevel AP 5 -64.665634 powerlevel AP 1 -121.27675
+penalty channel 11 powerlevel AP 5 -64.665634 powerlevel AP 2 -64.82237
+penalty channel 11 powerlevel AP 5 -64.665634 powerlevel AP 6 -77.92725
+
+Detect: 7______________
+MostValIndex (AP_dB): 6_-54.419376
+penalty channel 11 powerlevel AP 6 -59.0843 powerlevel AP 0 -111.16131
+penalty channel 11 powerlevel AP 6 -59.0843 powerlevel AP 1 -123.92358
+penalty channel 11 powerlevel AP 6 -59.0843 powerlevel AP 2 -93.00316
+penalty channel 11 powerlevel AP 6 -59.0843 powerlevel AP 5 -70.13716
+
+Detect: 8______________
+MostValIndex (AP_dB): 6_-42.903923
+penalty channel 11 powerlevel AP 6 -44.38232 powerlevel AP 0 -108.08573
+penalty channel 11 powerlevel AP 6 -44.38232 powerlevel AP 1 -141.08804
+penalty channel 11 powerlevel AP 6 -44.38232 powerlevel AP 2 -86.13285
+penalty channel 11 powerlevel AP 6 -44.38232 powerlevel AP 5 -73.930984
+
+Detect: 9______________
+MostValIndex (AP_dB): 5_-48.290245
+penalty channel 11 powerlevel AP 5 -49.747677 powerlevel AP 0 -93.03306
+penalty channel 11 powerlevel AP 5 -49.747677 powerlevel AP 1 -123.65653
+penalty channel 11 powerlevel AP 5 -49.747677 powerlevel AP 2 -70.32316
+penalty channel 11 powerlevel AP 5 -49.747677 powerlevel AP 6 -63.438683
+
+Detect: 10______________
+MostValIndex (AP_dB): 3_-66.78761
+penalty channel 6 powerlevel AP 3 -78.60087 powerlevel AP 4 -107.16914
+penalty channel 6 powerlevel AP 3 -78.60087 powerlevel AP 7 -79.24905
+
+Detect: 11______________
+MostValIndex (AP_dB): 4_-44.842968
+penalty channel 6 powerlevel AP 4 -43.27654 powerlevel AP 3 -66.23538
+penalty channel 6 powerlevel AP 4 -43.27654 powerlevel AP 7 -116.2025
+
+Detect: 12______________
+MostValIndex (AP_dB): 1_-61.300545
+penalty channel 11 powerlevel AP 1 -60.593678 powerlevel AP 0 -96.84241
+penalty channel 11 powerlevel AP 1 -60.593678 powerlevel AP 2 -95.68597
+penalty channel 11 powerlevel AP 1 -60.593678 powerlevel AP 5 -132.78415
+penalty channel 11 powerlevel AP 1 -60.593678 powerlevel AP 6 -108.37466
+
+Detect: 13______________
+MostValIndex (AP_dB): 3_-52.893623
+penalty channel 6 powerlevel AP 3 -52.560623 powerlevel AP 4 -87.14746
+penalty channel 6 powerlevel AP 3 -52.560623 powerlevel AP 7 -58.438683
+
+Fitness = fs - fp = -814.9758 - 6394.5215 = -7209.497
+
+gene 14
+pt_channel[10_6, 13_6, 16_6, 8_1, 6_6, 6_1, 17_11, 16_11, find geneFitness
+*************** This is Emergency Refresh ola ola ola ola ola!!!!!! ***************
+
+Detect: 0______________
+MostValIndex (AP_dB): 2_-30.822369
+penalty channel 6 powerlevel AP 2 -31.739313 powerlevel AP 0 -56.310844
+penalty channel 6 powerlevel AP 2 -31.739313 powerlevel AP 1 -64.26689
+penalty channel 6 powerlevel AP 2 -31.739313 powerlevel AP 4 -78.91422
+
+Detect: 1______________
+MostValIndex (AP_dB): 0_-36.82237
+penalty channel 6 powerlevel AP 0 -37.55462 powerlevel AP 1 -86.04904
+penalty channel 6 powerlevel AP 0 -37.55462 powerlevel AP 2 -54.5433
+penalty channel 6 powerlevel AP 0 -37.55462 powerlevel AP 4 -91.21431
+
+Detect: 2______________
+MostValIndex (AP_dB): 1_-68.90392
+penalty channel 6 powerlevel AP 1 -69.10324 powerlevel AP 0 -111.512276
+penalty channel 6 powerlevel AP 1 -69.10324 powerlevel AP 2 -95.74446
+penalty channel 6 powerlevel AP 1 -69.10324 powerlevel AP 4 -151.33691
+
+Detect: 3______________
+MostValIndex (AP_dB): 1_-51.784145
+penalty channel 6 powerlevel AP 1 -52.011967 powerlevel AP 0 -123.668
+penalty channel 6 powerlevel AP 1 -52.011967 powerlevel AP 2 -82.311134
+penalty channel 6 powerlevel AP 1 -52.011967 powerlevel AP 4 -106.47166
+
+Detect: 4______________
+MostValIndex (AP_dB): 1_-67.46058
+penalty channel 6 powerlevel AP 1 -67.430275 powerlevel AP 0 -135.97806
+penalty channel 6 powerlevel AP 1 -67.430275 powerlevel AP 2 -84.20694
+penalty channel 6 powerlevel AP 1 -67.430275 powerlevel AP 4 -112.63579
+
+Detect: 5______________
+MostValIndex (AP_dB): 2_-55.903923
+penalty channel 6 powerlevel AP 2 -55.22475 powerlevel AP 0 -74.95151
+penalty channel 6 powerlevel AP 2 -55.22475 powerlevel AP 1 -73.99286
+penalty channel 6 powerlevel AP 2 -55.22475 powerlevel AP 4 -87.36897
+
+Detect: 6______________
+MostValIndex (AP_dB): 5_-52.419376
+penalty channel 1 powerlevel AP 5 -60.665638 powerlevel AP 3 -77.97226
+
+Detect: 7______________
+MostValIndex (AP_dB): 6_-46.419376
+penalty channel 11 powerlevel AP 6 -51.0843 powerlevel AP 7 -87.03176
+
+Detect: 8______________
+MostValIndex (AP_dB): 6_-34.903923
+penalty channel 11 powerlevel AP 6 -36.38232 powerlevel AP 7 -99.97211
+
+Detect: 9______________
+MostValIndex (AP_dB): 5_-44.290245
+penalty channel 1 powerlevel AP 5 -45.747677 powerlevel AP 3 -97.40907
+
+Detect: 10______________
+MostValIndex (AP_dB): 3_-64.78761
+penalty channel 1 powerlevel AP 3 -71.60087 powerlevel AP 5 -88.38957
+
+Detect: 11______________
+MostValIndex (AP_dB): 4_-46.842968
+penalty channel 6 powerlevel AP 4 -45.27654 powerlevel AP 0 -77.95438
+penalty channel 6 powerlevel AP 4 -45.27654 powerlevel AP 1 -124.20615
+penalty channel 6 powerlevel AP 4 -45.27654 powerlevel AP 2 -64.71227
+
+Detect: 12______________
+MostValIndex (AP_dB): 1_-50.300545
+penalty channel 6 powerlevel AP 1 -49.593678 powerlevel AP 0 -88.84241
+penalty channel 6 powerlevel AP 1 -49.593678 powerlevel AP 2 -91.68597
+penalty channel 6 powerlevel AP 1 -49.593678 powerlevel AP 4 -145.6336
+
+Detect: 13______________
+MostValIndex (AP_dB): 3_-50.893623
+penalty channel 1 powerlevel AP 3 -50.560623 powerlevel AP 5 -68.95151
+
+Fitness = fs - fp = -723.9758 - 1774.6729 = -2498.6487
+
+gene 15
+pt_channel[4_6, 12_1, 1_6, 7_6, 5_11, 1_6, 15_1, 16_6, find geneFitness
+*************** This is Emergency Refresh ola ola ola ola ola!!!!!! ***************
+
+Detect: 0______________
+MostValIndex (AP_dB): 2_-45.82237
+penalty channel 6 powerlevel AP 2 -46.739315 powerlevel AP 0 -62.310844
+penalty channel 6 powerlevel AP 2 -46.739315 powerlevel AP 3 -61.64715
+penalty channel 6 powerlevel AP 2 -46.739315 powerlevel AP 5 -87.79364
+penalty channel 6 powerlevel AP 2 -46.739315 powerlevel AP 7 -85.17856
+
+Detect: 1______________
+MostValIndex (AP_dB): 0_-42.82237
+penalty channel 6 powerlevel AP 0 -43.55462 powerlevel AP 2 -69.543304
+penalty channel 6 powerlevel AP 0 -43.55462 powerlevel AP 3 -72.1284
+penalty channel 6 powerlevel AP 0 -43.55462 powerlevel AP 5 -100.14315
+penalty channel 6 powerlevel AP 0 -43.55462 powerlevel AP 7 -92.55423
+
+Detect: 2______________
+MostValIndex (AP_dB): 1_-69.90392
+penalty channel 1 powerlevel AP 1 -70.10324 powerlevel AP 6 -143.28531
+
+Detect: 3______________
+MostValIndex (AP_dB): 1_-52.784145
+penalty channel 1 powerlevel AP 1 -53.011967 powerlevel AP 6 -118.85624
+
+Detect: 4______________
+MostValIndex (AP_dB): 1_-68.46058
+penalty channel 1 powerlevel AP 1 -68.430275 powerlevel AP 6 -119.61673
+
+Detect: 5______________
+MostValIndex (AP_dB): 7_-61.961803
+penalty channel 6 powerlevel AP 7 -62.855835 powerlevel AP 0 -80.95151
+penalty channel 6 powerlevel AP 7 -62.855835 powerlevel AP 2 -70.90392
+penalty channel 6 powerlevel AP 7 -62.855835 powerlevel AP 3 -77.1819
+penalty channel 6 powerlevel AP 7 -62.855835 powerlevel AP 5 -76.533005
+
+Detect: 6______________
+MostValIndex (AP_dB): 5_-57.419376
+penalty channel 6 powerlevel AP 5 -66.94281 powerlevel AP 0 -80.60737
+penalty channel 6 powerlevel AP 5 -66.94281 powerlevel AP 2 -75.82237
+penalty channel 6 powerlevel AP 5 -66.94281 powerlevel AP 3 -78.97226
+penalty channel 6 powerlevel AP 5 -66.94281 powerlevel AP 7 -66.75769
+
+Detect: 7______________
+MostValIndex (AP_dB): 6_-48.419376
+penalty channel 1 powerlevel AP 6 -53.0843 powerlevel AP 1 -113.92358
+
+Detect: 8______________
+MostValIndex (AP_dB): 6_-36.903923
+penalty channel 1 powerlevel AP 6 -38.38232 powerlevel AP 1 -131.08806
+
+Detect: 9______________
+MostValIndex (AP_dB): 5_-49.290245
+penalty channel 6 powerlevel AP 5 -50.747677 powerlevel AP 0 -91.03306
+penalty channel 6 powerlevel AP 5 -50.747677 powerlevel AP 2 -81.32316
+penalty channel 6 powerlevel AP 5 -50.747677 powerlevel AP 3 -98.40907
+penalty channel 6 powerlevel AP 5 -50.747677 powerlevel AP 7 -70.997345
+
+Detect: 10______________
+MostValIndex (AP_dB): 3_-65.78761
+penalty channel 6 powerlevel AP 3 -71.60087 powerlevel AP 0 -115.98673
+penalty channel 6 powerlevel AP 3 -71.60087 powerlevel AP 2 -96.72534
+penalty channel 6 powerlevel AP 3 -71.60087 powerlevel AP 5 -93.38957
+penalty channel 6 powerlevel AP 3 -71.60087 powerlevel AP 7 -72.24905
+
+Detect: 11______________
+MostValIndex (AP_dB): 4_-47.842968
+
+Detect: 12______________
+MostValIndex (AP_dB): 1_-51.300545
+penalty channel 1 powerlevel AP 1 -50.593678 powerlevel AP 6 -102.37466
+
+Detect: 13______________
+MostValIndex (AP_dB): 7_-51.438683
+penalty channel 6 powerlevel AP 7 -51.560623 powerlevel AP 0 -75.63593
+penalty channel 6 powerlevel AP 7 -51.560623 powerlevel AP 2 -67.89362
+penalty channel 6 powerlevel AP 7 -51.560623 powerlevel AP 3 -51.893623
+penalty channel 6 powerlevel AP 7 -51.560623 powerlevel AP 5 -73.95151
+
+Fitness = fs - fp = -773.8841 - 4980.133 = -5754.017
+
+gene 16
+pt_channel[2_1, 16_6, 18_11, 2_6, 18_11, 7_6, 19_1, 7_11, find geneFitness
+*************** This is Emergency Refresh ola ola ola ola ola!!!!!! ***************
+
+Detect: 0______________
+MostValIndex (AP_dB): 2_-28.822369
+penalty channel 11 powerlevel AP 2 -29.739313 powerlevel AP 4 -66.91422
+penalty channel 11 powerlevel AP 2 -29.739313 powerlevel AP 7 -94.17856
+
+Detect: 1______________
+MostValIndex (AP_dB): 0_-44.82237
+penalty channel 1 powerlevel AP 0 -45.55462 powerlevel AP 6 -91.817184
+
+Detect: 2______________
+MostValIndex (AP_dB): 1_-65.90392
+penalty channel 6 powerlevel AP 1 -66.10324 powerlevel AP 3 -121.97081
+penalty channel 6 powerlevel AP 1 -66.10324 powerlevel AP 5 -85.20196
+
+Detect: 3______________
+MostValIndex (AP_dB): 1_-48.784145
+penalty channel 6 powerlevel AP 1 -49.011967 powerlevel AP 3 -98.121994
+penalty channel 6 powerlevel AP 1 -49.011967 powerlevel AP 5 -115.48347
+
+Detect: 4______________
+MostValIndex (AP_dB): 1_-64.46058
+penalty channel 6 powerlevel AP 1 -64.430275 powerlevel AP 3 -109.57747
+penalty channel 6 powerlevel AP 1 -64.430275 powerlevel AP 5 -135.96196
+
+Detect: 5______________
+MostValIndex (AP_dB): 2_-53.903923
+penalty channel 11 powerlevel AP 2 -53.22475 powerlevel AP 4 -75.36897
+penalty channel 11 powerlevel AP 2 -53.22475 powerlevel AP 7 -70.96181
+
+Detect: 6______________
+MostValIndex (AP_dB): 5_-51.419376
+penalty channel 6 powerlevel AP 5 -58.665638 powerlevel AP 1 -107.27675
+penalty channel 6 powerlevel AP 5 -58.665638 powerlevel AP 3 -83.97226
+
+Detect: 7______________
+MostValIndex (AP_dB): 6_-44.419376
+penalty channel 1 powerlevel AP 6 -49.0843 powerlevel AP 0 -111.16131
+
+Detect: 8______________
+MostValIndex (AP_dB): 6_-32.903923
+penalty channel 1 powerlevel AP 6 -34.38232 powerlevel AP 0 -108.08573
+
+Detect: 9______________
+MostValIndex (AP_dB): 5_-43.290245
+penalty channel 6 powerlevel AP 5 -44.747677 powerlevel AP 1 -109.65653
+penalty channel 6 powerlevel AP 5 -44.747677 powerlevel AP 3 -103.40907
+
+Detect: 10______________
+MostValIndex (AP_dB): 3_-70.787605
+penalty channel 6 powerlevel AP 3 -80.60087 powerlevel AP 1 -119.96051
+penalty channel 6 powerlevel AP 3 -80.60087 powerlevel AP 5 -87.38957
+
+Detect: 11______________
+MostValIndex (AP_dB): 4_-34.842968
+penalty channel 11 powerlevel AP 4 -33.27654 powerlevel AP 2 -62.712273
+penalty channel 11 powerlevel AP 4 -33.27654 powerlevel AP 7 -118.2025
+
+Detect: 12______________
+MostValIndex (AP_dB): 1_-47.300545
+penalty channel 6 powerlevel AP 1 -46.593678 powerlevel AP 3 -117.01181
+penalty channel 6 powerlevel AP 1 -46.593678 powerlevel AP 5 -127.78415
+
+Detect: 13______________
+MostValIndex (AP_dB): 2_-50.893623
+penalty channel 11 powerlevel AP 2 -50.676655 powerlevel AP 4 -77.14746
+penalty channel 11 powerlevel AP 2 -50.676655 powerlevel AP 7 -60.438683
+
+Fitness = fs - fp = -706.09186 - 24.610935 = -730.7028
+
+gene 17
+pt_channel[12_11, 5_11, 9_11, 7_11, 6_1, 9_1, 9_1, 1_1, find geneFitness
+*************** This is Emergency Refresh ola ola ola ola ola!!!!!! ***************
+
+Detect: 0______________
+MostValIndex (AP_dB): 2_-37.82237
+penalty channel 11 powerlevel AP 2 -38.739315 powerlevel AP 0 -54.310844
+penalty channel 11 powerlevel AP 2 -38.739315 powerlevel AP 1 -72.26689
+penalty channel 11 powerlevel AP 2 -38.739315 powerlevel AP 3 -61.64715
+
+Detect: 1______________
+MostValIndex (AP_dB): 0_-34.82237
+penalty channel 11 powerlevel AP 0 -35.55462 powerlevel AP 1 -94.04904
+penalty channel 11 powerlevel AP 0 -35.55462 powerlevel AP 2 -61.5433
+penalty channel 11 powerlevel AP 0 -35.55462 powerlevel AP 3 -72.1284
+
+Detect: 2______________
+MostValIndex (AP_dB): 1_-76.90392
+penalty channel 11 powerlevel AP 1 -73.253235 powerlevel AP 0 -109.512276
+penalty channel 11 powerlevel AP 1 -73.253235 powerlevel AP 2 -102.74446
+penalty channel 11 powerlevel AP 1 -73.253235 powerlevel AP 3 -116.97081
+
+Detect: 3______________
+MostValIndex (AP_dB): 1_-59.784145
+penalty channel 11 powerlevel AP 1 -60.011967 powerlevel AP 0 -121.668
+penalty channel 11 powerlevel AP 1 -60.011967 powerlevel AP 2 -89.311134
+penalty channel 11 powerlevel AP 1 -60.011967 powerlevel AP 3 -93.121994
+
+Detect: 4______________
+MostValIndex (AP_dB): 1_-75.46058
+penalty channel 11 powerlevel AP 1 -75.430275 powerlevel AP 0 -133.97806
+penalty channel 11 powerlevel AP 1 -75.430275 powerlevel AP 2 -91.20694
+penalty channel 11 powerlevel AP 1 -75.430275 powerlevel AP 3 -104.57747
+
+Detect: 5______________
+MostValIndex (AP_dB): 2_-62.903923
+penalty channel 11 powerlevel AP 2 -62.22475 powerlevel AP 0 -72.95151
+penalty channel 11 powerlevel AP 2 -62.22475 powerlevel AP 1 -81.99286
+penalty channel 11 powerlevel AP 2 -62.22475 powerlevel AP 3 -77.1819
+
+Detect: 6______________
+MostValIndex (AP_dB): 5_-49.419376
+penalty channel 1 powerlevel AP 5 -59.00241 powerlevel AP 4 -92.20364
+penalty channel 1 powerlevel AP 5 -59.00241 powerlevel AP 6 -77.92725
+penalty channel 1 powerlevel AP 5 -59.00241 powerlevel AP 7 -81.75769
+
+Detect: 7______________
+MostValIndex (AP_dB): 6_-54.419376
+penalty channel 1 powerlevel AP 6 -59.0843 powerlevel AP 4 -64.80177
+penalty channel 1 powerlevel AP 6 -59.0843 powerlevel AP 5 -63.137157
+penalty channel 1 powerlevel AP 6 -59.0843 powerlevel AP 7 -102.03176
+
+Detect: 8______________
+MostValIndex (AP_dB): 6_-42.903923
+penalty channel 1 powerlevel AP 6 -44.38232 powerlevel AP 4 -65.36234
+penalty channel 1 powerlevel AP 6 -44.38232 powerlevel AP 5 -66.930984
+penalty channel 1 powerlevel AP 6 -44.38232 powerlevel AP 7 -114.9721
+
+Detect: 9______________
+MostValIndex (AP_dB): 5_-41.290245
+penalty channel 1 powerlevel AP 5 -42.747677 powerlevel AP 4 -80.22864
+penalty channel 1 powerlevel AP 5 -42.747677 powerlevel AP 6 -63.438683
+penalty channel 1 powerlevel AP 5 -42.747677 powerlevel AP 7 -85.99734
+
+Detect: 10______________
+MostValIndex (AP_dB): 3_-65.78761
+penalty channel 11 powerlevel AP 3 -80.72654 powerlevel AP 0 -107.98673
+penalty channel 11 powerlevel AP 3 -80.72654 powerlevel AP 1 -130.96051
+penalty channel 11 powerlevel AP 3 -80.72654 powerlevel AP 2 -88.72534
+
+Detect: 11______________
+MostValIndex (AP_dB): 4_-46.842968
+penalty channel 1 powerlevel AP 4 -45.27654 powerlevel AP 5 -87.69009
+penalty channel 1 powerlevel AP 4 -45.27654 powerlevel AP 6 -60.55881
+penalty channel 1 powerlevel AP 4 -45.27654 powerlevel AP 7 -124.20251
+
+Detect: 12______________
+MostValIndex (AP_dB): 1_-58.300545
+penalty channel 11 powerlevel AP 1 -57.593678 powerlevel AP 0 -86.84241
+penalty channel 11 powerlevel AP 1 -57.593678 powerlevel AP 2 -98.68597
+penalty channel 11 powerlevel AP 1 -57.593678 powerlevel AP 3 -112.01181
+
+Detect: 13______________
+MostValIndex (AP_dB): 3_-51.893623
+penalty channel 11 powerlevel AP 3 -51.560623 powerlevel AP 0 -67.63593
+penalty channel 11 powerlevel AP 3 -51.560623 powerlevel AP 1 -86.58943
+penalty channel 11 powerlevel AP 3 -51.560623 powerlevel AP 2 -59.893623
+
+Fitness = fs - fp = -785.58826 - 6837.318 = -7622.9062
+
+gene 18
+pt_channel[3_11, 0_11, 12_11, 7_6, 6_1, 5_11, 9_1, 17_11, find geneFitness
+*************** This is Emergency Refresh ola ola ola ola ola!!!!!! ***************
+
+Detect: 0______________
+MostValIndex (AP_dB): 2_-34.82237
+penalty channel 11 powerlevel AP 2 -35.739315 powerlevel AP 0 -63.310844
+penalty channel 11 powerlevel AP 2 -35.739315 powerlevel AP 1 -77.26689
+penalty channel 11 powerlevel AP 2 -35.739315 powerlevel AP 5 -83.79364
+penalty channel 11 powerlevel AP 2 -35.739315 powerlevel AP 7 -84.17856
+
+Detect: 1______________
+MostValIndex (AP_dB): 0_-43.82237
+penalty channel 11 powerlevel AP 0 -44.55462 powerlevel AP 1 -99.04905
+penalty channel 11 powerlevel AP 0 -44.55462 powerlevel AP 2 -58.5433
+penalty channel 11 powerlevel AP 0 -44.55462 powerlevel AP 5 -96.14315
+penalty channel 11 powerlevel AP 0 -44.55462 powerlevel AP 7 -91.55423
+
+Detect: 2______________
+MostValIndex (AP_dB): 1_-81.90392
+penalty channel 11 powerlevel AP 1 -77.25324 powerlevel AP 0 -118.512276
+penalty channel 11 powerlevel AP 1 -77.25324 powerlevel AP 2 -99.74446
+penalty channel 11 powerlevel AP 1 -77.25324 powerlevel AP 5 -87.20196
+penalty channel 11 powerlevel AP 1 -77.25324 powerlevel AP 7 -89.70994
+
+Detect: 3______________
+MostValIndex (AP_dB): 1_-64.78415
+penalty channel 11 powerlevel AP 1 -65.01196 powerlevel AP 0 -130.668
+penalty channel 11 powerlevel AP 1 -65.01196 powerlevel AP 2 -86.311134
+penalty channel 11 powerlevel AP 1 -65.01196 powerlevel AP 5 -117.48347
+penalty channel 11 powerlevel AP 1 -65.01196 powerlevel AP 7 -84.54851
+
+Detect: 4______________
+MostValIndex (AP_dB): 1_-80.46058
+penalty channel 11 powerlevel AP 1 -80.430275 powerlevel AP 0 -142.97806
+penalty channel 11 powerlevel AP 1 -80.430275 powerlevel AP 2 -88.20694
+penalty channel 11 powerlevel AP 1 -80.430275 powerlevel AP 5 -137.96196
+penalty channel 11 powerlevel AP 1 -80.430275 powerlevel AP 7 -95.07088
+
+Detect: 5______________
+MostValIndex (AP_dB): 2_-59.903923
+penalty channel 11 powerlevel AP 2 -59.22475 powerlevel AP 0 -81.95151
+penalty channel 11 powerlevel AP 2 -59.22475 powerlevel AP 1 -86.99286
+penalty channel 11 powerlevel AP 2 -59.22475 powerlevel AP 5 -72.533005
+penalty channel 11 powerlevel AP 2 -59.22475 powerlevel AP 7 -60.961803
+
+Detect: 6______________
+MostValIndex (AP_dB): 5_-53.419376
+penalty channel 11 powerlevel AP 5 -63.00241 powerlevel AP 0 -81.60737
+penalty channel 11 powerlevel AP 5 -63.00241 powerlevel AP 1 -123.27675
+penalty channel 11 powerlevel AP 5 -63.00241 powerlevel AP 2 -64.82237
+penalty channel 11 powerlevel AP 5 -63.00241 powerlevel AP 7 -65.75769
+
+Detect: 7______________
+MostValIndex (AP_dB): 6_-54.419376
+penalty channel 1 powerlevel AP 6 -59.0843 powerlevel AP 4 -64.80177
+
+Detect: 8______________
+MostValIndex (AP_dB): 6_-42.903923
+penalty channel 1 powerlevel AP 6 -44.38232 powerlevel AP 4 -65.36234
+
+Detect: 9______________
+MostValIndex (AP_dB): 5_-45.290245
+penalty channel 11 powerlevel AP 5 -46.747677 powerlevel AP 0 -92.03306
+penalty channel 11 powerlevel AP 5 -46.747677 powerlevel AP 1 -125.65653
+penalty channel 11 powerlevel AP 5 -46.747677 powerlevel AP 2 -70.32316
+penalty channel 11 powerlevel AP 5 -46.747677 powerlevel AP 7 -69.997345
+
+Detect: 10______________
+MostValIndex (AP_dB): 3_-65.78761
+
+Detect: 11______________
+MostValIndex (AP_dB): 4_-46.842968
+penalty channel 1 powerlevel AP 4 -45.27654 powerlevel AP 6 -60.55881
+
+Detect: 12______________
+MostValIndex (AP_dB): 1_-63.300545
+penalty channel 11 powerlevel AP 1 -62.593678 powerlevel AP 0 -95.84241
+penalty channel 11 powerlevel AP 1 -62.593678 powerlevel AP 2 -95.68597
+penalty channel 11 powerlevel AP 1 -62.593678 powerlevel AP 5 -129.78415
+penalty channel 11 powerlevel AP 1 -62.593678 powerlevel AP 7 -72.01181
+
+Detect: 13______________
+MostValIndex (AP_dB): 7_-50.438683
+penalty channel 11 powerlevel AP 7 -50.65272 powerlevel AP 0 -76.63593
+penalty channel 11 powerlevel AP 7 -50.65272 powerlevel AP 1 -91.58943
+penalty channel 11 powerlevel AP 7 -50.65272 powerlevel AP 2 -56.893623
+penalty channel 11 powerlevel AP 7 -50.65272 powerlevel AP 5 -69.95151
+
+Fitness = fs - fp = -804.5547 - 8501.419 = -9305.974
+
+gene 19
+pt_channel[1_1, 13_6, 14_11, 0_1, 5_6, 13_1, 2_11, 3_11, find geneFitness
+*************** This is Emergency Refresh ola ola ola ola ola!!!!!! ***************
+
+Detect: 0______________
+MostValIndex (AP_dB): 2_-32.82237
+penalty channel 11 powerlevel AP 2 -33.739315 powerlevel AP 6 -106.79364
+penalty channel 11 powerlevel AP 2 -33.739315 powerlevel AP 7 -98.17856
+
+Detect: 1______________
+MostValIndex (AP_dB): 0_-45.82237
+penalty channel 1 powerlevel AP 0 -46.55462 powerlevel AP 3 -79.128395
+penalty channel 1 powerlevel AP 0 -46.55462 powerlevel AP 5 -88.14315
+
+Detect: 2______________
+MostValIndex (AP_dB): 1_-68.90392
+penalty channel 6 powerlevel AP 1 -69.10324 powerlevel AP 4 -152.33691
+
+Detect: 3______________
+MostValIndex (AP_dB): 1_-51.784145
+penalty channel 6 powerlevel AP 1 -52.011967 powerlevel AP 4 -107.47166
+
+Detect: 4______________
+MostValIndex (AP_dB): 1_-67.46058
+penalty channel 6 powerlevel AP 1 -67.430275 powerlevel AP 4 -113.63579
+
+Detect: 5______________
+MostValIndex (AP_dB): 2_-57.903923
+penalty channel 11 powerlevel AP 2 -57.22475 powerlevel AP 6 -92.85193
+penalty channel 11 powerlevel AP 2 -57.22475 powerlevel AP 7 -74.96181
+
+Detect: 6______________
+MostValIndex (AP_dB): 5_-45.419376
+penalty channel 1 powerlevel AP 5 -55.00241 powerlevel AP 0 -83.60737
+penalty channel 1 powerlevel AP 5 -55.00241 powerlevel AP 3 -85.97226
+
+Detect: 7______________
+MostValIndex (AP_dB): 5_-59.137157
+penalty channel 1 powerlevel AP 5 -65.46213 powerlevel AP 0 -112.16131
+penalty channel 1 powerlevel AP 5 -65.46213 powerlevel AP 3 -91.36234
+
+Detect: 8______________
+MostValIndex (AP_dB): 6_-49.903923
+penalty channel 11 powerlevel AP 6 -51.38232 powerlevel AP 2 -84.13285
+penalty channel 11 powerlevel AP 6 -51.38232 powerlevel AP 7 -112.9721
+
+Detect: 9______________
+MostValIndex (AP_dB): 5_-37.290245
+penalty channel 1 powerlevel AP 5 -38.747677 powerlevel AP 0 -94.03306
+penalty channel 1 powerlevel AP 5 -38.747677 powerlevel AP 3 -105.40908
+
+Detect: 10______________
+MostValIndex (AP_dB): 3_-72.787605
+penalty channel 1 powerlevel AP 3 -81.597565 powerlevel AP 0 -118.98673
+penalty channel 1 powerlevel AP 3 -81.597565 powerlevel AP 5 -81.38957
+
+Detect: 11______________
+MostValIndex (AP_dB): 4_-47.842968
+penalty channel 6 powerlevel AP 4 -46.27654 powerlevel AP 1 -124.20615
+
+Detect: 12______________
+MostValIndex (AP_dB): 1_-50.300545
+penalty channel 6 powerlevel AP 1 -49.593678 powerlevel AP 4 -146.6336
+
+Detect: 13______________
+MostValIndex (AP_dB): 2_-54.893623
+penalty channel 11 powerlevel AP 2 -54.676655 powerlevel AP 6 -89.99734
+penalty channel 11 powerlevel AP 2 -54.676655 powerlevel AP 7 -64.43868
+
+Fitness = fs - fp = -768.8031 - 68.636475 = -837.4396
+
+gene 20
+pt_channel[1_1, 14_11, 6_1, 1_1, 15_1, 9_6, 2_1, 16_1, find geneFitness
+*************** This is Emergency Refresh ola ola ola ola ola!!!!!! ***************
+
+Detect: 0______________
+MostValIndex (AP_dB): 2_-40.82237
+penalty channel 1 powerlevel AP 2 -41.739315 powerlevel AP 0 -65.310844
+penalty channel 1 powerlevel AP 2 -41.739315 powerlevel AP 3 -67.64715
+penalty channel 1 powerlevel AP 2 -41.739315 powerlevel AP 4 -69.91422
+penalty channel 1 powerlevel AP 2 -41.739315 powerlevel AP 6 -106.79364
+penalty channel 1 powerlevel AP 2 -41.739315 powerlevel AP 7 -85.17856
+
+Detect: 1______________
+MostValIndex (AP_dB): 0_-45.82237
+penalty channel 1 powerlevel AP 0 -46.55462 powerlevel AP 2 -64.543304
+penalty channel 1 powerlevel AP 0 -46.55462 powerlevel AP 3 -78.1284
+penalty channel 1 powerlevel AP 0 -46.55462 powerlevel AP 4 -82.21431
+penalty channel 1 powerlevel AP 0 -46.55462 powerlevel AP 6 -108.817184
+penalty channel 1 powerlevel AP 0 -46.55462 powerlevel AP 7 -92.55423
+
+Detect: 2______________
+MostValIndex (AP_dB): 1_-67.90392
+
+Detect: 3______________
+MostValIndex (AP_dB): 1_-50.784145
+
+Detect: 4______________
+MostValIndex (AP_dB): 1_-66.46058
+
+Detect: 5______________
+MostValIndex (AP_dB): 7_-61.961803
+penalty channel 1 powerlevel AP 7 -62.855835 powerlevel AP 0 -83.95151
+penalty channel 1 powerlevel AP 7 -62.855835 powerlevel AP 2 -65.90392
+penalty channel 1 powerlevel AP 7 -62.855835 powerlevel AP 3 -83.1819
+penalty channel 1 powerlevel AP 7 -62.855835 powerlevel AP 4 -78.36897
+penalty channel 1 powerlevel AP 7 -62.855835 powerlevel AP 6 -92.85193
+
+Detect: 6______________
+MostValIndex (AP_dB): 5_-49.419376
+
+Detect: 7______________
+MostValIndex (AP_dB): 4_-55.80177
+penalty channel 1 powerlevel AP 4 -55.46213 powerlevel AP 0 -112.16131
+penalty channel 1 powerlevel AP 4 -55.46213 powerlevel AP 2 -99.00316
+penalty channel 1 powerlevel AP 4 -55.46213 powerlevel AP 3 -90.36234
+penalty channel 1 powerlevel AP 4 -55.46213 powerlevel AP 6 -61.419376
+penalty channel 1 powerlevel AP 4 -55.46213 powerlevel AP 7 -87.03176
+
+Detect: 8______________
+MostValIndex (AP_dB): 6_-49.903923
+penalty channel 1 powerlevel AP 6 -51.38232 powerlevel AP 0 -109.08573
+penalty channel 1 powerlevel AP 6 -51.38232 powerlevel AP 2 -92.13285
+penalty channel 1 powerlevel AP 6 -51.38232 powerlevel AP 3 -84.5601
+penalty channel 1 powerlevel AP 6 -51.38232 powerlevel AP 4 -56.362343
+penalty channel 1 powerlevel AP 6 -51.38232 powerlevel AP 7 -99.97211
+
+Detect: 9______________
+MostValIndex (AP_dB): 5_-41.290245
+
+Detect: 10______________
+MostValIndex (AP_dB): 3_-71.787605
+penalty channel 1 powerlevel AP 3 -71.60087 powerlevel AP 0 -118.98673
+penalty channel 1 powerlevel AP 3 -71.60087 powerlevel AP 2 -91.72534
+penalty channel 1 powerlevel AP 3 -71.60087 powerlevel AP 4 -100.16914
+penalty channel 1 powerlevel AP 3 -71.60087 powerlevel AP 6 -92.700386
+penalty channel 1 powerlevel AP 3 -71.60087 powerlevel AP 7 -72.24905
+
+Detect: 11______________
+MostValIndex (AP_dB): 4_-37.842968
+penalty channel 1 powerlevel AP 4 -36.27654 powerlevel AP 0 -86.95437
+penalty channel 1 powerlevel AP 4 -36.27654 powerlevel AP 2 -74.71227
+penalty channel 1 powerlevel AP 4 -36.27654 powerlevel AP 3 -71.23538
+penalty channel 1 powerlevel AP 4 -36.27654 powerlevel AP 6 -67.55881
+penalty channel 1 powerlevel AP 4 -36.27654 powerlevel AP 7 -109.2025
+
+Detect: 12______________
+MostValIndex (AP_dB): 1_-49.300545
+
+Detect: 13______________
+MostValIndex (AP_dB): 7_-51.438683
+penalty channel 1 powerlevel AP 7 -51.65272 powerlevel AP 0 -78.63593
+penalty channel 1 powerlevel AP 7 -51.65272 powerlevel AP 2 -62.893623
+penalty channel 1 powerlevel AP 7 -51.65272 powerlevel AP 3 -57.893623
+penalty channel 1 powerlevel AP 7 -51.65272 powerlevel AP 4 -80.14746
+penalty channel 1 powerlevel AP 7 -51.65272 powerlevel AP 6 -89.99734
+
+Fitness = fs - fp = -753.41364 - 4221.465 = -4974.8784
+
+gene 21
+pt_channel[19_11, 0_11, 3_6, 13_11, 17_1, 0_11, 11_1, 9_6, find geneFitness
+*************** This is Emergency Refresh ola ola ola ola ola!!!!!! ***************
+
+Detect: 0______________
+MostValIndex (AP_dB): 2_-43.82237
+penalty channel 6 powerlevel AP 2 -44.739315 powerlevel AP 7 -92.17856
+
+Detect: 1______________
+MostValIndex (AP_dB): 0_-27.822369
+penalty channel 11 powerlevel AP 0 -28.554619 powerlevel AP 1 -99.04905
+penalty channel 11 powerlevel AP 0 -28.554619 powerlevel AP 3 -66.1284
+penalty channel 11 powerlevel AP 0 -28.554619 powerlevel AP 5 -101.14315
+
+Detect: 2______________
+MostValIndex (AP_dB): 1_-81.90392
+penalty channel 11 powerlevel AP 1 -82.10324 powerlevel AP 0 -102.512276
+penalty channel 11 powerlevel AP 1 -82.10324 powerlevel AP 3 -110.97081
+penalty channel 11 powerlevel AP 1 -82.10324 powerlevel AP 5 -92.20196
+
+Detect: 3______________
+MostValIndex (AP_dB): 1_-64.78415
+penalty channel 11 powerlevel AP 1 -65.01196 powerlevel AP 0 -114.668
+penalty channel 11 powerlevel AP 1 -65.01196 powerlevel AP 3 -87.121994
+penalty channel 11 powerlevel AP 1 -65.01196 powerlevel AP 5 -122.48347
+
+Detect: 4______________
+MostValIndex (AP_dB): 1_-80.46058
+penalty channel 11 powerlevel AP 1 -80.430275 powerlevel AP 0 -126.978065
+penalty channel 11 powerlevel AP 1 -80.430275 powerlevel AP 3 -98.57747
+penalty channel 11 powerlevel AP 1 -80.430275 powerlevel AP 5 -142.96196
+
+Detect: 5______________
+MostValIndex (AP_dB): 0_-65.95151
+penalty channel 11 powerlevel AP 0 -65.51314 powerlevel AP 1 -86.99286
+penalty channel 11 powerlevel AP 0 -65.51314 powerlevel AP 3 -71.1819
+penalty channel 11 powerlevel AP 0 -65.51314 powerlevel AP 5 -77.533005
+
+Detect: 6______________
+MostValIndex (AP_dB): 5_-58.419376
+penalty channel 11 powerlevel AP 5 -65.50665 powerlevel AP 0 -65.60736
+penalty channel 11 powerlevel AP 5 -65.50665 powerlevel AP 1 -123.27675
+penalty channel 11 powerlevel AP 5 -65.50665 powerlevel AP 3 -72.97226
+
+Detect: 7______________
+MostValIndex (AP_dB): 6_-52.419376
+penalty channel 1 powerlevel AP 6 -53.46213 powerlevel AP 4 -53.80177
+
+Detect: 8______________
+MostValIndex (AP_dB): 6_-40.903923
+penalty channel 1 powerlevel AP 6 -42.38232 powerlevel AP 4 -54.362343
+
+Detect: 9______________
+MostValIndex (AP_dB): 5_-50.290245
+penalty channel 11 powerlevel AP 5 -51.747677 powerlevel AP 0 -76.03306
+penalty channel 11 powerlevel AP 5 -51.747677 powerlevel AP 1 -125.65653
+penalty channel 11 powerlevel AP 5 -51.747677 powerlevel AP 3 -92.40907
+
+Detect: 10______________
+MostValIndex (AP_dB): 3_-59.78761
+penalty channel 11 powerlevel AP 3 -74.72654 powerlevel AP 0 -100.98673
+penalty channel 11 powerlevel AP 3 -74.72654 powerlevel AP 1 -135.96051
+penalty channel 11 powerlevel AP 3 -74.72654 powerlevel AP 5 -94.38957
+
+Detect: 11______________
+MostValIndex (AP_dB): 4_-35.842968
+penalty channel 1 powerlevel AP 4 -34.27654 powerlevel AP 6 -58.55881
+
+Detect: 12______________
+MostValIndex (AP_dB): 1_-63.300545
+penalty channel 11 powerlevel AP 1 -62.593678 powerlevel AP 0 -79.84241
+penalty channel 11 powerlevel AP 1 -62.593678 powerlevel AP 3 -106.01181
+penalty channel 11 powerlevel AP 1 -62.593678 powerlevel AP 5 -134.78415
+
+Detect: 13______________
+MostValIndex (AP_dB): 3_-45.893623
+penalty channel 11 powerlevel AP 3 -45.560623 powerlevel AP 0 -60.635933
+penalty channel 11 powerlevel AP 3 -45.560623 powerlevel AP 1 -91.58943
+penalty channel 11 powerlevel AP 3 -45.560623 powerlevel AP 5 -74.9515
+
+Fitness = fs - fp = -796.6087 - 5794.4434 = -6591.0522
+
+gene 22
+pt_channel[11_11, 4_6, 0_1, 17_1, 16_6, 14_6, 12_6, 16_11, find geneFitness
+*************** This is Emergency Refresh ola ola ola ola ola!!!!!! ***************
+
+Detect: 0______________
+MostValIndex (AP_dB): 2_-46.82237
+penalty channel 1 powerlevel AP 2 -47.739315 powerlevel AP 3 -51.64715
+
+Detect: 1______________
+MostValIndex (AP_dB): 0_-35.82237
+penalty channel 11 powerlevel AP 0 -36.55462 powerlevel AP 7 -92.55423
+
+Detect: 2______________
+MostValIndex (AP_dB): 1_-77.90392
+penalty channel 6 powerlevel AP 1 -68.253235 powerlevel AP 4 -141.33691
+penalty channel 6 powerlevel AP 1 -68.253235 powerlevel AP 5 -78.20196
+penalty channel 6 powerlevel AP 1 -68.253235 powerlevel AP 6 -146.28531
+
+Detect: 3______________
+MostValIndex (AP_dB): 1_-60.784145
+penalty channel 6 powerlevel AP 1 -61.011967 powerlevel AP 4 -96.47166
+penalty channel 6 powerlevel AP 1 -61.011967 powerlevel AP 5 -108.48347
+penalty channel 6 powerlevel AP 1 -61.011967 powerlevel AP 6 -121.85624
+
+Detect: 4______________
+MostValIndex (AP_dB): 1_-76.46058
+penalty channel 6 powerlevel AP 1 -76.430275 powerlevel AP 4 -102.63579
+penalty channel 6 powerlevel AP 1 -76.430275 powerlevel AP 5 -128.96196
+penalty channel 6 powerlevel AP 1 -76.430275 powerlevel AP 6 -122.61673
+
+Detect: 5______________
+MostValIndex (AP_dB): 7_-61.961803
+penalty channel 11 powerlevel AP 7 -62.855835 powerlevel AP 0 -73.95151
+
+Detect: 6______________
+MostValIndex (AP_dB): 5_-44.419376
+penalty channel 6 powerlevel AP 5 -54.00241 powerlevel AP 1 -119.27675
+penalty channel 6 powerlevel AP 5 -54.00241 powerlevel AP 4 -82.20364
+penalty channel 6 powerlevel AP 5 -54.00241 powerlevel AP 6 -74.92725
+
+Detect: 7______________
+MostValIndex (AP_dB): 6_-51.419376
+penalty channel 6 powerlevel AP 6 -54.46213 powerlevel AP 1 -121.92358
+penalty channel 6 powerlevel AP 6 -54.46213 powerlevel AP 4 -54.80177
+penalty channel 6 powerlevel AP 6 -54.46213 powerlevel AP 5 -58.137157
+
+Detect: 8______________
+MostValIndex (AP_dB): 6_-39.903923
+penalty channel 6 powerlevel AP 6 -41.38232 powerlevel AP 1 -139.08804
+penalty channel 6 powerlevel AP 6 -41.38232 powerlevel AP 4 -55.362343
+penalty channel 6 powerlevel AP 6 -41.38232 powerlevel AP 5 -61.930984
+
+Detect: 9______________
+MostValIndex (AP_dB): 5_-36.290245
+penalty channel 6 powerlevel AP 5 -37.747677 powerlevel AP 1 -121.65653
+penalty channel 6 powerlevel AP 5 -37.747677 powerlevel AP 4 -70.22864
+penalty channel 6 powerlevel AP 5 -37.747677 powerlevel AP 6 -60.438683
+
+Detect: 10______________
+MostValIndex (AP_dB): 3_-55.78761
+penalty channel 1 powerlevel AP 3 -70.72654 powerlevel AP 2 -97.72534
+
+Detect: 11______________
+MostValIndex (AP_dB): 4_-36.842968
+penalty channel 6 powerlevel AP 4 -35.27654 powerlevel AP 1 -133.20615
+penalty channel 6 powerlevel AP 4 -35.27654 powerlevel AP 5 -82.69009
+penalty channel 6 powerlevel AP 4 -35.27654 powerlevel AP 6 -57.55881
+
+Detect: 12______________
+MostValIndex (AP_dB): 1_-59.300545
+penalty channel 6 powerlevel AP 1 -58.593678 powerlevel AP 4 -135.6336
+penalty channel 6 powerlevel AP 1 -58.593678 powerlevel AP 5 -120.78415
+penalty channel 6 powerlevel AP 1 -58.593678 powerlevel AP 6 -105.37466
+
+Detect: 13______________
+MostValIndex (AP_dB): 3_-41.893623
+penalty channel 1 powerlevel AP 3 -41.560623 powerlevel AP 2 -68.89362
+
+Fitness = fs - fp = -746.59717 - 2909.7827 = -3656.38
+
+gene 23
+pt_channel[15_1, 15_11, 13_1, 10_6, 10_6, 13_11, 9_6, 15_11, find geneFitness
+*************** This is Emergency Refresh ola ola ola ola ola!!!!!! ***************
+
+Detect: 0______________
+MostValIndex (AP_dB): 2_-33.82237
+penalty channel 1 powerlevel AP 2 -34.739315 powerlevel AP 0 -51.310844
+
+Detect: 1______________
+MostValIndex (AP_dB): 0_-31.822369
+penalty channel 1 powerlevel AP 0 -32.55462 powerlevel AP 2 -57.5433
+
+Detect: 2______________
+MostValIndex (AP_dB): 1_-66.90392
+penalty channel 11 powerlevel AP 1 -67.10324 powerlevel AP 5 -79.20196
+penalty channel 11 powerlevel AP 1 -67.10324 powerlevel AP 7 -91.70994
+
+Detect: 3______________
+MostValIndex (AP_dB): 1_-49.784145
+penalty channel 11 powerlevel AP 1 -50.011967 powerlevel AP 5 -109.48347
+penalty channel 11 powerlevel AP 1 -50.011967 powerlevel AP 7 -86.54851
+
+Detect: 4______________
+MostValIndex (AP_dB): 1_-65.46058
+penalty channel 11 powerlevel AP 1 -65.430275 powerlevel AP 5 -129.96196
+penalty channel 11 powerlevel AP 1 -65.430275 powerlevel AP 7 -97.07088
+
+Detect: 5______________
+MostValIndex (AP_dB): 2_-58.903923
+penalty channel 1 powerlevel AP 2 -58.22475 powerlevel AP 0 -69.95151
+
+Detect: 6______________
+MostValIndex (AP_dB): 5_-45.419376
+penalty channel 11 powerlevel AP 5 -55.00241 powerlevel AP 1 -108.27675
+penalty channel 11 powerlevel AP 5 -55.00241 powerlevel AP 7 -67.75769
+
+Detect: 7______________
+MostValIndex (AP_dB): 6_-54.419376
+penalty channel 6 powerlevel AP 6 -59.0843 powerlevel AP 3 -81.36234
+penalty channel 6 powerlevel AP 6 -59.0843 powerlevel AP 4 -60.80177
+
+Detect: 8______________
+MostValIndex (AP_dB): 6_-42.903923
+penalty channel 6 powerlevel AP 6 -44.38232 powerlevel AP 3 -75.5601
+penalty channel 6 powerlevel AP 6 -44.38232 powerlevel AP 4 -61.362343
+
+Detect: 9______________
+MostValIndex (AP_dB): 5_-37.290245
+penalty channel 11 powerlevel AP 5 -38.747677 powerlevel AP 1 -110.65653
+penalty channel 11 powerlevel AP 5 -38.747677 powerlevel AP 7 -71.997345
+
+Detect: 10______________
+MostValIndex (AP_dB): 3_-62.78761
+penalty channel 6 powerlevel AP 3 -72.60087 powerlevel AP 4 -105.16914
+penalty channel 6 powerlevel AP 3 -72.60087 powerlevel AP 6 -85.700386
+
+Detect: 11______________
+MostValIndex (AP_dB): 4_-42.842968
+penalty channel 6 powerlevel AP 4 -41.27654 powerlevel AP 3 -62.235386
+penalty channel 6 powerlevel AP 4 -41.27654 powerlevel AP 6 -60.55881
+
+Detect: 12______________
+MostValIndex (AP_dB): 1_-48.300545
+penalty channel 11 powerlevel AP 1 -47.593678 powerlevel AP 5 -121.78415
+penalty channel 11 powerlevel AP 1 -47.593678 powerlevel AP 7 -74.01181
+
+Detect: 13______________
+MostValIndex (AP_dB): 3_-48.893623
+penalty channel 6 powerlevel AP 3 -48.560623 powerlevel AP 4 -85.14746
+penalty channel 6 powerlevel AP 3 -48.560623 powerlevel AP 6 -82.997345
+
+Fitness = fs - fp = -715.3126 - 3273.6108 = -3988.9233
+
+gene 24
+pt_channel[0_1, 4_1, 1_1, 19_6, 8_6, 4_11, 2_1, 9_6, find geneFitness
+*************** This is Emergency Refresh ola ola ola ola ola!!!!!! ***************
+
+Detect: 0______________
+MostValIndex (AP_dB): 2_-45.82237
+penalty channel 1 powerlevel AP 2 -46.739315 powerlevel AP 0 -66.310844
+penalty channel 1 powerlevel AP 2 -46.739315 powerlevel AP 1 -73.26689
+penalty channel 1 powerlevel AP 2 -46.739315 powerlevel AP 6 -106.79364
+
+Detect: 1______________
+MostValIndex (AP_dB): 0_-46.82237
+penalty channel 1 powerlevel AP 0 -47.55462 powerlevel AP 1 -95.04905
+penalty channel 1 powerlevel AP 0 -47.55462 powerlevel AP 2 -69.543304
+penalty channel 1 powerlevel AP 0 -47.55462 powerlevel AP 6 -108.817184
+
+Detect: 2______________
+MostValIndex (AP_dB): 1_-77.90392
+penalty channel 1 powerlevel AP 1 -78.10324 powerlevel AP 0 -121.512276
+penalty channel 1 powerlevel AP 1 -78.10324 powerlevel AP 2 -110.74447
+penalty channel 1 powerlevel AP 1 -78.10324 powerlevel AP 6 -156.28531
+
+Detect: 3______________
+MostValIndex (AP_dB): 1_-60.784145
+penalty channel 1 powerlevel AP 1 -61.011967 powerlevel AP 0 -133.668
+penalty channel 1 powerlevel AP 1 -61.011967 powerlevel AP 2 -97.311134
+penalty channel 1 powerlevel AP 1 -61.011967 powerlevel AP 6 -131.85623
+
+Detect: 4______________
+MostValIndex (AP_dB): 1_-76.46058
+penalty channel 1 powerlevel AP 1 -76.430275 powerlevel AP 0 -145.97806
+penalty channel 1 powerlevel AP 1 -76.430275 powerlevel AP 2 -99.20693
+penalty channel 1 powerlevel AP 1 -76.430275 powerlevel AP 6 -132.61673
+
+Detect: 5______________
+MostValIndex (AP_dB): 3_-65.1819
+penalty channel 6 powerlevel AP 3 -64.7218 powerlevel AP 4 -85.36897
+penalty channel 6 powerlevel AP 3 -64.7218 powerlevel AP 7 -68.96181
+
+Detect: 6______________
+MostValIndex (AP_dB): 5_-54.419376
+
+Detect: 7______________
+MostValIndex (AP_dB): 6_-61.419376
+penalty channel 1 powerlevel AP 6 -62.46213 powerlevel AP 0 -113.16131
+penalty channel 1 powerlevel AP 6 -62.46213 powerlevel AP 1 -121.92358
+penalty channel 1 powerlevel AP 6 -62.46213 powerlevel AP 2 -104.00316
+
+Detect: 8______________
+MostValIndex (AP_dB): 6_-49.903923
+penalty channel 1 powerlevel AP 6 -51.38232 powerlevel AP 0 -110.08573
+penalty channel 1 powerlevel AP 6 -51.38232 powerlevel AP 1 -139.08804
+penalty channel 1 powerlevel AP 6 -51.38232 powerlevel AP 2 -97.13285
+
+Detect: 9______________
+MostValIndex (AP_dB): 5_-46.290245
+
+Detect: 10______________
+MostValIndex (AP_dB): 3_-53.78761
+penalty channel 6 powerlevel AP 3 -68.72654 powerlevel AP 4 -107.16914
+penalty channel 6 powerlevel AP 3 -68.72654 powerlevel AP 7 -79.24905
+
+Detect: 11______________
+MostValIndex (AP_dB): 4_-44.842968
+penalty channel 6 powerlevel AP 4 -43.27654 powerlevel AP 3 -53.235386
+penalty channel 6 powerlevel AP 4 -43.27654 powerlevel AP 7 -116.2025
+
+Detect: 12______________
+MostValIndex (AP_dB): 1_-59.300545
+penalty channel 1 powerlevel AP 1 -58.593678 powerlevel AP 0 -98.84241
+penalty channel 1 powerlevel AP 1 -58.593678 powerlevel AP 2 -106.68597
+penalty channel 1 powerlevel AP 1 -58.593678 powerlevel AP 6 -115.37466
+
+Detect: 13______________
+MostValIndex (AP_dB): 3_-39.893623
+penalty channel 6 powerlevel AP 3 -39.560623 powerlevel AP 4 -87.14746
+penalty channel 6 powerlevel AP 3 -39.560623 powerlevel AP 7 -58.438683
+
+Fitness = fs - fp = -810.3132 - 3027.5112 = -3837.8245
+
+gene 25
+pt_channel[8_11, 9_1, 18_11, 14_11, 12_1, 16_1, 4_1, 9_1, find geneFitness
+*************** This is Emergency Refresh ola ola ola ola ola!!!!!! ***************
+
+Detect: 0______________
+MostValIndex (AP_dB): 2_-28.822369
+penalty channel 11 powerlevel AP 2 -29.739313 powerlevel AP 0 -58.310844
+penalty channel 11 powerlevel AP 2 -29.739313 powerlevel AP 3 -54.64715
+
+Detect: 1______________
+MostValIndex (AP_dB): 0_-38.82237
+penalty channel 11 powerlevel AP 0 -39.55462 powerlevel AP 2 -52.5433
+penalty channel 11 powerlevel AP 0 -39.55462 powerlevel AP 3 -65.1284
+
+Detect: 2______________
+MostValIndex (AP_dB): 1_-72.90392
+penalty channel 1 powerlevel AP 1 -66.253235 powerlevel AP 4 -145.3369
+penalty channel 1 powerlevel AP 1 -66.253235 powerlevel AP 5 -76.20196
+penalty channel 1 powerlevel AP 1 -66.253235 powerlevel AP 6 -154.28531
+penalty channel 1 powerlevel AP 1 -66.253235 powerlevel AP 7 -97.70994
+
+Detect: 3______________
+MostValIndex (AP_dB): 1_-55.784145
+penalty channel 1 powerlevel AP 1 -56.011967 powerlevel AP 4 -100.47166
+penalty channel 1 powerlevel AP 1 -56.011967 powerlevel AP 5 -106.48347
+penalty channel 1 powerlevel AP 1 -56.011967 powerlevel AP 6 -129.85623
+penalty channel 1 powerlevel AP 1 -56.011967 powerlevel AP 7 -92.54851
+
+Detect: 4______________
+MostValIndex (AP_dB): 1_-71.46058
+penalty channel 1 powerlevel AP 1 -71.430275 powerlevel AP 4 -106.63579
+penalty channel 1 powerlevel AP 1 -71.430275 powerlevel AP 5 -126.96196
+penalty channel 1 powerlevel AP 1 -71.430275 powerlevel AP 6 -130.61673
+penalty channel 1 powerlevel AP 1 -71.430275 powerlevel AP 7 -103.07088
+
+Detect: 5______________
+MostValIndex (AP_dB): 2_-53.903923
+penalty channel 11 powerlevel AP 2 -53.22475 powerlevel AP 0 -76.95151
+penalty channel 11 powerlevel AP 2 -53.22475 powerlevel AP 3 -70.1819
+
+Detect: 6______________
+MostValIndex (AP_dB): 5_-42.419376
+penalty channel 1 powerlevel AP 5 -52.00241 powerlevel AP 1 -114.27675
+penalty channel 1 powerlevel AP 5 -52.00241 powerlevel AP 4 -86.20364
+penalty channel 1 powerlevel AP 5 -52.00241 powerlevel AP 6 -82.92725
+penalty channel 1 powerlevel AP 5 -52.00241 powerlevel AP 7 -73.75769
+
+Detect: 7______________
+MostValIndex (AP_dB): 5_-56.137157
+penalty channel 1 powerlevel AP 5 -58.46213 powerlevel AP 1 -116.92358
+penalty channel 1 powerlevel AP 5 -58.46213 powerlevel AP 4 -58.80177
+penalty channel 1 powerlevel AP 5 -58.46213 powerlevel AP 6 -59.419376
+penalty channel 1 powerlevel AP 5 -58.46213 powerlevel AP 7 -94.03176
+
+Detect: 8______________
+MostValIndex (AP_dB): 6_-47.903923
+penalty channel 1 powerlevel AP 6 -49.38232 powerlevel AP 1 -134.08804
+penalty channel 1 powerlevel AP 6 -49.38232 powerlevel AP 4 -59.362343
+penalty channel 1 powerlevel AP 6 -49.38232 powerlevel AP 5 -59.930984
+penalty channel 1 powerlevel AP 6 -49.38232 powerlevel AP 7 -106.97211
+
+Detect: 9______________
+MostValIndex (AP_dB): 5_-34.290245
+penalty channel 1 powerlevel AP 5 -35.747677 powerlevel AP 1 -116.65653
+penalty channel 1 powerlevel AP 5 -35.747677 powerlevel AP 4 -74.22864
+penalty channel 1 powerlevel AP 5 -35.747677 powerlevel AP 6 -68.43868
+penalty channel 1 powerlevel AP 5 -35.747677 powerlevel AP 7 -77.997345
+
+Detect: 10______________
+MostValIndex (AP_dB): 3_-58.78761
+penalty channel 11 powerlevel AP 3 -73.72654 powerlevel AP 0 -111.98673
+penalty channel 11 powerlevel AP 3 -73.72654 powerlevel AP 2 -79.72534
+
+Detect: 11______________
+MostValIndex (AP_dB): 4_-40.842968
+penalty channel 1 powerlevel AP 4 -39.27654 powerlevel AP 1 -128.20615
+penalty channel 1 powerlevel AP 4 -39.27654 powerlevel AP 5 -80.69009
+penalty channel 1 powerlevel AP 4 -39.27654 powerlevel AP 6 -65.55881
+penalty channel 1 powerlevel AP 4 -39.27654 powerlevel AP 7 -116.2025
+
+Detect: 12______________
+MostValIndex (AP_dB): 1_-54.300545
+penalty channel 1 powerlevel AP 1 -53.593678 powerlevel AP 4 -139.6336
+penalty channel 1 powerlevel AP 1 -53.593678 powerlevel AP 5 -118.78415
+penalty channel 1 powerlevel AP 1 -53.593678 powerlevel AP 6 -113.37466
+penalty channel 1 powerlevel AP 1 -53.593678 powerlevel AP 7 -80.01181
+
+Detect: 13______________
+MostValIndex (AP_dB): 3_-44.893623
+penalty channel 11 powerlevel AP 3 -44.560623 powerlevel AP 0 -71.63593
+penalty channel 11 powerlevel AP 3 -44.560623 powerlevel AP 2 -50.893623
+
+Fitness = fs - fp = -722.9661 - 3990.6382 = -4713.6045
+
+gene 26
+pt_channel[18_11, 15_1, 5_6, 18_11, 9_6, 1_11, 18_6, 16_1, find geneFitness
+*************** This is Emergency Refresh ola ola ola ola ola!!!!!! ***************
+
+Detect: 0______________
+MostValIndex (AP_dB): 2_-41.82237
+penalty channel 6 powerlevel AP 2 -42.739315 powerlevel AP 4 -75.91422
+penalty channel 6 powerlevel AP 2 -42.739315 powerlevel AP 6 -90.79364
+
+Detect: 1______________
+MostValIndex (AP_dB): 0_-28.822369
+penalty channel 11 powerlevel AP 0 -29.554619 powerlevel AP 3 -61.1284
+penalty channel 11 powerlevel AP 0 -29.554619 powerlevel AP 5 -100.14315
+
+Detect: 2______________
+MostValIndex (AP_dB): 1_-66.90392
+penalty channel 1 powerlevel AP 1 -67.10324 powerlevel AP 7 -90.70994
+
+Detect: 3______________
+MostValIndex (AP_dB): 1_-49.784145
+penalty channel 1 powerlevel AP 1 -50.011967 powerlevel AP 7 -85.54851
+
+Detect: 4______________
+MostValIndex (AP_dB): 1_-65.46058
+penalty channel 1 powerlevel AP 1 -65.430275 powerlevel AP 7 -96.07088
+
+Detect: 5______________
+MostValIndex (AP_dB): 7_-61.961803
+penalty channel 1 powerlevel AP 7 -62.855835 powerlevel AP 1 -71.99286
+
+Detect: 6______________
+MostValIndex (AP_dB): 5_-57.419376
+penalty channel 11 powerlevel AP 5 -66.50665 powerlevel AP 0 -66.60736
+penalty channel 11 powerlevel AP 5 -66.50665 powerlevel AP 3 -67.97226
+
+Detect: 7______________
+MostValIndex (AP_dB): 6_-45.419376
+penalty channel 6 powerlevel AP 6 -50.0843 powerlevel AP 2 -100.00316
+penalty channel 6 powerlevel AP 6 -50.0843 powerlevel AP 4 -61.80177
+
+Detect: 8______________
+MostValIndex (AP_dB): 6_-33.903923
+penalty channel 6 powerlevel AP 6 -35.38232 powerlevel AP 2 -93.13285
+penalty channel 6 powerlevel AP 6 -35.38232 powerlevel AP 4 -62.362343
+
+Detect: 9______________
+MostValIndex (AP_dB): 5_-49.290245
+penalty channel 11 powerlevel AP 5 -50.747677 powerlevel AP 0 -77.03306
+penalty channel 11 powerlevel AP 5 -50.747677 powerlevel AP 3 -87.40907
+
+Detect: 10______________
+MostValIndex (AP_dB): 3_-54.78761
+penalty channel 11 powerlevel AP 3 -69.72654 powerlevel AP 0 -101.98673
+penalty channel 11 powerlevel AP 3 -69.72654 powerlevel AP 5 -93.38957
+
+Detect: 11______________
+MostValIndex (AP_dB): 4_-43.842968
+penalty channel 6 powerlevel AP 4 -42.27654 powerlevel AP 2 -75.71227
+penalty channel 6 powerlevel AP 4 -42.27654 powerlevel AP 6 -51.55881
+
+Detect: 12______________
+MostValIndex (AP_dB): 1_-48.300545
+penalty channel 1 powerlevel AP 1 -47.593678 powerlevel AP 7 -73.01181
+
+Detect: 13______________
+MostValIndex (AP_dB): 3_-40.893623
+penalty channel 11 powerlevel AP 3 -40.560623 powerlevel AP 0 -61.635933
+penalty channel 11 powerlevel AP 3 -40.560623 powerlevel AP 5 -73.95151
+
+Fitness = fs - fp = -720.5736 - 2252.662 = -2973.2358
+
+gene 27
+pt_channel[4_1, 17_1, 5_6, 10_6, 17_1, 0_11, 8_11, 15_1, find geneFitness
+*************** This is Emergency Refresh ola ola ola ola ola!!!!!! ***************
+
+Detect: 0______________
+MostValIndex (AP_dB): 2_-41.82237
+penalty channel 6 powerlevel AP 2 -42.739315 powerlevel AP 3 -58.64715
+
+Detect: 1______________
+MostValIndex (AP_dB): 0_-42.82237
+penalty channel 1 powerlevel AP 0 -43.55462 powerlevel AP 1 -82.04904
+penalty channel 1 powerlevel AP 0 -43.55462 powerlevel AP 4 -80.21431
+penalty channel 1 powerlevel AP 0 -43.55462 powerlevel AP 7 -93.55423
+
+Detect: 2______________
+MostValIndex (AP_dB): 1_-64.90392
+penalty channel 1 powerlevel AP 1 -65.10324 powerlevel AP 0 -117.512276
+penalty channel 1 powerlevel AP 1 -65.10324 powerlevel AP 4 -140.33691
+penalty channel 1 powerlevel AP 1 -65.10324 powerlevel AP 7 -91.70994
+
+Detect: 3______________
+MostValIndex (AP_dB): 1_-47.784145
+penalty channel 1 powerlevel AP 1 -48.011967 powerlevel AP 0 -129.668
+penalty channel 1 powerlevel AP 1 -48.011967 powerlevel AP 4 -95.47166
+penalty channel 1 powerlevel AP 1 -48.011967 powerlevel AP 7 -86.54851
+
+Detect: 4______________
+MostValIndex (AP_dB): 1_-63.46058
+penalty channel 1 powerlevel AP 1 -63.430275 powerlevel AP 0 -141.97806
+penalty channel 1 powerlevel AP 1 -63.430275 powerlevel AP 4 -101.63579
+penalty channel 1 powerlevel AP 1 -63.430275 powerlevel AP 7 -97.07088
+
+Detect: 5______________
+MostValIndex (AP_dB): 7_-62.961803
+penalty channel 1 powerlevel AP 7 -63.855835 powerlevel AP 0 -80.95151
+penalty channel 1 powerlevel AP 7 -63.855835 powerlevel AP 1 -69.99286
+penalty channel 1 powerlevel AP 7 -63.855835 powerlevel AP 4 -76.36897
+
+Detect: 6______________
+MostValIndex (AP_dB): 5_-58.419376
+penalty channel 11 powerlevel AP 5 -67.94281 powerlevel AP 6 -78.92725
+
+Detect: 7______________
+MostValIndex (AP_dB): 4_-53.80177
+penalty channel 1 powerlevel AP 4 -53.46213 powerlevel AP 0 -109.16131
+penalty channel 1 powerlevel AP 4 -53.46213 powerlevel AP 1 -108.92358
+penalty channel 1 powerlevel AP 4 -53.46213 powerlevel AP 7 -88.03176
+
+Detect: 8______________
+MostValIndex (AP_dB): 6_-43.903923
+penalty channel 11 powerlevel AP 6 -45.38232 powerlevel AP 5 -75.930984
+
+Detect: 9______________
+MostValIndex (AP_dB): 5_-50.290245
+penalty channel 11 powerlevel AP 5 -51.747677 powerlevel AP 6 -64.43868
+
+Detect: 10______________
+MostValIndex (AP_dB): 3_-62.78761
+penalty channel 6 powerlevel AP 3 -72.60087 powerlevel AP 2 -92.72534
+
+Detect: 11______________
+MostValIndex (AP_dB): 4_-35.842968
+penalty channel 1 powerlevel AP 4 -34.27654 powerlevel AP 0 -83.95438
+penalty channel 1 powerlevel AP 4 -34.27654 powerlevel AP 1 -120.20615
+penalty channel 1 powerlevel AP 4 -34.27654 powerlevel AP 7 -110.2025
+
+Detect: 12______________
+MostValIndex (AP_dB): 1_-46.300545
+penalty channel 1 powerlevel AP 1 -45.593678 powerlevel AP 0 -94.84241
+penalty channel 1 powerlevel AP 1 -45.593678 powerlevel AP 4 -134.6336
+penalty channel 1 powerlevel AP 1 -45.593678 powerlevel AP 7 -74.01181
+
+Detect: 13______________
+MostValIndex (AP_dB): 3_-48.893623
+penalty channel 6 powerlevel AP 3 -48.560623 powerlevel AP 2 -63.893623
+
+Fitness = fs - fp = -746.2619 - 2435.0337 = -3181.2957
+
+gene 28
+pt_channel[3_11, 18_1, 18_6, 19_1, 12_11, 3_11, 4_1, 4_11, find geneFitness
+*************** This is Emergency Refresh ola ola ola ola ola!!!!!! ***************
+
+Detect: 0______________
+MostValIndex (AP_dB): 2_-28.822369
+
+Detect: 1______________
+MostValIndex (AP_dB): 0_-43.82237
+penalty channel 11 powerlevel AP 0 -44.55462 powerlevel AP 4 -85.21431
+penalty channel 11 powerlevel AP 0 -44.55462 powerlevel AP 5 -98.14315
+penalty channel 11 powerlevel AP 0 -44.55462 powerlevel AP 7 -104.55423
+
+Detect: 2______________
+MostValIndex (AP_dB): 1_-63.903923
+penalty channel 1 powerlevel AP 1 -64.10324 powerlevel AP 3 -104.97081
+penalty channel 1 powerlevel AP 1 -64.10324 powerlevel AP 6 -154.28531
+
+Detect: 3______________
+MostValIndex (AP_dB): 1_-46.784145
+penalty channel 1 powerlevel AP 1 -47.011967 powerlevel AP 3 -81.121994
+penalty channel 1 powerlevel AP 1 -47.011967 powerlevel AP 6 -129.85623
+
+Detect: 4______________
+MostValIndex (AP_dB): 1_-62.46058
+penalty channel 1 powerlevel AP 1 -62.430275 powerlevel AP 3 -92.57747
+penalty channel 1 powerlevel AP 1 -62.430275 powerlevel AP 6 -130.61673
+
+Detect: 5______________
+MostValIndex (AP_dB): 2_-53.903923
+
+Detect: 6______________
+MostValIndex (AP_dB): 5_-55.419376
+penalty channel 11 powerlevel AP 5 -58.665638 powerlevel AP 0 -81.60737
+penalty channel 11 powerlevel AP 5 -58.665638 powerlevel AP 4 -86.20364
+penalty channel 11 powerlevel AP 5 -58.665638 powerlevel AP 7 -78.75769
+
+Detect: 7______________
+MostValIndex (AP_dB): 4_-58.80177
+penalty channel 11 powerlevel AP 4 -58.46213 powerlevel AP 0 -110.16131
+penalty channel 11 powerlevel AP 4 -58.46213 powerlevel AP 5 -69.13716
+penalty channel 11 powerlevel AP 4 -58.46213 powerlevel AP 7 -99.03176
+
+Detect: 8______________
+MostValIndex (AP_dB): 6_-47.903923
+penalty channel 1 powerlevel AP 6 -49.38232 powerlevel AP 1 -125.08806
+penalty channel 1 powerlevel AP 6 -49.38232 powerlevel AP 3 -66.5601
+
+Detect: 9______________
+MostValIndex (AP_dB): 5_-47.290245
+penalty channel 11 powerlevel AP 5 -48.747677 powerlevel AP 0 -92.03306
+penalty channel 11 powerlevel AP 5 -48.747677 powerlevel AP 4 -74.22864
+penalty channel 11 powerlevel AP 5 -48.747677 powerlevel AP 7 -82.997345
+
+Detect: 10______________
+MostValIndex (AP_dB): 3_-53.78761
+penalty channel 1 powerlevel AP 3 -68.72654 powerlevel AP 1 -117.96051
+penalty channel 1 powerlevel AP 3 -68.72654 powerlevel AP 6 -90.700386
+
+Detect: 11______________
+MostValIndex (AP_dB): 4_-40.842968
+penalty channel 11 powerlevel AP 4 -39.27654 powerlevel AP 0 -84.95437
+penalty channel 11 powerlevel AP 4 -39.27654 powerlevel AP 5 -93.69009
+penalty channel 11 powerlevel AP 4 -39.27654 powerlevel AP 7 -121.20251
+
+Detect: 12______________
+MostValIndex (AP_dB): 1_-45.300545
+penalty channel 1 powerlevel AP 1 -44.593678 powerlevel AP 3 -100.01181
+penalty channel 1 powerlevel AP 1 -44.593678 powerlevel AP 6 -113.37466
+
+Detect: 13______________
+MostValIndex (AP_dB): 3_-39.893623
+penalty channel 1 powerlevel AP 3 -39.560623 powerlevel AP 1 -73.58943
+penalty channel 1 powerlevel AP 3 -39.560623 powerlevel AP 6 -87.997345
+
+Fitness = fs - fp = -708.4794 - 603.8172 = -1312.2966
+
+gene 29
+pt_channel[10_1, 0_11, 10_1, 17_11, 17_1, 13_11, 7_11, 8_11, find geneFitness
+*************** This is Emergency Refresh ola ola ola ola ola!!!!!! ***************
+
+Detect: 0______________
+MostValIndex (AP_dB): 2_-36.82237
+penalty channel 1 powerlevel AP 2 -37.739315 powerlevel AP 0 -56.310844
+penalty channel 1 powerlevel AP 2 -37.739315 powerlevel AP 4 -67.91422
+
+Detect: 1______________
+MostValIndex (AP_dB): 0_-36.82237
+penalty channel 1 powerlevel AP 0 -37.55462 powerlevel AP 2 -60.5433
+penalty channel 1 powerlevel AP 0 -37.55462 powerlevel AP 4 -80.21431
+
+Detect: 2______________
+MostValIndex (AP_dB): 5_-79.20196
+penalty channel 11 powerlevel AP 5 -69.253235 powerlevel AP 1 -81.90392
+penalty channel 11 powerlevel AP 5 -69.253235 powerlevel AP 3 -106.97081
+penalty channel 11 powerlevel AP 5 -69.253235 powerlevel AP 6 -151.28531
+penalty channel 11 powerlevel AP 5 -69.253235 powerlevel AP 7 -98.70994
+
+Detect: 3______________
+MostValIndex (AP_dB): 1_-64.78415
+penalty channel 11 powerlevel AP 1 -65.01196 powerlevel AP 3 -83.121994
+penalty channel 11 powerlevel AP 1 -65.01196 powerlevel AP 5 -109.48347
+penalty channel 11 powerlevel AP 1 -65.01196 powerlevel AP 6 -126.85624
+penalty channel 11 powerlevel AP 1 -65.01196 powerlevel AP 7 -93.54851
+
+Detect: 4______________
+MostValIndex (AP_dB): 1_-80.46058
+penalty channel 11 powerlevel AP 1 -80.430275 powerlevel AP 3 -94.57747
+penalty channel 11 powerlevel AP 1 -80.430275 powerlevel AP 5 -129.96196
+penalty channel 11 powerlevel AP 1 -80.430275 powerlevel AP 6 -127.61673
+penalty channel 11 powerlevel AP 1 -80.430275 powerlevel AP 7 -104.07088
+
+Detect: 5______________
+MostValIndex (AP_dB): 2_-61.903923
+penalty channel 1 powerlevel AP 2 -61.22475 powerlevel AP 0 -74.95151
+penalty channel 1 powerlevel AP 2 -61.22475 powerlevel AP 4 -76.36897
+
+Detect: 6______________
+MostValIndex (AP_dB): 5_-45.419376
+penalty channel 11 powerlevel AP 5 -55.00241 powerlevel AP 1 -123.27675
+penalty channel 11 powerlevel AP 5 -55.00241 powerlevel AP 3 -68.97226
+penalty channel 11 powerlevel AP 5 -55.00241 powerlevel AP 6 -79.92725
+penalty channel 11 powerlevel AP 5 -55.00241 powerlevel AP 7 -74.75769
+
+Detect: 7______________
+MostValIndex (AP_dB): 4_-53.80177
+penalty channel 1 powerlevel AP 4 -53.46213 powerlevel AP 0 -103.1613
+penalty channel 1 powerlevel AP 4 -53.46213 powerlevel AP 2 -95.00316
+
+Detect: 8______________
+MostValIndex (AP_dB): 6_-44.903923
+penalty channel 11 powerlevel AP 6 -46.38232 powerlevel AP 1 -143.08804
+penalty channel 11 powerlevel AP 6 -46.38232 powerlevel AP 3 -68.5601
+penalty channel 11 powerlevel AP 6 -46.38232 powerlevel AP 5 -62.930984
+penalty channel 11 powerlevel AP 6 -46.38232 powerlevel AP 7 -107.97211
+
+Detect: 9______________
+MostValIndex (AP_dB): 5_-37.290245
+penalty channel 11 powerlevel AP 5 -38.747677 powerlevel AP 1 -125.65653
+penalty channel 11 powerlevel AP 5 -38.747677 powerlevel AP 3 -88.40907
+penalty channel 11 powerlevel AP 5 -38.747677 powerlevel AP 6 -65.43868
+penalty channel 11 powerlevel AP 5 -38.747677 powerlevel AP 7 -78.997345
+
+Detect: 10______________
+MostValIndex (AP_dB): 3_-55.78761
+penalty channel 11 powerlevel AP 3 -70.72654 powerlevel AP 1 -135.96051
+penalty channel 11 powerlevel AP 3 -70.72654 powerlevel AP 5 -81.38957
+penalty channel 11 powerlevel AP 3 -70.72654 powerlevel AP 6 -87.700386
+penalty channel 11 powerlevel AP 3 -70.72654 powerlevel AP 7 -80.24905
+
+Detect: 11______________
+MostValIndex (AP_dB): 4_-35.842968
+penalty channel 1 powerlevel AP 4 -34.27654 powerlevel AP 0 -77.95438
+penalty channel 1 powerlevel AP 4 -34.27654 powerlevel AP 2 -70.71227
+
+Detect: 12______________
+MostValIndex (AP_dB): 1_-63.300545
+penalty channel 11 powerlevel AP 1 -62.593678 powerlevel AP 3 -102.01181
+penalty channel 11 powerlevel AP 1 -62.593678 powerlevel AP 5 -121.78415
+penalty channel 11 powerlevel AP 1 -62.593678 powerlevel AP 6 -110.37466
+penalty channel 11 powerlevel AP 1 -62.593678 powerlevel AP 7 -81.01181
+
+Detect: 13______________
+MostValIndex (AP_dB): 3_-41.893623
+penalty channel 11 powerlevel AP 3 -41.560623 powerlevel AP 1 -91.58943
+penalty channel 11 powerlevel AP 3 -41.560623 powerlevel AP 5 -61.951504
+penalty channel 11 powerlevel AP 3 -41.560623 powerlevel AP 6 -84.997345
+penalty channel 11 powerlevel AP 3 -41.560623 powerlevel AP 7 -59.438683
+
+Fitness = fs - fp = -753.9661 - 6453.37 = -7207.3364
+
+gene 30
+pt_channel[14_1, 5_6, 9_11, 18_6, 8_1, 8_1, 10_11, 9_11, find geneFitness
+*************** This is Emergency Refresh ola ola ola ola ola!!!!!! ***************
+
+Detect: 0______________
+MostValIndex (AP_dB): 2_-37.82237
+penalty channel 11 powerlevel AP 2 -38.739315 powerlevel AP 6 -98.79364
+penalty channel 11 powerlevel AP 2 -38.739315 powerlevel AP 7 -92.17856
+
+Detect: 1______________
+MostValIndex (AP_dB): 0_-32.82237
+penalty channel 1 powerlevel AP 0 -33.55462 powerlevel AP 4 -89.21431
+penalty channel 1 powerlevel AP 0 -33.55462 powerlevel AP 5 -93.14315
+
+Detect: 2______________
+MostValIndex (AP_dB): 1_-76.90392
+penalty channel 6 powerlevel AP 1 -74.25324 powerlevel AP 3 -105.97081
+
+Detect: 3______________
+MostValIndex (AP_dB): 1_-59.784145
+penalty channel 6 powerlevel AP 1 -60.011967 powerlevel AP 3 -82.121994
+
+Detect: 4______________
+MostValIndex (AP_dB): 1_-75.46058
+penalty channel 6 powerlevel AP 1 -75.430275 powerlevel AP 3 -93.57747
+
+Detect: 5______________
+MostValIndex (AP_dB): 2_-62.903923
+penalty channel 11 powerlevel AP 2 -62.22475 powerlevel AP 6 -84.85193
+penalty channel 11 powerlevel AP 2 -62.22475 powerlevel AP 7 -68.96181
+
+Detect: 6______________
+MostValIndex (AP_dB): 5_-50.419376
+penalty channel 1 powerlevel AP 5 -60.00241 powerlevel AP 0 -70.60736
+penalty channel 1 powerlevel AP 5 -60.00241 powerlevel AP 4 -90.20364
+
+Detect: 7______________
+MostValIndex (AP_dB): 6_-53.419376
+penalty channel 11 powerlevel AP 6 -58.0843 powerlevel AP 2 -96.00316
+penalty channel 11 powerlevel AP 6 -58.0843 powerlevel AP 7 -94.03176
+
+Detect: 8______________
+MostValIndex (AP_dB): 6_-41.903923
+penalty channel 11 powerlevel AP 6 -43.38232 powerlevel AP 2 -89.13285
+penalty channel 11 powerlevel AP 6 -43.38232 powerlevel AP 7 -106.97211
+
+Detect: 9______________
+MostValIndex (AP_dB): 5_-42.290245
+penalty channel 1 powerlevel AP 5 -43.747677 powerlevel AP 0 -81.03306
+penalty channel 1 powerlevel AP 5 -43.747677 powerlevel AP 4 -78.22864
+
+Detect: 10______________
+MostValIndex (AP_dB): 3_-54.78761
+penalty channel 6 powerlevel AP 3 -69.72654 powerlevel AP 1 -130.96051
+
+Detect: 11______________
+MostValIndex (AP_dB): 4_-44.842968
+penalty channel 1 powerlevel AP 4 -43.27654 powerlevel AP 0 -73.95438
+penalty channel 1 powerlevel AP 4 -43.27654 powerlevel AP 5 -88.69009
+
+Detect: 12______________
+MostValIndex (AP_dB): 1_-58.300545
+penalty channel 6 powerlevel AP 1 -57.593678 powerlevel AP 3 -101.01181
+
+Detect: 13______________
+MostValIndex (AP_dB): 3_-40.893623
+penalty channel 6 powerlevel AP 3 -40.560623 powerlevel AP 1 -86.58943
+
+Fitness = fs - fp = -760.58826 - 1426.4775 = -2187.066
+
+gene 31
+pt_channel[16_11, 7_11, 3_11, 0_1, 6_6, 13_6, 3_1, 6_1, find geneFitness
+*************** This is Emergency Refresh ola ola ola ola ola!!!!!! ***************
+
+Detect: 0______________
+MostValIndex (AP_dB): 2_-43.82237
+penalty channel 11 powerlevel AP 2 -44.739315 powerlevel AP 0 -50.310844
+penalty channel 11 powerlevel AP 2 -44.739315 powerlevel AP 1 -70.26689
+
+Detect: 1______________
+MostValIndex (AP_dB): 0_-30.822369
+penalty channel 11 powerlevel AP 0 -31.554619 powerlevel AP 1 -92.04904
+penalty channel 11 powerlevel AP 0 -31.554619 powerlevel AP 2 -67.543304
+
+Detect: 2______________
+MostValIndex (AP_dB): 1_-74.90392
+penalty channel 11 powerlevel AP 1 -69.253235 powerlevel AP 0 -105.512276
+penalty channel 11 powerlevel AP 1 -69.253235 powerlevel AP 2 -108.74446
+
+Detect: 3______________
+MostValIndex (AP_dB): 1_-57.784145
+penalty channel 11 powerlevel AP 1 -58.011967 powerlevel AP 0 -117.668
+penalty channel 11 powerlevel AP 1 -58.011967 powerlevel AP 2 -95.311134
+
+Detect: 4______________
+MostValIndex (AP_dB): 1_-73.46058
+penalty channel 11 powerlevel AP 1 -73.430275 powerlevel AP 0 -129.97806
+penalty channel 11 powerlevel AP 1 -73.430275 powerlevel AP 2 -97.20693
+
+Detect: 5______________
+MostValIndex (AP_dB): 5_-64.533005
+penalty channel 6 powerlevel AP 5 -64.52487 powerlevel AP 4 -87.36897
+
+Detect: 6______________
+MostValIndex (AP_dB): 5_-45.419376
+penalty channel 6 powerlevel AP 5 -55.00241 powerlevel AP 4 -92.20364
+
+Detect: 7______________
+MostValIndex (AP_dB): 5_-59.137157
+penalty channel 6 powerlevel AP 5 -64.46213 powerlevel AP 4 -64.80177
+
+Detect: 8______________
+MostValIndex (AP_dB): 6_-48.903923
+penalty channel 1 powerlevel AP 6 -50.38232 powerlevel AP 3 -85.5601
+penalty channel 1 powerlevel AP 6 -50.38232 powerlevel AP 7 -109.9721
+
+Detect: 9______________
+MostValIndex (AP_dB): 5_-37.290245
+penalty channel 6 powerlevel AP 5 -38.747677 powerlevel AP 4 -80.22864
+
+Detect: 10______________
+MostValIndex (AP_dB): 3_-72.787605
+penalty channel 1 powerlevel AP 3 -81.597565 powerlevel AP 6 -91.700386
+penalty channel 1 powerlevel AP 3 -81.597565 powerlevel AP 7 -82.24905
+
+Detect: 11______________
+MostValIndex (AP_dB): 4_-46.842968
+penalty channel 6 powerlevel AP 4 -45.27654 powerlevel AP 5 -83.69009
+
+Detect: 12______________
+MostValIndex (AP_dB): 1_-56.300545
+penalty channel 11 powerlevel AP 1 -55.593678 powerlevel AP 0 -82.84241
+penalty channel 11 powerlevel AP 1 -55.593678 powerlevel AP 2 -104.68597
+
+Detect: 13______________
+MostValIndex (AP_dB): 3_-58.893623
+penalty channel 1 powerlevel AP 3 -58.560623 powerlevel AP 6 -88.997345
+penalty channel 1 powerlevel AP 3 -58.560623 powerlevel AP 7 -61.438683
+
+Fitness = fs - fp = -791.13727 - 2993.0684 = -3784.2056
+
+gene 32
+pt_channel[4_11, 7_11, 12_11, 7_11, 16_11, 12_1, 12_1, 7_6, find geneFitness
+*************** This is Emergency Refresh ola ola ola ola ola!!!!!! ***************
+
+Detect: 0______________
+MostValIndex (AP_dB): 2_-34.82237
+penalty channel 11 powerlevel AP 2 -35.739315 powerlevel AP 0 -62.310844
+penalty channel 11 powerlevel AP 2 -35.739315 powerlevel AP 1 -70.26689
+penalty channel 11 powerlevel AP 2 -35.739315 powerlevel AP 3 -61.64715
+penalty channel 11 powerlevel AP 2 -35.739315 powerlevel AP 4 -68.91422
+
+Detect: 1______________
+MostValIndex (AP_dB): 0_-42.82237
+penalty channel 11 powerlevel AP 0 -43.55462 powerlevel AP 1 -92.04904
+penalty channel 11 powerlevel AP 0 -43.55462 powerlevel AP 2 -58.5433
+penalty channel 11 powerlevel AP 0 -43.55462 powerlevel AP 3 -72.1284
+penalty channel 11 powerlevel AP 0 -43.55462 powerlevel AP 4 -81.21431
+
+Detect: 2______________
+MostValIndex (AP_dB): 1_-74.90392
+penalty channel 11 powerlevel AP 1 -70.253235 powerlevel AP 0 -117.512276
+penalty channel 11 powerlevel AP 1 -70.253235 powerlevel AP 2 -99.74446
+penalty channel 11 powerlevel AP 1 -70.253235 powerlevel AP 3 -116.97081
+penalty channel 11 powerlevel AP 1 -70.253235 powerlevel AP 4 -141.33691
+
+Detect: 3______________
+MostValIndex (AP_dB): 1_-57.784145
+penalty channel 11 powerlevel AP 1 -58.011967 powerlevel AP 0 -129.668
+penalty channel 11 powerlevel AP 1 -58.011967 powerlevel AP 2 -86.311134
+penalty channel 11 powerlevel AP 1 -58.011967 powerlevel AP 3 -93.121994
+penalty channel 11 powerlevel AP 1 -58.011967 powerlevel AP 4 -96.47166
+
+Detect: 4______________
+MostValIndex (AP_dB): 1_-73.46058
+penalty channel 11 powerlevel AP 1 -73.430275 powerlevel AP 0 -141.97806
+penalty channel 11 powerlevel AP 1 -73.430275 powerlevel AP 2 -88.20694
+penalty channel 11 powerlevel AP 1 -73.430275 powerlevel AP 3 -104.57747
+penalty channel 11 powerlevel AP 1 -73.430275 powerlevel AP 4 -102.63579
+
+Detect: 5______________
+MostValIndex (AP_dB): 2_-59.903923
+penalty channel 11 powerlevel AP 2 -59.22475 powerlevel AP 0 -80.95151
+penalty channel 11 powerlevel AP 2 -59.22475 powerlevel AP 1 -79.99286
+penalty channel 11 powerlevel AP 2 -59.22475 powerlevel AP 3 -77.1819
+penalty channel 11 powerlevel AP 2 -59.22475 powerlevel AP 4 -77.36897
+
+Detect: 6______________
+MostValIndex (AP_dB): 5_-46.419376
+penalty channel 1 powerlevel AP 5 -56.00241 powerlevel AP 6 -74.92725
+
+Detect: 7______________
+MostValIndex (AP_dB): 6_-51.419376
+penalty channel 1 powerlevel AP 6 -54.46213 powerlevel AP 5 -60.137157
+
+Detect: 8______________
+MostValIndex (AP_dB): 6_-39.903923
+penalty channel 1 powerlevel AP 6 -41.38232 powerlevel AP 5 -63.930984
+
+Detect: 9______________
+MostValIndex (AP_dB): 5_-38.290245
+penalty channel 1 powerlevel AP 5 -39.747677 powerlevel AP 6 -60.438683
+
+Detect: 10______________
+MostValIndex (AP_dB): 3_-65.78761
+penalty channel 11 powerlevel AP 3 -80.60087 powerlevel AP 0 -115.98673
+penalty channel 11 powerlevel AP 3 -80.60087 powerlevel AP 1 -128.96051
+penalty channel 11 powerlevel AP 3 -80.60087 powerlevel AP 2 -85.72534
+penalty channel 11 powerlevel AP 3 -80.60087 powerlevel AP 4 -99.16914
+
+Detect: 11______________
+MostValIndex (AP_dB): 4_-36.842968
+penalty channel 11 powerlevel AP 4 -35.27654 powerlevel AP 0 -83.95438
+penalty channel 11 powerlevel AP 4 -35.27654 powerlevel AP 1 -130.20615
+penalty channel 11 powerlevel AP 4 -35.27654 powerlevel AP 2 -68.71227
+penalty channel 11 powerlevel AP 4 -35.27654 powerlevel AP 3 -65.23538
+
+Detect: 12______________
+MostValIndex (AP_dB): 1_-56.300545
+penalty channel 11 powerlevel AP 1 -55.593678 powerlevel AP 0 -94.84241
+penalty channel 11 powerlevel AP 1 -55.593678 powerlevel AP 2 -95.68597
+penalty channel 11 powerlevel AP 1 -55.593678 powerlevel AP 3 -112.01181
+penalty channel 11 powerlevel AP 1 -55.593678 powerlevel AP 4 -135.6336
+
+Detect: 13______________
+MostValIndex (AP_dB): 3_-51.893623
+penalty channel 11 powerlevel AP 3 -51.560623 powerlevel AP 0 -75.63593
+penalty channel 11 powerlevel AP 3 -51.560623 powerlevel AP 1 -84.58943
+penalty channel 11 powerlevel AP 3 -51.560623 powerlevel AP 2 -56.893623
+penalty channel 11 powerlevel AP 3 -51.560623 powerlevel AP 4 -79.14746
+
+Fitness = fs - fp = -754.84045 - 6386.952 = -7141.7925
+
+gene 33
+pt_channel[0_11, 19_1, 5_11, 5_6, 13_1, 7_1, 5_11, 0_11, find geneFitness
+*************** This is Emergency Refresh ola ola ola ola ola!!!!!! ***************
+
+Detect: 0______________
+MostValIndex (AP_dB): 2_-41.82237
+penalty channel 11 powerlevel AP 2 -42.739315 powerlevel AP 0 -66.310844
+penalty channel 11 powerlevel AP 2 -42.739315 powerlevel AP 6 -103.79364
+penalty channel 11 powerlevel AP 2 -42.739315 powerlevel AP 7 -101.17856
+
+Detect: 1______________
+MostValIndex (AP_dB): 0_-46.82237
+penalty channel 11 powerlevel AP 0 -47.55462 powerlevel AP 2 -65.543304
+penalty channel 11 powerlevel AP 0 -47.55462 powerlevel AP 6 -105.817184
+penalty channel 11 powerlevel AP 0 -47.55462 powerlevel AP 7 -108.55423
+
+Detect: 2______________
+MostValIndex (AP_dB): 1_-62.903923
+penalty channel 1 powerlevel AP 1 -63.103245 powerlevel AP 4 -144.3369
+penalty channel 1 powerlevel AP 1 -63.103245 powerlevel AP 5 -85.20196
+
+Detect: 3______________
+MostValIndex (AP_dB): 1_-45.784145
+penalty channel 1 powerlevel AP 1 -46.011967 powerlevel AP 4 -99.47166
+penalty channel 1 powerlevel AP 1 -46.011967 powerlevel AP 5 -115.48347
+
+Detect: 4______________
+MostValIndex (AP_dB): 1_-61.46058
+penalty channel 1 powerlevel AP 1 -61.430275 powerlevel AP 4 -105.63579
+penalty channel 1 powerlevel AP 1 -61.430275 powerlevel AP 5 -135.96196
+
+Detect: 5______________
+MostValIndex (AP_dB): 2_-66.90392
+penalty channel 11 powerlevel AP 2 -66.22475 powerlevel AP 0 -84.9515
+penalty channel 11 powerlevel AP 2 -66.22475 powerlevel AP 6 -89.85193
+penalty channel 11 powerlevel AP 2 -66.22475 powerlevel AP 7 -77.96181
+
+Detect: 6______________
+MostValIndex (AP_dB): 5_-51.419376
+penalty channel 1 powerlevel AP 5 -61.00241 powerlevel AP 1 -104.27675
+penalty channel 1 powerlevel AP 5 -61.00241 powerlevel AP 4 -85.20364
+
+Detect: 7______________
+MostValIndex (AP_dB): 4_-57.80177
+penalty channel 1 powerlevel AP 4 -57.46213 powerlevel AP 1 -106.92358
+penalty channel 1 powerlevel AP 4 -57.46213 powerlevel AP 5 -65.13716
+
+Detect: 8______________
+MostValIndex (AP_dB): 6_-46.903923
+penalty channel 11 powerlevel AP 6 -48.38232 powerlevel AP 0 -110.08573
+penalty channel 11 powerlevel AP 6 -48.38232 powerlevel AP 2 -93.13285
+penalty channel 11 powerlevel AP 6 -48.38232 powerlevel AP 7 -115.9721
+
+Detect: 9______________
+MostValIndex (AP_dB): 5_-43.290245
+penalty channel 1 powerlevel AP 5 -44.747677 powerlevel AP 1 -106.65653
+penalty channel 1 powerlevel AP 5 -44.747677 powerlevel AP 4 -73.22864
+
+Detect: 10______________
+MostValIndex (AP_dB): 3_-67.78761
+
+Detect: 11______________
+MostValIndex (AP_dB): 4_-39.842968
+penalty channel 1 powerlevel AP 4 -38.27654 powerlevel AP 1 -118.20615
+penalty channel 1 powerlevel AP 4 -38.27654 powerlevel AP 5 -89.69009
+
+Detect: 12______________
+MostValIndex (AP_dB): 1_-44.300545
+penalty channel 1 powerlevel AP 1 -43.593678 powerlevel AP 4 -138.6336
+penalty channel 1 powerlevel AP 1 -43.593678 powerlevel AP 5 -127.78415
+
+Detect: 13______________
+MostValIndex (AP_dB): 3_-53.893623
+
+Fitness = fs - fp = -756.8161 - 697.12427 = -1453.9404
+
+gene 34
+pt_channel[19_6, 16_11, 8_6, 12_1, 19_11, 8_1, 11_6, 8_11, find geneFitness
+*************** This is Emergency Refresh ola ola ola ola ola!!!!!! ***************
+
+Detect: 0______________
+MostValIndex (AP_dB): 2_-38.82237
+penalty channel 6 powerlevel AP 2 -39.739315 powerlevel AP 0 -47.310844
+penalty channel 6 powerlevel AP 2 -39.739315 powerlevel AP 6 -97.79364
+
+Detect: 1______________
+MostValIndex (AP_dB): 0_-27.822369
+penalty channel 6 powerlevel AP 0 -28.554619 powerlevel AP 2 -62.5433
+penalty channel 6 powerlevel AP 0 -28.554619 powerlevel AP 6 -99.817184
+
+Detect: 2______________
+MostValIndex (AP_dB): 1_-65.90392
+penalty channel 11 powerlevel AP 1 -66.10324 powerlevel AP 4 -138.33691
+penalty channel 11 powerlevel AP 1 -66.10324 powerlevel AP 7 -98.70994
+
+Detect: 3______________
+MostValIndex (AP_dB): 1_-48.784145
+penalty channel 11 powerlevel AP 1 -49.011967 powerlevel AP 4 -93.47166
+penalty channel 11 powerlevel AP 1 -49.011967 powerlevel AP 7 -93.54851
+
+Detect: 4______________
+MostValIndex (AP_dB): 1_-64.46058
+penalty channel 11 powerlevel AP 1 -64.430275 powerlevel AP 4 -99.63579
+penalty channel 11 powerlevel AP 1 -64.430275 powerlevel AP 7 -104.07088
+
+Detect: 5______________
+MostValIndex (AP_dB): 2_-63.903923
+penalty channel 6 powerlevel AP 2 -63.22475 powerlevel AP 0 -65.95151
+penalty channel 6 powerlevel AP 2 -63.22475 powerlevel AP 6 -83.85193
+
+Detect: 6______________
+MostValIndex (AP_dB): 5_-50.419376
+penalty channel 1 powerlevel AP 5 -60.00241 powerlevel AP 3 -73.97226
+
+Detect: 7______________
+MostValIndex (AP_dB): 4_-51.80177
+penalty channel 11 powerlevel AP 4 -51.46213 powerlevel AP 1 -109.92358
+penalty channel 11 powerlevel AP 4 -51.46213 powerlevel AP 7 -95.03176
+
+Detect: 8______________
+MostValIndex (AP_dB): 6_-40.903923
+penalty channel 6 powerlevel AP 6 -42.38232 powerlevel AP 0 -91.085724
+penalty channel 6 powerlevel AP 6 -42.38232 powerlevel AP 2 -90.13285
+
+Detect: 9______________
+MostValIndex (AP_dB): 5_-42.290245
+penalty channel 1 powerlevel AP 5 -43.747677 powerlevel AP 3 -93.40907
+
+Detect: 10______________
+MostValIndex (AP_dB): 3_-60.78761
+penalty channel 1 powerlevel AP 3 -75.72654 powerlevel AP 5 -86.38957
+
+Detect: 11______________
+MostValIndex (AP_dB): 4_-33.842968
+penalty channel 11 powerlevel AP 4 -32.27654 powerlevel AP 1 -121.20615
+penalty channel 11 powerlevel AP 4 -32.27654 powerlevel AP 7 -117.2025
+
+Detect: 12______________
+MostValIndex (AP_dB): 1_-47.300545
+penalty channel 11 powerlevel AP 1 -46.593678 powerlevel AP 4 -132.6336
+penalty channel 11 powerlevel AP 1 -46.593678 powerlevel AP 7 -81.01181
+
+Detect: 13______________
+MostValIndex (AP_dB): 3_-46.893623
+penalty channel 1 powerlevel AP 3 -46.560623 powerlevel AP 5 -66.95151
+
+Fitness = fs - fp = -709.8161 - 932.76245 = -1642.5786
+
+gene 35
+pt_channel[8_11, 9_11, 19_1, 7_6, 13_6, 15_6, 17_6, 14_6, find geneFitness
+*************** This is Emergency Refresh ola ola ola ola ola!!!!!! ***************
+
+Detect: 0______________
+MostValIndex (AP_dB): 2_-27.822369
+
+Detect: 1______________
+MostValIndex (AP_dB): 0_-38.82237
+penalty channel 11 powerlevel AP 0 -39.55462 powerlevel AP 1 -90.04904
+
+Detect: 2______________
+MostValIndex (AP_dB): 1_-72.90392
+penalty channel 11 powerlevel AP 1 -67.253235 powerlevel AP 0 -113.512276
+
+Detect: 3______________
+MostValIndex (AP_dB): 1_-55.784145
+penalty channel 11 powerlevel AP 1 -56.011967 powerlevel AP 0 -125.668
+
+Detect: 4______________
+MostValIndex (AP_dB): 1_-71.46058
+penalty channel 11 powerlevel AP 1 -71.430275 powerlevel AP 0 -137.97806
+
+Detect: 5______________
+MostValIndex (AP_dB): 2_-52.903923
+
+Detect: 6______________
+MostValIndex (AP_dB): 5_-43.419376
+penalty channel 6 powerlevel AP 5 -53.00241 powerlevel AP 3 -78.97226
+penalty channel 6 powerlevel AP 5 -53.00241 powerlevel AP 4 -85.20364
+penalty channel 6 powerlevel AP 5 -53.00241 powerlevel AP 6 -69.92725
+penalty channel 6 powerlevel AP 5 -53.00241 powerlevel AP 7 -68.75769
+
+Detect: 7______________
+MostValIndex (AP_dB): 6_-46.419376
+penalty channel 6 powerlevel AP 6 -51.0843 powerlevel AP 3 -84.36234
+penalty channel 6 powerlevel AP 6 -51.0843 powerlevel AP 4 -57.80177
+penalty channel 6 powerlevel AP 6 -51.0843 powerlevel AP 5 -57.137157
+penalty channel 6 powerlevel AP 6 -51.0843 powerlevel AP 7 -89.03176
+
+Detect: 8______________
+MostValIndex (AP_dB): 6_-34.903923
+penalty channel 6 powerlevel AP 6 -36.38232 powerlevel AP 3 -78.5601
+penalty channel 6 powerlevel AP 6 -36.38232 powerlevel AP 4 -58.362343
+penalty channel 6 powerlevel AP 6 -36.38232 powerlevel AP 5 -60.930984
+penalty channel 6 powerlevel AP 6 -36.38232 powerlevel AP 7 -101.97211
+
+Detect: 9______________
+MostValIndex (AP_dB): 5_-35.290245
+penalty channel 6 powerlevel AP 5 -36.747677 powerlevel AP 3 -98.40907
+penalty channel 6 powerlevel AP 5 -36.747677 powerlevel AP 4 -73.22864
+penalty channel 6 powerlevel AP 5 -36.747677 powerlevel AP 6 -55.438683
+penalty channel 6 powerlevel AP 5 -36.747677 powerlevel AP 7 -72.997345
+
+Detect: 10______________
+MostValIndex (AP_dB): 3_-65.78761
+penalty channel 6 powerlevel AP 3 -73.60087 powerlevel AP 4 -102.16914
+penalty channel 6 powerlevel AP 3 -73.60087 powerlevel AP 5 -79.38957
+penalty channel 6 powerlevel AP 3 -73.60087 powerlevel AP 6 -77.700386
+penalty channel 6 powerlevel AP 3 -73.60087 powerlevel AP 7 -74.24905
+
+Detect: 11______________
+MostValIndex (AP_dB): 4_-39.842968
+penalty channel 6 powerlevel AP 4 -38.27654 powerlevel AP 3 -65.23538
+penalty channel 6 powerlevel AP 4 -38.27654 powerlevel AP 5 -81.69009
+penalty channel 6 powerlevel AP 4 -38.27654 powerlevel AP 6 -52.55881
+penalty channel 6 powerlevel AP 4 -38.27654 powerlevel AP 7 -111.2025
+
+Detect: 12______________
+MostValIndex (AP_dB): 1_-54.300545
+penalty channel 11 powerlevel AP 1 -53.593678 powerlevel AP 0 -90.84241
+
+Detect: 13______________
+MostValIndex (AP_dB): 2_-49.893623
+
+Fitness = fs - fp = -707.5786 - 2069.9297 = -2777.5083
+
+gene 36
+pt_channel[2_6, 14_11, 19_6, 11_6, 18_11, 8_11, 1_1, 13_11, find geneFitness
+*************** This is Emergency Refresh ola ola ola ola ola!!!!!! ***************
+
+Detect: 0______________
+MostValIndex (AP_dB): 2_-27.822369
+penalty channel 6 powerlevel AP 2 -28.739313 powerlevel AP 0 -64.310844
+penalty channel 6 powerlevel AP 2 -28.739313 powerlevel AP 3 -57.64715
+
+Detect: 1______________
+MostValIndex (AP_dB): 0_-44.82237
+penalty channel 6 powerlevel AP 0 -45.55462 powerlevel AP 2 -51.5433
+penalty channel 6 powerlevel AP 0 -45.55462 powerlevel AP 3 -68.1284
+
+Detect: 2______________
+MostValIndex (AP_dB): 1_-67.90392
+penalty channel 11 powerlevel AP 1 -68.10324 powerlevel AP 4 -139.33691
+penalty channel 11 powerlevel AP 1 -68.10324 powerlevel AP 5 -84.20196
+penalty channel 11 powerlevel AP 1 -68.10324 powerlevel AP 7 -93.70994
+
+Detect: 3______________
+MostValIndex (AP_dB): 1_-50.784145
+penalty channel 11 powerlevel AP 1 -51.011967 powerlevel AP 4 -94.47166
+penalty channel 11 powerlevel AP 1 -51.011967 powerlevel AP 5 -114.48347
+penalty channel 11 powerlevel AP 1 -51.011967 powerlevel AP 7 -88.54851
+
+Detect: 4______________
+MostValIndex (AP_dB): 1_-66.46058
+penalty channel 11 powerlevel AP 1 -66.430275 powerlevel AP 4 -100.63579
+penalty channel 11 powerlevel AP 1 -66.430275 powerlevel AP 5 -134.96196
+penalty channel 11 powerlevel AP 1 -66.430275 powerlevel AP 7 -99.07088
+
+Detect: 5______________
+MostValIndex (AP_dB): 2_-52.903923
+penalty channel 6 powerlevel AP 2 -52.22475 powerlevel AP 0 -82.95151
+penalty channel 6 powerlevel AP 2 -52.22475 powerlevel AP 3 -73.1819
+
+Detect: 6______________
+MostValIndex (AP_dB): 5_-50.419376
+penalty channel 11 powerlevel AP 5 -57.665638 powerlevel AP 1 -109.27675
+penalty channel 11 powerlevel AP 5 -57.665638 powerlevel AP 4 -80.20364
+penalty channel 11 powerlevel AP 5 -57.665638 powerlevel AP 7 -69.75769
+
+Detect: 7______________
+MostValIndex (AP_dB): 4_-52.80177
+penalty channel 11 powerlevel AP 4 -52.46213 powerlevel AP 1 -111.92358
+penalty channel 11 powerlevel AP 4 -52.46213 powerlevel AP 5 -64.13716
+penalty channel 11 powerlevel AP 4 -52.46213 powerlevel AP 7 -90.03176
+
+Detect: 8______________
+MostValIndex (AP_dB): 6_-50.903923
+
+Detect: 9______________
+MostValIndex (AP_dB): 5_-42.290245
+penalty channel 11 powerlevel AP 5 -43.747677 powerlevel AP 1 -111.65653
+penalty channel 11 powerlevel AP 5 -43.747677 powerlevel AP 4 -68.22864
+penalty channel 11 powerlevel AP 5 -43.747677 powerlevel AP 7 -73.997345
+
+Detect: 10______________
+MostValIndex (AP_dB): 3_-61.78761
+penalty channel 6 powerlevel AP 3 -74.60087 powerlevel AP 0 -117.98673
+penalty channel 6 powerlevel AP 3 -74.60087 powerlevel AP 2 -78.72534
+
+Detect: 11______________
+MostValIndex (AP_dB): 4_-34.842968
+penalty channel 11 powerlevel AP 4 -33.27654 powerlevel AP 1 -123.20615
+penalty channel 11 powerlevel AP 4 -33.27654 powerlevel AP 5 -88.69009
+penalty channel 11 powerlevel AP 4 -33.27654 powerlevel AP 7 -112.2025
+
+Detect: 12______________
+MostValIndex (AP_dB): 1_-49.300545
+penalty channel 11 powerlevel AP 1 -48.593678 powerlevel AP 4 -133.6336
+penalty channel 11 powerlevel AP 1 -48.593678 powerlevel AP 5 -126.78415
+penalty channel 11 powerlevel AP 1 -48.593678 powerlevel AP 7 -76.01181
+
+Detect: 13______________
+MostValIndex (AP_dB): 3_-47.893623
+penalty channel 6 powerlevel AP 3 -47.560623 powerlevel AP 0 -77.63593
+penalty channel 6 powerlevel AP 3 -47.560623 powerlevel AP 2 -49.893623
+
+Fitness = fs - fp = -722.3537 - 3381.7124 = -4104.066
+
+gene 37
+pt_channel[4_11, 2_1, 13_11, 9_1, 13_11, 2_1, 3_6, 17_11, find geneFitness
+*************** This is Emergency Refresh ola ola ola ola ola!!!!!! ***************
+
+Detect: 0______________
+MostValIndex (AP_dB): 2_-33.82237
+penalty channel 11 powerlevel AP 2 -34.739315 powerlevel AP 0 -62.310844
+penalty channel 11 powerlevel AP 2 -34.739315 powerlevel AP 4 -71.91422
+penalty channel 11 powerlevel AP 2 -34.739315 powerlevel AP 7 -84.17856
+
+Detect: 1______________
+MostValIndex (AP_dB): 0_-42.82237
+penalty channel 11 powerlevel AP 0 -43.55462 powerlevel AP 2 -57.5433
+penalty channel 11 powerlevel AP 0 -43.55462 powerlevel AP 4 -84.21431
+penalty channel 11 powerlevel AP 0 -43.55462 powerlevel AP 7 -91.55423
+
+Detect: 2______________
+MostValIndex (AP_dB): 1_-79.90392
+penalty channel 1 powerlevel AP 1 -80.10324 powerlevel AP 3 -114.97081
+penalty channel 1 powerlevel AP 1 -80.10324 powerlevel AP 5 -90.20196
+
+Detect: 3______________
+MostValIndex (AP_dB): 1_-62.784145
+penalty channel 1 powerlevel AP 1 -63.011967 powerlevel AP 3 -91.121994
+penalty channel 1 powerlevel AP 1 -63.011967 powerlevel AP 5 -120.48347
+
+Detect: 4______________
+MostValIndex (AP_dB): 1_-78.46058
+penalty channel 1 powerlevel AP 1 -78.430275 powerlevel AP 3 -102.57747
+penalty channel 1 powerlevel AP 1 -78.430275 powerlevel AP 5 -140.96196
+
+Detect: 5______________
+MostValIndex (AP_dB): 2_-58.903923
+penalty channel 11 powerlevel AP 2 -58.22475 powerlevel AP 0 -80.95151
+penalty channel 11 powerlevel AP 2 -58.22475 powerlevel AP 4 -80.36897
+penalty channel 11 powerlevel AP 2 -58.22475 powerlevel AP 7 -60.961803
+
+Detect: 6______________
+MostValIndex (AP_dB): 5_-56.419376
+penalty channel 1 powerlevel AP 5 -63.665638 powerlevel AP 1 -121.27675
+penalty channel 1 powerlevel AP 5 -63.665638 powerlevel AP 3 -76.97226
+
+Detect: 7______________
+MostValIndex (AP_dB): 4_-57.80177
+penalty channel 11 powerlevel AP 4 -57.46213 powerlevel AP 0 -109.16131
+penalty channel 11 powerlevel AP 4 -57.46213 powerlevel AP 2 -92.00316
+penalty channel 11 powerlevel AP 4 -57.46213 powerlevel AP 7 -86.03176
+
+Detect: 8______________
+MostValIndex (AP_dB): 6_-48.903923
+
+Detect: 9______________
+MostValIndex (AP_dB): 5_-48.290245
+penalty channel 1 powerlevel AP 5 -49.747677 powerlevel AP 1 -123.65653
+penalty channel 1 powerlevel AP 5 -49.747677 powerlevel AP 3 -96.40907
+
+Detect: 10______________
+MostValIndex (AP_dB): 3_-63.78761
+penalty channel 1 powerlevel AP 3 -70.60087 powerlevel AP 1 -133.96051
+penalty channel 1 powerlevel AP 3 -70.60087 powerlevel AP 5 -92.38957
+
+Detect: 11______________
+MostValIndex (AP_dB): 4_-39.842968
+penalty channel 11 powerlevel AP 4 -38.27654 powerlevel AP 0 -83.95438
+penalty channel 11 powerlevel AP 4 -38.27654 powerlevel AP 2 -67.71227
+penalty channel 11 powerlevel AP 4 -38.27654 powerlevel AP 7 -108.2025
+
+Detect: 12______________
+MostValIndex (AP_dB): 1_-61.300545
+penalty channel 1 powerlevel AP 1 -60.593678 powerlevel AP 3 -110.01181
+penalty channel 1 powerlevel AP 1 -60.593678 powerlevel AP 5 -132.78415
+
+Detect: 13______________
+MostValIndex (AP_dB): 3_-49.893623
+penalty channel 1 powerlevel AP 3 -49.560623 powerlevel AP 1 -89.58943
+penalty channel 1 powerlevel AP 3 -49.560623 powerlevel AP 5 -72.95151
+
+Fitness = fs - fp = -798.3537 - 4016.8787 = -4815.2324
+
+gene 38
+pt_channel[6_11, 11_1, 13_6, 17_1, 14_1, 11_1, 4_6, 16_1, find geneFitness
+*************** This is Emergency Refresh ola ola ola ola ola!!!!!! ***************
+
+Detect: 0______________
+MostValIndex (AP_dB): 2_-33.82237
+penalty channel 6 powerlevel AP 2 -34.739315 powerlevel AP 6 -104.79364
+
+Detect: 1______________
+MostValIndex (AP_dB): 0_-40.82237
+
+Detect: 2______________
+MostValIndex (AP_dB): 1_-70.90392
+penalty channel 1 powerlevel AP 1 -71.10324 powerlevel AP 3 -106.97081
+penalty channel 1 powerlevel AP 1 -71.10324 powerlevel AP 4 -143.33691
+penalty channel 1 powerlevel AP 1 -71.10324 powerlevel AP 5 -81.20196
+penalty channel 1 powerlevel AP 1 -71.10324 powerlevel AP 7 -90.70994
+
+Detect: 3______________
+MostValIndex (AP_dB): 1_-53.784145
+penalty channel 1 powerlevel AP 1 -54.011967 powerlevel AP 3 -83.121994
+penalty channel 1 powerlevel AP 1 -54.011967 powerlevel AP 4 -98.47166
+penalty channel 1 powerlevel AP 1 -54.011967 powerlevel AP 5 -111.48347
+penalty channel 1 powerlevel AP 1 -54.011967 powerlevel AP 7 -85.54851
+
+Detect: 4______________
+MostValIndex (AP_dB): 1_-69.46058
+penalty channel 1 powerlevel AP 1 -69.430275 powerlevel AP 3 -94.57747
+penalty channel 1 powerlevel AP 1 -69.430275 powerlevel AP 4 -104.63579
+penalty channel 1 powerlevel AP 1 -69.430275 powerlevel AP 5 -131.96196
+penalty channel 1 powerlevel AP 1 -69.430275 powerlevel AP 7 -96.07088
+
+Detect: 5______________
+MostValIndex (AP_dB): 2_-58.903923
+penalty channel 6 powerlevel AP 2 -58.22475 powerlevel AP 6 -90.85193
+
+Detect: 6______________
+MostValIndex (AP_dB): 5_-47.419376
+penalty channel 1 powerlevel AP 5 -57.00241 powerlevel AP 1 -112.27675
+penalty channel 1 powerlevel AP 5 -57.00241 powerlevel AP 3 -68.97226
+penalty channel 1 powerlevel AP 5 -57.00241 powerlevel AP 4 -84.20364
+penalty channel 1 powerlevel AP 5 -57.00241 powerlevel AP 7 -66.75769
+
+Detect: 7______________
+MostValIndex (AP_dB): 4_-56.80177
+penalty channel 1 powerlevel AP 4 -56.46213 powerlevel AP 1 -114.92358
+penalty channel 1 powerlevel AP 4 -56.46213 powerlevel AP 3 -74.36234
+penalty channel 1 powerlevel AP 4 -56.46213 powerlevel AP 5 -61.137157
+penalty channel 1 powerlevel AP 4 -56.46213 powerlevel AP 7 -87.03176
+
+Detect: 8______________
+MostValIndex (AP_dB): 6_-47.903923
+penalty channel 6 powerlevel AP 6 -49.38232 powerlevel AP 2 -85.13285
+
+Detect: 9______________
+MostValIndex (AP_dB): 5_-39.290245
+penalty channel 1 powerlevel AP 5 -40.747677 powerlevel AP 1 -114.65653
+penalty channel 1 powerlevel AP 5 -40.747677 powerlevel AP 3 -88.40907
+penalty channel 1 powerlevel AP 5 -40.747677 powerlevel AP 4 -72.22864
+penalty channel 1 powerlevel AP 5 -40.747677 powerlevel AP 7 -70.997345
+
+Detect: 10______________
+MostValIndex (AP_dB): 3_-55.78761
+penalty channel 1 powerlevel AP 3 -70.72654 powerlevel AP 1 -124.96051
+penalty channel 1 powerlevel AP 3 -70.72654 powerlevel AP 4 -101.16914
+penalty channel 1 powerlevel AP 3 -70.72654 powerlevel AP 5 -83.38957
+penalty channel 1 powerlevel AP 3 -70.72654 powerlevel AP 7 -72.24905
+
+Detect: 11______________
+MostValIndex (AP_dB): 4_-38.842968
+penalty channel 1 powerlevel AP 4 -37.27654 powerlevel AP 1 -126.20615
+penalty channel 1 powerlevel AP 4 -37.27654 powerlevel AP 3 -55.235386
+penalty channel 1 powerlevel AP 4 -37.27654 powerlevel AP 5 -85.69009
+penalty channel 1 powerlevel AP 4 -37.27654 powerlevel AP 7 -109.2025
+
+Detect: 12______________
+MostValIndex (AP_dB): 1_-52.300545
+penalty channel 1 powerlevel AP 1 -51.593678 powerlevel AP 3 -102.01181
+penalty channel 1 powerlevel AP 1 -51.593678 powerlevel AP 4 -137.6336
+penalty channel 1 powerlevel AP 1 -51.593678 powerlevel AP 5 -123.78415
+penalty channel 1 powerlevel AP 1 -51.593678 powerlevel AP 7 -73.01181
+
+Detect: 13______________
+MostValIndex (AP_dB): 3_-41.893623
+penalty channel 1 powerlevel AP 3 -41.560623 powerlevel AP 1 -80.58943
+penalty channel 1 powerlevel AP 3 -41.560623 powerlevel AP 4 -81.14746
+penalty channel 1 powerlevel AP 3 -41.560623 powerlevel AP 5 -63.951504
+penalty channel 1 powerlevel AP 3 -41.560623 powerlevel AP 7 -51.438683
+
+Fitness = fs - fp = -733.8161 - 4911.7515 = -5645.5674
+
+gene 39
+pt_channel[11_1, 6_11, 10_6, 8_11, 14_6, 4_1, 14_6, 17_6, find geneFitness
+*************** This is Emergency Refresh ola ola ola ola ola!!!!!! ***************
+
+Detect: 0______________
+MostValIndex (AP_dB): 2_-36.82237
+penalty channel 6 powerlevel AP 2 -37.739315 powerlevel AP 4 -70.91422
+penalty channel 6 powerlevel AP 2 -37.739315 powerlevel AP 6 -94.79364
+penalty channel 6 powerlevel AP 2 -37.739315 powerlevel AP 7 -84.17856
+
+Detect: 1______________
+MostValIndex (AP_dB): 0_-35.82237
+penalty channel 1 powerlevel AP 0 -36.55462 powerlevel AP 5 -97.14315
+
+Detect: 2______________
+MostValIndex (AP_dB): 1_-75.90392
+penalty channel 11 powerlevel AP 1 -76.10324 powerlevel AP 3 -115.97081
+
+Detect: 3______________
+MostValIndex (AP_dB): 1_-58.784145
+penalty channel 11 powerlevel AP 1 -59.011967 powerlevel AP 3 -92.121994
+
+Detect: 4______________
+MostValIndex (AP_dB): 1_-74.46058
+penalty channel 11 powerlevel AP 1 -74.430275 powerlevel AP 3 -103.57747
+
+Detect: 5______________
+MostValIndex (AP_dB): 7_-60.961803
+penalty channel 6 powerlevel AP 7 -61.22475 powerlevel AP 2 -61.903923
+penalty channel 6 powerlevel AP 7 -61.22475 powerlevel AP 4 -79.36897
+penalty channel 6 powerlevel AP 7 -61.22475 powerlevel AP 6 -80.85193
+
+Detect: 6______________
+MostValIndex (AP_dB): 5_-54.419376
+penalty channel 1 powerlevel AP 5 -64.00241 powerlevel AP 0 -73.60736
+
+Detect: 7______________
+MostValIndex (AP_dB): 6_-49.419376
+penalty channel 6 powerlevel AP 6 -54.0843 powerlevel AP 2 -95.00316
+penalty channel 6 powerlevel AP 6 -54.0843 powerlevel AP 4 -56.80177
+penalty channel 6 powerlevel AP 6 -54.0843 powerlevel AP 7 -86.03176
+
+Detect: 8______________
+MostValIndex (AP_dB): 6_-37.903923
+penalty channel 6 powerlevel AP 6 -39.38232 powerlevel AP 2 -88.13285
+penalty channel 6 powerlevel AP 6 -39.38232 powerlevel AP 4 -57.362343
+penalty channel 6 powerlevel AP 6 -39.38232 powerlevel AP 7 -98.97211
+
+Detect: 9______________
+MostValIndex (AP_dB): 5_-46.290245
+penalty channel 1 powerlevel AP 5 -47.747677 powerlevel AP 0 -84.03306
+
+Detect: 10______________
+MostValIndex (AP_dB): 3_-64.78761
+penalty channel 11 powerlevel AP 3 -70.60087 powerlevel AP 1 -129.96051
+
+Detect: 11______________
+MostValIndex (AP_dB): 4_-38.842968
+penalty channel 6 powerlevel AP 4 -37.27654 powerlevel AP 2 -70.71227
+penalty channel 6 powerlevel AP 4 -37.27654 powerlevel AP 6 -55.55881
+penalty channel 6 powerlevel AP 4 -37.27654 powerlevel AP 7 -108.2025
+
+Detect: 12______________
+MostValIndex (AP_dB): 1_-57.300545
+penalty channel 11 powerlevel AP 1 -56.593678 powerlevel AP 3 -111.01181
+
+Detect: 13______________
+MostValIndex (AP_dB): 7_-50.438683
+penalty channel 6 powerlevel AP 7 -50.560623 powerlevel AP 2 -58.893623
+penalty channel 6 powerlevel AP 7 -50.560623 powerlevel AP 4 -81.14746
+penalty channel 6 powerlevel AP 7 -50.560623 powerlevel AP 6 -77.997345
+
+Fitness = fs - fp = -765.3126 - 2225.8652 = -2991.1777
+
+gene 40
+pt_channel[9_11, 7_6, 16_11, 19_1, 2_11, 0_11, 4_6, 5_11, find geneFitness
+*************** This is Emergency Refresh ola ola ola ola ola!!!!!! ***************
+
+Detect: 0______________
+MostValIndex (AP_dB): 2_-30.822369
+penalty channel 11 powerlevel AP 2 -31.739313 powerlevel AP 0 -57.310844
+penalty channel 11 powerlevel AP 2 -31.739313 powerlevel AP 4 -82.91422
+penalty channel 11 powerlevel AP 2 -31.739313 powerlevel AP 5 -88.79364
+penalty channel 11 powerlevel AP 2 -31.739313 powerlevel AP 7 -96.17856
+
+Detect: 1______________
+MostValIndex (AP_dB): 0_-37.82237
+penalty channel 11 powerlevel AP 0 -38.55462 powerlevel AP 2 -54.5433
+penalty channel 11 powerlevel AP 0 -38.55462 powerlevel AP 4 -95.2143
+penalty channel 11 powerlevel AP 0 -38.55462 powerlevel AP 5 -101.14315
+penalty channel 11 powerlevel AP 0 -38.55462 powerlevel AP 7 -103.55423
+
+Detect: 2______________
+MostValIndex (AP_dB): 1_-74.90392
+penalty channel 6 powerlevel AP 1 -75.10324 powerlevel AP 6 -154.28531
+
+Detect: 3______________
+MostValIndex (AP_dB): 1_-57.784145
+penalty channel 6 powerlevel AP 1 -58.011967 powerlevel AP 6 -129.85623
+
+Detect: 4______________
+MostValIndex (AP_dB): 1_-73.46058
+penalty channel 6 powerlevel AP 1 -73.430275 powerlevel AP 6 -130.61673
+
+Detect: 5______________
+MostValIndex (AP_dB): 2_-55.903923
+penalty channel 11 powerlevel AP 2 -55.22475 powerlevel AP 0 -75.95151
+penalty channel 11 powerlevel AP 2 -55.22475 powerlevel AP 4 -91.36897
+penalty channel 11 powerlevel AP 2 -55.22475 powerlevel AP 5 -77.533005
+penalty channel 11 powerlevel AP 2 -55.22475 powerlevel AP 7 -72.96181
+
+Detect: 6______________
+MostValIndex (AP_dB): 5_-58.419376
+penalty channel 11 powerlevel AP 5 -60.665638 powerlevel AP 0 -75.60736
+penalty channel 11 powerlevel AP 5 -60.665638 powerlevel AP 2 -60.82237
+penalty channel 11 powerlevel AP 5 -60.665638 powerlevel AP 4 -96.20364
+penalty channel 11 powerlevel AP 5 -60.665638 powerlevel AP 7 -77.75769
+
+Detect: 7______________
+MostValIndex (AP_dB): 6_-59.419376
+penalty channel 6 powerlevel AP 6 -64.084305 powerlevel AP 1 -118.92358
+
+Detect: 8______________
+MostValIndex (AP_dB): 6_-47.903923
+penalty channel 6 powerlevel AP 6 -49.38232 powerlevel AP 1 -136.08804
+
+Detect: 9______________
+MostValIndex (AP_dB): 5_-50.290245
+penalty channel 11 powerlevel AP 5 -51.747677 powerlevel AP 0 -86.03306
+penalty channel 11 powerlevel AP 5 -51.747677 powerlevel AP 2 -66.32316
+penalty channel 11 powerlevel AP 5 -51.747677 powerlevel AP 4 -84.22864
+penalty channel 11 powerlevel AP 5 -51.747677 powerlevel AP 7 -81.997345
+
+Detect: 10______________
+MostValIndex (AP_dB): 3_-53.78761
+
+Detect: 11______________
+MostValIndex (AP_dB): 4_-50.842968
+penalty channel 11 powerlevel AP 4 -49.27654 powerlevel AP 0 -78.95438
+penalty channel 11 powerlevel AP 4 -49.27654 powerlevel AP 2 -64.71227
+penalty channel 11 powerlevel AP 4 -49.27654 powerlevel AP 5 -96.69009
+penalty channel 11 powerlevel AP 4 -49.27654 powerlevel AP 7 -120.20251
+
+Detect: 12______________
+MostValIndex (AP_dB): 1_-56.300545
+penalty channel 6 powerlevel AP 1 -55.593678 powerlevel AP 6 -113.37466
+
+Detect: 13______________
+MostValIndex (AP_dB): 3_-39.893623
+
+Fitness = fs - fp = -771.10156 - 523.7145 = -1294.816
+
+gene 41
+pt_channel[9_1, 19_6, 19_6, 3_6, 3_11, 16_11, 16_11, 9_6, find geneFitness
+*************** This is Emergency Refresh ola ola ola ola ola!!!!!! ***************
+
+Detect: 0______________
+MostValIndex (AP_dB): 2_-27.822369
+penalty channel 6 powerlevel AP 2 -28.739313 powerlevel AP 1 -58.266895
+penalty channel 6 powerlevel AP 2 -28.739313 powerlevel AP 3 -65.64715
+penalty channel 6 powerlevel AP 2 -28.739313 powerlevel AP 7 -92.17856
+
+Detect: 1______________
+MostValIndex (AP_dB): 0_-37.82237
+
+Detect: 2______________
+MostValIndex (AP_dB): 1_-62.903923
+penalty channel 6 powerlevel AP 1 -63.103245 powerlevel AP 2 -92.74446
+penalty channel 6 powerlevel AP 1 -63.103245 powerlevel AP 3 -120.97081
+penalty channel 6 powerlevel AP 1 -63.103245 powerlevel AP 7 -97.70994
+
+Detect: 3______________
+MostValIndex (AP_dB): 1_-45.784145
+penalty channel 6 powerlevel AP 1 -46.011967 powerlevel AP 2 -79.311134
+penalty channel 6 powerlevel AP 1 -46.011967 powerlevel AP 3 -97.121994
+penalty channel 6 powerlevel AP 1 -46.011967 powerlevel AP 7 -92.54851
+
+Detect: 4______________
+MostValIndex (AP_dB): 1_-61.46058
+penalty channel 6 powerlevel AP 1 -61.430275 powerlevel AP 2 -81.20694
+penalty channel 6 powerlevel AP 1 -61.430275 powerlevel AP 3 -108.57747
+penalty channel 6 powerlevel AP 1 -61.430275 powerlevel AP 7 -103.07088
+
+Detect: 5______________
+MostValIndex (AP_dB): 2_-52.903923
+penalty channel 6 powerlevel AP 2 -52.22475 powerlevel AP 1 -67.99286
+penalty channel 6 powerlevel AP 2 -52.22475 powerlevel AP 3 -81.1819
+penalty channel 6 powerlevel AP 2 -52.22475 powerlevel AP 7 -68.96181
+
+Detect: 6______________
+MostValIndex (AP_dB): 5_-42.419376
+penalty channel 11 powerlevel AP 5 -52.00241 powerlevel AP 4 -95.20364
+penalty channel 11 powerlevel AP 5 -52.00241 powerlevel AP 6 -70.92725
+
+Detect: 7______________
+MostValIndex (AP_dB): 6_-47.419376
+penalty channel 11 powerlevel AP 6 -52.0843 powerlevel AP 4 -67.80177
+penalty channel 11 powerlevel AP 6 -52.0843 powerlevel AP 5 -56.137157
+
+Detect: 8______________
+MostValIndex (AP_dB): 6_-35.903923
+penalty channel 11 powerlevel AP 6 -37.38232 powerlevel AP 4 -68.36234
+penalty channel 11 powerlevel AP 6 -37.38232 powerlevel AP 5 -59.930984
+
+Detect: 9______________
+MostValIndex (AP_dB): 5_-34.290245
+penalty channel 11 powerlevel AP 5 -35.747677 powerlevel AP 4 -83.22864
+penalty channel 11 powerlevel AP 5 -35.747677 powerlevel AP 6 -56.438683
+
+Detect: 10______________
+MostValIndex (AP_dB): 3_-69.787605
+penalty channel 6 powerlevel AP 3 -78.597565 powerlevel AP 1 -116.96051
+penalty channel 6 powerlevel AP 3 -78.597565 powerlevel AP 2 -78.72534
+penalty channel 6 powerlevel AP 3 -78.597565 powerlevel AP 7 -79.24905
+
+Detect: 11______________
+MostValIndex (AP_dB): 4_-49.842968
+penalty channel 11 powerlevel AP 4 -48.27654 powerlevel AP 5 -80.69009
+penalty channel 11 powerlevel AP 4 -48.27654 powerlevel AP 6 -53.55881
+
+Detect: 12______________
+MostValIndex (AP_dB): 1_-44.300545
+penalty channel 6 powerlevel AP 1 -43.593678 powerlevel AP 2 -88.68597
+penalty channel 6 powerlevel AP 1 -43.593678 powerlevel AP 3 -116.01181
+penalty channel 6 powerlevel AP 1 -43.593678 powerlevel AP 7 -80.01181
+
+Detect: 13______________
+MostValIndex (AP_dB): 2_-49.893623
+penalty channel 6 powerlevel AP 2 -49.676655 powerlevel AP 1 -72.58943
+penalty channel 6 powerlevel AP 2 -49.676655 powerlevel AP 3 -55.893623
+penalty channel 6 powerlevel AP 2 -49.676655 powerlevel AP 7 -58.438683
+
+Fitness = fs - fp = -687.4253 - 3297.742 = -3985.1672
+
+gene 42
+pt_channel[16_6, 3_1, 5_1, 2_1, 14_11, 10_6, 8_6, 5_1, find geneFitness
+*************** This is Emergency Refresh ola ola ola ola ola!!!!!! ***************
+
+Detect: 0______________
+MostValIndex (AP_dB): 2_-41.82237
+penalty channel 1 powerlevel AP 2 -42.739315 powerlevel AP 1 -74.26689
+penalty channel 1 powerlevel AP 2 -42.739315 powerlevel AP 3 -66.64715
+penalty channel 1 powerlevel AP 2 -42.739315 powerlevel AP 7 -96.17856
+
+Detect: 1______________
+MostValIndex (AP_dB): 0_-30.822369
+penalty channel 6 powerlevel AP 0 -31.554619 powerlevel AP 5 -91.14315
+penalty channel 6 powerlevel AP 0 -31.554619 powerlevel AP 6 -102.817184
+
+Detect: 2______________
+MostValIndex (AP_dB): 1_-78.90392
+penalty channel 1 powerlevel AP 1 -72.253235 powerlevel AP 2 -106.74446
+penalty channel 1 powerlevel AP 1 -72.253235 powerlevel AP 3 -121.97081
+penalty channel 1 powerlevel AP 1 -72.253235 powerlevel AP 7 -101.70994
+
+Detect: 3______________
+MostValIndex (AP_dB): 1_-61.784145
+penalty channel 1 powerlevel AP 1 -62.011967 powerlevel AP 2 -93.311134
+penalty channel 1 powerlevel AP 1 -62.011967 powerlevel AP 3 -98.121994
+penalty channel 1 powerlevel AP 1 -62.011967 powerlevel AP 7 -96.54851
+
+Detect: 4______________
+MostValIndex (AP_dB): 1_-77.46058
+penalty channel 1 powerlevel AP 1 -77.430275 powerlevel AP 2 -95.20693
+penalty channel 1 powerlevel AP 1 -77.430275 powerlevel AP 3 -109.57747
+penalty channel 1 powerlevel AP 1 -77.430275 powerlevel AP 7 -107.07088
+
+Detect: 5______________
+MostValIndex (AP_dB): 2_-66.90392
+penalty channel 1 powerlevel AP 2 -66.22475 powerlevel AP 1 -83.99286
+penalty channel 1 powerlevel AP 2 -66.22475 powerlevel AP 3 -82.1819
+penalty channel 1 powerlevel AP 2 -66.22475 powerlevel AP 7 -72.96181
+
+Detect: 6______________
+MostValIndex (AP_dB): 5_-48.419376
+penalty channel 6 powerlevel AP 5 -58.00241 powerlevel AP 0 -68.60736
+penalty channel 6 powerlevel AP 5 -58.00241 powerlevel AP 6 -78.92725
+
+Detect: 7______________
+MostValIndex (AP_dB): 6_-55.419376
+penalty channel 6 powerlevel AP 6 -56.46213 powerlevel AP 0 -97.1613
+penalty channel 6 powerlevel AP 6 -56.46213 powerlevel AP 5 -62.137157
+
+Detect: 8______________
+MostValIndex (AP_dB): 6_-43.903923
+penalty channel 6 powerlevel AP 6 -45.38232 powerlevel AP 0 -94.085724
+penalty channel 6 powerlevel AP 6 -45.38232 powerlevel AP 5 -65.930984
+
+Detect: 9______________
+MostValIndex (AP_dB): 5_-40.290245
+penalty channel 6 powerlevel AP 5 -41.747677 powerlevel AP 0 -79.03306
+penalty channel 6 powerlevel AP 5 -41.747677 powerlevel AP 6 -64.43868
+
+Detect: 10______________
+MostValIndex (AP_dB): 3_-70.787605
+penalty channel 1 powerlevel AP 3 -82.60087 powerlevel AP 1 -132.96051
+penalty channel 1 powerlevel AP 3 -82.60087 powerlevel AP 2 -92.72534
+penalty channel 1 powerlevel AP 3 -82.60087 powerlevel AP 7 -83.24905
+
+Detect: 11______________
+MostValIndex (AP_dB): 4_-38.842968
+
+Detect: 12______________
+MostValIndex (AP_dB): 1_-60.300545
+penalty channel 1 powerlevel AP 1 -59.593678 powerlevel AP 2 -102.68597
+penalty channel 1 powerlevel AP 1 -59.593678 powerlevel AP 3 -117.01181
+penalty channel 1 powerlevel AP 1 -59.593678 powerlevel AP 7 -84.01181
+
+Detect: 13______________
+MostValIndex (AP_dB): 3_-56.893623
+penalty channel 1 powerlevel AP 3 -56.560623 powerlevel AP 1 -88.58943
+penalty channel 1 powerlevel AP 3 -56.560623 powerlevel AP 2 -63.893623
+penalty channel 1 powerlevel AP 3 -56.560623 powerlevel AP 7 -62.438683
+
+Fitness = fs - fp = -789.84045 - 6080.7627 = -6870.603
+
+gene 43
+pt_channel[12_11, 1_11, 0_11, 9_11, 11_1, 19_6, 6_6, 11_1, find geneFitness
+*************** This is Emergency Refresh ola ola ola ola ola!!!!!! ***************
+
+Detect: 0______________
+MostValIndex (AP_dB): 2_-46.82237
+penalty channel 11 powerlevel AP 2 -47.739315 powerlevel AP 0 -54.310844
+penalty channel 11 powerlevel AP 2 -47.739315 powerlevel AP 1 -76.26689
+penalty channel 11 powerlevel AP 2 -47.739315 powerlevel AP 3 -59.64715
+
+Detect: 1______________
+MostValIndex (AP_dB): 0_-34.82237
+penalty channel 11 powerlevel AP 0 -35.55462 powerlevel AP 1 -98.04905
+penalty channel 11 powerlevel AP 0 -35.55462 powerlevel AP 2 -70.543304
+penalty channel 11 powerlevel AP 0 -35.55462 powerlevel AP 3 -70.1284
+
+Detect: 2______________
+MostValIndex (AP_dB): 5_-73.20196
+penalty channel 6 powerlevel AP 5 -63.25324 powerlevel AP 6 -152.28531
+
+Detect: 3______________
+MostValIndex (AP_dB): 1_-63.784145
+penalty channel 11 powerlevel AP 1 -64.01196 powerlevel AP 0 -121.668
+penalty channel 11 powerlevel AP 1 -64.01196 powerlevel AP 2 -98.311134
+penalty channel 11 powerlevel AP 1 -64.01196 powerlevel AP 3 -91.121994
+
+Detect: 4______________
+MostValIndex (AP_dB): 1_-79.46058
+penalty channel 11 powerlevel AP 1 -79.430275 powerlevel AP 0 -133.97806
+penalty channel 11 powerlevel AP 1 -79.430275 powerlevel AP 2 -100.20693
+penalty channel 11 powerlevel AP 1 -79.430275 powerlevel AP 3 -102.57747
+
+Detect: 5______________
+MostValIndex (AP_dB): 5_-58.533
+penalty channel 6 powerlevel AP 5 -58.524868 powerlevel AP 6 -88.85193
+
+Detect: 6______________
+MostValIndex (AP_dB): 5_-39.419376
+penalty channel 6 powerlevel AP 5 -49.00241 powerlevel AP 6 -80.92725
+
+Detect: 7______________
+MostValIndex (AP_dB): 5_-53.137157
+penalty channel 6 powerlevel AP 5 -59.46213 powerlevel AP 6 -57.419376
+
+Detect: 8______________
+MostValIndex (AP_dB): 6_-45.903923
+penalty channel 6 powerlevel AP 6 -47.38232 powerlevel AP 5 -56.930984
+
+Detect: 9______________
+MostValIndex (AP_dB): 5_-31.290243
+penalty channel 6 powerlevel AP 5 -32.747677 powerlevel AP 6 -66.43868
+
+Detect: 10______________
+MostValIndex (AP_dB): 3_-63.78761
+penalty channel 11 powerlevel AP 3 -75.597565 powerlevel AP 0 -107.98673
+penalty channel 11 powerlevel AP 3 -75.597565 powerlevel AP 1 -134.96051
+penalty channel 11 powerlevel AP 3 -75.597565 powerlevel AP 2 -97.72534
+
+Detect: 11______________
+MostValIndex (AP_dB): 4_-41.842968
+penalty channel 1 powerlevel AP 4 -40.27654 powerlevel AP 7 -114.2025
+
+Detect: 12______________
+MostValIndex (AP_dB): 1_-62.300545
+penalty channel 11 powerlevel AP 1 -61.593678 powerlevel AP 0 -86.84241
+penalty channel 11 powerlevel AP 1 -61.593678 powerlevel AP 2 -107.68597
+penalty channel 11 powerlevel AP 1 -61.593678 powerlevel AP 3 -110.01181
+
+Detect: 13______________
+MostValIndex (AP_dB): 3_-49.893623
+penalty channel 11 powerlevel AP 3 -49.560623 powerlevel AP 0 -67.63593
+penalty channel 11 powerlevel AP 3 -49.560623 powerlevel AP 1 -90.58943
+penalty channel 11 powerlevel AP 3 -49.560623 powerlevel AP 2 -68.89362
+
+Fitness = fs - fp = -764.13727 - 3709.8438 = -4473.981
+
+gene 44
+pt_channel[12_1, 16_11, 6_6, 18_6, 14_1, 10_6, 15_6, 2_6, find geneFitness
+*************** This is Emergency Refresh ola ola ola ola ola!!!!!! ***************
+
+Detect: 0______________
+MostValIndex (AP_dB): 2_-40.82237
+penalty channel 6 powerlevel AP 2 -41.739315 powerlevel AP 3 -50.64715
+penalty channel 6 powerlevel AP 2 -41.739315 powerlevel AP 5 -78.79364
+penalty channel 6 powerlevel AP 2 -41.739315 powerlevel AP 6 -93.79364
+penalty channel 6 powerlevel AP 2 -41.739315 powerlevel AP 7 -99.17856
+
+Detect: 1______________
+MostValIndex (AP_dB): 0_-34.82237
+penalty channel 1 powerlevel AP 0 -35.55462 powerlevel AP 4 -83.21431
+
+Detect: 2______________
+MostValIndex (AP_dB): 1_-65.90392
+
+Detect: 3______________
+MostValIndex (AP_dB): 1_-48.784145
+
+Detect: 4______________
+MostValIndex (AP_dB): 1_-64.46058
+
+Detect: 5______________
+MostValIndex (AP_dB): 2_-65.90392
+penalty channel 6 powerlevel AP 2 -65.22475 powerlevel AP 3 -66.1819
+penalty channel 6 powerlevel AP 2 -65.22475 powerlevel AP 5 -67.533005
+penalty channel 6 powerlevel AP 2 -65.22475 powerlevel AP 6 -79.85193
+penalty channel 6 powerlevel AP 2 -65.22475 powerlevel AP 7 -75.96181
+
+Detect: 6______________
+MostValIndex (AP_dB): 5_-48.419376
+penalty channel 6 powerlevel AP 5 -58.00241 powerlevel AP 2 -70.82237
+penalty channel 6 powerlevel AP 5 -58.00241 powerlevel AP 3 -67.97226
+penalty channel 6 powerlevel AP 5 -58.00241 powerlevel AP 6 -71.92725
+penalty channel 6 powerlevel AP 5 -58.00241 powerlevel AP 7 -80.75769
+
+Detect: 7______________
+MostValIndex (AP_dB): 6_-48.419376
+penalty channel 6 powerlevel AP 6 -53.0843 powerlevel AP 2 -99.00316
+penalty channel 6 powerlevel AP 6 -53.0843 powerlevel AP 3 -73.36234
+penalty channel 6 powerlevel AP 6 -53.0843 powerlevel AP 5 -62.137157
+penalty channel 6 powerlevel AP 6 -53.0843 powerlevel AP 7 -101.03176
+
+Detect: 8______________
+MostValIndex (AP_dB): 6_-36.903923
+penalty channel 6 powerlevel AP 6 -38.38232 powerlevel AP 2 -92.13285
+penalty channel 6 powerlevel AP 6 -38.38232 powerlevel AP 3 -67.5601
+penalty channel 6 powerlevel AP 6 -38.38232 powerlevel AP 5 -65.930984
+penalty channel 6 powerlevel AP 6 -38.38232 powerlevel AP 7 -113.9721
+
+Detect: 9______________
+MostValIndex (AP_dB): 5_-40.290245
+penalty channel 6 powerlevel AP 5 -41.747677 powerlevel AP 2 -76.32316
+penalty channel 6 powerlevel AP 5 -41.747677 powerlevel AP 3 -87.40907
+penalty channel 6 powerlevel AP 5 -41.747677 powerlevel AP 6 -57.438683
+penalty channel 6 powerlevel AP 5 -41.747677 powerlevel AP 7 -84.99734
+
+Detect: 10______________
+MostValIndex (AP_dB): 3_-54.78761
+penalty channel 6 powerlevel AP 3 -69.72654 powerlevel AP 2 -91.72534
+penalty channel 6 powerlevel AP 3 -69.72654 powerlevel AP 5 -84.38957
+penalty channel 6 powerlevel AP 3 -69.72654 powerlevel AP 6 -79.700386
+penalty channel 6 powerlevel AP 3 -69.72654 powerlevel AP 7 -86.24905
+
+Detect: 11______________
+MostValIndex (AP_dB): 4_-38.842968
+penalty channel 1 powerlevel AP 4 -37.27654 powerlevel AP 0 -75.95438
+
+Detect: 12______________
+MostValIndex (AP_dB): 1_-47.300545
+
+Detect: 13______________
+MostValIndex (AP_dB): 3_-40.893623
+penalty channel 6 powerlevel AP 3 -40.560623 powerlevel AP 2 -62.893623
+penalty channel 6 powerlevel AP 3 -40.560623 powerlevel AP 5 -64.95151
+penalty channel 6 powerlevel AP 3 -40.560623 powerlevel AP 6 -76.997345
+penalty channel 6 powerlevel AP 3 -40.560623 powerlevel AP 7 -65.43868
+
+Fitness = fs - fp = -707.43823 - 4247.771 = -4955.209
+
+gene 45
+pt_channel[12_11, 19_6, 4_6, 19_6, 2_6, 17_1, 0_6, 6_6, find geneFitness
+*************** This is Emergency Refresh ola ola ola ola ola!!!!!! ***************
+
+Detect: 0______________
+MostValIndex (AP_dB): 2_-42.82237
+penalty channel 6 powerlevel AP 2 -43.739315 powerlevel AP 1 -58.266895
+penalty channel 6 powerlevel AP 2 -43.739315 powerlevel AP 3 -49.64715
+penalty channel 6 powerlevel AP 2 -43.739315 powerlevel AP 4 -82.91422
+penalty channel 6 powerlevel AP 2 -43.739315 powerlevel AP 6 -108.79364
+penalty channel 6 powerlevel AP 2 -43.739315 powerlevel AP 7 -95.17856
+
+Detect: 1______________
+MostValIndex (AP_dB): 0_-34.82237
+
+Detect: 2______________
+MostValIndex (AP_dB): 1_-62.903923
+penalty channel 6 powerlevel AP 1 -63.103245 powerlevel AP 2 -107.74446
+penalty channel 6 powerlevel AP 1 -63.103245 powerlevel AP 3 -104.97081
+penalty channel 6 powerlevel AP 1 -63.103245 powerlevel AP 4 -155.33691
+penalty channel 6 powerlevel AP 1 -63.103245 powerlevel AP 6 -158.28531
+penalty channel 6 powerlevel AP 1 -63.103245 powerlevel AP 7 -100.70994
+
+Detect: 3______________
+MostValIndex (AP_dB): 1_-45.784145
+penalty channel 6 powerlevel AP 1 -46.011967 powerlevel AP 2 -94.311134
+penalty channel 6 powerlevel AP 1 -46.011967 powerlevel AP 3 -81.121994
+penalty channel 6 powerlevel AP 1 -46.011967 powerlevel AP 4 -110.47166
+penalty channel 6 powerlevel AP 1 -46.011967 powerlevel AP 6 -133.85623
+penalty channel 6 powerlevel AP 1 -46.011967 powerlevel AP 7 -95.54851
+
+Detect: 4______________
+MostValIndex (AP_dB): 1_-61.46058
+penalty channel 6 powerlevel AP 1 -61.430275 powerlevel AP 2 -96.20693
+penalty channel 6 powerlevel AP 1 -61.430275 powerlevel AP 3 -92.57747
+penalty channel 6 powerlevel AP 1 -61.430275 powerlevel AP 4 -116.63579
+penalty channel 6 powerlevel AP 1 -61.430275 powerlevel AP 6 -134.61673
+penalty channel 6 powerlevel AP 1 -61.430275 powerlevel AP 7 -106.07088
+
+Detect: 5______________
+MostValIndex (AP_dB): 5_-60.533
+
+Detect: 6______________
+MostValIndex (AP_dB): 5_-41.419376
+
+Detect: 7______________
+MostValIndex (AP_dB): 5_-55.137157
+
+Detect: 8______________
+MostValIndex (AP_dB): 6_-51.903923
+penalty channel 6 powerlevel AP 6 -53.38232 powerlevel AP 1 -124.08806
+penalty channel 6 powerlevel AP 6 -53.38232 powerlevel AP 2 -94.13285
+penalty channel 6 powerlevel AP 6 -53.38232 powerlevel AP 3 -66.5601
+penalty channel 6 powerlevel AP 6 -53.38232 powerlevel AP 4 -69.36234
+penalty channel 6 powerlevel AP 6 -53.38232 powerlevel AP 7 -109.9721
+
+Detect: 9______________
+MostValIndex (AP_dB): 5_-33.290245
+
+Detect: 10______________
+MostValIndex (AP_dB): 3_-53.78761
+penalty channel 6 powerlevel AP 3 -68.72654 powerlevel AP 1 -116.96051
+penalty channel 6 powerlevel AP 3 -68.72654 powerlevel AP 2 -93.72534
+penalty channel 6 powerlevel AP 3 -68.72654 powerlevel AP 4 -113.16914
+penalty channel 6 powerlevel AP 3 -68.72654 powerlevel AP 6 -94.700386
+penalty channel 6 powerlevel AP 3 -68.72654 powerlevel AP 7 -82.24905
+
+Detect: 11______________
+MostValIndex (AP_dB): 4_-50.842968
+penalty channel 6 powerlevel AP 4 -49.27654 powerlevel AP 1 -118.20615
+penalty channel 6 powerlevel AP 4 -49.27654 powerlevel AP 2 -76.71227
+penalty channel 6 powerlevel AP 4 -49.27654 powerlevel AP 3 -53.235386
+penalty channel 6 powerlevel AP 4 -49.27654 powerlevel AP 6 -69.55881
+penalty channel 6 powerlevel AP 4 -49.27654 powerlevel AP 7 -119.20251
+
+Detect: 12______________
+MostValIndex (AP_dB): 1_-44.300545
+penalty channel 6 powerlevel AP 1 -43.593678 powerlevel AP 2 -103.68597
+penalty channel 6 powerlevel AP 1 -43.593678 powerlevel AP 3 -100.01181
+penalty channel 6 powerlevel AP 1 -43.593678 powerlevel AP 4 -149.6336
+penalty channel 6 powerlevel AP 1 -43.593678 powerlevel AP 6 -117.37466
+penalty channel 6 powerlevel AP 1 -43.593678 powerlevel AP 7 -83.01181
+
+Detect: 13______________
+MostValIndex (AP_dB): 3_-39.893623
+penalty channel 6 powerlevel AP 3 -39.560623 powerlevel AP 1 -72.58943
+penalty channel 6 powerlevel AP 3 -39.560623 powerlevel AP 2 -64.89362
+penalty channel 6 powerlevel AP 3 -39.560623 powerlevel AP 4 -93.14746
+penalty channel 6 powerlevel AP 3 -39.560623 powerlevel AP 6 -91.99734
+penalty channel 6 powerlevel AP 3 -39.560623 powerlevel AP 7 -61.438683
+
+Fitness = fs - fp = -716.09735 - 1110.5002 = -1826.5977
+
+gene 46
+pt_channel[17_1, 5_6, 9_6, 3_1, 3_11, 1_1, 2_1, 15_11, find geneFitness
+*************** This is Emergency Refresh ola ola ola ola ola!!!!!! ***************
+
+Detect: 0______________
+MostValIndex (AP_dB): 2_-37.82237
+penalty channel 6 powerlevel AP 2 -38.739315 powerlevel AP 1 -72.26689
+
+Detect: 1______________
+MostValIndex (AP_dB): 0_-29.822369
+penalty channel 1 powerlevel AP 0 -30.554619 powerlevel AP 3 -76.1284
+penalty channel 1 powerlevel AP 0 -30.554619 powerlevel AP 5 -100.14315
+penalty channel 1 powerlevel AP 0 -30.554619 powerlevel AP 6 -108.817184
+
+Detect: 2______________
+MostValIndex (AP_dB): 1_-76.90392
+penalty channel 6 powerlevel AP 1 -77.10324 powerlevel AP 2 -102.74446
+
+Detect: 3______________
+MostValIndex (AP_dB): 1_-59.784145
+penalty channel 6 powerlevel AP 1 -60.011967 powerlevel AP 2 -89.311134
+
+Detect: 4______________
+MostValIndex (AP_dB): 1_-75.46058
+penalty channel 6 powerlevel AP 1 -75.430275 powerlevel AP 2 -91.20694
+
+Detect: 5______________
+MostValIndex (AP_dB): 2_-62.903923
+penalty channel 6 powerlevel AP 2 -62.22475 powerlevel AP 1 -81.99286
+
+Detect: 6______________
+MostValIndex (AP_dB): 5_-57.419376
+penalty channel 1 powerlevel AP 5 -67.00241 powerlevel AP 0 -67.60736
+penalty channel 1 powerlevel AP 5 -67.00241 powerlevel AP 3 -82.97226
+penalty channel 1 powerlevel AP 5 -67.00241 powerlevel AP 6 -84.92725
+
+Detect: 7______________
+MostValIndex (AP_dB): 6_-61.419376
+penalty channel 1 powerlevel AP 6 -66.084305 powerlevel AP 0 -96.1613
+penalty channel 1 powerlevel AP 6 -66.084305 powerlevel AP 3 -88.36234
+penalty channel 1 powerlevel AP 6 -66.084305 powerlevel AP 5 -71.13716
+
+Detect: 8______________
+MostValIndex (AP_dB): 6_-49.903923
+penalty channel 1 powerlevel AP 6 -51.38232 powerlevel AP 0 -93.085724
+penalty channel 1 powerlevel AP 6 -51.38232 powerlevel AP 3 -82.5601
+penalty channel 1 powerlevel AP 6 -51.38232 powerlevel AP 5 -74.930984
+
+Detect: 9______________
+MostValIndex (AP_dB): 5_-49.290245
+penalty channel 1 powerlevel AP 5 -50.747677 powerlevel AP 0 -78.03306
+penalty channel 1 powerlevel AP 5 -50.747677 powerlevel AP 3 -102.40907
+penalty channel 1 powerlevel AP 5 -50.747677 powerlevel AP 6 -70.43868
+
+Detect: 10______________
+MostValIndex (AP_dB): 3_-69.787605
+penalty channel 1 powerlevel AP 3 -72.60087 powerlevel AP 0 -102.98673
+penalty channel 1 powerlevel AP 3 -72.60087 powerlevel AP 5 -93.38957
+penalty channel 1 powerlevel AP 3 -72.60087 powerlevel AP 6 -92.700386
+
+Detect: 11______________
+MostValIndex (AP_dB): 4_-49.842968
+penalty channel 11 powerlevel AP 4 -48.27654 powerlevel AP 7 -110.2025
+
+Detect: 12______________
+MostValIndex (AP_dB): 1_-58.300545
+penalty channel 6 powerlevel AP 1 -57.593678 powerlevel AP 2 -98.68597
+
+Detect: 13______________
+MostValIndex (AP_dB): 7_-52.438683
+penalty channel 11 powerlevel AP 7 -52.65272 powerlevel AP 4 -92.14746
+
+Fitness = fs - fp = -810.4047 - 3397.3289 = -4207.7334
+
+gene 47
+pt_channel[13_1, 17_11, 19_1, 5_11, 5_11, 18_11, 19_6, 18_6, find geneFitness
+*************** This is Emergency Refresh ola ola ola ola ola!!!!!! ***************
+
+Detect: 0______________
+MostValIndex (AP_dB): 2_-27.822369
+penalty channel 1 powerlevel AP 2 -28.739313 powerlevel AP 0 -53.310844
+
+Detect: 1______________
+MostValIndex (AP_dB): 0_-33.82237
+penalty channel 1 powerlevel AP 0 -34.55462 powerlevel AP 2 -51.5433
+
+Detect: 2______________
+MostValIndex (AP_dB): 1_-64.90392
+penalty channel 11 powerlevel AP 1 -64.253235 powerlevel AP 3 -118.97081
+penalty channel 11 powerlevel AP 1 -64.253235 powerlevel AP 4 -152.33691
+penalty channel 11 powerlevel AP 1 -64.253235 powerlevel AP 5 -74.20196
+
+Detect: 3______________
+MostValIndex (AP_dB): 1_-47.784145
+penalty channel 11 powerlevel AP 1 -48.011967 powerlevel AP 3 -95.121994
+penalty channel 11 powerlevel AP 1 -48.011967 powerlevel AP 4 -107.47166
+penalty channel 11 powerlevel AP 1 -48.011967 powerlevel AP 5 -104.48347
+
+Detect: 4______________
+MostValIndex (AP_dB): 1_-63.46058
+penalty channel 11 powerlevel AP 1 -63.430275 powerlevel AP 3 -106.57747
+penalty channel 11 powerlevel AP 1 -63.430275 powerlevel AP 4 -113.63579
+penalty channel 11 powerlevel AP 1 -63.430275 powerlevel AP 5 -124.96196
+
+Detect: 5______________
+MostValIndex (AP_dB): 2_-52.903923
+penalty channel 1 powerlevel AP 2 -52.22475 powerlevel AP 0 -71.95151
+
+Detect: 6______________
+MostValIndex (AP_dB): 5_-40.419376
+penalty channel 11 powerlevel AP 5 -50.00241 powerlevel AP 1 -106.27675
+penalty channel 11 powerlevel AP 5 -50.00241 powerlevel AP 3 -80.97226
+penalty channel 11 powerlevel AP 5 -50.00241 powerlevel AP 4 -93.20364
+
+Detect: 7______________
+MostValIndex (AP_dB): 6_-44.419376
+penalty channel 6 powerlevel AP 6 -49.0843 powerlevel AP 7 -85.03176
+
+Detect: 8______________
+MostValIndex (AP_dB): 6_-32.903923
+penalty channel 6 powerlevel AP 6 -34.38232 powerlevel AP 7 -97.97211
+
+Detect: 9______________
+MostValIndex (AP_dB): 5_-32.290245
+penalty channel 11 powerlevel AP 5 -33.747677 powerlevel AP 1 -108.65653
+penalty channel 11 powerlevel AP 5 -33.747677 powerlevel AP 3 -100.40907
+penalty channel 11 powerlevel AP 5 -33.747677 powerlevel AP 4 -81.22864
+
+Detect: 10______________
+MostValIndex (AP_dB): 3_-67.78761
+penalty channel 11 powerlevel AP 3 -69.60087 powerlevel AP 1 -118.96051
+penalty channel 11 powerlevel AP 3 -69.60087 powerlevel AP 4 -110.16914
+penalty channel 11 powerlevel AP 3 -69.60087 powerlevel AP 5 -76.38957
+
+Detect: 11______________
+MostValIndex (AP_dB): 4_-47.842968
+penalty channel 11 powerlevel AP 4 -46.27654 powerlevel AP 1 -120.20615
+penalty channel 11 powerlevel AP 4 -46.27654 powerlevel AP 3 -67.23538
+penalty channel 11 powerlevel AP 4 -46.27654 powerlevel AP 5 -78.69009
+
+Detect: 12______________
+MostValIndex (AP_dB): 1_-46.300545
+penalty channel 11 powerlevel AP 1 -45.593678 powerlevel AP 3 -114.01181
+penalty channel 11 powerlevel AP 1 -45.593678 powerlevel AP 4 -146.6336
+penalty channel 11 powerlevel AP 1 -45.593678 powerlevel AP 5 -116.78415
+
+Detect: 13______________
+MostValIndex (AP_dB): 7_-49.438683
+penalty channel 6 powerlevel AP 7 -49.65272 powerlevel AP 6 -72.997345
+
+Fitness = fs - fp = -669.5547 - 470.42252 = -1139.9772
+
+gene 48
+pt_channel[18_1, 8_6, 17_1, 0_1, 6_6, 8_11, 7_6, 9_1, find geneFitness
+*************** This is Emergency Refresh ola ola ola ola ola!!!!!! ***************
