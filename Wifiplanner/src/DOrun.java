@@ -1495,7 +1495,7 @@ public class DOrun {
 		Float bestFitValue;
 		int round=1;
 		do {
-			bestFitValue = showBestFitness(fitnessList,population);
+//			bestFitValue = showBestFitness(fitnessList,population);
 			sortFitness(population,populationChannel,fitnessList);
 			mate(fitnessList,population,populationChannel,parentUseRate);
 			mutate(population,populationChannel,mutaterate,powMax,parentUseRate);
@@ -1587,14 +1587,15 @@ public class DOrun {
 		ArrayList<ArrayList<Integer>> newpopulation = new ArrayList<ArrayList<Integer>> ();
 		ArrayList<ArrayList<Integer>> newpopulationChannel = new ArrayList<ArrayList<Integer>> ();
 		Random rand = new Random();
+		
+		int size = population.size();
+        int i,j, k, l;
+        
 		while (newpopulation.size() < population.size() * (1.0-parentUseRate)) {
- 
-            int size = population.size();
-            int i = rand.nextInt(size);
-            int j, k, l;
- 
-            j = k = l = i;
- 
+			i = rand.nextInt(size);
+			j = rand.nextInt(size);
+			k = rand.nextInt(size);
+			l = rand.nextInt(size);
             while (j == i)
                 j = rand.nextInt(size);
             while (k == i || k == j)
@@ -1648,7 +1649,7 @@ public class DOrun {
                 chw2 = c4.channels;
 //                System.out.println("win2=" + l);
             }
-            while(newpopulation.size() < population.size() * (1.0-parentUseRate)) {//cross over
+//            while(newpopulation.size() < population.size() * (1.0-parentUseRate)) {//cross over
             	ArrayList<Integer> child1 = new ArrayList<Integer>();
             	ArrayList<Integer> child2 = new ArrayList<Integer>();
             	ArrayList<Integer> child1ch = new ArrayList<Integer>();
@@ -1680,28 +1681,28 @@ public class DOrun {
             	newpopulation.add(child2);
             	newpopulationChannel.add(child1ch);
             	newpopulationChannel.add(child2ch);
-            }
+//            }
 //            while(newpopulation.size()>population.size() * (1.0-parentUseRate)) {
 //    			newpopulation.remove(newpopulation.size()-1);
 //    			System.out.println("DELETE excess POP");
 //    		}
 //            System.out.println("old population     " + population);
 //            System.out.println("old pop_channel    "+ populationChannel);
-    		for(int p= (int) (population.size()*parentUseRate);p<population.size() * (1.0-parentUseRate);p++) {
-//    			System.out.println("index p "+p);
-    			population.set(p, newpopulation.get(p));
-    			populationChannel.set(p, newpopulationChannel.get(p));
-    		}
-//			System.out.println("new population     "+ newpopulation);
-//			System.out.println("new pop_channel    "+ newpopulationChannel);
-			
-			System.out.println("Current population " + population);
-			System.out.println("Current pop_channel" + populationChannel);
 		}
 		
 //		for(int i = (int) (population.size()*(1.0-parentUseRate));i<population.size()*(1.0-parentUseRate);i++) {
 //			population.set(i, newpopulation.get(i));
 //		}
+		for(int p= (int) (population.size()*parentUseRate);p<population.size() * (1.0-parentUseRate);p++) {
+//			System.out.println("index p "+p);
+			population.set(p, newpopulation.get(p));
+			populationChannel.set(p, newpopulationChannel.get(p));
+		}
+//		System.out.println("new population     "+ newpopulation);
+//		System.out.println("new pop_channel    "+ newpopulationChannel);
+		
+		System.out.println("Current population " + population);
+		System.out.println("Current pop_channel" + populationChannel);
 		System.out.println("Sort print population : " + population);
 		System.out.println("Fitness : "+fitnessList);
 	}
@@ -1733,6 +1734,7 @@ public class DOrun {
 		System.out.println();
 		System.out.println("***Sorted population: "+population);
 		System.out.println("***Sorted popChannel: "+populationChannel);
+		System.out.println("***Sorted fitness: "+fitnessList);
 	}
 
 	public Float showBestFitness(ArrayList<Float> fitnessList, ArrayList<ArrayList<Integer>> population) {
