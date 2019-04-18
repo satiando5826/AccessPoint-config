@@ -248,8 +248,12 @@ public class drawPanel extends JPanel implements Serializable {
 		 		//drawAP----------------
 		 		if(APs!=null){
 		 		for(int i=0; i< APs.size();i++){//for every AP
-	        		
-		 			g2.setColor(Color.BLUE);
+	        		if(APs.get(i).channel == 1) {
+	        			g2.setColor(Color.magenta);
+	        		}else if (APs.get(i).channel == 6) {
+	        			g2.setColor(Color.PINK);
+	        		}else g2.setColor(Color.BLUE);
+		 			
 		 			g2.fillOval((APs.get(i).posx-4),(APs.get(i).posy-4),gw,gw);
 		 			g2.drawOval(APs.get(i).posx-4,APs.get(i).posy-4,gw,gw);	        			
 	        		}

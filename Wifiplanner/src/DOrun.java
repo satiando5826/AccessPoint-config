@@ -1516,11 +1516,11 @@ public class DOrun {
 			System.out.println("\t_ _ _ _ _ _ __ _ _ _ _ _ __ _ _ _ _ _ __ _ _ _ _ _ __ _ _ _ _ _ __ _ _ _ _ _ __ _ _ _ _ _ _");
 			System.out.println("round "+round+"\tBestFitness: "+bestFitValue);
 			round++;
-			if(round>maxRound-1) {
+			if(round>maxRound) {
 				break;
 			}
 			System.out.println("_ _ _ _ _ _ __ _ _ _ _ _ __ _ _ _ _ _ __ _ _ _ _ _ __ _ _ _ _ _ __ _ _ _ _ _ __ _ _ _ _ _ _");
-		}while(bestFitValue<=-100.00*Drawingpanel.Detecs.size()/2);
+		}while(bestFitValue<=-100.00*Drawingpanel.Detecs.size()/5);
 		System.out.println("++++++++++++++++END GeneticAlgorithms++++++++++++++++");
 		
 //		ArrayList<Integer> gene = ptAPs(Drawingpanel.APs);
@@ -1857,6 +1857,11 @@ public class DOrun {
 	    float tmpVal = -200;
 	    float penalty = 0;
 	    int mostVal_Index = -1;
+	    System.out.print("gene(power_channel) ");
+	    for (int i = 0; i < Drawingpanel.APs.size(); i++) {
+	    	System.out.print(Drawingpanel.APs.get(i).pt + "_" + Drawingpanel.APs.get(i).channel+",");
+	    }
+	    System.out.println();
 		for(int i = 0;i<Drawingpanel.Detecs.size();i++) {
 			System.out.println("\nDetect: "+i+"______________");
 			SpotSignal currentSignal = pointSignals(Drawingpanel.Detecs.get(i).getPos());
@@ -1876,11 +1881,12 @@ public class DOrun {
 						genePenalty=tmpVal+Math.abs(tmpVal-currentSignal.vals.get(j));
 						
 //						System.out.println("penalty val = "+ genePenalty);
-						System.out.print("("+j+"_"+currentSignal.vals.get(j)+"_"+genePenalty);
+						System.out.print("("+j+"_"+currentSignal.vals.get(j)+"_"+genePenalty+")");
 						penalty += genePenalty; 
 					}
 				}
 			}
+			System.out.println();
 			fp += tmpVal-penalty;
 			
 //			System.out.println("val:"+getVal(Drawingpanel.Detecs.get(i).getPos())+" comulative fr:"+fr);		
