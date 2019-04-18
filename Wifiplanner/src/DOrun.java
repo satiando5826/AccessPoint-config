@@ -1762,7 +1762,7 @@ public class DOrun {
 			}
 		}
 		System.out.println();
-		System.out.println("Best: gene " + index);
+		System.out.println("Best: gene " + index + " -> "+fitnessList.get(index));
 		for(int i=0;i<Drawingpanel.APs.size();i++) {
 			int pt = population.get(index).get(i);
 			Drawingpanel.APs.get(i).setPT(pt);
@@ -1866,15 +1866,17 @@ public class DOrun {
 			tmpVal = currentSignal.vals.get(mostVal_Index);
 			fs += tmpVal;
 			float genePenalty = 0;
+			System.out.println("penalty channel "+currentSignal.channels.get(mostVal_Index)+"(AP_dBs_penaltyVal)");
 			for (int j = 0; j < currentSignal.channels.size(); j++) {
 //				System.out.println("current channel is "+ currentSignal.channels.get(mostValIndex(currentSignal)) + "this vals Channel is " + currentSignal.channels.get(j));
 				if(currentSignal.channels.get(j)==currentSignal.channels.get(mostValIndex(currentSignal))) {
 					if(j!=mostValIndex(currentSignal)) {
-						System.out.println("penalty channel "+ currentSignal.channels.get(j)+ " powerlevel AP "+mostValIndex(currentSignal)+" "+tmpVal+" powerlevel AP "+j+" "+currentSignal.vals.get(j));
+						//System.out.println("penalty channel "+ currentSignal.channels.get(j)+ " powerlevel AP "+mostValIndex(currentSignal)+" "+tmpVal+" powerlevel AP "+j+" "+currentSignal.vals.get(j));
 						
 						genePenalty=tmpVal+Math.abs(tmpVal-currentSignal.vals.get(j));
 						
-						System.out.println("penalty val = "+ genePenalty);
+//						System.out.println("penalty val = "+ genePenalty);
+						System.out.print("("+j+"_"+currentSignal.vals.get(j)+"_"+genePenalty);
 						penalty += genePenalty; 
 					}
 				}
