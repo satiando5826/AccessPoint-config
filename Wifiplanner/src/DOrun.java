@@ -1732,11 +1732,25 @@ public class DOrun {
 		population = tmppop;
 		populationChannel = tmpCH;
 		System.out.println();
-		System.out.println("***Sorted population: "+population);
-		System.out.println("***Sorted popChannel: "+populationChannel);
-		System.out.println("***Sorted fitness: "+fitnessList);
+//		System.out.println("***Sorted population: "+population);
+		showPop(population,populationChannel);
+//		System.out.println("***Sorted popChannel: "+populationChannel);
+//		System.out.println("***Sorted fitness: "+fitnessList);
 	}
-
+	
+	public void showPop(ArrayList<ArrayList<Integer>> population, ArrayList<ArrayList<Integer>> populationChannel) {
+		int inLine = 1;
+		System.out.println("***Sorted population: ");
+		for(int i = 0;i<population.size();i++) {
+			if(inLine>=3) {
+				inLine = 1;
+				System.out.println();
+			}
+			System.out.print(population.get(i)+"_"+populationChannel.get(i));
+			inLine++;
+		}
+	}
+	
 	public Float showBestFitness(ArrayList<Float> fitnessList, ArrayList<ArrayList<Integer>> population) {
 		System.out.println("***************Show Best Fitness***************");
 		Float best = (float) -99999;
@@ -1774,6 +1788,7 @@ public class DOrun {
 		ArrayList<Integer> ch = chAPs(Drawingpanel.APs);
 		population.add(pt);
 		populationChannel.add(ch);
+		System.out.println();
 //		emergencyRefresh();
 	}
 	
@@ -1832,7 +1847,9 @@ public class DOrun {
 	public float geneFitness() {// Power level
 		System.out.println("find geneFitness");
 		emergencyRefresh();
-		Drawingpanel.reCal();
+//		Drawingpanel.reCal();
+		Drawingpanel.reCalSpot();
+		
 		float fs = 0;
 		float fp = 0;
 	    float total = 0;
@@ -1845,14 +1862,20 @@ public class DOrun {
 			SpotSignal currentSignal = pointSignals(Drawingpanel.Detecs.get(i).getPos());
 			mostVal_Index = mostValIndex(currentSignal);
 			System.out.println("MostValIndex (AP_dB): " + mostVal_Index +"_"+currentSignal.vals.get(mostVal_Index));
-			tmpVal = getVal(Drawingpanel.Detecs.get(i).getPos(),lastChannel);
+//			tmpVal = getVal(Drawingpanel.Detecs.get(i).getPos(),lastChannel);
+			tmpVal = currentSignal.vals.get(mostVal_Index);
 			fs += tmpVal;
+			float genePenalty = 0;
 			for (int j = 0; j < currentSignal.channels.size(); j++) {
 //				System.out.println("current channel is "+ currentSignal.channels.get(mostValIndex(currentSignal)) + "this vals Channel is " + currentSignal.channels.get(j));
 				if(currentSignal.channels.get(j)==currentSignal.channels.get(mostValIndex(currentSignal))) {
 					if(j!=mostValIndex(currentSignal)) {
 						System.out.println("penalty channel "+ currentSignal.channels.get(j)+ " powerlevel AP "+mostValIndex(currentSignal)+" "+tmpVal+" powerlevel AP "+j+" "+currentSignal.vals.get(j));
-						penalty += tmpVal+Math.abs(tmpVal-currentSignal.vals.get(j)); 
+						
+						genePenalty=tmpVal+Math.abs(tmpVal-currentSignal.vals.get(j));
+						
+						System.out.println("penalty val = "+ genePenalty);
+						penalty += genePenalty; 
 					}
 				}
 			}

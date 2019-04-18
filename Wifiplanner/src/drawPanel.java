@@ -33,6 +33,8 @@ import javax.swing.JSlider;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
+import com.sun.xml.internal.ws.dump.LoggingDumpTube.Position;
+
 
 
 public class drawPanel extends JPanel implements Serializable {
@@ -374,13 +376,71 @@ public class drawPanel extends JPanel implements Serializable {
 		return temp;
 		
 	}
+	
+	public void reCalSpot() {
+		for(int o=0;o<Detecshow.size();o++) {
+			int i=Detecshow.get(o).posx;
+			int j=Detecshow.get(o).posy;
+			for(int k=0; k< APshow.size();k++){//check all APs
+      		  if(i!=APshow.get(k).posx || j!=APshow.get(k).posy){
+      		  
+      		  float tempDistP =(float) Point.distance(i, j,APshow.get(k).posx ,APshow.get(k).posy);//distance from ij to AP in pixel
+      		  if(tempDistP<=gridDistP){//if it's less than 70m( in pixel unit) gridDistP is defined in Testrun1
+      			  
+      			  float dist = (tempDistP*gridDist)/gw;//convert Pixel to Meter
+      			//  System.out.println(APs.get(k).freq);
+      			  float tempVal = spl(dist,APshow.get(k).curK,APshow.get(k).pt);//calculate spl
+      			  int tempChannel = APs.get(k).channel;
+//      			  System.out.println("spotapshow pt"+APshow.get(k).pt);
+//      			  System.out.println("spotaps pt"+APs.get(k).pt);
+//      			  
+//      			  System.out.println("spotapshow channel "+APshow.get(k).channel);
+//      			  System.out.println("spotaps channel "+APs.get(k).channel);
+//      			  System.out.println("spot chan"+tempChannel);
+      			  
+      			  ArrayList<Float> PAFS = new ArrayList<Float>();
+      			  PAFS = ipm(APshow.get(k).posx,APshow.get(k).posy,i,j);//find how many walls in the line of sign
+      			  
+      			  for(int m=0; m<PAFS.size();m++){
+      				  tempVal= tempVal + PAFS.get(m);// Path loss + obstacles
+      				 
+      			  }
+      			  if(tempVal >= -90){//if val > -100  add it to Spots
+      		
+      			 Spot tempSpot = new Spot(new Point(i,j),tempVal,tempChannel);
+      			 int checkDup = findDupSpot(new Point(i,j));//check duplicate spot
+      			 if(checkDup != -1){//if found
+      				 if(tempVal > Spots.get(checkDup).value){//if new spot is greater than old spot
+      					 Spots.get(checkDup).value = tempVal;//update new value to old spot
+      					// Color c = findColor(tempSpot.value);
+      					// Spots.get(checkDup).setColor(c);
+      					 Spots.get(checkDup).channel = tempChannel;
+//      					 System.out.println("temp channel  :"+tempChannel);
+//      					 System.out.println("spots.channel :"+Spots.get(checkDup).channel);
+      					 
+      				 }
+      				 if(tempVal-Spots.get(checkDup).value >= 30 || tempVal-Spots.get(checkDup).value <= -30 ) {
+      					 overthreadhold+=1;
+      				 }
+      			 }else{
+      				// Color c = findColor(tempSpot.value);
+      				// tempSpot.setColor(c);
+      				 Spots.add(tempSpot);//add to arrayList
+      				 
+      			 }
+      			 
+      			  }
+      			  
+      		  }
+      	  }
+      		
+      	  }
+		}
+	}
+	
 	public void reCal(){
 		 //create Image for Spots---------------
-		  
-
-
 		Spots.clear();
-		
 			 //int count = 0;
 			 
 		 for (int i=0;i<BGimgIcon.getWidth();i+=cGW) {
