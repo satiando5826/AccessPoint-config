@@ -3,6 +3,7 @@ import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Cursor;
 import java.awt.Dimension;
+import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 
@@ -251,10 +252,13 @@ public class drawPanel extends JPanel implements Serializable {
 	        		if(APs.get(i).channel == 1) {
 	        			g2.setColor(Color.magenta);
 	        		}else if (APs.get(i).channel == 6) {
-	        			g2.setColor(Color.PINK);
+	        			g2.setColor(Color.ORANGE);
 	        		}else g2.setColor(Color.BLUE);
+	        		g2.fillOval((APs.get(i).posx-4),(APs.get(i).posy-4),gw,gw);
+	        		g2.setColor(Color.black);
+	        		g.setFont(new Font("TimesRoman", Font.PLAIN, 40));
+		 			g2.drawString(String.valueOf(APs.get(i).pt), (APs.get(i).posx-4),(APs.get(i).posy-4));
 		 			
-		 			g2.fillOval((APs.get(i).posx-4),(APs.get(i).posy-4),gw,gw);
 		 			g2.drawOval(APs.get(i).posx-4,APs.get(i).posy-4,gw,gw);	        			
 	        		}
 		 		}

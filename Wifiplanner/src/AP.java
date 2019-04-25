@@ -31,6 +31,7 @@ public class AP implements Serializable{
 		this.posx = another.posx;
 		this.posy = another.posy;
 		this.pt = another.pt;
+		this.channel = another.channel;
 		
 	}
 	public AP(int x ,int y,float freq_){
@@ -44,6 +45,7 @@ public class AP implements Serializable{
 		posxf = x;
 		posyf = y;
 		pt = 1;
+		channel = 0;
 	}
 	public Point getPos(){
 		
