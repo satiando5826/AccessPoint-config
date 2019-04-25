@@ -1476,7 +1476,8 @@ public class DOrun {
 		int popSize = 100;
 //		exVals[0] = Double.parseDouble(conPanel.exVals1.getText());
 		int powMax = 20;
-		int maxRound = 20; //Max round of genetic
+		int endCountMax = 5;
+		int maxRound = 50; //Max round of genetic
 		Float mutaterate = (float) 0.01;
 		Float parentUseRate = (float) 0.2;
 		System.out.println("*******Start*******");
@@ -1525,7 +1526,7 @@ public class DOrun {
 			}
 			System.out.println("_ _ _ _ _ _ __ _ _ _ _ _ __ _ _ _ _ _ __ _ _ _ _ _ __ _ _ _ _ _ __ _ _ _ _ _ __ _ _ _ _ _ _");
 //		}while(bestFitValue<=-100.00*Drawingpanel.Detecs.size()/5);
-		}while(endCount<3);
+		}while(endCount<endCountMax);
 		showBestFitness(fitnessList, population,populationChannel);
 		emergencyRefresh();
 		System.out.println("++++++++++++++++END GeneticAlgorithms++++++++++++++++");
@@ -1579,22 +1580,21 @@ public class DOrun {
 		for(int i = (int) (parentUseRate*population.size()); i<population.size(); i++) {
 			for(int j=0; j<newpopulation.get(i).size();j++) {
 				if(rand.nextInt(10000)<=mutaterate*10000) {
-					if(rand.nextInt(2)>=1) {
-						while(newpopulation.get(i).get(j)==mutateVal) {
-							mutateVal = rand.nextInt(_powMax);
-						}
-						newpopulation.get(i).set(j, mutateVal);
-						System.out.println(("mutate at pop "+i+" gene "+j+" set to "+newpopulation.get(i).get(j)));
-					}else {	
-						while(newpopulationChannel.get(i).get(j)==mutateCH) {
-							mutateCH = rand.nextInt(2)*5+1;
-						}
-						newpopulationChannel.get(i).set(j, mutateCH);
-						System.out.println(("mutate at pop_CH "+i+" gene "+j+" set to "+newpopulationChannel.get(i).get(j)));
+					while(newpopulation.get(i).get(j)==mutateVal) {
+						mutateVal = rand.nextInt(_powMax);
 					}
+					newpopulation.get(i).set(j, mutateVal);
+					System.out.println(("mutate at pop "+i+" gene "+j+" set to "+newpopulation.get(i).get(j)));
+					}
+				if(rand.nextInt(10000)<=mutaterate*10000) {
+					while(newpopulationChannel.get(i).get(j)==mutateCH) {
+						mutateCH = rand.nextInt(2)*5+1;
+					}
+					newpopulationChannel.get(i).set(j, mutateCH);
+					System.out.println(("mutate at pop_CH "+i+" gene "+j+" set to "+newpopulationChannel.get(i).get(j)));	
 				}
 				populationCalCheck.set(i, 0);
-			}	
+			}
 		}
 		population = newpopulation;
 		populationChannel =newpopulationChannel;
@@ -1608,6 +1608,7 @@ public class DOrun {
 				j=0;
 			}
 		}
+		
 	}
 
 	private void mate(ArrayList<Float> fitnessList, ArrayList<ArrayList<Integer>> population, ArrayList<ArrayList<Integer>> populationChannel, Float parentUseRate, ArrayList<Integer> populationCalCheck) {
