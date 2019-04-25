@@ -102,6 +102,7 @@ public class drawPanel extends JPanel implements Serializable {
 	 public int overthreadhold = 0;
 	 
 	 public int popSize = 100;
+	 public int powerLevelMax = 20;
 	 public int powMax = 20;
 	 public int maxRound = 50;
 	 public float mutaterate = (float)0.005;

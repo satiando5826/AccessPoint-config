@@ -822,7 +822,11 @@ public class DOrun {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				 //Drawingpanel.repaint();
-				System.out.println("popsize   "+conPanel.popSize.getText());
+				System.out.println("Population size   "+conPanel.popSize.getText());
+				System.out.println("Powerlevel Max    "+conPanel.powMax.getText());
+				System.out.println("Round    "+conPanel.roundMax.getText());
+				System.out.println("Mutation    "+conPanel.mutationRate.getText());
+				System.out.println("Mutation    "+conPanel.parentUseRate.getText());
 				geneticAlgorithm();	
 			//	 System.out.println(Drawingpanel.scale);
 			}
@@ -1473,13 +1477,13 @@ public class DOrun {
 	//GENETIC ALGORITHM _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 	
 	public void geneticAlgorithm(){	
-		int popSize = 100;
+		int popSize = Integer.valueOf(conPanel.popSize.getText());
 //		exVals[0] = Double.parseDouble(conPanel.exVals1.getText());
-		int powMax = 20;
-		int endCountMax = 5;
-		int maxRound = 50; //Max round of genetic
-		Float mutaterate = (float) 0.01;
-		Float parentUseRate = (float) 0.2;
+		int powMax = Integer.valueOf(conPanel.powMax.getText());
+		int endCountMax = 4;
+		int maxRound = Integer.valueOf(conPanel.roundMax.getText()); //Max round of genetic
+		Float mutaterate = Float.valueOf(conPanel.mutationRate.getText());
+		Float parentUseRate = Float.valueOf(conPanel.parentUseRate.getText());
 		System.out.println("*******Start*******");
 		System.out.println("Genetic Algorithm \npopulation size : "+popSize+"\tpowerlevelMax = "+powMax+"\tRound : "+maxRound+"\nMutation rate : "+
 		mutaterate+"\tParent Rate : "+parentUseRate);

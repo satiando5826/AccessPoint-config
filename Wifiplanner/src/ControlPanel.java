@@ -27,8 +27,8 @@ public class ControlPanel extends JPanel {
 	public JButton btnNewButton;
 	public JTextField popSize;
 	public JTextField powMax;
-	public JTextField maxRound;
-	public JTextField mutaterate;
+	public JTextField roundMax;
+	public JTextField mutationRate;
 	public JTextField parentUseRate;
 	public JTextField exVals1;
 	public JTextField exVals2;
@@ -202,10 +202,47 @@ public class ControlPanel extends JPanel {
 		lblSignalLevelExamples.setBounds(97, 340, 123, 14);
 		add(lblSignalLevelExamples);
 		
+		JLabel popsizelbl = new JLabel("Population size ");
+		popsizelbl.setBounds(5, 540, 100, 23);
+		add(popsizelbl);
+		
 		popSize = new JTextField();
-		popSize.setBounds(0, 520, 89, 23);
+		popSize.setBounds(100, 540, 89, 23);
+		popSize.setText("100");
 		add(popSize);
 		
+		JLabel powMaxlbl =  new JLabel("Powerlevel     ");
+		powMaxlbl.setBounds(5,560,100,23);
+		add(powMaxlbl);
+		
+		powMax = new JTextField("20");
+		powMax.setBounds(100, 560, 89, 23);
+		add(powMax);
+		
+		JLabel roundMaxlbl =  new JLabel("Round ");
+		roundMaxlbl.setBounds(5,580,89,23);
+		add(roundMaxlbl);
+		
+		roundMax = new JTextField("20");
+		roundMax.setBounds(100, 580, 89, 23);
+		add(roundMax);
+		
+		JLabel mutatationRatelbl =  new JLabel("Mutation rate ");
+		mutatationRatelbl.setBounds(5,600,89,23);
+		add(mutatationRatelbl);
+		
+		mutationRate = new JTextField("0.005");
+		mutationRate.setBounds(100, 600, 89, 23);
+		add(mutationRate);
+		
+		JLabel parentUseRatelbl =  new JLabel("Parent Use rate ");
+		parentUseRatelbl.setBounds(5,620,100,23);
+		add(parentUseRatelbl);
+		
+		parentUseRate = new JTextField("0.2");
+		parentUseRate.setBounds(100, 620, 89, 23);
+		add(parentUseRate);
+				
 		exVals1 = new JTextField();
 		exVals1.setBounds(104, 365, 86, 20);
 		exVals1.setVisible(false);
