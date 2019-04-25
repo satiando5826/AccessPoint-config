@@ -1898,7 +1898,7 @@ public class DOrun {
 	
 	public float geneFitness(ArrayList<Integer> populationCalCheck, int i2) {// Power level
 		System.out.println("find geneFitness");
-		emergencyRefresh();
+//		emergencyRefresh();
 //		Drawingpanel.reCal();
 		Drawingpanel.reCalSpot();
 		

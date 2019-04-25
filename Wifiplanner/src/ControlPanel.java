@@ -231,7 +231,7 @@ public class ControlPanel extends JPanel {
 		mutatationRatelbl.setBounds(5,600,89,23);
 		add(mutatationRatelbl);
 		
-		mutationRate = new JTextField("0.005");
+		mutationRate = new JTextField("0.01");
 		mutationRate.setBounds(100, 600, 89, 23);
 		add(mutationRate);
 		
