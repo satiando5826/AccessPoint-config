@@ -30,6 +30,7 @@ public class ControlPanel extends JPanel {
 	public JTextField roundMax;
 	public JTextField mutationRate;
 	public JTextField parentUseRate;
+	public JTextField endCount;
 	public JTextField exVals1;
 	public JTextField exVals2;
 	public JTextField exVals3;
@@ -242,6 +243,14 @@ public class ControlPanel extends JPanel {
 		parentUseRate = new JTextField("0.2");
 		parentUseRate.setBounds(100, 620, 89, 23);
 		add(parentUseRate);
+		
+		JLabel endCountlbl =  new JLabel("End count ");
+		endCountlbl.setBounds(5,640,100,23);
+		add(endCountlbl);
+		
+		endCount = new JTextField("10");
+		endCount.setBounds(100, 640, 89, 23);
+		add(endCount);
 				
 		exVals1 = new JTextField();
 		exVals1.setBounds(104, 365, 86, 20);

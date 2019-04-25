@@ -818,7 +818,7 @@ public class DOrun {
 			}
 		});
 		
-		conPanel.btnGeneticAlgo.addActionListener(new ActionListener() {
+		conPanel.btnGeneticAlgo.addActionListener (new ActionListener()  { 
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				 //Drawingpanel.repaint();
@@ -826,8 +826,9 @@ public class DOrun {
 				System.out.println("Powerlevel Max    "+conPanel.powMax.getText());
 				System.out.println("Round    "+conPanel.roundMax.getText());
 				System.out.println("Mutation    "+conPanel.mutationRate.getText());
-				System.out.println("Mutation    "+conPanel.parentUseRate.getText());
-				geneticAlgorithm();	
+				System.out.println("Parent use rate    "+conPanel.parentUseRate.getText());
+				System.out.println("End count    "+conPanel.endCount.getText());
+				geneticAlgorithm();
 			//	 System.out.println(Drawingpanel.scale);
 			}
 		});
@@ -1476,11 +1477,12 @@ public class DOrun {
 	}
 	//GENETIC ALGORITHM _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 	
-	public void geneticAlgorithm(){	
+	public void geneticAlgorithm() {	
+		
 		int popSize = Integer.valueOf(conPanel.popSize.getText());
 //		exVals[0] = Double.parseDouble(conPanel.exVals1.getText());
 		int powMax = Integer.valueOf(conPanel.powMax.getText());
-		int endCountMax = 4;
+		int endCountMax = Integer.valueOf(conPanel.endCount.getText());
 		int maxRound = Integer.valueOf(conPanel.roundMax.getText()); //Max round of genetic
 		Float mutaterate = Float.valueOf(conPanel.mutationRate.getText());
 		Float parentUseRate = Float.valueOf(conPanel.parentUseRate.getText());
@@ -1705,7 +1707,7 @@ public class DOrun {
         		}
         		
             	
-            	System.out.print("w1 "+w1+"\t\t\t");
+            	System.out.print("w1 "+w1+"\t\t\t\t");
             	System.out.println("w2 "+w2);
             	
             	System.out.print("child 1 "+child1+"\t\t");
@@ -1745,7 +1747,7 @@ public class DOrun {
 //		System.out.println("Current population " + population);
 //		System.out.println("Current pop_channel" + populationChannel);
 //		System.out.println("Sort print population : " + population);
-		showfitness(fitnessList);
+//		showfitness(fitnessList);
 	}
 	private void sortFitness(ArrayList<ArrayList<Integer>> population, ArrayList<ArrayList<Integer>> populationChannel, ArrayList<Float> fitnessList) {//Insertion Sort
 		System.out.println("Sort Fitness");
@@ -1865,7 +1867,7 @@ public class DOrun {
 	public void emergencyRefresh() {
 		//refresh
 		System.out.println("*************** This is Emergency Refresh ola ola ola ola ola!!!!!! ***************");
-		int count = Drawingpanel.APs.size();
+		int count = Drawingpanel.APs.size()+1;
 		String[] numAPs = new String[count];
 		numAPs[0]="all";
 		for(int h = 1; h< numAPs.length;h++){	 
@@ -1898,6 +1900,7 @@ public class DOrun {
 	
 	public float geneFitness(ArrayList<Integer> populationCalCheck, int i2) {// Power level
 		System.out.println("find geneFitness");
+		
 //		emergencyRefresh();
 //		Drawingpanel.reCal();
 		Drawingpanel.reCalSpot();
@@ -1992,6 +1995,7 @@ public class DOrun {
 		ArrayList<Float> pointVals = new ArrayList<Float>();
 		ArrayList<Integer> pointChannels = new ArrayList<Integer>();	
 		for(int i = 0;i<Drawingpanel.APs.size();i++) {
+			System.out.println("draw AP "+i);
 			float tempDistP =(float) Point.distance(_loc.getX(), _loc.getY(),Drawingpanel.APshow.get(i).posx ,Drawingpanel.APshow.get(i).posy);//distance from ij to AP in pixel
    		  	if(tempDistP<=Drawingpanel.gridDistP){//if it's less than 70m( in pixel unit) gridDistP is defined in Testrun1
    		  		float dist = (tempDistP*Drawingpanel.gridDist)/Drawingpanel.gw;
