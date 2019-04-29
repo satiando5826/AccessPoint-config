@@ -115,7 +115,7 @@ public class DOrun {
   
         // Assign o to output stream 
         System.setOut(o); 
-        System.out.println("This will be written to the text file"); 
+//        System.out.println("This will be written to the text file"); 
   
 //        // Use stored value for output stream 
 //        System.setOut(console); 
@@ -831,6 +831,26 @@ public class DOrun {
 				geneticAlgorithm();
 			//	 System.out.println(Drawingpanel.scale);
 			}
+		});
+		
+		conPanel.btnCo_channel.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				testCo_Channel();
+				
+			}
+
+		});
+
+		conPanel.btnCoverage.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				testCoverage();
+				
+			}
+
 		});
 		
 		conPanel.btnExecute.addActionListener(new ActionListener() {
@@ -1694,24 +1714,42 @@ public class DOrun {
             	child1ch.addAll(chw1);
             	child2ch.addAll(chw2);
         		int index = rand.nextInt(w1.size());
-        		System.out.println("crossover index is " + index);
+        		int index2 = rand.nextInt(w1.size());
+        		int indexCh = rand.nextInt(chw1.size());
+        		int indexCh2 = rand.nextInt(chw1.size());
+        		System.out.println("Candidate : "+i+", "+j+", "+k+", "+l);
+        		System.out.println("crossover index is " + index +", "+index2);
+        		System.out.println("crossover indexChannel is " + indexCh +", "+indexCh2);
 //        		for(int i1=0;i1<index;i1++) {
 //        			child1.set(i1, w1.get(i1));
 //        			child2.set(i1, w2.get(i1));
+        		while(index>=index2) {
+        			index = rand.nextInt(w1.size());
+        			index2 = rand.nextInt(w1.size());
+        		}
+        		while(indexCh>=indexCh2) {
+        			indexCh = rand.nextInt(chw1.size());
+        			indexCh2 = rand.nextInt(chw1.size());
+        		}
 //        		}
-        		for(int j1=index;j1<w1.size();j1++) {
+        		for(int j1=index;j1<index2;j1++) {
             		child1.set(j1, w2.get(j1));
             		child2.set(j1, w1.get(j1));
+        		}
+        		for(int j1=indexCh;j1<indexCh2;j1++) {
             		child1ch.set(j1, chw2.get(j1));
             		child2ch.set(j1, chw1.get(j1));
         		}
         		
-            	
-            	System.out.print("w1 "+w1+"\t\t\t\t");
+            	System.out.print("w1 "+w1+"  \t\t\t\t");
             	System.out.println("w2 "+w2);
+            	System.out.print("chw1 "+chw1+"  \t\t\t\t");
+            	System.out.println("chw2 "+chw2);
             	
             	System.out.print("child 1 "+child1+"\t\t");
             	System.out.println("child 2 "+child2);
+            	System.out.print("childCh 1 "+child1ch+"\t\t");
+            	System.out.println("childCh 2 "+child2ch);
             	newpopulation.add(child1);
             	newpopulation.add(child2);
             	newpopulationChannel.add(child1ch);
@@ -1866,7 +1904,7 @@ public class DOrun {
 	
 	public void emergencyRefresh() {
 		//refresh
-		System.out.println("*************** This is Emergency Refresh ola ola ola ola ola!!!!!! ***************");
+		System.out.println("*************** Refresh ***************");
 		int count = Drawingpanel.APs.size()+1;
 		String[] numAPs = new String[count];
 		numAPs[0]="all";
@@ -1930,6 +1968,8 @@ public class DOrun {
 			for (int j = 0; j < currentSignal.channels.size(); j++) {
 //				System.out.println("current channel is "+ currentSignal.channels.get(mostValIndex(currentSignal)) + "this vals Channel is " + currentSignal.channels.get(j));
 				if(currentSignal.channels.get(j)==currentSignal.channels.get(mostValIndex(currentSignal))) {
+//					if (true) {
+						
 					if(currentSignal.vals.get(mostVal_Index)*2<currentSignal.vals.get(j)) {
 						//System.out.println("penalty channel "+ currentSignal.channels.get(j)+ " powerlevel AP "+mostValIndex(currentSignal)+" "+tmpVal+" powerlevel AP "+j+" "+currentSignal.vals.get(j));
 						
@@ -1995,7 +2035,7 @@ public class DOrun {
 		ArrayList<Float> pointVals = new ArrayList<Float>();
 		ArrayList<Integer> pointChannels = new ArrayList<Integer>();	
 		for(int i = 0;i<Drawingpanel.APs.size();i++) {
-			System.out.println("draw AP "+i);
+//			System.out.println("draw AP "+i);
 			float tempDistP =(float) Point.distance(_loc.getX(), _loc.getY(),Drawingpanel.APshow.get(i).posx ,Drawingpanel.APshow.get(i).posy);//distance from ij to AP in pixel
    		  	if(tempDistP<=Drawingpanel.gridDistP){//if it's less than 70m( in pixel unit) gridDistP is defined in Testrun1
    		  		float dist = (tempDistP*Drawingpanel.gridDist)/Drawingpanel.gw;
@@ -2016,4 +2056,17 @@ public class DOrun {
 		SpotSignal signals = new  SpotSignal(pointVals,pointChannels);		
 		return signals; 
 	}
+	
+	public void testCo_Channel() {
+			System.out.println("Test Co-Channel Interferences");
+			
+		}
+	
+	
+	public void testCoverage() {
+		System.out.println("Test Coverage");
+		
+	}
+	
+	
 }

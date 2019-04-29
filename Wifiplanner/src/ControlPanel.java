@@ -47,7 +47,10 @@ public class ControlPanel extends JPanel {
 	public JButton btnDelete;
 	public JButton btnExecute;
 	public JButton btnSubmit;
+	
 	public JButton btnGeneticAlgo;
+	public JButton btnCo_channel;
+	public JButton btnCoverage;
 
 	
 	public JSlider Yslider;
@@ -80,7 +83,7 @@ public class ControlPanel extends JPanel {
 		
 		Icon delete = new ImageIcon("delete.png");
 		btnDelete = new JButton(delete);
-		btnDelete.setBounds(120, 50, 25, 25);
+		btnDelete.setBounds(140, 50, 25, 25);
 		
 		add(btnDelete);
 		
@@ -110,8 +113,18 @@ public class ControlPanel extends JPanel {
 		add(modeListCombo);
 		
 		btnGeneticAlgo = new JButton("GeneticAlgo");
-		btnGeneticAlgo.setBounds(0, 500, 89, 23);
+		btnGeneticAlgo.setBounds(0, 500, 120, 23);
 		add(btnGeneticAlgo);
+		
+		btnCo_channel = new JButton("Co_channel");
+		btnCo_channel.setBounds(0, 800, 120, 23);
+		add(btnCo_channel);
+		
+		btnCoverage = new JButton("Coverage");
+		btnCoverage.setBounds(0, 825, 120, 23);
+		add(btnCoverage);
+		
+		
 		
 		//-----------------------------------------------------------------------------gridSlider---------------
 		
@@ -195,7 +208,7 @@ public class ControlPanel extends JPanel {
 		add(numDetec);
 		
 		numChannel = new JComboBox<String>();
-		numChannel.setBounds(104, 500, 89, 23);
+		numChannel.setBounds(140, 500, 89, 23);
 		
 		add(numChannel);
 		
@@ -209,7 +222,7 @@ public class ControlPanel extends JPanel {
 		
 		popSize = new JTextField();
 		popSize.setBounds(100, 540, 89, 23);
-		popSize.setText("100");
+		popSize.setText("250");
 		add(popSize);
 		
 		JLabel powMaxlbl =  new JLabel("Powerlevel     ");
@@ -224,7 +237,7 @@ public class ControlPanel extends JPanel {
 		roundMaxlbl.setBounds(5,580,89,23);
 		add(roundMaxlbl);
 		
-		roundMax = new JTextField("20");
+		roundMax = new JTextField("25");
 		roundMax.setBounds(100, 580, 89, 23);
 		add(roundMax);
 		
@@ -232,7 +245,7 @@ public class ControlPanel extends JPanel {
 		mutatationRatelbl.setBounds(5,600,89,23);
 		add(mutatationRatelbl);
 		
-		mutationRate = new JTextField("0.01");
+		mutationRate = new JTextField("0.02");
 		mutationRate.setBounds(100, 600, 89, 23);
 		add(mutationRate);
 		
@@ -240,7 +253,7 @@ public class ControlPanel extends JPanel {
 		parentUseRatelbl.setBounds(5,620,100,23);
 		add(parentUseRatelbl);
 		
-		parentUseRate = new JTextField("0.2");
+		parentUseRate = new JTextField("0.1");
 		parentUseRate.setBounds(100, 620, 89, 23);
 		add(parentUseRate);
 		
