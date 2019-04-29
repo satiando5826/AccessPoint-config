@@ -590,7 +590,7 @@ public class TestrunAJ {
 						  File file = fileChooser.getSelectedFile();
 						  FileOutputStream opf = new FileOutputStream(file);				     
 				         ObjectOutputStream out = new ObjectOutputStream(opf);
-				         savedObj saveOb = new savedObj(selectedFile,Drawingpanel.WList,Drawingpanel.APs,Drawingpanel.Spots,Drawingpanel.gridDist,Drawingpanel.gridDistP,Drawingpanel.gw,Drawingpanel.curY,Drawingpanel.cGW);
+				         savedObj saveOb = new savedObj(selectedFile,Drawingpanel.WList,Drawingpanel.APs,Drawingpanel.Spots,Drawingpanel.gridDist,Drawingpanel.gridDistP,Drawingpanel.gw,Drawingpanel.curY,Drawingpanel.cGW,Drawingpanel.TEs);
 				         out.writeObject(saveOb);
 				         System.out.println("wr done!!");
 				         out.close();

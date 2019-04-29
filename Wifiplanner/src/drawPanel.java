@@ -34,6 +34,7 @@ import javax.swing.JSlider;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
+import com.sun.org.apache.xml.internal.resolver.helpers.PublicId;
 import com.sun.xml.internal.ws.dump.LoggingDumpTube.Position;
 
 
@@ -42,6 +43,7 @@ public class drawPanel extends JPanel implements Serializable {
 	public int detectedWallnum;
 	public int detectedAP;
 	public int detectedDetec;
+	public int detectedTestarea;
 	 /**
 	 * 
 	 */
@@ -62,8 +64,11 @@ public class drawPanel extends JPanel implements Serializable {
 	 public boolean scale = false;
 	 //---------------------wall condition var
 	 public Line temp ;
+	 public Line Testareatemp ;
 	 public  ArrayList<Line> WList=new ArrayList<Line>();
+	 public  ArrayList<Line> TestList=new ArrayList<Line>();
 	 public boolean Walldrawing = false;
+	 public boolean TestAreadrawing = false;
 	 public float curPAF;
 	 public float curFreq;
 	 public int selectedWall=0;
@@ -78,7 +83,8 @@ public class drawPanel extends JPanel implements Serializable {
 	 
 	//grid width and height
 	 public int gw=20;
-	 public int cGW=gw;
+//	 public int cGW=gw; //Edit
+	 public int cGW = 10;
 	
 	 public int npx,npy;//current position of mouse
 	 int size;//arraysize
@@ -87,10 +93,14 @@ public class drawPanel extends JPanel implements Serializable {
 	 public   JComboBox<String>  changeFreq;
 	 JSlider selectPt ;
 	//AP var----------------------------------------------
-	 public  ArrayList<AP> APs=new ArrayList<AP>();
-	 public  ArrayList<Detec> Detecs=new ArrayList<Detec>();
-	 public  ArrayList<AP> APshow=new ArrayList<AP>();
+	 public  ArrayList<AP> APs = new ArrayList<AP>();
+	 public  ArrayList<Detec> Detecs = new ArrayList<Detec>();
+	 public  ArrayList<TestArea> TestAreas = new ArrayList<TestArea>(); 
+	 public  ArrayList<AP> APshow = new ArrayList<AP>();
 	 public ArrayList<Detec> Detecshow = new ArrayList<Detec>();
+	 public ArrayList<TestArea> TestAreashow = new ArrayList<TestArea>();
+	 public ArrayList<Point> TestAreaSpot = new ArrayList<Point>();
+	 
 	 public ArrayList<Spot> Spots	 = new ArrayList<Spot>() ;
 	 public ArrayList<Spot> SampleSpots	 = new ArrayList<Spot>() ;
 	 
@@ -273,6 +283,30 @@ public class drawPanel extends JPanel implements Serializable {
 			 			g2.drawRect(Detecs.get(i).posx-4,Detecs.get(i).posy-4,gw,gw);	        			
 		 			}
 		 		}
+		 		
+		 		//drawTestArea
+		 		if(TestAreas != null) {
+		 			if (TestAreas.size() > 0) {
+//			 			System.out.println(TestAreas);
+			 			g2.setColor(Color.green);
+			 			g2.fillRect((TestAreas.get(0).posx-4),(TestAreas.get(0).posy-4),gw,gw);
+			 			g2.setColor(Color.black);
+			 			g2.drawRect(TestAreas.get(0).posx-4,TestAreas.get(0).posy-4,gw,gw);
+			 			for(int i = 1; i< TestAreas.size();i++) {//
+			 				g2.setColor(Color.green);
+				 			g2.fillRect((TestAreas.get(i).posx-4),(TestAreas.get(i).posy-4),gw,gw);
+				 			g2.setColor(Color.black);
+				 			g2.drawRect(TestAreas.get(i).posx-4,TestAreas.get(i).posy-4,gw,gw);	 
+				 			g2.setStroke(new BasicStroke(3,BasicStroke.CAP_ROUND, BasicStroke.JOIN_BEVEL));
+				 			if(i%4 != 0 && i%4 != 3) {
+				 				g2.drawLine(TestAreas.get(i-1).posx, TestAreas.get(i-1).posy, TestAreas.get(i).posx, TestAreas.get(i).posy);
+				 			}else if(i%4 == 3){
+				 				g2.drawLine(TestAreas.get(i-1).posx, TestAreas.get(i-1).posy, TestAreas.get(i).posx, TestAreas.get(i).posy);
+				 				g2.drawLine(TestAreas.get(i-3).posx, TestAreas.get(i-3).posy, TestAreas.get(i).posx, TestAreas.get(i).posy);
+							}
+			 			}
+			 		}
+		 		}
 		 	
 			 	  Graphics2D g2d = (Graphics2D) g2;
 			 	
@@ -296,20 +330,19 @@ public class drawPanel extends JPanel implements Serializable {
 			        	
 			        	gWall.drawLine(temp.getP1X(), temp.getP1Y(),temp.getP2X(),temp.getP2Y());
 			        }
-			    	
+//			        if(TestAreadrawing){
+//			        	
+//			        	g2.drawLine(Testareatemp.getP1X(), Testareatemp.getP1Y(),Testareatemp.getP2X(),Testareatemp.getP2Y());
+//			        }
 			 		//drawWall---------------
-				 	   if(WList != null){
-				 		 
-				 		
+				 	   if(WList != null){			 		 		 		
 				        	for(int i=0; i< WList.size(); i++){
 				        		//System.out.println(WList.get(i).getPAF());
 				        		gWall.setColor(WList.get(i).getColor());
-				        		gWall.drawLine(WList.get(i).getP1X(),WList.get(i).getP1Y(),WList.get(i).getP2X(),WList.get(i).getP2Y());
-				        		
-				        	}
-				        	
-				        	
+				        		gWall.drawLine(WList.get(i).getP1X(),WList.get(i).getP1Y(),WList.get(i).getP2X(),WList.get(i).getP2Y());				    
+				        	}				        					        	
 				        }
+				 
 			 		
 
 		 		Dimension dim = getPreferredSize();
@@ -387,9 +420,12 @@ public class drawPanel extends JPanel implements Serializable {
 	}
 	
 	public void reCalSpot() {
+		System.out.println("RecalSpot");
 		for(int o=0;o<Detecshow.size();o++) {
+			
 			int i=Detecshow.get(o).posx;
 			int j=Detecshow.get(o).posy;
+			System.out.println("Pos:" + i+"; "+j);
 			for(int k=0; k< APshow.size();k++){//check all APs
       		  if(i!=APshow.get(k).posx || j!=APshow.get(k).posy){
       		  
@@ -445,6 +481,72 @@ public class drawPanel extends JPanel implements Serializable {
       		
       	  }
 		}
+	}
+	
+	public void reCalTest() {
+		System.out.println("recalTest");
+		for(int o=0;o<TestAreaSpot.size();o++) {
+			int i=TestAreaSpot.get(o).x;
+			int j=TestAreaSpot.get(o).y;
+			for(int k=0; k< APshow.size();k++){//check all APs
+      		  if(i!=APshow.get(k).posx || j!=APshow.get(k).posy){
+      		  
+      		  float tempDistP =(float) Point.distance(i, j,APshow.get(k).posx ,APshow.get(k).posy);//distance from ij to AP in pixel
+      		  if(tempDistP<=gridDistP){//if it's less than 70m( in pixel unit) gridDistP is defined in Testrun1
+      			  
+      			  float dist = (tempDistP*gridDist)/gw;//convert Pixel to Meter
+      			//  System.out.println(APs.get(k).freq);
+      			  float tempVal = spl(dist,APshow.get(k).curK,APshow.get(k).pt);//calculate spl
+      			  int tempChannel = APs.get(k).channel;
+//      			  System.out.println("spotapshow pt"+APshow.get(k).pt);
+//      			  System.out.println("spotaps pt"+APs.get(k).pt);
+//      			  
+//      			  System.out.println("spotapshow channel "+APshow.get(k).channel);
+//      			  System.out.println("spotaps channel "+APs.get(k).channel);
+//      			  System.out.println("spot chan"+tempChannel);
+      			  
+      			  ArrayList<Float> PAFS = new ArrayList<Float>();
+      			  PAFS = ipm(APshow.get(k).posx,APshow.get(k).posy,i,j);//find how many walls in the line of sign
+      			  
+      			  for(int m=0; m<PAFS.size();m++){
+      				  
+      				  tempVal= tempVal + PAFS.get(m);// Path loss + obstacles
+//      				System.out.println("Position "+ i+","+j +" tempVal = "+tempVal);
+      				 
+      			  }
+      			  if(tempVal >= -100){//if val > -100  add it to Spots
+      		
+      			 Spot tempSpot = new Spot(new Point(i,j),tempVal,tempChannel);
+      			 int checkDup = findDupSpot(new Point(i,j));//check duplicate spot
+      			 if(checkDup != -1){//if found
+      				 if(tempVal > Spots.get(checkDup).value){//if new spot is greater than old spot
+      					 Spots.get(checkDup).value = tempVal;//update new value to old spot
+      					// Color c = findColor(tempSpot.value);
+      					// Spots.get(checkDup).setColor(c);
+      					 Spots.get(checkDup).channel = tempChannel;
+//      					 System.out.println("temp channel  :"+tempChannel);
+//      					 System.out.println("spots.channel :"+Spots.get(checkDup).channel);
+      					 
+      				 }
+      				 if(tempVal-Spots.get(checkDup).value >= 30 || tempVal-Spots.get(checkDup).value <= -30 ) {
+      					 overthreadhold+=1;
+      				 }
+      			 }else{
+      				// Color c = findColor(tempSpot.value);
+      				// tempSpot.setColor(c);
+//      				 System.out.println("addSpot "+tempSpot.value);
+      				 Spots.add(tempSpot);//add to arrayList
+      				 
+      			 }
+      			 
+      			  }
+      			  
+      		  }
+      	  }
+      		
+      	  }
+		}
+		setColorTstGA();
 	}
 	
 	public void reCal(){
@@ -576,12 +678,27 @@ public class drawPanel extends JPanel implements Serializable {
     		
     		Color c = findColor(Spots.get(k).value,min1,max1);
 //    		System.out.println(i);
+    		Spots.get(k).setColor(c);       
+    			        		
+    	}
+	}
+	
+	public void setColorTstGA(){
+		int i=0;
+		int min1 = (int) findMinSpots(Spots);
+		 int max1 = (int) findMaxSpots(Spots);
+		//set Color------------------------------------------
+		 for(int k =0;k<Spots.size();k++){
+    		
+    		Color c = findColor(Spots.get(k).value,min1,max1);
+//    		System.out.println(i);
     		Spots.get(k).setColor(c);
-    			
+    		System.out.println("setColor Pos: "+ Spots.get(k).getPos());
        
     			        		
     	}
 	}
+	
 		 public void setColorTestSpots(){
 			 int min1 = (int) findMinSpots(SampleSpots);
 			 int max1 = (int) findMaxSpots(SampleSpots);
@@ -592,6 +709,8 @@ public class drawPanel extends JPanel implements Serializable {
 		    		SampleSpots.get(k).setColor(c);	    			        		
 		    	}
 			}
+		 
+		 
 	public int findDupSpot(Point _loc){
 		int found=-1;
 		
@@ -778,6 +897,7 @@ public class drawPanel extends JPanel implements Serializable {
 			 }
 		return checker;
 	}
+	
 	public boolean isthereDetec(int apx,int apy) {
 		boolean checker = false;
 		loop:
@@ -791,6 +911,20 @@ public class drawPanel extends JPanel implements Serializable {
 			 }
 		return checker;	
 	}
+	public boolean isthereTestArea(int apx,int apy) {
+		boolean checker = false;
+		loop:
+			for(int i=0;i<TestAreas.size();i++){
+				 if(TestAreas.get(i).getPos().equals(new Point(apx,apy)))
+				 {
+					 checker = true;
+					 detectedTestarea = i;
+					 break loop;
+				 } 
+			 }
+		return checker;	
+	}
+	
 	public void ShowApOptions(){
 		
 		ChangingPanel = new JPanel();
@@ -848,6 +982,7 @@ public class drawPanel extends JPanel implements Serializable {
 	    WList = new ArrayList<Line>();
 		APs = new ArrayList<AP>();
 		Detecs = new ArrayList<Detec>();
+		TestAreas = new ArrayList<TestArea>();
 		Spots = new ArrayList<Spot>();
 		APshow = new ArrayList<AP>();
 		Detecshow = new ArrayList<Detec>();

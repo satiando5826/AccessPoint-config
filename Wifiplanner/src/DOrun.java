@@ -14,9 +14,12 @@ import javax.swing.UIManager;
 import javax.swing.JFileChooser;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
+import org.apache.commons.math3.analysis.function.Min;
 import org.apache.commons.math3.linear.MatrixUtils;
 import org.apache.commons.math3.linear.RealMatrix;
 import org.apache.commons.math3.stat.regression.OLSMultipleLinearRegression;
+
+import javafx.collections.SetChangeListener;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
@@ -804,7 +807,7 @@ public class DOrun {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				 
-				Drawingpanel.changeModeTo(5);
+				Drawingpanel.changeModeTo(6);
 				System.out.println(Drawingpanel.currentMode);
 			}
 		});
@@ -1142,7 +1145,8 @@ public class DOrun {
 				}
 				
 				Drawingpanel.drawingScale = !Drawingpanel.drawingScale; //when clicking stage of drawing must change
-			 }else if(Drawingpanel.currentMode ==  1){// if it's wall mode
+				
+			 }else if(Drawingpanel.currentMode == 1){// if it's wall mode draw wall
 				
 				 if(Drawingpanel.Walldrawing){
 					 Drawingpanel.temp.setWPAF(Drawingpanel.curPAF);//set current PAF to the wall
@@ -1165,8 +1169,7 @@ public class DOrun {
 					 
 				 
 				 
-			 }else if(Drawingpanel.currentMode == 2){
-				//AP
+			 }else if(Drawingpanel.currentMode == 2){//AP
 		//test--------------------------------------------------------------------------------------	
 				
 				 
@@ -1204,7 +1207,7 @@ public class DOrun {
 				 
 				 
 				 
-			 }else if(Drawingpanel.currentMode == 4){//Detec
+			 }else if(Drawingpanel.currentMode == 4){//Detect
 				 if(!Drawingpanel.isthereWall(npx,npy)) {//check if there is a wall in the same npx npy
 					 
 					 Detec tempDetec = new Detec(npx,npy);
@@ -1235,9 +1238,34 @@ public class DOrun {
 					 Drawingpanel.reCal();
 			 }
 				 
+			 }else if(Drawingpanel.currentMode == 5){//Test Area
+				 if(!Drawingpanel.isthereWall(npx,npy)) {//check if there is a wall in the same npx npy
+					 
+					 TestArea tempArea = new TestArea(npx,npy);
+					 System.out.println(npx+","+npy);
+					 
+					 Drawingpanel.TestAreas.add(tempArea);
+					System.out.println(Drawingpanel.TestAreas);
+//					 if(Drawingpanel.TestAreadrawing){
+////						 Drawingpanel.temp.setWPAF(Drawingpanel.curPAF);//set current PAF to the wall
+////						 Drawingpanel.temp.setColor(Drawingpanel.selectedWall);
+//						 Drawingpanel.TestAreas.add(Drawingpanel.temp);
+//						 Drawingpanel.reCal();
+//						// Drawingpanel.SampleRecal();
+//						 Drawingpanel.temp = new Line();
+//						 System.out.print(Drawingpanel.temp);
+//					 }else{
+//						
+//						 Drawingpanel.temp = new Line(new Point(npx,npy),new Point(npx,npy));
+//						 
+//						 				 
+//					 }
+//					 	 
+//					 Drawingpanel.TestAreadrawing = !Drawingpanel.TestAreadrawing;
+					 Drawingpanel.reCal();
+			 }	 
 				 
-				 
-			 }else if(Drawingpanel.currentMode ==5){//delete mode
+			 }else if(Drawingpanel.currentMode == 6){//delete mode
 				// System.out.println(GBx+","+GBy);
 				 Point p = snapGrid();
 				 if(Drawingpanel.isthereAP(p.x,p.y)){
@@ -1257,6 +1285,12 @@ public class DOrun {
 					Drawingpanel.Detecshow.remove(Drawingpanel.detectedDetec);
 					Drawingpanel.reCal();
 				}
+				if(Drawingpanel.isthereTestArea(p.x, p.y)) {
+					Drawingpanel.TestAreas.remove(Drawingpanel.detectedDetec);
+					Drawingpanel.TestAreas.remove(Drawingpanel.detectedDetec);
+					Drawingpanel.reCal();
+				}
+				
 					 
 				 
 				 
@@ -2059,7 +2093,32 @@ public class DOrun {
 	
 	public void testCo_Channel() {
 			System.out.println("Test Co-Channel Interferences");
-			
+//			for (int i = 0; i < Drawingpanel.Spots.size(); i++) {
+//				System.out.println(Drawingpanel.Spots.get(i).getPos());	
+//			}
+			Drawingpanel.Spots.clear();
+			int subareaSize= 30;
+			Drawingpanel.TestAreaSpot.clear();
+			for (int i = 0; i < Drawingpanel.TestAreas.size()/4; i++) {//per area
+				System.out.println("Area "+i);
+				int minX = Min(Min(Drawingpanel.TestAreas.get(i*4).posx,Drawingpanel.TestAreas.get(i*4+1).posx),Min(Drawingpanel.TestAreas.get(i*4+2).posx,Drawingpanel.TestAreas.get(i*4+3).posx));
+				int maxX = Max(Max(Drawingpanel.TestAreas.get(i*4).posx,Drawingpanel.TestAreas.get(i*4+1).posx),Max(Drawingpanel.TestAreas.get(i*4+2).posx,Drawingpanel.TestAreas.get(i*4+3).posx));
+				int minY = Min(Min(Drawingpanel.TestAreas.get(i*4).posy,Drawingpanel.TestAreas.get(i*4+1).posy),Min(Drawingpanel.TestAreas.get(i*4+2).posy,Drawingpanel.TestAreas.get(i*4+3).posy));
+				int maxY = Max(Max(Drawingpanel.TestAreas.get(i*4).posy,Drawingpanel.TestAreas.get(i*4+1).posy),Max(Drawingpanel.TestAreas.get(i*4+2).posy,Drawingpanel.TestAreas.get(i*4+3).posy));
+				System.out.println("minX maxX : minY maxY \t"+minX+" "+maxX+" : "+minY+" "+maxY);
+			for (int j = 0; j < (maxX - minX)/subareaSize; j++) {//X sub area
+					for (int j2 = 0; j2 < (maxY-minY)/subareaSize; j2++) {//Y sub area
+//						System.out.println("add spot"+(((minX/30)*30+(j*subareaSize))+", "+((minY/30)*30+(j2*subareaSize))));
+//						Drawingpanel.TestAreaSpot.add(new Point((minX/30)*30+(j*subareaSize),(minY/30)*30+(j2*subareaSize)));
+						Drawingpanel.TestAreaSpot.add(new Point(minX+(j*subareaSize), minY+(j2*subareaSize)));
+					}
+				}
+			}
+			System.out.println(Drawingpanel.TestAreaSpot);
+			System.out.println("TestSpot Size " + Drawingpanel.TestAreaSpot.size());
+			Drawingpanel.reCalTest();
+			Drawingpanel.repaint();
+//			emergencyRefresh();
 		}
 	
 	
@@ -2068,5 +2127,19 @@ public class DOrun {
 		
 	}
 	
+	private int Min(int posx, int posx2) {
+		if (posx < posx2) {
+			return posx;
+		}else {
+			return posx2;
+		}
+	}
+	private int Max(int posx, int posx2) {
+		if (posx > posx2) {
+			return posx;
+		}else {
+			return posx2;
+		}
+	}
 	
 }

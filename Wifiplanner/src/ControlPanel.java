@@ -64,7 +64,7 @@ public class ControlPanel extends JPanel {
 	String[] choices = { "Cement : -10dB", "Iron door : -15.4dB", "Thin Cement : -2.89dB", "Cement+WBoard : -16dB", "Wood board: -5.0 dB", "F : -18dB", "Customize" }; 
 	
 	  JComboBox<String> modeListCombo;
-	String[] modeList = {"Select Mode","Wall Mode","AP Mode","Auto Mode","Detec Mode"}; //{0,1,2,3}
+	String[] modeList = {"Select Mode","Wall Mode","AP Mode","Auto Mode","Detect Mode","Test Area Mode"}; //{0,1,2,3}
 	
 	  JComboBox<String> selectFreq;
 	String[] freqs = {"2.4 GHz","5.0GHz"};
