@@ -100,6 +100,7 @@ public class drawPanel extends JPanel implements Serializable {
 	 public ArrayList<Detec> Detecshow = new ArrayList<Detec>();
 	 public ArrayList<TestArea> TestAreashow = new ArrayList<TestArea>();
 	 public ArrayList<Point> TestAreaSpot = new ArrayList<Point>();
+	 public ArrayList<Integer> TestAreaVal = new ArrayList<Integer>();
 	 
 	 public ArrayList<Spot> Spots	 = new ArrayList<Spot>() ;
 	 public ArrayList<Spot> SampleSpots	 = new ArrayList<Spot>() ;
@@ -483,27 +484,21 @@ public class drawPanel extends JPanel implements Serializable {
 		}
 	}
 	
-	public void reCalTest() {
+	public void reCalTestCovorage(int threshold) {
+		Spots.clear();
 		System.out.println("recalTest");
 		for(int o=0;o<TestAreaSpot.size();o++) {
 			int i=TestAreaSpot.get(o).x;
 			int j=TestAreaSpot.get(o).y;
 			for(int k=0; k< APshow.size();k++){//check all APs
       		  if(i!=APshow.get(k).posx || j!=APshow.get(k).posy){
-      		  
       		  float tempDistP =(float) Point.distance(i, j,APshow.get(k).posx ,APshow.get(k).posy);//distance from ij to AP in pixel
       		  if(tempDistP<=gridDistP){//if it's less than 70m( in pixel unit) gridDistP is defined in Testrun1
       			  
       			  float dist = (tempDistP*gridDist)/gw;//convert Pixel to Meter
-      			//  System.out.println(APs.get(k).freq);
       			  float tempVal = spl(dist,APshow.get(k).curK,APshow.get(k).pt);//calculate spl
       			  int tempChannel = APs.get(k).channel;
-//      			  System.out.println("spotapshow pt"+APshow.get(k).pt);
-//      			  System.out.println("spotaps pt"+APs.get(k).pt);
-//      			  
-//      			  System.out.println("spotapshow channel "+APshow.get(k).channel);
-//      			  System.out.println("spotaps channel "+APs.get(k).channel);
-//      			  System.out.println("spot chan"+tempChannel);
+
       			  
       			  ArrayList<Float> PAFS = new ArrayList<Float>();
       			  PAFS = ipm(APshow.get(k).posx,APshow.get(k).posy,i,j);//find how many walls in the line of sign
@@ -511,41 +506,37 @@ public class drawPanel extends JPanel implements Serializable {
       			  for(int m=0; m<PAFS.size();m++){
       				  
       				  tempVal= tempVal + PAFS.get(m);// Path loss + obstacles
-//      				System.out.println("Position "+ i+","+j +" tempVal = "+tempVal);
       				 
       			  }
       			  if(tempVal >= -100){//if val > -100  add it to Spots
-      		
       			 Spot tempSpot = new Spot(new Point(i,j),tempVal,tempChannel);
       			 int checkDup = findDupSpot(new Point(i,j));//check duplicate spot
       			 if(checkDup != -1){//if found
       				 if(tempVal > Spots.get(checkDup).value){//if new spot is greater than old spot
       					 Spots.get(checkDup).value = tempVal;//update new value to old spot
-      					// Color c = findColor(tempSpot.value);
-      					// Spots.get(checkDup).setColor(c);
-      					 Spots.get(checkDup).channel = tempChannel;
-//      					 System.out.println("temp channel  :"+tempChannel);
-//      					 System.out.println("spots.channel :"+Spots.get(checkDup).channel);
-      					 
+      					 Spots.get(checkDup).channel = tempChannel; 
       				 }
       				 if(tempVal-Spots.get(checkDup).value >= 30 || tempVal-Spots.get(checkDup).value <= -30 ) {
       					 overthreadhold+=1;
       				 }
       			 }else{
-      				// Color c = findColor(tempSpot.value);
-      				// tempSpot.setColor(c);
-//      				 System.out.println("addSpot "+tempSpot.value);
-      				 Spots.add(tempSpot);//add to arrayList
-      				 
+      				 Spots.add(tempSpot);//add to arrayList	 
       			 }
       			 
       			  }
       			  
       		  }
       	  }
-      		
       	  }
+			
 		}
+		int countCO = 0;
+		for (int co = 0; co < Spots.size(); co++) {
+			if(Spots.get(co).getVal() >= threshold) {
+				countCO++;
+			}
+		}
+		TestAreaVal.add(countCO);
 		setColorTstGA();
 	}
 	

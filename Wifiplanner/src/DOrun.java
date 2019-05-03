@@ -85,6 +85,7 @@ public class DOrun {
 	File selectedFile;
 	float currentPAF;
 	float currentY;
+	boolean tested = false;
 
      int currentMode = 0;
      
@@ -1239,7 +1240,7 @@ public class DOrun {
 			 }
 				 
 			 }else if(Drawingpanel.currentMode == 5){//Test Area
-				 if(!Drawingpanel.isthereWall(npx,npy)) {//check if there is a wall in the same npx npy
+//				 if(!Drawingpanel.isthereWall(npx,npy)) {//check if there is a wall in the same npx npy
 					 
 					 TestArea tempArea = new TestArea(npx,npy);
 					 System.out.println(npx+","+npy);
@@ -1263,7 +1264,7 @@ public class DOrun {
 //					 	 
 //					 Drawingpanel.TestAreadrawing = !Drawingpanel.TestAreadrawing;
 					 Drawingpanel.reCal();
-			 }	 
+//			 }	 
 				 
 			 }else if(Drawingpanel.currentMode == 6){//delete mode
 				// System.out.println(GBx+","+GBy);
@@ -2092,41 +2093,75 @@ public class DOrun {
 	}
 	
 	public void testCo_Channel() {
-			System.out.println("Test Co-Channel Interferences");
-//			for (int i = 0; i < Drawingpanel.Spots.size(); i++) {
-//				System.out.println(Drawingpanel.Spots.get(i).getPos());	
-//			}
-			Drawingpanel.Spots.clear();
-			int subareaSize= 30;
-			Drawingpanel.TestAreaSpot.clear();
-			for (int i = 0; i < Drawingpanel.TestAreas.size()/4; i++) {//per area
-				System.out.println("Area "+i);
-				int minX = Min(Min(Drawingpanel.TestAreas.get(i*4).posx,Drawingpanel.TestAreas.get(i*4+1).posx),Min(Drawingpanel.TestAreas.get(i*4+2).posx,Drawingpanel.TestAreas.get(i*4+3).posx));
-				int maxX = Max(Max(Drawingpanel.TestAreas.get(i*4).posx,Drawingpanel.TestAreas.get(i*4+1).posx),Max(Drawingpanel.TestAreas.get(i*4+2).posx,Drawingpanel.TestAreas.get(i*4+3).posx));
-				int minY = Min(Min(Drawingpanel.TestAreas.get(i*4).posy,Drawingpanel.TestAreas.get(i*4+1).posy),Min(Drawingpanel.TestAreas.get(i*4+2).posy,Drawingpanel.TestAreas.get(i*4+3).posy));
-				int maxY = Max(Max(Drawingpanel.TestAreas.get(i*4).posy,Drawingpanel.TestAreas.get(i*4+1).posy),Max(Drawingpanel.TestAreas.get(i*4+2).posy,Drawingpanel.TestAreas.get(i*4+3).posy));
-				System.out.println("minX maxX : minY maxY \t"+minX+" "+maxX+" : "+minY+" "+maxY);
-			for (int j = 0; j < (maxX - minX)/subareaSize; j++) {//X sub area
-					for (int j2 = 0; j2 < (maxY-minY)/subareaSize; j2++) {//Y sub area
-//						System.out.println("add spot"+(((minX/30)*30+(j*subareaSize))+", "+((minY/30)*30+(j2*subareaSize))));
-//						Drawingpanel.TestAreaSpot.add(new Point((minX/30)*30+(j*subareaSize),(minY/30)*30+(j2*subareaSize)));
-						Drawingpanel.TestAreaSpot.add(new Point(minX+(j*subareaSize), minY+(j2*subareaSize)));
-					}
-				}
-			}
-			System.out.println(Drawingpanel.TestAreaSpot);
-			System.out.println("TestSpot Size " + Drawingpanel.TestAreaSpot.size());
-			Drawingpanel.reCalTest();
-			Drawingpanel.repaint();
-//			emergencyRefresh();
+		System.out.println("///////////// Test Co-Channel Interferences /////////////");
+//		for (int i = 0; i < Drawingpanel.Spots.size(); i++) {
+//			System.out.println(Drawingpanel.Spots.get(i).getPos());	
+//		}
+		for (int i = 0; i < 10; i++) {
+			write_txt("testwr.txt", String.valueOf(i));
+		}
+//		emergencyRefresh();
 		}
 	
-	
 	public void testCoverage() {
-		System.out.println("Test Coverage");
-		
+		System.out.println("///////////////////// Test Coverage /////////////////////");
+		geneticAlgorithm();
+		addTestSpot(15,60);
+		System.out.println(Drawingpanel.TestAreaSpot);
+		System.out.println("TestSpot Size " + Drawingpanel.TestAreaSpot.size());
+		Drawingpanel.reCalTestCovorage(-60);
+		Drawingpanel.repaint();
+		write_txt("CoverageTest.log", "Test Coverage");
+		for (int i = 0; i < Drawingpanel.TestAreaVal.size(); i++) {
+			write_txt("CoverageTest.log", String.valueOf(Drawingpanel.TestAreaVal.get(i)));
+		}
+		System.out.println("TestCoverage Area Val: "+ Drawingpanel.TestAreaVal);
+		tested = !tested;
 	}
 	
+	
+	public void write_txt(String path, String content) {
+			
+		try (FileWriter writer = new FileWriter(path, true);
+	             BufferedWriter bw = new BufferedWriter(writer)) {
+
+	            bw.write(content);
+	            bw.newLine();
+	            bw.close();
+	        } catch (IOException e) {
+	            System.err.format("IOException: %s%n", e);
+	        }
+	}
+	
+	public void addTestSpot(int min, int max) {
+		Drawingpanel.TestAreaSpot.clear();
+		int subareaSize= max;
+		
+//		if (!tested) {
+//			subareaSize= max;
+//		}else {
+//			subareaSize= min;
+//		}
+			
+		Drawingpanel.TestAreaSpot.clear();
+		for (int i = 0; i < Drawingpanel.TestAreas.size()/4; i++) {//per area
+			System.out.println("Area "+i);
+			int minX = Min(Min(Drawingpanel.TestAreas.get(i*4).posx,Drawingpanel.TestAreas.get(i*4+1).posx),Min(Drawingpanel.TestAreas.get(i*4+2).posx,Drawingpanel.TestAreas.get(i*4+3).posx));
+			int maxX = Max(Max(Drawingpanel.TestAreas.get(i*4).posx,Drawingpanel.TestAreas.get(i*4+1).posx),Max(Drawingpanel.TestAreas.get(i*4+2).posx,Drawingpanel.TestAreas.get(i*4+3).posx));
+			int minY = Min(Min(Drawingpanel.TestAreas.get(i*4).posy,Drawingpanel.TestAreas.get(i*4+1).posy),Min(Drawingpanel.TestAreas.get(i*4+2).posy,Drawingpanel.TestAreas.get(i*4+3).posy));
+			int maxY = Max(Max(Drawingpanel.TestAreas.get(i*4).posy,Drawingpanel.TestAreas.get(i*4+1).posy),Max(Drawingpanel.TestAreas.get(i*4+2).posy,Drawingpanel.TestAreas.get(i*4+3).posy));
+			System.out.println("minX maxX : minY maxY \t"+minX+" "+maxX+" : "+minY+" "+maxY);
+			for (int j = 0; j < (maxX - minX)/subareaSize; j++) {//X sub area
+				for (int j2 = 0; j2 < (maxY-minY)/subareaSize; j2++) {//Y sub area
+//					System.out.println("add spot"+(((minX/30)*30+(j*subareaSize))+", "+((minY/30)*30+(j2*subareaSize))));
+//					Drawingpanel.TestAreaSpot.add(new Point((minX/30)*30+(j*subareaSize),(minY/30)*30+(j2*subareaSize)));
+					Drawingpanel.TestAreaSpot.add(new Point(minX+(j*subareaSize), minY+(j2*subareaSize)));
+				}
+			}
+		}
+	}
+	
+		
 	private int Min(int posx, int posx2) {
 		if (posx < posx2) {
 			return posx;
