@@ -833,6 +833,7 @@ public class DOrun {
 				System.out.println("Parent use rate    "+conPanel.parentUseRate.getText());
 				System.out.println("End count    "+conPanel.endCount.getText());
 				geneticAlgorithm();
+				//emergencyRefresh();
 			//	 System.out.println(Drawingpanel.scale);
 			}
 		});
@@ -851,7 +852,9 @@ public class DOrun {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				testCoverage();
+				if (Drawingpanel.TestAreas.size()<3) {
+					System.out.println("Need Test Area");
+				}else testCoverage();
 				
 			}
 
@@ -1246,7 +1249,7 @@ public class DOrun {
 					 System.out.println(npx+","+npy);
 					 
 					 Drawingpanel.TestAreas.add(tempArea);
-					System.out.println(Drawingpanel.TestAreas);
+//					System.out.println(Drawingpanel.TestAreas);
 //					 if(Drawingpanel.TestAreadrawing){
 ////						 Drawingpanel.temp.setWPAF(Drawingpanel.curPAF);//set current PAF to the wall
 ////						 Drawingpanel.temp.setColor(Drawingpanel.selectedWall);
@@ -1552,7 +1555,7 @@ public class DOrun {
 	    System.out.println("Random generate first Population");
 		for(int i = 0;i<popSize;i++) {
 //			System.out.println();
-			System.out.println("gene " + i);
+//			System.out.println("gene " + i);
 			initRandom(Drawingpanel.APs,population,powMax,populationChannel,populationCalCheck);
 			fitnessList.add(geneFitness(populationCalCheck,i));
 		}
@@ -1578,7 +1581,7 @@ public class DOrun {
 			}
 //			sortFitness(population,populationChannel,fitnessList);
 //			showfitness(fitnessList);
-			System.out.println();
+//			System.out.println();
 			System.out.println("_ _ _ _ _ _ __ _ _ _ _ _ __ _ _ _ _ _ __ _ _ _ _ _ __ _ _ _ _ _ __ _ _ _ _ _ __ _ _ _ _ _ _");
 			System.out.println("round "+round+"\tBestFitness: "+bestFitValueCurr);
 			round++;
@@ -1615,7 +1618,7 @@ public class DOrun {
 				Drawingpanel.APs.get(j).setPT(population.get(i).get(j));
 				Drawingpanel.APs.get(j).setChannel(populationChannel.get(i).get(j));
 			}
-			System.out.println("Find fitness population "+i);
+			//System.out.println("Find fitness population "+i);
 			if(populationCalCheck.get(i)==0){
 				fitnessList.set(i, geneFitness(populationCalCheck, i));
 //				fitnessList.add(geneFitness(populationCalCheck,i));
@@ -1628,7 +1631,7 @@ public class DOrun {
 	}
 
 	private void mutate(ArrayList<ArrayList<Integer>> population, ArrayList<ArrayList<Integer>> populationChannel, Float mutaterate,int _powMax, Float parentUseRate, ArrayList<Integer> populationCalCheck) {
-		System.out.println("***************Mutate Function***************");
+		//System.out.println("***************Mutate Function***************");
 		ArrayList<ArrayList<Integer>> newpopulation = new ArrayList<ArrayList<Integer>> ();
 		ArrayList<ArrayList<Integer>> newpopulationChannel = new ArrayList<ArrayList<Integer>> ();
 		Random rand = new Random();
@@ -1673,7 +1676,7 @@ public class DOrun {
 	}
 
 	private void mate(ArrayList<Float> fitnessList, ArrayList<ArrayList<Integer>> population, ArrayList<ArrayList<Integer>> populationChannel, Float parentUseRate, ArrayList<Integer> populationCalCheck) {
-		System.out.println("***************Mate Function***************");
+		//System.out.println("***************Mate Function***************");
 		ArrayList<ArrayList<Integer>> newpopulation = new ArrayList<ArrayList<Integer>> ();
 		ArrayList<ArrayList<Integer>> newpopulationChannel = new ArrayList<ArrayList<Integer>> ();
 		Random rand = new Random();
@@ -1820,7 +1823,7 @@ public class DOrun {
 //		showfitness(fitnessList);
 	}
 	private void sortFitness(ArrayList<ArrayList<Integer>> population, ArrayList<ArrayList<Integer>> populationChannel, ArrayList<Float> fitnessList) {//Insertion Sort
-		System.out.println("Sort Fitness");
+		//System.out.println("Sort Fitness");
 		ArrayList<Integer> index = new ArrayList<Integer>();
 		ArrayList<ArrayList<Integer>> tmppop= new ArrayList<ArrayList<Integer>>();
 		ArrayList<ArrayList<Integer>> tmpCH= new ArrayList<ArrayList<Integer>>();
@@ -1881,16 +1884,16 @@ public class DOrun {
 				index = i;
 			}
 		}
-		System.out.println();
+		//System.out.println();
 		System.out.println("Best: gene " + index + " -> "+fitnessList.get(index));
 		for(int i=0;i<Drawingpanel.APs.size();i++) {
 			int pt = population.get(index).get(i);
 			Drawingpanel.APs.get(i).setPT(pt);
 			Drawingpanel.APs.get(i).setChannel(populationChannel.get(index).get(i));
 		}
-		System.out.println(population.get(index));
-		System.out.println(populationChannel.get(index));
-		emergencyRefresh();
+		//System.out.println(population.get(index));
+		//System.out.println(populationChannel.get(index));
+		//emergencyRefresh();
 		return best;
 	}
 
@@ -1898,7 +1901,7 @@ public class DOrun {
 		Random rand = new Random();
 		int n;
 		int cha;
-		System.out.print("pt_channel[");
+//		System.out.print("pt_channel[");
 		for(int i = 0; i<Drawingpanel.APs.size();i++){//init random gene
 			n = rand.nextInt(_powMax);
 			cha = rand.nextInt(3)*5+1;
@@ -1912,7 +1915,7 @@ public class DOrun {
 		population.add(pt);
 		populationChannel.add(ch);
 		populationCalCheck.add(0);
-		System.out.println();
+		//System.out.println();
 //		emergencyRefresh();
 	}
 	
@@ -1969,7 +1972,7 @@ public class DOrun {
 	}
 	
 	public float geneFitness(ArrayList<Integer> populationCalCheck, int i2) {// Power level
-		System.out.println("find geneFitness");
+		//System.out.println("find geneFitness");
 		
 //		emergencyRefresh();
 //		Drawingpanel.reCal();
@@ -1982,11 +1985,11 @@ public class DOrun {
 	    float tmpVal = -200;
 	    float penalty = 0;
 	    int mostVal_Index = -1;
-	    System.out.print("gene(power_channel) ");
+	    //System.out.print("gene(power_channel) ");
 	    for (int i = 0; i < Drawingpanel.APs.size(); i++) {
-	    	System.out.print(Drawingpanel.APs.get(i).pt + "_" + Drawingpanel.APs.get(i).channel+",");
+	    	//System.out.print(Drawingpanel.APs.get(i).pt + "_" + Drawingpanel.APs.get(i).channel+",");
 	    }
-	    System.out.println();
+	    //System.out.println();
 		for(int i = 0;i<Drawingpanel.Detecs.size();i++) {
 //			System.out.println("\nDetect: "+i+"______________");
 			SpotSignal currentSignal = pointSignals(Drawingpanel.Detecs.get(i).getPos());
@@ -2021,7 +2024,7 @@ public class DOrun {
 		}
 //		fs = -30*Drawingpanel.overthreadhold;
 		total = fs-fp;
-		System.out.println("\nFitness = fs - fp = "+fs+" - "+fp +" = "+ total+"\n");
+		//System.out.println("\nFitness = fs - fp = "+fs+" - "+fp +" = "+ total+"\n");
 		return total;
 	}
 	
@@ -2129,9 +2132,11 @@ public class DOrun {
 		int Avg = 0;
 		int inc = 50;
 		addTestSpot(15,60);
-		for (int i = 0; i < 10 ; i++) {//per change popsize
+		for (int i = 0; i < 20 ; i++) {//per change popsize
 			Drawingpanel.TestAreaVal.clear();
-			for (int k = 0; k < 5; k++) {//add val to find Avg
+			
+			for (int k = 0; k < 100; k++) {//add val to find Avg
+				System.out.println("popsize "+popSize+" , example "+k);
 				geneticAlgorithm();
 //				System.out.println(Drawingpanel.TestAreaSpot);
 //				System.out.println("TestSpot Size " + Drawingpanel.TestAreaSpot.size());
@@ -2148,7 +2153,7 @@ public class DOrun {
 			Avg= Avg/Drawingpanel.TestAreaVal.size();
 			write_txt("CoverageTest.log",String.valueOf(popSize)+"			 	"+Avg);
 			popSize += inc;
-			inc += 50;
+			//inc += 50;
 			conPanel.popSize.setText(String.valueOf(popSize));
 		}
 		tested = !tested;

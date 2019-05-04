@@ -421,7 +421,7 @@ public class drawPanel extends JPanel implements Serializable {
 	}
 	
 	public void reCalSpot() {
-		System.out.println("RecalSpot");
+		//System.out.println("RecalSpot");
 		for(int o=0;o<Detecshow.size();o++) {
 			
 			int i=Detecshow.get(o).posx;

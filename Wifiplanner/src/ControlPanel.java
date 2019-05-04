@@ -222,7 +222,7 @@ public class ControlPanel extends JPanel {
 		
 		popSize = new JTextField();
 		popSize.setBounds(100, 540, 89, 23);
-		popSize.setText("250");
+		popSize.setText("50");
 		add(popSize);
 		
 		JLabel powMaxlbl =  new JLabel("Powerlevel     ");
