@@ -16,6 +16,7 @@ public ArrayList<Integer> channels = new ArrayList<Integer>();
 public float value;
 public int channel;
 public float Maxval;
+public int Mostvalindex = 0;
 public Color sc;
 
 Spot(Point _pos,float _val){
@@ -27,6 +28,8 @@ Spot(Point _pos,float _val,int _channel){
 	pos = _pos;
 	value = _val;
 	channel = _channel;
+	values.add(_val);
+	channels.add(_channel);
 }
 
 public Point getPos(){

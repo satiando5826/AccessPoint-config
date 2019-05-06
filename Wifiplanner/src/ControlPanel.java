@@ -116,11 +116,11 @@ public class ControlPanel extends JPanel {
 		btnGeneticAlgo.setBounds(0, 500, 120, 23);
 		add(btnGeneticAlgo);
 		
-		btnCo_channel = new JButton("Co_channel");
-		btnCo_channel.setBounds(0, 800, 120, 23);
-		add(btnCo_channel);
-		
-		btnCoverage = new JButton("Coverage");
+//		btnCo_channel = new JButton("Co_channel");
+//		btnCo_channel.setBounds(0, 800, 120, 23);
+//		add(btnCo_channel);
+//		
+		btnCoverage = new JButton("TEST");
 		btnCoverage.setBounds(0, 825, 120, 23);
 		add(btnCoverage);
 		
@@ -222,7 +222,7 @@ public class ControlPanel extends JPanel {
 		
 		popSize = new JTextField();
 		popSize.setBounds(100, 540, 89, 23);
-		popSize.setText("50");
+		popSize.setText("250");
 		add(popSize);
 		
 		JLabel powMaxlbl =  new JLabel("Powerlevel     ");
