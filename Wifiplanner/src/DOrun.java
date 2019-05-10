@@ -2254,16 +2254,21 @@ public class DOrun {
 		System.out.println("///////////////////// Test  /////////////////////");
 		write_txt("TestGA.log", "popSize\t\tCoverage\t\tPenalty");
 		int popSize = Integer.valueOf(conPanel.popSize.getText());
+		float mutaterate = Float.valueOf(conPanel.mutationRate.getText());
 		int Avg = 0;
 		int AvgCo = 0;
 		int inc = 50;
+		int change= 8;
+		int example_set = 30;
 		addTestSpot(15,60);
-		for (int i = 0; i < 20 ; i++) {//per change popsize
+		for (int i = 0; i < change ; i++) {//per change popsize
 			Drawingpanel.TestAreaVal.clear();
 			Drawingpanel.TestAreaCoVal.clear();
 			
-			for (int k = 0; k < 50; k++) {//add val to find Avg
-				System.out.println("popsize "+popSize+" , example "+k);
+			for (int k = 0; k < example_set; k++) {//add val to find Avg
+//				System.out.println("popsize "+popSize+" , example "+k);
+				System.out.println("mutate rate "+mutaterate+" , example "+k);
+				
 				geneticAlgorithm(false);
 //				System.out.println(Drawingpanel.TestAreaSpot);
 //				System.out.println("TestSpot Size " + Drawingpanel.TestAreaSpot.size());
@@ -2274,7 +2279,7 @@ public class DOrun {
 			Avg = 0;
 			for (int j = 0; j < Drawingpanel.TestAreaVal.size(); j++) {//Find Avg
 //				write_txt("CoverageTest.log", String.valueOf(Drawingpanel.TestAreaVal.get(j)));
-				write_txt("TestGA.log"+popSize+".log", String.valueOf(popSize)+"            "+String.valueOf(Drawingpanel.TestAreaVal.get(j)+"            "+String.valueOf(Drawingpanel.TestAreaCoVal.get(j))));
+				write_txt("TestGA.log"+popSize+".log", String.valueOf(popSize)+"\t\t"+String.valueOf(Drawingpanel.TestAreaVal.get(j)+"\t\t"+String.valueOf(Drawingpanel.TestAreaCoVal.get(j))));
 				Avg += Drawingpanel.TestAreaVal.get(j);
 				AvgCo += Drawingpanel.TestAreaCoVal.get(j);
 			}
@@ -2282,8 +2287,11 @@ public class DOrun {
 			AvgCo= AvgCo/Drawingpanel.TestAreaCoVal.size();
 			write_txt("TestGA.log",String.valueOf(popSize)+"			 	"+Avg+"			 	"+AvgCo);
 			popSize += inc;
+			mutaterate += 0.005;
 			//inc += 50;
-			conPanel.popSize.setText(String.valueOf(popSize));
+//			conPanel.popSize.setText(String.valueOf(popSize));
+			conPanel.mutationRate.setText(String.valueOf(mutaterate));
+		
 		}
 		tested = !tested;
 	}
