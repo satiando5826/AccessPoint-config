@@ -27,9 +27,12 @@ public class ControlPanel extends JPanel {
 	public JButton btnNewButton;
 	public JTextField popSize;
 	public JTextField powMax;
+	public JTextField powMin;
 	public JTextField roundMax;
 	public JTextField mutationRate;
 	public JTextField parentUseRate;
+	public JTextField testType;
+	public JTextField roundDiff;
 	public JTextField endCount;
 	public JTextField exVals1;
 	public JTextField exVals2;
@@ -121,7 +124,7 @@ public class ControlPanel extends JPanel {
 //		add(btnCo_channel);
 //		
 		btnCoverage = new JButton("TEST");
-		btnCoverage.setBounds(0, 825, 120, 23);
+		btnCoverage.setBounds(0, 700, 120, 23);
 		add(btnCoverage);
 		
 		
@@ -222,16 +225,20 @@ public class ControlPanel extends JPanel {
 		
 		popSize = new JTextField();
 		popSize.setBounds(100, 540, 89, 23);
-		popSize.setText("250");
+		popSize.setText("50");
 		add(popSize);
 		
-		JLabel powMaxlbl =  new JLabel("Powerlevel     ");
+		JLabel powMaxlbl =  new JLabel("Power transmission     ");
 		powMaxlbl.setBounds(5,560,100,23);
 		add(powMaxlbl);
 		
-		powMax = new JTextField("20");
-		powMax.setBounds(100, 560, 89, 23);
+		powMax = new JTextField("1");
+		powMax.setBounds(140, 560, 40, 23);
 		add(powMax);
+		
+		powMin = new JTextField("-10");
+		powMin.setBounds(100, 560, 40, 23);
+		add(powMin);
 		
 		JLabel roundMaxlbl =  new JLabel("Round ");
 		roundMaxlbl.setBounds(5,580,89,23);
@@ -264,6 +271,29 @@ public class ControlPanel extends JPanel {
 		endCount = new JTextField("10");
 		endCount.setBounds(100, 640, 89, 23);
 		add(endCount);
+		
+		JLabel testTypelb1 =  new JLabel("Select test type");
+		testTypelb1.setBounds(5,720,250,23);
+		add(testTypelb1);
+		
+		JLabel testTypelb2 =  new JLabel("0:pop 1:mutate 2:round 3:parentuse  ");
+		testTypelb2.setBounds(5,740,250,23);
+		add(testTypelb2);
+		
+		
+		testType = new JTextField("0");
+		testType.setBounds(5, 760, 89, 23);
+		add(testType);
+		
+		JLabel roundDifflb =  new JLabel("Different");
+		roundDifflb.setBounds(5,780,100,23);
+		add(roundDifflb);
+		
+		roundDiff = new JTextField("5");
+		roundDiff.setBounds(100, 780, 89, 23);
+		add(roundDiff);
+		
+		
 				
 		exVals1 = new JTextField();
 		exVals1.setBounds(104, 365, 86, 20);

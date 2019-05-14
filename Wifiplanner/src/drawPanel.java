@@ -894,7 +894,7 @@ public class drawPanel extends JPanel implements Serializable {
 		return checker;
 	}
 	public boolean isthereAP(int apx,int apy){
-		boolean checker = false;F
+		boolean checker = false;
 		loop:
 			 for(int i=0;i<APshow.size();i++){
 				 if(APshow.get(i).getPos().equals(new Point(apx,apy)))
