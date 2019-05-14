@@ -32,8 +32,10 @@ public class ControlPanel extends JPanel {
 	public JTextField mutationRate;
 	public JTextField parentUseRate;
 	public JTextField testType;
+	public JTextField testCount;
 	public JTextField roundDiff;
 	public JTextField endCount;
+	public JTextField testSample;
 	public JTextField exVals1;
 	public JTextField exVals2;
 	public JTextField exVals3;
@@ -227,7 +229,7 @@ public class ControlPanel extends JPanel {
 		add(popsizelbl);
 		
 		popSize = new JTextField();
-		popSize.setBounds(100, 440, 89, 23);
+		popSize.setBounds(100, 440, 89, 20);
 		popSize.setText("50");
 		add(popSize);
 		
@@ -236,19 +238,19 @@ public class ControlPanel extends JPanel {
 		add(powMaxlbl);
 		
 		powMax = new JTextField("1");
-		powMax.setBounds(140, 460, 40, 23);
+		powMax.setBounds(140, 460, 40, 20);
 		add(powMax);
 		
 		powMin = new JTextField("-10");
-		powMin.setBounds(100, 460, 40, 23);
+		powMin.setBounds(100, 460, 40, 20);
 		add(powMin);
 		
 		JLabel roundMaxlbl =  new JLabel("Round ");
 		roundMaxlbl.setBounds(5,480,89,23);
 		add(roundMaxlbl);
 		
-		roundMax = new JTextField("25");
-		roundMax.setBounds(100, 480, 89, 23);
+		roundMax = new JTextField("15");
+		roundMax.setBounds(100, 480, 89, 20);
 		add(roundMax);
 		
 		JLabel mutatationRatelbl =  new JLabel("Mutation rate ");
@@ -256,7 +258,7 @@ public class ControlPanel extends JPanel {
 		add(mutatationRatelbl);
 		
 		mutationRate = new JTextField("0.02");
-		mutationRate.setBounds(100, 500, 89, 23);
+		mutationRate.setBounds(100, 500, 89, 20);
 		add(mutationRate);
 		
 		JLabel parentUseRatelbl =  new JLabel("Parent Use rate ");
@@ -264,15 +266,15 @@ public class ControlPanel extends JPanel {
 		add(parentUseRatelbl);
 		
 		parentUseRate = new JTextField("0.1");
-		parentUseRate.setBounds(100, 520, 89, 23);
+		parentUseRate.setBounds(100, 520, 89, 20);
 		add(parentUseRate);
 		
 		JLabel endCountlbl =  new JLabel("End count ");
-		endCountlbl.setBounds(5,540,100,23);
+//		endCountlbl.setBounds(5,540,100,23);
 		add(endCountlbl);
 		
 		endCount = new JTextField("10");
-		endCount.setBounds(100, 540, 89, 23);
+//		endCount.setBounds(100, 540, 89, 20);
 		add(endCount);
 		
 		JLabel testTypelb1 =  new JLabel("Select test type");
@@ -283,17 +285,32 @@ public class ControlPanel extends JPanel {
 		testTypelb2.setBounds(5,640,250,23);
 		add(testTypelb2);
 		
-		
 		testType = new JTextField("0");
-		testType.setBounds(5, 660, 89, 23);
+		testType.setBounds(5, 660, 89, 20);
 		add(testType);
 		
+		JLabel testCountlb =  new JLabel("Case");
+		testCountlb.setBounds(5,680,50,23);
+		add(testCountlb);
+		
+		testCount = new JTextField("20");
+		testCount.setBounds(44, 680, 50, 20);
+		add(testCount);
+		
+		JLabel testSamplelb =  new JLabel("Sample");
+		testSamplelb.setBounds(100,680,50,23);
+		add(testSamplelb);
+		
+		testSample = new JTextField("50");
+		testSample.setBounds(150, 680, 50, 20);
+		add(testSample);
+		
 		JLabel roundDifflb =  new JLabel("Different");
-		roundDifflb.setBounds(5,680,100,23);
+		roundDifflb.setBounds(5,700,100,23);
 		add(roundDifflb);
 		
 		roundDiff = new JTextField("5");
-		roundDiff.setBounds(100, 680, 89, 23);
+		roundDiff.setBounds(100, 700, 89, 20);
 		add(roundDiff);
 		
 		

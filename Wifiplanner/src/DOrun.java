@@ -4,6 +4,7 @@ import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.EventQueue;
 import java.awt.Point;
+import static java.time.temporal.ChronoUnit.MILLIS;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -18,8 +19,10 @@ import org.apache.commons.math3.analysis.function.Min;
 import org.apache.commons.math3.linear.MatrixUtils;
 import org.apache.commons.math3.linear.RealMatrix;
 import org.apache.commons.math3.stat.regression.OLSMultipleLinearRegression;
+import com.sun.org.apache.xml.internal.security.algorithms.implementations.SignatureECDSA;
 
 import javafx.collections.SetChangeListener;
+import javafx.util.converter.LocalTimeStringConverter;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
@@ -41,6 +44,8 @@ import java.io.Writer;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.sql.Time;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.awt.event.ActionEvent;
@@ -775,11 +780,7 @@ public class DOrun {
 					} catch (IOException e) {
 						
 						e.printStackTrace();
-					}
-					
-					
-					
-					 
+					} 
 				 }
 				//if the user click on cancle in Jfilechooser
 		          else if(result == JFileChooser.CANCEL_OPTION){
@@ -1536,7 +1537,8 @@ public class DOrun {
 	//GENETIC ALGORITHM _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 	
 	public void geneticAlgorithm(boolean showdetaillog) {	
-		
+		LocalTime startTime = LocalTime.now();
+		System.out.println("Start Time : "+startTime);
 		int popSize = Integer.valueOf(conPanel.popSize.getText());
 		int powMax = Integer.valueOf(conPanel.powMax.getText());
 		int powMin = Integer.valueOf(conPanel.powMin.getText());
@@ -1599,7 +1601,12 @@ public class DOrun {
 //		}while(endCount<endCountMax);
 		}while(true);
 		showBestFitness(fitnessList, population,populationChannel);
-		emergencyRefresh();
+		if (showdetaillog) {
+			emergencyRefresh();
+		}
+		LocalTime endTime = LocalTime.now();
+		System.out.println("end time "+endTime);
+		System.out.println("Run time (sec) "+ ((float)startTime.until(endTime, MILLIS))/1000);
 		System.out.println("++++++++++++++++END GeneticAlgorithms++++++++++++++++");
 		
 //		ArrayList<Integer> gene = ptAPs(Drawingpanel.APs);
@@ -2233,22 +2240,27 @@ public class DOrun {
 		int testType = Integer.valueOf(conPanel.testType.getText());
 		int Avg = 0;
 		int AvgCo = 0;
+		float AvgTime = 0;
 		int inc = Integer.valueOf(conPanel.roundDiff.getText());
-		int change= 20;
-		int example_set = 100;
+		int change= Integer.valueOf(conPanel.testCount.getText());
+		int example_set = Integer.valueOf(conPanel.testSample.getText());
+		int coverageThreshold = -72 ; //dBm
+		
 		addTestSpot(15,60);
+		
+		ArrayList<Float> geneticTime = new ArrayList<Float>();
 		switch (testType) {
 		case 0:
-			write_txt("TestGApopSize.log", "popSize\t\tCoverage\t\tPenalty");
+			write_txt("TestGApopSize.log", "popSize\t\tCoverage\t\tPenalty\t\tTime");
 			break;
 		case 1:
-			write_txt("TestGAmutate.log", "mutate\t\tCoverage\t\tPenalty");
+			write_txt("TestGAmutate.log", "mutate\t\tCoverage\t\tPenalty\t\tTime");
 			break;
 		case 2:
-			write_txt("TestGAround.log", "round\t\tCoverage\t\tPenalty");
+			write_txt("TestGAround.log", "round\t\tCoverage\t\tPenalty\t\tTime");
 			break;
 		case 3:
-			write_txt("TestGAparent.log", "parent\t\tCoverage\t\tPenalty");
+			write_txt("TestGAparent.log", "parent\t\tCoverage\t\tPenalty\t\tTime");
 			break;
 		
 		default:
@@ -2258,6 +2270,7 @@ public class DOrun {
 		for (int i = 0; i < change ; i++) {//per change popsize
 			Drawingpanel.TestAreaVal.clear();
 			Drawingpanel.TestAreaCoVal.clear();
+			geneticTime.clear();
 			
 			for (int k = 0; k < example_set; k++) {//add val to find Avg
 				switch (testType) {
@@ -2277,29 +2290,35 @@ public class DOrun {
 				default:
 					break;
 				}
-				
-//				System.out.println("mutate rate "+mutaterate+" , example "+k);
+				LocalTime starttestTime = LocalTime.now();
 				geneticAlgorithm(false);
-//				System.out.println(Drawingpanel.TestAreaSpot);
-//				System.out.println("TestSpot Size " + Drawingpanel.TestAreaSpot.size());
-				Drawingpanel.reCalTestCovorage(-60);
+				LocalTime endtestTime = LocalTime.now();
+				geneticTime.add(((float)starttestTime.until(endtestTime, MILLIS))/1000);
+				emergencyRefresh();
+				Drawingpanel.reCalTestCovorage(coverageThreshold);
 //				Drawingpanel.repaint();
 			}
 			System.out.println("TestCoverage Area Val: "+ Drawingpanel.TestAreaVal);
 			Avg = 0;
+			AvgCo = 0;
+			AvgTime = 0;
 			for (int j = 0; j < Drawingpanel.TestAreaVal.size(); j++) {//Find Avg
 				switch (testType) {
 				case 0:
-					write_txt("TestGApopSize.log"+popSize+".log", String.valueOf(popSize)+"\t"+String.valueOf(Drawingpanel.TestAreaVal.get(j)+"\t"+String.valueOf(Drawingpanel.TestAreaCoVal.get(j))));
+					write_txt("TestGApopSize"+popSize+".log", String.valueOf(popSize)+"\t"+String.valueOf(Drawingpanel.TestAreaVal.get(j)+
+							"\t"+String.valueOf(Drawingpanel.TestAreaCoVal.get(j))+"\t"+String.valueOf(geneticTime.get(j))));
 					break;
 				case 1:
-					write_txt("TestGAmutate.log"+mutaterate+".log", String.valueOf(mutaterate)+"\t"+String.valueOf(Drawingpanel.TestAreaVal.get(j)+"\t"+String.valueOf(Drawingpanel.TestAreaCoVal.get(j))));
+					write_txt("TestGAmutate"+mutaterate+".log", String.valueOf(mutaterate)+"\t"+String.valueOf(Drawingpanel.TestAreaVal.get(j)+
+							"\t"+String.valueOf(Drawingpanel.TestAreaCoVal.get(j))+"\t"+String.valueOf(geneticTime.get(j))));
 					break;
 				case 2:
-					write_txt("TestGAround.log"+maxRound+".log", String.valueOf(maxRound)+"\t"+String.valueOf(Drawingpanel.TestAreaVal.get(j)+"\t"+String.valueOf(Drawingpanel.TestAreaCoVal.get(j))));
+					write_txt("TestGAround"+maxRound+".log", String.valueOf(maxRound)+"\t"+String.valueOf(Drawingpanel.TestAreaVal.get(j)+
+							"\t"+String.valueOf(Drawingpanel.TestAreaCoVal.get(j))+"\t"+String.valueOf(geneticTime.get(j))));
 					break;
 				case 3:
-					write_txt("TestGAparent.log"+parentuserate+".log", String.valueOf(parentuserate)+"\t"+String.valueOf(Drawingpanel.TestAreaVal.get(j)+"\t"+String.valueOf(Drawingpanel.TestAreaCoVal.get(j))));
+					write_txt("TestGAparent"+parentuserate+".log", String.valueOf(parentuserate)+"\t"+String.valueOf(Drawingpanel.TestAreaVal.get(j)+
+							"\t"+String.valueOf(Drawingpanel.TestAreaCoVal.get(j))+"\t"+String.valueOf(geneticTime.get(j))));
 					break;
 				
 				default:
@@ -2307,27 +2326,29 @@ public class DOrun {
 				}
 				Avg += Drawingpanel.TestAreaVal.get(j);
 				AvgCo += Drawingpanel.TestAreaCoVal.get(j);
+				AvgTime += geneticTime.get(j);
 			}
 			Avg= Avg/Drawingpanel.TestAreaVal.size();
 			AvgCo= AvgCo/Drawingpanel.TestAreaCoVal.size();
+			AvgTime = AvgTime/geneticTime.size();
 			switch (testType) {
 			case 0:
-				write_txt("TestGApopSize.log",String.valueOf(popSize)+"\t"+Avg+"\t"+AvgCo);
+				write_txt("TestGApopSize.log",String.valueOf(popSize)+"\t\t"+Avg+"\t\t"+AvgCo+"\t\t"+AvgTime);
 				popSize+=inc;
 				conPanel.popSize.setText(String.valueOf(popSize));
 				break;
 			case 1:
-				write_txt("TestGAmutate.log",String.valueOf(mutaterate)+"\t"+Avg+"\t"+AvgCo);
+				write_txt("TestGAmutate.log",String.valueOf(mutaterate)+"\t\t"+Avg+"\t\t"+AvgCo+"\t\t"+AvgTime);
 				mutaterate+=inc;
 				conPanel.mutationRate.setText(String.valueOf(mutaterate));
 				break;
 			case 2:
-				write_txt("TestGAmaxround.log",String.valueOf(maxRound)+"\t"+Avg+"\t"+AvgCo);
+				write_txt("TestGAmaxround.log",String.valueOf(maxRound)+"\t\t"+Avg+"\t\t"+AvgCo+"\t\t"+AvgTime);
 				maxRound+=inc;
 				conPanel.roundMax.setText(String.valueOf(maxRound));
 				break;
 			case 3:
-				write_txt("TestGAparent.log",String.valueOf(parentuserate)+"\t"+Avg+"\t"+AvgCo);
+				write_txt("TestGAparent.log",String.valueOf(parentuserate)+"\t\t"+Avg+"\t\t"+AvgCo+"\t\t"+AvgTime);
 				parentuserate+=inc;
 				conPanel.parentUseRate.setText(String.valueOf(parentuserate));
 				break;

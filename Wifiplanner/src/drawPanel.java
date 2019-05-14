@@ -527,13 +527,14 @@ public class drawPanel extends JPanel implements Serializable {
       		  }
       	  }
       	  }
-		
 		}
 		System.out.println("\\testhere//");
-		System.out.println(Spots.get(0).values);
+//		System.out.println("test spot size = "+ Spots.size());
+//		System.out.println(Spots.get(0).values);
 		int countCO = 0;
 		for (int co = 0; co < Spots.size(); co++) {
-			if(Spots.get(co).getVal() >= threshold) {
+			if(Spots.get(co).getMaxVal() >= threshold) {
+//				System.out.println(Spots.get(co).values);
 				countCO++;
 			}
 		}
@@ -549,7 +550,8 @@ public class drawPanel extends JPanel implements Serializable {
 				if(Spots.get(co).channels.get(l) == Spots.get(co).channel) {			
 					if(Spots.get(co).value*2<Spots.get(co).values.get(l)) {
 						genePenalty=tmpVal+Math.abs(tmpVal-Spots.get(co).values.get(l));
-						penalty += genePenalty; 
+						penalty += genePenalty;
+						genePenalty = 0;
 					}
 				}
 			}	
