@@ -116,7 +116,7 @@ public class ControlPanel extends JPanel {
 		add(modeListCombo);
 		
 		btnGeneticAlgo = new JButton("GeneticAlgo");
-		btnGeneticAlgo.setBounds(0, 500, 120, 23);
+		btnGeneticAlgo.setBounds(0, 380, 120, 23);
 		add(btnGeneticAlgo);
 		
 //		btnCo_channel = new JButton("Co_channel");
@@ -124,7 +124,7 @@ public class ControlPanel extends JPanel {
 //		add(btnCo_channel);
 //		
 		btnCoverage = new JButton("TEST");
-		btnCoverage.setBounds(0, 700, 120, 23);
+		btnCoverage.setBounds(0, 600, 120, 23);
 		add(btnCoverage);
 		
 		
@@ -210,9 +210,12 @@ public class ControlPanel extends JPanel {
 		numDetec.setBounds(124, 35, 50, 20);
 		add(numDetec);
 		
-		numChannel = new JComboBox<String>();
-		numChannel.setBounds(140, 500, 89, 23);
+		JLabel numchanalb = new JLabel("channel");
+		numchanalb.setBounds(5,410, 89, 23);
+		add(numchanalb);
 		
+		numChannel = new JComboBox<String>();
+		numChannel.setBounds(100, 410, 89, 23);
 		add(numChannel);
 		
 		JLabel lblSignalLevelExamples = new JLabel("Signal level examples");
@@ -220,77 +223,77 @@ public class ControlPanel extends JPanel {
 		add(lblSignalLevelExamples);
 		
 		JLabel popsizelbl = new JLabel("Population size ");
-		popsizelbl.setBounds(5, 540, 100, 23);
+		popsizelbl.setBounds(5, 440, 100, 23);
 		add(popsizelbl);
 		
 		popSize = new JTextField();
-		popSize.setBounds(100, 540, 89, 23);
+		popSize.setBounds(100, 440, 89, 23);
 		popSize.setText("50");
 		add(popSize);
 		
 		JLabel powMaxlbl =  new JLabel("Power transmission     ");
-		powMaxlbl.setBounds(5,560,100,23);
+		powMaxlbl.setBounds(5,460,100,23);
 		add(powMaxlbl);
 		
 		powMax = new JTextField("1");
-		powMax.setBounds(140, 560, 40, 23);
+		powMax.setBounds(140, 460, 40, 23);
 		add(powMax);
 		
 		powMin = new JTextField("-10");
-		powMin.setBounds(100, 560, 40, 23);
+		powMin.setBounds(100, 460, 40, 23);
 		add(powMin);
 		
 		JLabel roundMaxlbl =  new JLabel("Round ");
-		roundMaxlbl.setBounds(5,580,89,23);
+		roundMaxlbl.setBounds(5,480,89,23);
 		add(roundMaxlbl);
 		
 		roundMax = new JTextField("25");
-		roundMax.setBounds(100, 580, 89, 23);
+		roundMax.setBounds(100, 480, 89, 23);
 		add(roundMax);
 		
 		JLabel mutatationRatelbl =  new JLabel("Mutation rate ");
-		mutatationRatelbl.setBounds(5,600,89,23);
+		mutatationRatelbl.setBounds(5,500,89,23);
 		add(mutatationRatelbl);
 		
 		mutationRate = new JTextField("0.02");
-		mutationRate.setBounds(100, 600, 89, 23);
+		mutationRate.setBounds(100, 500, 89, 23);
 		add(mutationRate);
 		
 		JLabel parentUseRatelbl =  new JLabel("Parent Use rate ");
-		parentUseRatelbl.setBounds(5,620,100,23);
+		parentUseRatelbl.setBounds(5,520,100,23);
 		add(parentUseRatelbl);
 		
 		parentUseRate = new JTextField("0.1");
-		parentUseRate.setBounds(100, 620, 89, 23);
+		parentUseRate.setBounds(100, 520, 89, 23);
 		add(parentUseRate);
 		
 		JLabel endCountlbl =  new JLabel("End count ");
-		endCountlbl.setBounds(5,640,100,23);
+		endCountlbl.setBounds(5,540,100,23);
 		add(endCountlbl);
 		
 		endCount = new JTextField("10");
-		endCount.setBounds(100, 640, 89, 23);
+		endCount.setBounds(100, 540, 89, 23);
 		add(endCount);
 		
 		JLabel testTypelb1 =  new JLabel("Select test type");
-		testTypelb1.setBounds(5,720,250,23);
+		testTypelb1.setBounds(5,620,250,23);
 		add(testTypelb1);
 		
 		JLabel testTypelb2 =  new JLabel("0:pop 1:mutate 2:round 3:parentuse  ");
-		testTypelb2.setBounds(5,740,250,23);
+		testTypelb2.setBounds(5,640,250,23);
 		add(testTypelb2);
 		
 		
 		testType = new JTextField("0");
-		testType.setBounds(5, 760, 89, 23);
+		testType.setBounds(5, 660, 89, 23);
 		add(testType);
 		
 		JLabel roundDifflb =  new JLabel("Different");
-		roundDifflb.setBounds(5,780,100,23);
+		roundDifflb.setBounds(5,680,100,23);
 		add(roundDifflb);
 		
 		roundDiff = new JTextField("5");
-		roundDiff.setBounds(100, 780, 89, 23);
+		roundDiff.setBounds(100, 680, 89, 23);
 		add(roundDiff);
 		
 		

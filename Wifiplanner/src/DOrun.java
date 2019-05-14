@@ -2225,21 +2225,59 @@ public class DOrun {
 	
 	public void testCoverage() {//test all
 		System.out.println("///////////////////// Test  /////////////////////");
-		write_txt("TestGA.log", "popSize\t\tCoverage\t\tPenalty");
+		
 		int popSize = Integer.valueOf(conPanel.popSize.getText());
 		float mutaterate = Float.valueOf(conPanel.mutationRate.getText());
+		int maxRound = Integer.valueOf(conPanel.roundMax.getText());
+		float parentuserate = Float.valueOf(conPanel.parentUseRate.getText());
+		int testType = Integer.valueOf(conPanel.testType.getText());
 		int Avg = 0;
 		int AvgCo = 0;
-		int inc = 5;
+		int inc = Integer.valueOf(conPanel.roundDiff.getText());
 		int change= 20;
 		int example_set = 100;
 		addTestSpot(15,60);
+		switch (testType) {
+		case 0:
+			write_txt("TestGApopSize.log", "popSize\t\tCoverage\t\tPenalty");
+			break;
+		case 1:
+			write_txt("TestGAmutate.log", "mutate\t\tCoverage\t\tPenalty");
+			break;
+		case 2:
+			write_txt("TestGAround.log", "round\t\tCoverage\t\tPenalty");
+			break;
+		case 3:
+			write_txt("TestGAparent.log", "parent\t\tCoverage\t\tPenalty");
+			break;
+		
+		default:
+			break;
+		}
+		
 		for (int i = 0; i < change ; i++) {//per change popsize
 			Drawingpanel.TestAreaVal.clear();
 			Drawingpanel.TestAreaCoVal.clear();
 			
 			for (int k = 0; k < example_set; k++) {//add val to find Avg
-				System.out.println("popsize "+popSize+" , example "+k);
+				switch (testType) {
+				case 0:
+					System.out.println("popsize "+popSize+" , example "+k);
+					break;
+				case 1:
+					System.out.println("mutate rate "+mutaterate+" , example "+k);
+					break;
+				case 2:
+					System.out.println("round max "+maxRound+" , example "+k);
+					break;
+				case 3:
+					System.out.println("parent use rate "+parentuserate+" , example "+k);
+					break;
+				
+				default:
+					break;
+				}
+				
 //				System.out.println("mutate rate "+mutaterate+" , example "+k);
 				geneticAlgorithm(false);
 //				System.out.println(Drawingpanel.TestAreaSpot);
@@ -2250,22 +2288,53 @@ public class DOrun {
 			System.out.println("TestCoverage Area Val: "+ Drawingpanel.TestAreaVal);
 			Avg = 0;
 			for (int j = 0; j < Drawingpanel.TestAreaVal.size(); j++) {//Find Avg
-//				write_txt("CoverageTest.log", String.valueOf(Drawingpanel.TestAreaVal.get(j)));
-				write_txt("TestGA.log"+popSize+".log", String.valueOf(popSize)+"\t"+String.valueOf(Drawingpanel.TestAreaVal.get(j)+"\t"+String.valueOf(Drawingpanel.TestAreaCoVal.get(j))));
-//				write_txt("TestGA.log"+mutaterate+".log", String.valueOf(mutaterate)+"\t"+String.valueOf(Drawingpanel.TestAreaVal.get(j)+"\t"+String.valueOf(Drawingpanel.TestAreaCoVal.get(j))));
+				switch (testType) {
+				case 0:
+					write_txt("TestGApopSize.log"+popSize+".log", String.valueOf(popSize)+"\t"+String.valueOf(Drawingpanel.TestAreaVal.get(j)+"\t"+String.valueOf(Drawingpanel.TestAreaCoVal.get(j))));
+					break;
+				case 1:
+					write_txt("TestGAmutate.log"+mutaterate+".log", String.valueOf(mutaterate)+"\t"+String.valueOf(Drawingpanel.TestAreaVal.get(j)+"\t"+String.valueOf(Drawingpanel.TestAreaCoVal.get(j))));
+					break;
+				case 2:
+					write_txt("TestGAround.log"+maxRound+".log", String.valueOf(maxRound)+"\t"+String.valueOf(Drawingpanel.TestAreaVal.get(j)+"\t"+String.valueOf(Drawingpanel.TestAreaCoVal.get(j))));
+					break;
+				case 3:
+					write_txt("TestGAparent.log"+parentuserate+".log", String.valueOf(parentuserate)+"\t"+String.valueOf(Drawingpanel.TestAreaVal.get(j)+"\t"+String.valueOf(Drawingpanel.TestAreaCoVal.get(j))));
+					break;
+				
+				default:
+					break;
+				}
 				Avg += Drawingpanel.TestAreaVal.get(j);
 				AvgCo += Drawingpanel.TestAreaCoVal.get(j);
 			}
 			Avg= Avg/Drawingpanel.TestAreaVal.size();
 			AvgCo= AvgCo/Drawingpanel.TestAreaCoVal.size();
-			write_txt("TestGA.log",String.valueOf(popSize)+"			 	"+Avg+"			 	"+AvgCo);
-//			write_txt("TestGA.log",String.valueOf(mutaterate)+"			 	"+Avg+"			 	"+AvgCo);
-			popSize += inc;
-			mutaterate += 0.0015;
-			//inc += 50;
-			conPanel.popSize.setText(String.valueOf(popSize));
-//			conPanel.mutationRate.setText(String.valueOf(mutaterate));
-		
+			switch (testType) {
+			case 0:
+				write_txt("TestGApopSize.log",String.valueOf(popSize)+"\t"+Avg+"\t"+AvgCo);
+				popSize+=inc;
+				conPanel.popSize.setText(String.valueOf(popSize));
+				break;
+			case 1:
+				write_txt("TestGAmutate.log",String.valueOf(mutaterate)+"\t"+Avg+"\t"+AvgCo);
+				mutaterate+=inc;
+				conPanel.mutationRate.setText(String.valueOf(mutaterate));
+				break;
+			case 2:
+				write_txt("TestGAmaxround.log",String.valueOf(maxRound)+"\t"+Avg+"\t"+AvgCo);
+				maxRound+=inc;
+				conPanel.roundMax.setText(String.valueOf(maxRound));
+				break;
+			case 3:
+				write_txt("TestGAparent.log",String.valueOf(parentuserate)+"\t"+Avg+"\t"+AvgCo);
+				parentuserate+=inc;
+				conPanel.parentUseRate.setText(String.valueOf(parentuserate));
+				break;
+			
+			default:
+				break;
+			}	
 		}
 		tested = !tested;
 	}
