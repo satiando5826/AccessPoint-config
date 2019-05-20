@@ -593,7 +593,7 @@ public class DOrun {
 					 for(int h = 1; h< numAPs.length;h++){
 						 numAPs[h] = String.valueOf(h);
 					 }
-					 showdetailAP();
+					 showdetailAP(false,0);
                      DefaultComboBoxModel<String> model = (DefaultComboBoxModel<String>) conPanel.numAP.getModel();
 					 model.removeAllElements();
 					 for(String temp : numAPs){
@@ -1030,7 +1030,7 @@ public class DOrun {
 					//System.out.println("wdsalijdoiaefjaliwjisle");
 					Drawingpanel.reCal();
 					Drawingpanel.repaint();
-					showdetailAP();
+					showdetailAP(false,0);
 					
 				}else{
 					//Drawingpanel.APshow.clear();
@@ -1042,7 +1042,7 @@ public class DOrun {
 					}
 					Drawingpanel.reCal();
 					Drawingpanel.repaint();
-					showdetailAP();
+					showdetailAP(false,0);
 				}	
 				}	
 			}
@@ -1093,7 +1093,7 @@ public class DOrun {
 					//System.out.println("wdsalijdoiaefjaliwjisle");
 					Drawingpanel.reCal();
 					Drawingpanel.repaint();
-					showdetailAP();
+					showdetailAP(true,(index-1)*5+1);
 					
 				}else{
 					//Drawingpanel.APshow.clear();
@@ -1105,7 +1105,7 @@ public class DOrun {
 					}
 					Drawingpanel.reCal();
 					Drawingpanel.repaint();
-					showdetailAP();
+					showdetailAP(false,0);
 				}	
 				}	
 			}
@@ -1330,7 +1330,7 @@ public class DOrun {
 			//	 System.out.println(Drawingpanel.test.get(0).getPos());
 				 
 				 Drawingpanel.repaint();
-				showdetailAP();
+				showdetailAP(false,0);
 				
 			}
 		});
@@ -1412,7 +1412,7 @@ public class DOrun {
              //  System.out.println(Drawingpanel.APs.get(0).getPos());
              //  System.out.println(Drawingpanel.getPreferredSize());
                 Drawingpanel.repaint();
-                showdetailAP();
+                showdetailAP(false,0);
                			
 			}
 		});
@@ -1555,18 +1555,18 @@ public class DOrun {
 		Float mutaterate = Float.valueOf(conPanel.mutationRate.getText());
 		Float parentUseRate = Float.valueOf(conPanel.parentUseRate.getText());
 		System.out.println("*******Start*******");
-		System.out.println("Genetic Algorithm \npopulation size : "+popSize+"\tpowerlevelMax = "+powMax+"\tRound : "+maxRound+"\nMutation rate : "+
+		System.out.println("Genetic Algorithm \npopulation size : "+popSize+"\tpowerlevel min:max "+powMin+":"+powMax+"\tRound : "+maxRound+"\nMutation rate : "+
 		mutaterate+"\tParent Rate : "+parentUseRate);
 		ArrayList<Float> fitnessList = new ArrayList<Float>();
 		ArrayList<ArrayList<Integer> > population =  new ArrayList<ArrayList<Integer>>();
 		ArrayList<ArrayList<Integer> > populationChannel =  new ArrayList<ArrayList<Integer>>();
 		ArrayList<Integer> populationCalCheck =  new ArrayList<Integer>();
 		
-	    System.out.println("Random generate first Population");
+	    System.out.println("\nRandom generate first Population");
 		for(int i = 0;i<popSize;i++) {
 			if (showdetaillog == true) {
 				System.out.println();
-				System.out.println("gene " + i);
+				System.out.println("Population " + i);
 			}
 			initRandom(Drawingpanel.APs,population,powMax,powMin,populationChannel,populationCalCheck,showdetaillog);
 			fitnessList.add(geneFitness(populationCalCheck,i,showdetaillog));
@@ -1857,9 +1857,7 @@ public class DOrun {
         		int index2 = rand.nextInt(w1.size());
         		int indexCh = rand.nextInt(chw1.size());
         		int indexCh2 = rand.nextInt(chw1.size());
-//        		System.out.println("Candidate : "+i+", "+j+", "+k+", "+l);
-//        		System.out.println("crossover index is " + index +", "+index2);
-//        		System.out.println("crossover indexChannel is " + indexCh +", "+indexCh2);
+        		
         		while(index>=index2) {
         			index = rand.nextInt(w1.size());
         			index2 = rand.nextInt(w1.size());
@@ -1878,6 +1876,10 @@ public class DOrun {
             		child2ch.set(j1, chw1.get(j1));
         		}
         		if (showdetaillog) {
+            		System.out.println("Candidate : "+i+", "+j+", "+k+", "+l);
+                	System.out.println("crossover index is " + index +", "+index2);
+                	System.out.println("crossover indexChannel is " + indexCh +", "+indexCh2);
+
         			System.out.println();
                 	System.out.print("w1 "+w1+"  \t\t\t\t");
                 	System.out.println("w2 "+w2);
@@ -2045,9 +2047,11 @@ public class DOrun {
 			Drawingpanel.APs.get(i).setChannel(cha);
 			if (showdetaillog) {
 				System.out.print(n+"_"+cha+", ");
-				System.out.println();
 			}
 		}
+			if (showdetaillog) {
+				System.out.println();
+			}
 		ArrayList<Integer> pt = ptAPs(Drawingpanel.APs);
 		ArrayList<Integer> ch = chAPs(Drawingpanel.APs);
 		population.add(pt);
@@ -2106,7 +2110,7 @@ public class DOrun {
 		
 		Drawingpanel.reCal();
 		Drawingpanel.repaint();
-		showdetailAP();
+		showdetailAP(false,0);
 		//refresh
 	}
 	
@@ -2435,15 +2439,24 @@ public class DOrun {
 		}
 	}
 	
-	public void showdetailAP() {
+	public void showdetailAP(boolean SelectChannel, int channelInt) {
 		String detail = "";
 		 int countInline = 0;
 		 for (int j2 = 0; j2 < Drawingpanel.APs.size(); j2++) {
-			 countInline++;
-			detail += "("+String.valueOf(j2)+"_"+Drawingpanel.APs.get(j2).pt+"_"+Drawingpanel.APs.get(j2).channel+"), ";
+			countInline++;
+			if (SelectChannel) {
+				if (Drawingpanel.APs.get(j2).channel==channelInt) {
+					detail += "("+String.valueOf(j2)+"_"+Drawingpanel.APs.get(j2).pt+"_"+Drawingpanel.APs.get(j2).channel+")";
+				}
+			} else {
+				detail += "("+String.valueOf(j2)+"_"+Drawingpanel.APs.get(j2).pt+"_"+Drawingpanel.APs.get(j2).channel+")";
+			}
 			if (countInline >= 3) {
 				detail +="\n";
 				countInline = 0;
+			}
+			else {
+				detail += "\t";
 			}
 		}
 		 conPanel.detailPOP.setText(detail);

@@ -320,7 +320,7 @@ public class ControlPanel extends JPanel {
 		add(detailPoplb);
 		
 		detailPOP = new JTextArea("");
-		detailPOP.setBounds(5, 760, 220, 80);
+		detailPOP.setBounds(0, 760, 240, 80);
 		add(detailPOP);
 		
 				
