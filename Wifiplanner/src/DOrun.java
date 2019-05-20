@@ -593,6 +593,7 @@ public class DOrun {
 					 for(int h = 1; h< numAPs.length;h++){
 						 numAPs[h] = String.valueOf(h);
 					 }
+					 showdetailAP();
                      DefaultComboBoxModel<String> model = (DefaultComboBoxModel<String>) conPanel.numAP.getModel();
 					 model.removeAllElements();
 					 for(String temp : numAPs){
@@ -646,7 +647,10 @@ public class DOrun {
 					 
                  }
 			}
+
+			
 		});
+		
 		mnFile.add(mntmLoad);
 		
 		JMenuItem mntmSave = new JMenuItem("Save");
@@ -1026,6 +1030,7 @@ public class DOrun {
 					//System.out.println("wdsalijdoiaefjaliwjisle");
 					Drawingpanel.reCal();
 					Drawingpanel.repaint();
+					showdetailAP();
 					
 				}else{
 					//Drawingpanel.APshow.clear();
@@ -1037,6 +1042,7 @@ public class DOrun {
 					}
 					Drawingpanel.reCal();
 					Drawingpanel.repaint();
+					showdetailAP();
 				}	
 				}	
 			}
@@ -1087,6 +1093,7 @@ public class DOrun {
 					//System.out.println("wdsalijdoiaefjaliwjisle");
 					Drawingpanel.reCal();
 					Drawingpanel.repaint();
+					showdetailAP();
 					
 				}else{
 					//Drawingpanel.APshow.clear();
@@ -1098,6 +1105,7 @@ public class DOrun {
 					}
 					Drawingpanel.reCal();
 					Drawingpanel.repaint();
+					showdetailAP();
 				}	
 				}	
 			}
@@ -1322,7 +1330,7 @@ public class DOrun {
 			//	 System.out.println(Drawingpanel.test.get(0).getPos());
 				 
 				 Drawingpanel.repaint();
-				
+				showdetailAP();
 				
 			}
 		});
@@ -1404,9 +1412,8 @@ public class DOrun {
              //  System.out.println(Drawingpanel.APs.get(0).getPos());
              //  System.out.println(Drawingpanel.getPreferredSize());
                 Drawingpanel.repaint();
-                
-               
-				
+                showdetailAP();
+               			
 			}
 		});
 		
@@ -1685,7 +1692,6 @@ public class DOrun {
 				populationCalCheck.set(i, 0);
 //				System.out.println("j++");
 			}
-//			System.out.println("i++");
 		}
 		population = newpopulation;
 		populationChannel =newpopulationChannel;
@@ -2100,6 +2106,7 @@ public class DOrun {
 		
 		Drawingpanel.reCal();
 		Drawingpanel.repaint();
+		showdetailAP();
 		//refresh
 	}
 	
@@ -2257,16 +2264,16 @@ public class DOrun {
 		ArrayList<Float> geneticTime = new ArrayList<Float>();
 		switch (testType) {
 		case 0:
-			write_txt("TestGApopSize.log", "popSize\t\tCoverage\t\tPenalty\t\tTime\t\tFitness");
+			write_txt("TestGApopSize.txt", "popSize\t\tCoverage\t\tPenalty\t\tTime\t\tFitness");
 			break;
 		case 1:
-			write_txt("TestGAmutate.log", "mutate\t\tCoverage\t\tPenalty\t\tTime\t\tFitness");
+			write_txt("TestGAmutate.txt", "mutate\t\tCoverage\t\tPenalty\t\tTime\t\tFitness");
 			break;
 		case 2:
-			write_txt("TestGAround.log", "round\t\tCoverage\t\tPenalty\t\tTime\t\tFitness");
+			write_txt("TestGAround.txt", "round\t\tCoverage\t\tPenalty\t\tTime\t\tFitness");
 			break;
 		case 3:
-			write_txt("TestGAparent.log", "parent\t\tCoverage\t\tPenalty\t\tTime\t\tFitness");
+			write_txt("TestGAparent.txt", "parent\t\tCoverage\t\tPenalty\t\tTime\t\tFitness");
 			break;
 		
 		default:
@@ -2313,19 +2320,19 @@ public class DOrun {
 			for (int j = 0; j < Drawingpanel.TestAreaVal.size(); j++) {//Find Avg
 				switch (testType) {
 				case 0:
-					write_txt("TestGApopSize"+popSize+".log", String.valueOf(popSize)+"\t"+String.valueOf(Drawingpanel.TestAreaVal.get(j)+
+					write_txt("TestGApopSize"+popSize+".txt", String.valueOf(popSize)+"\t"+String.valueOf(Drawingpanel.TestAreaVal.get(j)+
 							"\t"+String.valueOf(Drawingpanel.TestAreaCoVal.get(j))+"\t"+String.valueOf(geneticTime.get(j))+"\t"+bestFitnessTest.get(j)));
 					break;
 				case 1:
-					write_txt("TestGAmutate"+mutaterate+".log", String.valueOf(mutaterate)+"\t"+String.valueOf(Drawingpanel.TestAreaVal.get(j)+
+					write_txt("TestGAmutate"+mutaterate+".txt", String.valueOf(mutaterate)+"\t"+String.valueOf(Drawingpanel.TestAreaVal.get(j)+
 							"\t"+String.valueOf(Drawingpanel.TestAreaCoVal.get(j))+"\t"+String.valueOf(geneticTime.get(j))+"\t"+bestFitnessTest.get(j)));
 					break;
 				case 2:
-					write_txt("TestGAround"+maxRound+".log", String.valueOf(maxRound)+"\t"+String.valueOf(Drawingpanel.TestAreaVal.get(j)+
+					write_txt("TestGAround"+maxRound+".txt", String.valueOf(maxRound)+"\t"+String.valueOf(Drawingpanel.TestAreaVal.get(j)+
 							"\t"+String.valueOf(Drawingpanel.TestAreaCoVal.get(j))+"\t"+String.valueOf(geneticTime.get(j))+"\t"+bestFitnessTest.get(j)));
 					break;
 				case 3:
-					write_txt("TestGAparent"+parentuserate+".log", String.valueOf(parentuserate)+"\t"+String.valueOf(Drawingpanel.TestAreaVal.get(j)+
+					write_txt("TestGAparent"+parentuserate+".txt", String.valueOf(parentuserate)+"\t"+String.valueOf(Drawingpanel.TestAreaVal.get(j)+
 							"\t"+String.valueOf(Drawingpanel.TestAreaCoVal.get(j))+"\t"+String.valueOf(geneticTime.get(j))+"\t"+bestFitnessTest.get(j)));
 					break;
 				
@@ -2343,22 +2350,22 @@ public class DOrun {
 			AvgFitness = AvgFitness/bestFitnessTest.size();
 			switch (testType) {
 			case 0:
-				write_txt("TestGApopSize.log",String.valueOf(popSize)+"\t\t"+Avg+"\t\t"+AvgCo+"\t\t"+AvgTime+"\t\t"+AvgFitness);
+				write_txt("TestGApopSize.txt",String.valueOf(popSize)+"\t\t"+Avg+"\t\t"+AvgCo+"\t\t"+AvgTime+"\t\t"+AvgFitness);
 				popSize+=inc;
 				conPanel.popSize.setText(String.valueOf(popSize));
 				break;
 			case 1:
-				write_txt("TestGAmutate.log",String.valueOf(mutaterate)+"\t\t"+Avg+"\t\t"+AvgCo+"\t\t"+AvgTime+"\t\t"+AvgFitness);
+				write_txt("TestGAmutate.txt",String.valueOf(mutaterate)+"\t\t"+Avg+"\t\t"+AvgCo+"\t\t"+AvgTime+"\t\t"+AvgFitness);
 				mutaterate+=inc;
 				conPanel.mutationRate.setText(String.valueOf(mutaterate));
 				break;
 			case 2:
-				write_txt("TestGAround.log",String.valueOf(maxRound)+"\t\t"+Avg+"\t\t"+AvgCo+"\t\t"+AvgTime+"\t\t"+AvgFitness);
+				write_txt("TestGAround.txt",String.valueOf(maxRound)+"\t\t"+Avg+"\t\t"+AvgCo+"\t\t"+AvgTime+"\t\t"+AvgFitness);
 				maxRound+=inc;
 				conPanel.roundMax.setText(String.valueOf(maxRound));
 				break;
 			case 3:
-				write_txt("TestGAparent.log",String.valueOf(parentuserate)+"\t\t"+Avg+"\t\t"+AvgCo+"\t\t"+AvgTime+"\t\t"+AvgFitness);
+				write_txt("TestGAparent.txt",String.valueOf(parentuserate)+"\t\t"+Avg+"\t\t"+AvgCo+"\t\t"+AvgTime+"\t\t"+AvgFitness);
 				parentuserate+=inc;
 				conPanel.parentUseRate.setText(String.valueOf(parentuserate));
 				break;
@@ -2426,6 +2433,20 @@ public class DOrun {
 		}else {
 			return posx2;
 		}
+	}
+	
+	public void showdetailAP() {
+		String detail = "";
+		 int countInline = 0;
+		 for (int j2 = 0; j2 < Drawingpanel.APs.size(); j2++) {
+			 countInline++;
+			detail += "("+String.valueOf(j2)+"_"+Drawingpanel.APs.get(j2).pt+"_"+Drawingpanel.APs.get(j2).channel+"), ";
+			if (countInline >= 3) {
+				detail +="\n";
+				countInline = 0;
+			}
+		}
+		 conPanel.detailPOP.setText(detail);
 	}
 	
 }

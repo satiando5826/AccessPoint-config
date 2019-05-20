@@ -14,6 +14,7 @@ import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JSlider;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
@@ -36,6 +37,7 @@ public class ControlPanel extends JPanel {
 	public JTextField roundDiff;
 	public JTextField endCount;
 	public JTextField testSample;
+	public JTextArea detailPOP;
 	public JTextField exVals1;
 	public JTextField exVals2;
 	public JTextField exVals3;
@@ -313,7 +315,15 @@ public class ControlPanel extends JPanel {
 		roundDiff.setBounds(100, 700, 89, 20);
 		add(roundDiff);
 		
+		JLabel detailPoplb =  new JLabel("Ap detail (AP_power(dBm)_channel)");
+		detailPoplb.setBounds(5,740,240,23);
+		add(detailPoplb);
 		
+		detailPOP = new JTextArea("");
+		detailPOP.setBounds(5, 760, 220, 80);
+		add(detailPOP);
+		
+				
 				
 		exVals1 = new JTextField();
 		exVals1.setBounds(104, 365, 86, 20);

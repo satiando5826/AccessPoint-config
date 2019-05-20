@@ -120,6 +120,7 @@ public class drawPanel extends JPanel implements Serializable {
 	 public int maxRound = 50;
 	 public float mutaterate = (float)0.005;
 	 public float parentUseRate = (float) 0.2;
+	 ControlPanel conPanel;
 	 
 	
 	public drawPanel() {
@@ -547,14 +548,18 @@ public class drawPanel extends JPanel implements Serializable {
 		for (int co = 0; co < Spots.size(); co++) {
 			for (int l = 0; l < Spots.get(co).values.size(); l++) {
 				tmpVal = Spots.get(co).value;
+//				System.out.println("____test penalty____");
+//				System.out.println("tmpVal = "+tmpVal);
 				if(Spots.get(co).channels.get(l) == Spots.get(co).channel) {			
 					if(Spots.get(co).value*2<Spots.get(co).values.get(l)) {
 						genePenalty=tmpVal+Math.abs(tmpVal-Spots.get(co).values.get(l));
-						penalty += genePenalty;
+//						System.out.println("genePenalty "+genePenalty);
+						penalty -= genePenalty;
 						genePenalty = 0;
 					}
 				}
-			}	
+			}
+			penalty += tmpVal;
 		}
 		TestAreaCoVal.add(penalty);
 		setColorTstGA();
